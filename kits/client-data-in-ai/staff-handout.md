@@ -28,7 +28,7 @@ Delete the conversation and remove any share link. If the training setting was o
 
 ### Why today?
 
-If personal data was involved, your firm may have to decide within 72 hours of finding out whether to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). It has to keep a record of every incident like this, including the ones it doesn't report. It can only do either if it knows.
+If personal data was involved, your firm may have to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). The law says: as soon as possible, and within 72 hours of finding out where it can. It must also record every data breach, including the ones it doesn't report. It can only do any of that if it knows.
 
 ### If you used a work account
 

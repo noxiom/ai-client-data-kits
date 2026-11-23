@@ -2,6 +2,10 @@
 
 Newest first. Each kit also shows its own change log on its web page.
 
+## 23 November 2026 (evening)
+
+- **Client data went into an AI tool** 1.2.1: the staff pages (English and Dutch) now state the reporting rule the way GDPR Articles 33 and 34 put it: report to the Autoriteit Persoonsgegevens unless the breach is unlikely to put anyone at risk, as soon as possible and within 72 hours where possible, tell the people concerned when the risk is high, and when the firm handles the data for a client, tell that client, who decides about reporting. The earlier wording ("only when it is likely to put people at some risk") set the bar the wrong way round. Dutch wording fixes on /nl/klantgegevens-in-ai-tool, and the Dutch page uses the site's Dutch footer.
+
 ## 23 November 2026 (later)
 
 - **Client data went into an AI tool** 1.2.0: a Dutch version of the staff page at noxiom.com/nl/klantgegevens-in-ai-tool, paired with the English page through hreflang, and a Dutch staff handout in Word. Rendered from the same template and data file (Dutch strings in `employee_nl`); the Dutch was written with AI.

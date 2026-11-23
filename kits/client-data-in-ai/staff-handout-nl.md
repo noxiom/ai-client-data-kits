@@ -28,7 +28,7 @@ Verwijder het gesprek en haal een eventuele deellink weg. Stond de trainingsinst
 
 ### Waarom vandaag?
 
-Gingen er persoonsgegevens in, dan moet je bedrijf misschien binnen 72 uur nadat het ervan weet beslissen of het een datalek meldt bij de Autoriteit Persoonsgegevens. Het moet ook elk incident als dit vastleggen, ook de incidenten die het niet meldt. Dat kan allebei alleen als het ervan weet.
+Gingen er persoonsgegevens in, dan moet je bedrijf het misschien melden bij de Autoriteit Persoonsgegevens. De wet zegt: zo snel mogelijk, en waar het kan binnen 72 uur nadat het bedrijf ervan weet. Het moet ook elk datalek vastleggen, ook de datalekken die het niet meldt. Dat kan allemaal alleen als het ervan weet.
 
 ### Als je een werkaccount gebruikte
 

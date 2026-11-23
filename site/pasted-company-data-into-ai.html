@@ -52,7 +52,7 @@
       "name": "Is it a data breach if I put client data into ChatGPT?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call."
+        "text": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. It has to be reported to the authority unless it is unlikely to put the people concerned at any risk. Your firm makes that call."
       }
     },
     {
@@ -491,7 +491,7 @@ textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
           </div>
           <p class="guide-alert guide-full">
             <span class="pill-icon" aria-hidden="true">!</span>
-            <span><strong>Why today?</strong> If personal data was involved, your firm may have to decide within 72 hours of finding out whether to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). It has to keep a record of every incident like this, including the ones it doesn't report. It can only do either if it knows.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></span>
+            <span><strong>Why today?</strong> If personal data was involved, your firm may have to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). The law says: as soon as possible, and within 72 hours of finding out where it can. It must also record every data breach, including the ones it doesn't report. It can only do any of that if it knows.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></span>
           </p>
 
           <h2 id="steps">Three steps, in this order</h2>
@@ -544,13 +544,14 @@ textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
 <ol class="report-list">
 <li>Your firm writes the incident down.</li>
 <li>It assesses the risk to the people whose information it was.</li>
-<li>It decides whether to report it to the Autoriteit Persoonsgegevens, and whether to tell the client and the people concerned.</li>
+<li>It reports the breach to the Autoriteit Persoonsgegevens, unless it is unlikely to put anyone at risk. If the risk to the people concerned is high, it tells them too.</li>
+<li>Does your firm handle the data for a client, such as payroll it runs for them? Then it tells that client as soon as possible, and the client decides about reporting.</li>
 <li>You may be asked for details. The decisions are the firm's, not yours.</li>
 </ol>
 
           <h2 id="faq">Questions</h2>
 <div class="guide-accordion">
-<details class="guide-faq"><summary>Is it a data breach if I put client data into ChatGPT?</summary><p>If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call.<sup class="cite"><a href="#src-10" aria-label="Source 10">10</a>, <a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
+<details class="guide-faq"><summary>Is it a data breach if I put client data into ChatGPT?</summary><p>If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. It has to be reported to the authority unless it is unlikely to put the people concerned at any risk. Your firm makes that call.<sup class="cite"><a href="#src-10" aria-label="Source 10">10</a>, <a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
 <details class="guide-faq"><summary>Should I delete the conversation straight away?</summary><p>Note what went in first, and tell your firm. Then delete it, unless your firm asks you to wait because it wants to see the chat for its record. Deleting doesn't always remove everything: some tools keep deleted chats for a while, and anything already used for training stays there. The per-tool notes on this page say what each vendor does.</p></details>
 <details class="guide-faq"><summary>I pasted a password or an access key into an AI tool.</summary><p>Change the password or replace the key now, everywhere it is used, and tell whoever manages your IT. Then delete the conversation. A changed password is worthless to anyone who sees the chat later.</p></details>
 <details class="guide-faq"><summary>It was company information, but nothing about people. Does it still matter?</summary><p>It isn't a personal data breach under the GDPR, because no personal data was involved. It can still matter: client contracts often require confidentiality, and the tool may keep or train on what you typed. Tell your manager so the firm can check.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
@@ -576,8 +577,9 @@ textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
             <p><strong>It doesn't</strong> replace your firm's own rules, decide whether anything must be reported, or give legal advice. If your firm has its own procedure, follow that.</p>
           </details>
           <details class="guide-more" id="changes">
-            <summary>Change log and corrections <span class="summary-hint">version 1.2.0</span></summary>
+            <summary>Change log and corrections <span class="summary-hint">version 1.2.1</span></summary>
 <ul class="report-list">
+<li><strong>23 November 2026:</strong> The staff pages state the reporting rule as the law puts it: report unless the breach is unlikely to put anyone at risk, as soon as possible and within 72 hours where possible, tell the people concerned when the risk is high, and if the firm handles the data for a client, tell that client, who decides. Dutch wording fixes on the Dutch page.</li>
 <li><strong>23 November 2026:</strong> A Dutch version of the staff page at /nl/klantgegevens-in-ai-tool, with a Dutch staff handout in Word. The Dutch text was written with AI.</li>
 <li><strong>23 November 2026:</strong> Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word.</li>
 <li><strong>23 November 2026:</strong> First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout.</li>

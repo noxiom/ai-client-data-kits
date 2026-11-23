@@ -2,13 +2,17 @@
   "id": "client-data-in-ai",
   "title": "Client data went into an AI tool",
   "description": "What an employee and a small firm do in the first 72 hours after client or company data went into an AI tool: record it, contain it, assess the risk, decide on reporting to the Dutch data protection authority, and fix the cause.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "status": "release",
   "checked": "2026-11-23",
   "next_review": "2026-12-22",
   "uses_dataset": "ai-accounts",
   "license": { "name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
   "changelog": [
+    {
+      "date": "2026-11-23",
+      "change": "The staff pages state the reporting rule as the law puts it: report unless the breach is unlikely to put anyone at risk, as soon as possible and within 72 hours where possible, tell the people concerned when the risk is high, and if the firm handles the data for a client, tell that client, who decides. Dutch wording fixes on the Dutch page."
+    },
     { "date": "2026-11-23", "change": "A Dutch version of the staff page at /nl/klantgegevens-in-ai-tool, with a Dutch staff handout in Word. The Dutch text was written with AI." },
     { "date": "2026-11-23", "change": "Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word." },
     { "date": "2026-11-23", "change": "First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout." }
@@ -45,7 +49,7 @@
       "Tell the person your firm has named for this today: your manager, office manager or privacy contact.",
       "Then delete the conversation, unless your firm asks you to wait."
     ],
-    "why_today": "If personal data was involved, your firm may have to decide within 72 hours of finding out whether to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). It has to keep a record of every incident like this, including the ones it doesn't report. It can only do either if it knows.",
+    "why_today": "If personal data was involved, your firm may have to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). The law says: as soon as possible, and within 72 hours of finding out where it can. It must also record every data breach, including the ones it doesn't report. It can only do any of that if it knows.",
     "steps": [
       {
         "title": "Note it",
@@ -78,13 +82,14 @@
     "next": [
       "Your firm writes the incident down.",
       "It assesses the risk to the people whose information it was.",
-      "It decides whether to report it to the Autoriteit Persoonsgegevens, and whether to tell the client and the people concerned.",
+      "It reports the breach to the Autoriteit Persoonsgegevens, unless it is unlikely to put anyone at risk. If the risk to the people concerned is high, it tells them too.",
+      "Does your firm handle the data for a client, such as payroll it runs for them? Then it tells that client as soon as possible, and the client decides about reporting.",
       "You may be asked for details. The decisions are the firm's, not yours."
     ],
     "faq": [
       {
         "q": "Is it a data breach if I put client data into ChatGPT?",
-        "a": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call.",
+        "a": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. It has to be reported to the authority unless it is unlikely to put the people concerned at any risk. Your firm makes that call.",
         "sources": ["ap-chatbots", "gdpr"]
       },
       {
@@ -168,7 +173,7 @@
       "Meld het vandaag bij de persoon die je bedrijf hiervoor heeft aangewezen: je leidinggevende, de officemanager of de privacycontactpersoon.",
       "Verwijder daarna het gesprek, tenzij je bedrijf vraagt om te wachten."
     ],
-    "why_today": "Gingen er persoonsgegevens in, dan moet je bedrijf misschien binnen 72 uur nadat het ervan weet beslissen of het een datalek meldt bij de Autoriteit Persoonsgegevens. Het moet ook elk incident als dit vastleggen, ook de incidenten die het niet meldt. Dat kan allebei alleen als het ervan weet.",
+    "why_today": "Gingen er persoonsgegevens in, dan moet je bedrijf het misschien melden bij de Autoriteit Persoonsgegevens. De wet zegt: zo snel mogelijk, en waar het kan binnen 72 uur nadat het bedrijf ervan weet. Het moet ook elk datalek vastleggen, ook de datalekken die het niet meldt. Dat kan allemaal alleen als het ervan weet.",
     "steps": [
       {
         "title": "Schrijf het op",
@@ -201,18 +206,19 @@
     "next": [
       "Je bedrijf legt het incident vast.",
       "Het beoordeelt het risico voor de mensen van wie de gegevens zijn.",
-      "Het beslist of het een datalek meldt bij de Autoriteit Persoonsgegevens, en of het de klant en de betrokkenen inlicht.",
+      "Het meldt het datalek bij de Autoriteit Persoonsgegevens, tenzij het waarschijnlijk geen risico oplevert voor de mensen om wie het gaat. Is het risico voor hen hoog, dan licht het die mensen ook in.",
+      "Verwerkt je bedrijf de gegevens voor een klant, zoals de salarisadministratie die het voor die klant doet? Dan licht het die klant zo snel mogelijk in, en beslist de klant over het melden.",
       "Misschien vraagt het je om details. De beslissingen neemt je bedrijf, niet jij."
     ],
     "faq": [
       {
         "q": "Is het een datalek als ik klantgegevens in ChatGPT zet?",
-        "a": "Zaten er persoonsgegevens bij en gebruikte je de tool tegen de afspraken met je werkgever in, dan is het volgens de Autoriteit Persoonsgegevens een datalek. Niet elk datalek hoeft gemeld te worden bij de AP: alleen als het waarschijnlijk een risico oplevert voor de mensen om wie het gaat. Dat beoordeelt je bedrijf.",
+        "a": "Zaten er persoonsgegevens bij en gebruikte je de tool tegen de afspraken met je werkgever in, dan is het volgens de Autoriteit Persoonsgegevens een datalek. Het moet gemeld worden bij de AP, tenzij het waarschijnlijk geen risico oplevert voor de mensen om wie het gaat. Dat beoordeelt je bedrijf.",
         "sources": ["ap-chatbots", "gdpr"]
       },
       {
         "q": "Binnen hoeveel tijd moet een datalek gemeld worden?",
-        "a": "Binnen 72 uur nadat het bedrijf ervan weet, tenzij het datalek waarschijnlijk geen risico oplevert voor de mensen om wie het gaat. Een latere melding moet de reden voor de vertraging noemen. Melden is de taak van je bedrijf, niet van jou. Jouw deel is dat het bedrijf het vandaag weet.",
+        "a": "Zo snel mogelijk, en waar het kan binnen 72 uur nadat het bedrijf ervan weet. Een latere melding moet de reden voor de vertraging noemen. Melden is de taak van je bedrijf, niet van jou. Jouw deel is dat het bedrijf het vandaag weet.",
         "sources": ["gdpr", "edpb-breach"]
       },
       {
