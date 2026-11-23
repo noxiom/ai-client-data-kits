@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>{{seo_title}} | Noxiom</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="canonical" href="{{canonical}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="article:modified_time" content="{{checked_iso}}" />
+{{jsonld}}
+    <style>
+{{guide_css}}
+{{kit_css}}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free kit</span>
+            <h1>{{title}}</h1>
+            <p class="guide-lead">{{lead}}</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="{{checked_iso}}">{{checked_human}}</time></strong></span>
+              <span><a href="#builder">Statement builder: runs in your browser</a></span>
+              <span>English and Dutch</span>
+            </p>
+          </div>
+
+          <div class="kit-answer">
+            <p class="kit-answer-label">In short</p>
+            <p>{{answer}}</p>
+          </div>
+
+          <h2 id="asks">What clients ask</h2>
+          <p class="guide-measure">{{asks_intro}}</p>
+{{asks}}
+
+          <h2 id="why">Why they ask</h2>
+          <div class="guide-steps kit-steps">
+{{why}}
+          </div>
+
+          <h2 id="builder">Build your statement and letter</h2>
+          <div id="builder-wrap">
+            <p class="kit-privacy">
+              <span class="pill-icon" aria-hidden="true">&#x2713;</span>
+              <span>
+                <strong>Runs in your browser.</strong> Nothing you type is sent
+                anywhere or stored, not even on this device. Close the tab and
+                it's gone, so save first. {{builder_intro}}
+              </span>
+            </p>
+            <p class="guide-note" id="builder-fallback">
+              The statement builder needs JavaScript. The
+              <a href="{{example_url}}" download>example statement (Word)</a>
+              shows what it makes; the questions are listed under
+              <a href="#for-assistants">For AI assistants</a>.
+            </p>
+            <div class="kit-layout" id="statement-builder" hidden>
+              <div class="kit-form">
+                <section class="kit-assist" aria-labelledby="assist-title">
+                  <p class="kit-assist-title" id="assist-title">Let an AI assistant fill it in</p>
+                  <p class="kit-assist-text">{{assistant_intro}}</p>
+                  <p class="kit-assist-caution">{{assistant_caution}}</p>
+                  <div class="kit-assist-actions">
+                    <button type="button" class="kit-btn kit-btn-primary" data-copy="assistant-prompt" data-copied="Copied. Paste it into your assistant">Copy instructions</button>
+                    <button type="button" class="kit-btn" id="paste-open" aria-expanded="false" aria-controls="paste-panel">Paste facts</button>
+                    <input type="file" id="file-open" class="visually-hidden" accept=".json,application/json" autocomplete="off" />
+                    <label class="kit-btn" for="file-open">Open saved facts</label>
+                  </div>
+                  <details class="kit-plan-more">
+                    <summary>Show the instructions</summary>
+                    <p class="kit-message" id="assistant-prompt">{{assistant_prompt}}</p>
+                  </details>
+                  <div class="kit-paste" id="paste-panel" hidden>
+                    <label class="kit-label" for="paste-box">Paste the JSON from your assistant</label>
+                    <textarea class="kit-input" id="paste-box" rows="5" autocomplete="off" spellcheck="false" placeholder="{ &quot;tools&quot;: [...], ... }"></textarea>
+                    <div class="kit-assist-actions">
+                      <button type="button" class="kit-btn kit-btn-primary" id="paste-load">Fill in the form</button>
+                      <button type="button" class="kit-btn kit-btn-quiet" id="paste-cancel">Cancel</button>
+                    </div>
+                  </div>
+                  <p class="kit-load-result" id="load-result" role="status" hidden></p>
+                </section>
+{{form}}
+                <div class="kit-bar" id="kit-bar">
+                  <div class="kit-bar-text" id="kit-bar-text">Answer what you have confirmed</div>
+                  <button type="button" class="kit-btn kit-btn-primary" id="kit-bar-save">Preview and save</button>
+                </div>
+              </div>
+              <aside class="kit-summary" aria-label="Your statement" aria-live="polite">
+                <div class="kit-card" id="open-card">
+                  <p class="kit-card-title">Open points</p>
+                  <div id="open-points"></div>
+                </div>
+                <div class="kit-card kit-role" id="gap-card" hidden>
+                  <p><strong>{{gap_title}}.</strong> {{gap_text}}</p>
+                  <div class="guide-cta-row">
+                    <a data-cta="statement-check" href="{{guide_url}}#check" class="guide-text-link">Do the 20-minute check &rarr;</a>
+                  </div>
+                </div>
+                <div class="kit-card" id="save-card" tabindex="-1">
+                  <p class="kit-card-title">Save</p>
+                  <div class="kit-actions">
+                    <button type="button" id="st-download" class="kit-btn kit-btn-primary">Statement (Word)</button>
+                    <button type="button" id="lt-download" class="kit-btn kit-btn-primary">Letter (Word)</button>
+                    <button type="button" id="st-share" class="kit-btn" hidden>Share</button>
+                    <button type="button" id="st-print" class="kit-btn">Print or PDF</button>
+                    <button type="button" id="st-copy" class="kit-btn">Copy as text</button>
+                  </div>
+                  <p class="kit-save-why">Word, so you can edit before you send: add your letterhead and the client's name there, not here.</p>
+                  <div class="kit-actions kit-actions-quiet">
+                    <button type="button" id="st-json" class="kit-btn kit-btn-quiet">Save your answers (.json)</button>
+                    <button type="button" id="st-clear" class="kit-btn kit-btn-quiet">Clear</button>
+                  </div>
+                  <p class="kit-save-why">The .json file opens again here with "Open saved facts", or in an AI assistant. Keep it for the next client who asks. Nothing is uploaded.</p>
+                </div>
+                <div class="kit-card kit-doc-card">
+                  <div class="kit-doc-tabs" role="tablist" aria-label="Preview">
+                    <button type="button" role="tab" class="kit-chip-btn" id="tab-statement" aria-selected="true" aria-controls="preview">Statement</button>
+                    <button type="button" role="tab" class="kit-chip-btn" id="tab-letter" aria-selected="false" aria-controls="preview">Letter</button>
+                  </div>
+                  <div class="kit-doc" id="preview" role="tabpanel"></div>
+                </div>
+              </aside>
+            </div>
+            <div id="print-record"></div>
+          </div>
+
+          <h2 id="example">What you get</h2>
+          <p class="guide-measure">
+            A one-page statement and a short letter, in English or Dutch.
+            Lines the firm confirmed say what was checked; lines a vendor
+            promises are kept apart with their sources; anything not confirmed
+            is listed as an open point ({{open_pill}}). Here is one for an
+            invented payroll office.
+          </p>
+          <div class="guide-downloads">
+            <a data-cta="statement-example" href="{{example_url}}" download>Example AI statement (Word): an invented payroll office, with the points it is still checking</a>
+          </div>
+
+          <div class="guide-bridge" id="help">
+            <h2>{{gap_title}}</h2>
+            <p class="guide-measure">{{gap_text}}</p>
+            <div class="guide-cta-row">
+              <a data-cta="statement-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="statement-intake" href="/contact" class="guide-text-link">Book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="faq">Questions</h2>
+{{faq}}
+
+          <h2 id="for-assistants">For AI assistants</h2>
+          <p class="guide-measure">
+            If someone gave you this page and asked for help: here is how to
+            fill in their firm's AI facts with them. People can read it too.
+          </p>
+          <details class="guide-more">
+            <summary>How to fill in the facts <span class="summary-hint">questions and allowed answers</span></summary>
+{{assistant_section}}
+          </details>
+
+          <h2 id="about">About this kit</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't do</summary>
+            <p><strong>It gives you</strong> the questions clients ask, the rules behind them, and a statement and letter written only from what your firm confirmed. Vendor statements come from the <a href="{{guide_url}}">AI accounts guide</a>, checked {{guide_checked_human}}.</p>
+            <p><strong>It doesn't</strong> check your setup, decide what your contracts allow, or replace advice. The Dutch wording of the statement and letter was written with AI: read it before you send it. It is not legal advice.</p>
+          </details>
+          <details class="guide-more" id="reuse">
+            <summary>Reuse it <span class="summary-hint">CC BY 4.0</span></summary>
+            <p>The text and the sentence model are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. The statement you make is yours.</p>
+            <p>The source is public on GitHub: <a href="https://github.com/noxiom/ai-client-data-kits" rel="noopener">noxiom/ai-client-data-kits</a>. The firm facts are a JSON Schema at <a href="/data/firm-ai-facts.schema.json">/data/firm-ai-facts.schema.json</a>; the same saved file will work with the next kit, for the AI section of client questionnaires.</p>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">version {{version}}, next check by {{next_review_human}}</span></summary>
+{{changelog}}
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>. We check it, correct it and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">"Checked" is the date we last read the page. The vendor statements in the builder carry their own sources.</p>
+            <!-- sources-list -->
+          </details>
+
+          <p class="report-footnote">
+            Written by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>, which reviews how small firms use AI tools with client data. Version {{version}}, checked {{checked_human}}. Not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script type="application/json" id="kit-data">{{kit_data}}</script>
+    <script>
+{{logic_js}}
+    </script>
+    <script>
+{{docx_js}}
+    </script>
+    <script>
+{{statement_js}}
+    </script>
+  </body>
+</html>

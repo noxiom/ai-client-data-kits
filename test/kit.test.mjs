@@ -174,8 +174,9 @@ test("every account type in the guide reaches the record builder", () => {
 
 // ---------------------------------------------------------------- pages
 
-const pages = { owner: renderOwner(kit, data), employee: renderEmployee(kit, data) };
-const slugs = { owner: kit.owner.slug, employee: kit.employee.slug };
+const pages = { owner: renderOwner(kit, data), employee: renderEmployee(kit, data), employee_nl: renderEmployee(kit, data, "nl") };
+const slugs = { owner: kit.owner.slug, employee: kit.employee.slug, employee_nl: kit.employee_nl.slug };
+const faqs = { owner: kit.owner.faq, employee: kit.employee.faq, employee_nl: kit.employee_nl.faq };
 
 for (const [name, html] of Object.entries(pages)) {
   test(`${name} page: structure and metadata`, () => {
@@ -193,7 +194,7 @@ for (const [name, html] of Object.entries(pages)) {
   test(`${name} page: JSON-LD parses and matches the questions`, () => {
     const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
     const faq = blocks.find((b) => b["@type"] === "FAQPage");
-    assert.equal(faq.mainEntity.length, (name === "owner" ? kit.owner : kit.employee).faq.length);
+    assert.equal(faq.mainEntity.length, faqs[name].length);
     const article = blocks.find((b) => b["@type"] === "Article");
     assert.equal(article.author["@id"], "https://noxiom.com/about#founder");
   });
@@ -208,8 +209,8 @@ for (const [name, html] of Object.entries(pages)) {
   test(`${name} page: internal links resolve`, () => {
     const guidePages = ["/ai-accounts", ...data.tools.map((t) => `/${t.slug}`)];
     const known = new Set([
-      "/", "/about", "/services", "/pricing", "/sample-report", "/contact", "/privacy", "/nl/",
-      ...guidePages, `/${kit.owner.slug}`, `/${kit.employee.slug}`, DOWNLOADS.record, DOWNLOADS.handout, SCHEMA_PATH,
+      "/", "/about", "/services", "/pricing", "/sample-report", "/contact", "/privacy", "/nl/", "/nl/ai-tools-bedrijfsgegevens",
+      ...guidePages, `/${kit.owner.slug}`, `/${kit.employee.slug}`, `/${kit.employee_nl.slug}`, DOWNLOADS.record, DOWNLOADS.handout, DOWNLOADS.handout_nl, SCHEMA_PATH,
     ]);
     const markup = html.replace(/<script[\s\S]*?<\/script>/g, "");
     for (const [, href] of markup.matchAll(/href="(\/[^"#]*)(#[^"]*)?"/g)) {
@@ -227,7 +228,7 @@ for (const [name, html] of Object.entries(pages)) {
       assert.ok(!scripts.includes(bad), `script uses ${bad}`);
     }
     const srcs = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((m) => m[1]);
-    assert.deepEqual(srcs, ["scripts.js"], "only the site's own script");
+    assert.deepEqual(srcs, [name.endsWith("_nl") ? "/scripts.js" : "scripts.js"], "only the site's own script");
     for (const [tag] of html.matchAll(/<(input|textarea|select)\b[^>]*>/g)) assert.ok(tag.includes('autocomplete="off"'), `autocomplete on: ${tag.slice(0, 60)}`);
   });
 
@@ -237,7 +238,7 @@ for (const [name, html] of Object.entries(pages)) {
 }
 
 test("every registered tag is used, and the builder's own buttons carry none", () => {
-  const all = pages.owner + pages.employee;
+  const all = pages.owner + pages.employee + pages.employee_nl;
   for (const tag of CTA_TAGS) assert.ok(all.includes(`data-cta="${tag}"`), `unused tag ${tag}`);
   assert.ok(!/<button[^>]*data-cta/.test(pages.owner), "the record builder sends nothing, not even a click tag");
 });
@@ -308,6 +309,7 @@ test("the Markdown templates in the repository are up to date", () => {
   for (const [file, blocks] of [
     ["incident-record.md", recordBlocks(kit, data)],
     ["staff-handout.md", handoutBlocks(kit)],
+    ["staff-handout-nl.md", handoutBlocks(kit, "nl")],
     ["first-72-hours.md", guideBlocks(kit)],
   ]) {
     assert.ok(existsSync(join(KIT_DIR, file)), `${file} missing: run node src/render.mjs`);
@@ -412,4 +414,57 @@ test("the schema file is written next to the pages", () => {
   render(out);
   const schema = JSON.parse(readFileSync(join(out, SCHEMA_PATH), "utf8"));
   assert.equal(schema.title, "AI data incident record");
+});
+
+// ---------------------------------------------------------------- Dutch staff page
+
+test("Dutch staff page: language, header, hreflang pair, and it says AI wrote the Dutch", () => {
+  const nl = pages.employee_nl;
+  const en = pages.employee;
+  assert.ok(nl.startsWith('<!doctype html>\n<html lang="nl">'));
+  assert.ok(nl.includes("<!-- include: header-nl -->") && !nl.includes("<!-- include: header -->"));
+  assert.ok(en.includes("<!-- include: header -->"));
+  const pairs = (html) => [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)" \/>/g)].map((m) => `${m[1]} ${m[2]}`);
+  assert.deepEqual(pairs(nl), pairs(en), "both pages carry the same three hreflang tags");
+  assert.deepEqual(pairs(en), [
+    `en https://noxiom.com/${kit.employee.slug}`,
+    `nl https://noxiom.com/${kit.employee_nl.slug}`,
+    `x-default https://noxiom.com/${kit.employee.slug}`,
+  ]);
+  assert.ok(/geschreven met hulp van AI/.test(nl), "the page says the Dutch was written with AI");
+  assert.ok(/in het Engels/.test(nl), "the page says calls are in English");
+  const article = [...nl.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1])).find((b) => b["@type"] === "Article");
+  assert.equal(article.inLanguage, "nl");
+  assert.ok(/Bron \d/.test(nl) && /Gecontroleerd \d+ \w+ 2026/.test(nl), "Dutch citation labels and dates");
+  for (const word of ["Checked", "Copy the message", "Sources", "In short"]) assert.ok(!nl.includes(`>${word}<`), `English UI left: ${word}`);
+});
+
+test("Dutch staff page: same structure as the English one", () => {
+  const nl = kit.employee_nl;
+  const en = kit.employee;
+  assert.equal(nl.steps.length, en.steps.length);
+  assert.equal(nl.steps[0].items.length, en.steps[0].items.length);
+  assert.equal(nl.answer.length, en.answer.length);
+  assert.deepEqual(Object.keys(nl.ui).sort(), Object.keys(en.ui).sort(), "same UI strings in both languages");
+  for (const f of nl.faq) for (const id of f.sources) assert.ok(sourceIds.has(id), id);
+  assert.deepEqual(nl.work_account_sources, en.work_account_sources);
+});
+
+test("Dutch tool notes exist for every personal account and match the guide's check", () => {
+  const tools = data.tools.filter((t) => t.plans.some((p) => p.account === "personal")).map((t) => t.id);
+  assert.deepEqual(Object.keys(kit.employee_nl.tool_notes).sort(), [...tools].sort());
+  assert.equal(kit.employee_nl.tool_notes_from, data.checked, "the guide was re-checked: re-translate the Dutch tool notes, then update tool_notes_from");
+  for (const id of tools) assert.ok(pages.employee_nl.includes(`href="/nl/ai-tools-bedrijfsgegevens#${id}"`), `link to the Dutch article's ${id} section`);
+});
+
+test("the Dutch staff handout is a valid Word file in Dutch", () => {
+  const out = mkdtempSync(join(tmpdir(), "kit-nl-"));
+  render(out);
+  const files = unzip(readFileSync(join(out, DOWNLOADS.handout_nl)));
+  for (const part of ["word/document.xml", "word/styles.xml"]) wellFormed(files[part], part);
+  const doc = files["word/document.xml"];
+  for (const text of [kit.employee_nl.handout.title, kit.employee_nl.handout.contact_line, kit.employee_nl.message]) assert.ok(doc.includes(xmlText(text)), text);
+  assert.ok(files["word/styles.xml"].includes('<w:lang w:val="nl-NL"/>'));
+  assert.ok(!DASHES.test(doc));
+  assert.ok(existsSync(join(out, `${kit.employee_nl.slug}.html`)));
 });

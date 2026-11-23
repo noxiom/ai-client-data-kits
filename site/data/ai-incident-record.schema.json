@@ -3,7 +3,7 @@
   "$id": "https://noxiom.com/data/ai-incident-record.schema.json",
   "title": "AI data incident record",
   "description": "The record from https://noxiom.com/ai-data-incident: what a small firm writes down when client or company data went into an AI tool. For AI assistants helping someone fill it in: ask the questions one at a time in plain words; describe the data by type only and never ask for the data itself or anyone's name; use only the listed values (const) for choices; leave out what the person doesn't know instead of guessing; give the result as one JSON object. The person pastes it into the record builder on the page, which checks it and fills the form in their browser. The page never decides whether to report a breach; neither should you.",
-  "x-version": "1.1.0",
+  "x-version": "1.2.0",
   "x-license": "https://creativecommons.org/licenses/by/4.0/",
   "type": "object",
   "properties": {

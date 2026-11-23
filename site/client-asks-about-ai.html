@@ -1,0 +1,1727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Client asks how you use AI? A one-page answer and letter | Noxiom</title>
+    <meta name="description" content="A client asks whether you use AI with their data. Build a truthful one-page AI statement and answer letter, in English or Dutch, from what you have confirmed." />
+    <link rel="canonical" href="https://noxiom.com/client-asks-about-ai" />
+    <meta property="og:title" content="A client asks how you use AI with their data" />
+    <meta property="og:description" content="A client asks whether you use AI with their data. Build a truthful one-page AI statement and answer letter, in English or Dutch, from what you have confirmed." />
+    <meta property="og:url" content="https://noxiom.com/client-asks-about-ai" />
+    <meta property="article:modified_time" content="2026-11-23" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A client asks how you use AI with their data",
+  "description": "A client asks whether you use AI with their data. Build a truthful one-page AI statement and answer letter, in English or Dutch, from what you have confirmed.",
+  "url": "https://noxiom.com/client-asks-about-ai",
+  "mainEntityOfPage": "https://noxiom.com/client-asks-about-ai",
+  "inLanguage": "en",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the AI Act require us to tell clients that we use AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for ordinary internal use. Article 50 sets transparency duties for providers of AI systems, such as the makers of chatbots, and for deployers of emotion recognition, deep fakes, and AI-written text published to inform the public on matters of public interest. Using an AI tool on client work isn't one of those. What you owe a client comes from your contract with them, from the GDPR where you are their processor, and from your professional rules. Separately, Article 4 asks firms that use AI systems to see to their staff's AI literacy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We are the client's processor. Do we need their permission for an AI tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A processor may not engage another processor without the controller's prior specific or general written authorisation. Under a general authorisation, it must tell the controller about new ones so the controller can object. An AI vendor that processes your client's personal data is such a sub-processor. Check what your processing agreement with the client says, and put the vendor on the list you give them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we tell the client the tool is GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The statement doesn't say that, and we advise against it. Say what you checked: the agreement with the vendor, the training setting, the storage location, and what the vendor states, with the date. Whether your use meets the GDPR depends on how you use the tool, not on the tool alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if we don't know which AI tools our staff use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Then the statement says so, as an open point. A statement that claims more than the firm knows does more harm than an honest open point, especially if the client later finds out. The 20-minute check in the AI accounts guide is a first step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the statement keep what the vendor says apart from what we checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because they are different claims. \"Training is off: we checked the setting\" is your firm's fact. \"The vendor says it doesn't train on business data by default\" is the vendor's promise. Your client's lawyer reads them differently, and you can only vouch for the first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this page send or keep what we enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the statement as Word, or your answers as a .json file to continue later."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "A client asks how you use AI with their data",
+      "item": "https://noxiom.com/client-asks-about-ai"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+/* Situation kits: additions to the guide's stylesheet (guide.css is inlined
+   first). Same rules: status colours only with an icon and a label. */
+.kit-answer { border: 1px solid rgba(40, 247, 216, 0.3); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 18px; background: rgba(40, 247, 216, 0.05); margin: 4px 0 12px; }
+.kit-answer-label { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent) !important; margin: 0 0 6px !important; }
+.kit-answer p { color: #ececec !important; margin: 0 !important; line-height: 1.55; }
+.kit-answer ol { margin: 0; padding-left: 20px; color: #ececec; display: flex; flex-direction: column; gap: 6px; line-height: 1.5; }
+.kit-when { font-size: 0.74em; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); }
+.kit-steps .step-card h3 { margin: 0; }
+.kit-steps { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.kit-steps-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.kit-message { border: 1px dashed var(--field-border); border-radius: 10px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); color: var(--text-soft); font-size: 0.9em; line-height: 1.55; margin: 4px 0 0; white-space: pre-wrap; }
+.kit-copy { font: inherit; font-size: 0.84em; font-weight: 600; color: var(--accent); background: none; border: 1px solid rgba(40, 247, 216, 0.35); border-radius: 999px; padding: 4px 12px; cursor: pointer; align-self: flex-start; }
+.kit-copy[hidden] { display: none; }
+.kit-tools { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88em; color: var(--text-soft); }
+.kit-tools strong { color: #e5e5e5; }
+.kit-work { border: 1px solid rgba(40, 247, 216, 0.25); border-top: 3px solid var(--accent); border-radius: 12px; padding: 12px 16px; background: rgba(255, 255, 255, 0.02); margin: 10px 0 12px; }
+.kit-work p { margin: 6px 0 0 !important; color: var(--text-soft); }
+
+/* ------------------------------------------------------------ record builder */
+.kit-privacy { display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); font-size: 0.9em; color: var(--text-soft); margin: 0 0 18px; }
+.kit-privacy .pill-icon { background: #0ca30c; margin-top: 2px; }
+.kit-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.kit-layout[hidden] { display: none; }
+.kit-form { display: flex; flex-direction: column; gap: 22px; }
+
+/* Sections: a quiet heading above a rounded card, like a grouped settings list */
+.kit-section { border: none; padding: 0; margin: 0; min-width: 0; }
+.kit-section legend { float: left; width: 100%; padding: 0 4px; margin: 0 0 8px; font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.kit-section legend + * { clear: both; }
+.kit-group { background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; overflow: hidden; }
+.kit-group > .kit-field { padding: 16px 18px; margin: 0; }
+.kit-group > .kit-field + .kit-field { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-field { display: flex; flex-direction: column; gap: 10px; }
+.kit-label { font-size: 0.95em; font-weight: 600; color: #f2f2f2; letter-spacing: -0.005em; }
+.kit-optional { font-weight: 400; font-size: 0.86em; color: var(--text-muted); margin-left: 6px; }
+.kit-hint { font-size: 0.82em; color: var(--text-muted); line-height: 1.45; margin-top: -4px; }
+
+/* Text fields */
+.kit-input { font: inherit; font-size: 0.95em; color: #f2f2f2; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 12px; width: 100%; box-sizing: border-box; color-scheme: dark; transition: border-color 0.15s, box-shadow 0.15s, background 0.15s; }
+.kit-input:hover { background: rgba(255, 255, 255, 0.07); }
+.kit-input:focus { outline: none; border-color: rgba(40, 247, 216, 0.7); box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.16); }
+textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
+.kit-input::placeholder { color: var(--text-muted); }
+
+/* Chips: single or multiple choice with short labels */
+.kit-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-chip { position: relative; cursor: pointer; }
+.kit-chip input, .kit-row input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.kit-chip span { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 0.88em; line-height: 1.2; color: #e8e8e8; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); transition: background 0.15s, border-color 0.15s, color 0.15s; user-select: none; }
+.kit-chip:hover span { background: rgba(255, 255, 255, 0.1); }
+.kit-chip input:checked + span { color: #ffffff; background: rgba(40, 247, 216, 0.16); border-color: rgba(40, 247, 216, 0.75); }
+.kit-chip input:checked + span::before { content: "\2713"; font-weight: 700; color: var(--accent); font-size: 0.9em; }
+.kit-chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+
+/* Grouped list: options with long labels, and the containment steps */
+.kit-rows { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden; background: rgba(0, 0, 0, 0.12); }
+.kit-row { position: relative; display: flex; align-items: center; gap: 12px; padding: 11px 14px; cursor: pointer; font-size: 0.9em; line-height: 1.4; color: #e2e2e2; transition: background 0.15s; }
+.kit-row + .kit-row { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-row:hover { background: rgba(255, 255, 255, 0.04); }
+.kit-row-text { flex: 1 1 auto; min-width: 0; }
+.kit-row .tag { flex: 0 0 auto; }
+.kit-ind { flex: 0 0 auto; width: 20px; height: 20px; box-sizing: border-box; border: 1.5px solid rgba(255, 255, 255, 0.3); display: grid; place-items: center; transition: background 0.15s, border-color 0.15s; }
+.kit-row input[type="radio"] ~ .kit-ind { border-radius: 50%; }
+.kit-row input[type="checkbox"] ~ .kit-ind { border-radius: 6px; }
+.kit-row input:checked ~ .kit-ind { background: var(--accent); border-color: var(--accent); }
+.kit-row input[type="checkbox"]:checked ~ .kit-ind::after { content: "\2713"; color: #052a24; font-size: 0.75em; font-weight: 800; }
+.kit-row input[type="radio"]:checked ~ .kit-ind::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #052a24; }
+.kit-row input:checked ~ .kit-row-text { color: #ffffff; }
+.kit-row input:focus-visible ~ .kit-ind { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+.kit-stamp { flex: 0 0 auto; font-size: 0.85em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.kit-accounts { margin-top: 2px; }
+.kit-accounts[hidden] { display: none; }
+
+/* Day and time */
+.kit-clock { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.kit-clock .kit-date { width: auto; min-width: 170px; }
+.kit-clock .kit-date[hidden] { display: none; }
+.kit-clock .kit-time { width: 112px; font-variant-numeric: tabular-nums; text-align: center; }
+.kit-time::-webkit-calendar-picker-indicator { display: none; }
+.kit-date::-webkit-calendar-picker-indicator { filter: invert(0.85); opacity: 0.6; cursor: pointer; }
+.kit-now { font: inherit; font-size: 0.86em; font-weight: 600; color: var(--accent); background: none; border: none; padding: 8px 6px; cursor: pointer; border-radius: 8px; }
+.kit-now:hover { background: rgba(40, 247, 216, 0.08); }
+.kit-now:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Summary column */
+.kit-summary { position: sticky; top: 96px; max-height: calc(100vh - 112px); overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 12px; padding: 22px 2px 2px 0; }
+.kit-card { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 14px 18px; background: rgba(255, 255, 255, 0.035); }
+.kit-card[hidden] { display: none; }
+.kit-card-title { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted) !important; margin: 0 0 8px !important; }
+.kit-deadline-label { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-deadline-time { font-size: 1.45em; font-weight: 700; letter-spacing: -0.01em; color: #f5f5f5 !important; margin: 2px 0 8px !important; font-variant-numeric: tabular-nums; }
+.kit-deadline-left { font-size: 0.86em; margin: 0 !important; color: var(--text-soft); }
+.kit-deadline-empty { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-role { border-color: rgba(250, 178, 25, 0.35); background: rgba(250, 178, 25, 0.05); font-size: 0.9em; color: var(--text-soft); }
+.kit-role p { margin: 0 !important; }
+.kit-plan .plan-row { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
+.kit-plan-title { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; }
+.kit-fact { font-size: 0.86em; margin: 6px 0 2px !important; color: var(--text-soft); line-height: 1.45; }
+.kit-src { font-size: 0.76em; color: var(--text-muted) !important; margin: 0 !important; overflow-wrap: anywhere; }
+.kit-plan-more summary { font-size: 0.84em; color: var(--accent); padding: 6px 0 2px; }
+.kit-plan-more[open] summary { margin-bottom: 4px; }
+.kit-plan-todo { font-size: 0.88em; margin: 10px 0 6px !important; color: var(--text-soft); }
+.kit-factor-group + .kit-factor-group { margin-top: 12px; }
+.kit-factor-head { margin: 0 0 6px !important; }
+.kit-factor-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: 0.87em; color: var(--text-soft); line-height: 1.45; }
+.kit-factor-list strong { color: #e5e5e5; }
+.kit-high { display: block; font-size: 0.92em; color: #f3c35b; margin-top: 2px; }
+.kit-factor-list .kit-src { display: block; margin-top: 2px !important; }
+.kit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-actions-quiet { margin-top: 10px; }
+.kit-save-why { font-size: 0.78em; color: var(--text-muted) !important; margin: 8px 0 0 !important; line-height: 1.45; }
+
+/* Buttons */
+.kit-btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-size: 0.88em; font-weight: 600; border-radius: 999px; padding: 8px 15px; min-height: 38px; box-sizing: border-box; cursor: pointer; border: 1px solid rgba(40, 247, 216, 0.4); color: var(--accent); background: rgba(40, 247, 216, 0.06); transition: background 0.15s, filter 0.15s; text-decoration: none; }
+.kit-btn:hover { background: rgba(40, 247, 216, 0.12); }
+.kit-btn-primary { background: var(--accent); color: #052a24; border-color: var(--accent); }
+.kit-btn-primary:hover { background: var(--accent); filter: brightness(1.06); }
+.kit-btn-quiet { border-color: rgba(255, 255, 255, 0.12); color: var(--text-muted); background: none; }
+.kit-btn-quiet:hover { background: rgba(255, 255, 255, 0.05); }
+.kit-btn[hidden] { display: none; }
+.kit-btn:focus-visible, .visually-hidden:focus-visible + .kit-btn { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Fill it in with an assistant */
+.kit-assist { border: 1px solid rgba(40, 247, 216, 0.22); border-radius: 16px; padding: 16px 18px; background: linear-gradient(180deg, rgba(40, 247, 216, 0.06), rgba(40, 247, 216, 0.02)); display: flex; flex-direction: column; gap: 10px; }
+.kit-assist-title { font-weight: 700; color: #f2f2f2 !important; margin: 0 !important; }
+.kit-assist-text { font-size: 0.9em; color: var(--text-soft); margin: 0 !important; line-height: 1.5; }
+.kit-assist-caution { font-size: 0.84em; color: #f3c35b !important; margin: 0 !important; line-height: 1.45; }
+.kit-assist-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-paste { display: flex; flex-direction: column; gap: 8px; }
+.kit-paste[hidden] { display: none; }
+.kit-paste textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+.kit-load-result { font-size: 0.86em; margin: 0 !important; padding: 10px 12px; border-radius: 10px; line-height: 1.45; }
+.kit-load-result[hidden] { display: none; }
+.kit-load-result.is-ok { background: rgba(12, 163, 12, 0.1); color: #cfeccf !important; }
+.kit-load-result.is-warn { background: rgba(250, 178, 25, 0.08); color: #f3d79b !important; }
+.kit-assist-fields { font-size: 0.86em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; padding-left: 18px; }
+.kit-assist-fields code, .kit-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: #d8fff8; }
+.kit-code { display: block; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px 14px; border-radius: 10px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.06); }
+
+/* Statement builder (kit 2): tools with their short questions, the preview */
+.kit-tool-head { font-size: 0.78em; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted) !important; margin: 6px 0 -2px !important; }
+.kit-toolq { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px 14px 46px; border-top: 1px dashed rgba(255, 255, 255, 0.08); background: rgba(40, 247, 216, 0.03); }
+.kit-toolq[hidden] { display: none; }
+.kit-toolq .kit-field { gap: 6px; }
+.kit-toolq-label { margin-top: 0; color: var(--text-soft); }
+.kit-toolq .kit-chip span { padding: 6px 12px; font-size: 0.84em; }
+.kit-open-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 0.86em; color: var(--text-soft); line-height: 1.45; }
+.kit-open-count { font-size: 1.3em; font-weight: 700; color: #f5f5f5 !important; margin: 0 0 6px !important; }
+.kit-doc-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.kit-chip-btn { font: inherit; font-size: 0.84em; font-weight: 600; padding: 6px 14px; border-radius: 999px; cursor: pointer; color: var(--text-soft); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); }
+.kit-chip-btn[aria-selected="true"] { color: #052a24; background: var(--accent); border-color: var(--accent); }
+.kit-doc { background: #fbfbf9; color: #1b1b1b; border-radius: 10px; padding: 18px 20px; font-size: 0.82em; line-height: 1.5; max-height: 70vh; overflow-y: auto; }
+.kit-doc h3, .kit-doc h4, .kit-doc h5 { color: #111 !important; margin: 12px 0 4px !important; letter-spacing: 0; }
+.kit-doc h3 { font-size: 1.35em; margin-top: 0 !important; }
+.kit-doc h4 { font-size: 1.05em; border-bottom: 1px solid #ddd; padding-bottom: 2px; }
+.kit-doc h5 { font-size: 0.98em; }
+.kit-doc p, .kit-doc li { color: #1b1b1b !important; margin: 0 0 6px !important; }
+.kit-doc ul, .kit-doc ol { padding-left: 18px; margin: 0 0 6px; }
+.kit-doc .small { font-size: 0.86em; color: #555 !important; }
+.kit-doc .is-open { background: #fff4d6; border-radius: 4px; padding: 0 3px; }
+.kit-doc a { color: #0b5d52; }
+.kit-asks { list-style: none; padding: 0; margin: 0 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.kit-asks li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; background: rgba(255, 255, 255, 0.03); }
+.kit-asks-q { color: #ececec; font-weight: 600; line-height: 1.4; }
+.kit-asks-a { font-size: 0.84em; color: var(--text-muted); }
+
+/* The bar at the bottom of the screen on phones and tablets */
+.kit-bar { display: none; }
+.kit-static-factors { columns: 2 260px; column-gap: 24px; font-size: 0.9em; }
+.kit-static-factors li { break-inside: avoid; margin-bottom: 6px; color: var(--text-soft); }
+#print-record { display: none; }
+
+@media (max-width: 960px) {
+  .kit-layout { grid-template-columns: 1fr; }
+  .kit-summary { position: static; max-height: none; overflow: visible; padding-top: 0; }
+  .kit-bar { display: flex; position: sticky; bottom: 10px; z-index: 5; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 16px; background: rgba(22, 26, 40, 0.92); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+  .kit-bar-text { display: flex; flex-direction: column; font-size: 0.82em; color: var(--text-muted); line-height: 1.3; min-width: 0; }
+  .kit-bar-text strong { color: #f5f5f5; font-size: 1.08em; font-variant-numeric: tabular-nums; }
+  .kit-bar-text span { font-variant-numeric: tabular-nums; }
+}
+@media (max-width: 600px) {
+  .kit-group > .kit-field { padding: 14px 14px; }
+  .kit-assist { padding: 14px; }
+}
+/* Touch screens: targets of at least 44 px, and 16 px text in fields so
+   iPhones don't zoom in when a field is tapped */
+@media (pointer: coarse) {
+  .kit-chip span { padding: 11px 16px; min-height: 44px; box-sizing: border-box; font-size: 0.92em; }
+  .kit-row { min-height: 48px; padding: 12px 14px; }
+  .kit-ind { width: 22px; height: 22px; }
+  .kit-input { font-size: 16px; padding: 12px; }
+  .kit-btn { min-height: 44px; padding: 10px 18px; }
+  .kit-now { min-height: 44px; padding: 10px 12px; }
+  .kit-clock .kit-time { width: 120px; }
+}
+
+/* Print: only the record, as a plain document */
+@media print {
+  body > *:not(main), .guide .report-doc > *:not(#builder-wrap) { display: none !important; }
+  #builder-wrap > *:not(#print-record) { display: none !important; }
+  body, main, .report-doc, .report-wrap { background: #fff !important; color: #000 !important; border: none !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; }
+  #print-record { display: block !important; color: #111; font: 10.5pt/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #print-record h1 { font-size: 18pt; margin: 0 0 8pt; color: #111; }
+  #print-record h2 { font-size: 12.5pt; margin: 14pt 0 6pt; padding-bottom: 3pt; border-bottom: 1px solid #ccc; color: #111; }
+  #print-record h3 { font-size: 11pt; margin: 10pt 0 4pt; color: #111; }
+  #print-record p, #print-record li { color: #111; margin: 0 0 6pt; }
+  #print-record .small { font-size: 8.5pt; color: #555; }
+  #print-record .kv strong { color: #111; }
+  #print-record h4 { font-size: 12.5pt; margin: 14pt 0 6pt; color: #111; }
+  #print-record h5 { font-size: 11pt; margin: 10pt 0 4pt; color: #111; }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free kit</span>
+            <h1>A client asks how you use AI with their data</h1>
+            <p class="guide-lead">Often there is a renewal or a new contract waiting. Here is what clients ask, why they ask it, and a builder that turns what your firm has confirmed into a one-page statement and a short letter.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-23">23 November 2026</time></strong></span>
+              <span><a href="#builder">Statement builder: runs in your browser</a></span>
+              <span>English and Dutch</span>
+            </p>
+          </div>
+
+          <div class="kit-answer">
+            <p class="kit-answer-label">In short</p>
+            <p>Tell them which AI tools you use and under which accounts, what may go into them, who checks the output, and what you are still checking. Say only what you have confirmed, and keep what the vendor promises apart from what you checked yourself. The builder below writes the statement and the letter that way, in English or Dutch.</p>
+          </div>
+
+          <h2 id="asks">What clients ask</h2>
+          <p class="guide-measure">Client questionnaires and contract clauses come back to the same points. Here they are in the clients' own words, and where your statement answers each one.</p>
+<ul class="kit-asks">
+<li><span class="kit-asks-q">&ldquo;Do you use AI on our data, or only for your own back office?&rdquo;<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></span><span class="kit-asks-a">Your statement: The AI tools you use; what goes in</span></li>
+<li><span class="kit-asks-q">&ldquo;Which AI tools, from which vendors?&rdquo;<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></span><span class="kit-asks-a">Your statement: The AI tools you use</span></li>
+<li><span class="kit-asks-q">&ldquo;Will our data be used to train the AI?&rdquo;<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></span><span class="kit-asks-a">Your statement: Per tool: training, and what the vendor states</span></li>
+<li><span class="kit-asks-q">&ldquo;Where is our data stored, and how long is it kept?&rdquo;<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></span><span class="kit-asks-a">Your statement: Per tool: storage and retention</span></li>
+<li><span class="kit-asks-q">&ldquo;Who checks the output, and who is responsible if it is wrong?&rdquo;<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></span><span class="kit-asks-a">Your statement: How we work</span></li>
+<li><span class="kit-asks-q">&ldquo;Are your staff trained to use it?&rdquo;<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></span><span class="kit-asks-a">Your statement: How we work</span></li>
+<li><span class="kit-asks-q">&ldquo;Is the AI vendor a sub-processor we approved?&rdquo;<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></span><span class="kit-asks-a">Your statement: How we work (for processors)</span></li>
+<li><span class="kit-asks-q">&ldquo;Can we ask you not to use AI on our work?&rdquo;<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></span><span class="kit-asks-a">Your statement: Your choices</span></li>
+            </ul>
+
+          <h2 id="why">Why they ask</h2>
+          <div class="guide-steps kit-steps">
+<div class="step-card"><h3>If you are their processor</h3><p>Under the GDPR a processor may not engage another processor without the client's prior written authorisation, specific or general. Under a general authorisation it must tell the client about a new one, so the client can object. An AI vendor that processes the client's personal data for you is such a sub-processor.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></p></div>
+<div class="step-card"><h3>Their contracts</h3><p>Model contract clauses for AI, published for public buyers by the European Commission's procurement community, ask suppliers not to use client data for anything but the agreed work, to delete it on request, to keep a person watching for over-reliance on AI output, and to give information on request. A client's own contract may use similar wording.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></div>
+<div class="step-card"><h3>Not the AI Act, mostly</h3><p>Article 50 of the AI Act, which applies from 2 August 2026, sets transparency duties for providers of AI systems, and for deployers of emotion recognition, of deep fakes, and of AI-written text published to inform the public on matters of public interest. Using ChatGPT or Copilot on client work is none of those. A KvK page explains those duties; it doesn't answer your client's question.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-6" aria-label="Source 6">6</a></sup></p></div>
+          </div>
+
+          <h2 id="builder">Build your statement and letter</h2>
+          <div id="builder-wrap">
+            <p class="kit-privacy">
+              <span class="pill-icon" aria-hidden="true">&#x2713;</span>
+              <span>
+                <strong>Runs in your browser.</strong> Nothing you type is sent
+                anywhere or stored, not even on this device. Close the tab and
+                it's gone, so save first. Answer what you have confirmed. Leave the rest, or pick &quot;not sure&quot;: it becomes an open point in the statement, never a claim.
+              </span>
+            </p>
+            <p class="guide-note" id="builder-fallback">
+              The statement builder needs JavaScript. The
+              <a href="/downloads/ai-statement-example.docx" download>example statement (Word)</a>
+              shows what it makes; the questions are listed under
+              <a href="#for-assistants">For AI assistants</a>.
+            </p>
+            <div class="kit-layout" id="statement-builder" hidden>
+              <div class="kit-form">
+                <section class="kit-assist" aria-labelledby="assist-title">
+                  <p class="kit-assist-title" id="assist-title">Let an AI assistant fill it in</p>
+                  <p class="kit-assist-text">Rather talk it through, or on your phone? An AI assistant can ask you the questions and give you the answers as one block of JSON. You paste it back here, check it, and save.</p>
+                  <p class="kit-assist-caution">Use your firm's work account for this. Don't give it client names or client data: the questions are about your firm's own setup.</p>
+                  <div class="kit-assist-actions">
+                    <button type="button" class="kit-btn kit-btn-primary" data-copy="assistant-prompt" data-copied="Copied. Paste it into your assistant">Copy instructions</button>
+                    <button type="button" class="kit-btn" id="paste-open" aria-expanded="false" aria-controls="paste-panel">Paste facts</button>
+                    <input type="file" id="file-open" class="visually-hidden" accept=".json,application/json" autocomplete="off" />
+                    <label class="kit-btn" for="file-open">Open saved facts</label>
+                  </div>
+                  <details class="kit-plan-more">
+                    <summary>Show the instructions</summary>
+                    <p class="kit-message" id="assistant-prompt">Help me fill in my firm's AI facts, for an AI statement to clients. The questions and the allowed answers are at https://noxiom.com/data/firm-ai-facts.schema.json (the same list is on https://noxiom.com/client-asks-about-ai under &quot;For AI assistants&quot;). Ask me the questions one at a time, in plain words, and offer the allowed answers. For each AI account the firm provides, also ask the short questions about it (tool_facts). Only record what I have confirmed: if I'm not sure, use the &quot;not sure&quot; answer or leave it out; don't guess, and don't fill in what a vendor promises as if it were my firm's fact. Don't ask for client names or client data. When we're done, give me the whole result as one JSON code block, so I can paste it back into the page.</p>
+                  </details>
+                  <div class="kit-paste" id="paste-panel" hidden>
+                    <label class="kit-label" for="paste-box">Paste the JSON from your assistant</label>
+                    <textarea class="kit-input" id="paste-box" rows="5" autocomplete="off" spellcheck="false" placeholder="{ &quot;tools&quot;: [...], ... }"></textarea>
+                    <div class="kit-assist-actions">
+                      <button type="button" class="kit-btn kit-btn-primary" id="paste-load">Fill in the form</button>
+                      <button type="button" class="kit-btn kit-btn-quiet" id="paste-cancel">Cancel</button>
+                    </div>
+                  </div>
+                  <p class="kit-load-result" id="load-result" role="status" hidden></p>
+                </section>
+<fieldset class="kit-section" id="sec-language"><legend>Output</legend><div class="kit-group"><div class="kit-field" role="radiogroup" aria-labelledby="l-language" data-field="language" data-type="radio"><span class="kit-label" id="l-language">Language of the statement and the letter</span><span class="kit-hint">The Dutch wording was written with AI. Read it before you send it.</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-language" value="en" autocomplete="off" /><span>English</span></label><label class="kit-chip"><input type="radio" name="f-language" value="nl" autocomplete="off" /><span>Nederlands</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-firm"><legend>Your firm</legend><div class="kit-group"><label class="kit-field"><span class="kit-label" id="l-firm_name">Your firm's name <span class="kit-optional">optional</span></span><span class="kit-hint">Used in the statement and the letter. It stays in your browser.</span><input type="text" class="kit-input" id="f-firm_name" data-field="firm_name" data-type="text" autocomplete="off" spellcheck="false" /></label><label class="kit-field"><span class="kit-label" id="l-contact">Who clients can ask about it <span class="kit-optional">optional</span></span><span class="kit-hint">A role or a shared address, for example &quot;our office manager, privacy@yourfirm.nl&quot;.</span><input type="text" class="kit-input" id="f-contact" data-field="contact" data-type="text" autocomplete="off" spellcheck="false" /></label><div class="kit-field" role="radiogroup" aria-labelledby="l-role" data-field="role" data-type="radio"><span class="kit-label" id="l-role">For your clients' data, what is your firm?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-role" value="processor" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Their processor: we handle it for them under a processing agreement</span></label><label class="kit-row"><input type="radio" name="f-role" value="controller" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Controller: we decide how we use it for our work</span></label><label class="kit-row"><input type="radio" name="f-role" value="both" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Both, depending on the client or the work</span></label><label class="kit-row"><input type="radio" name="f-role" value="unsure" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not sure</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-tools"><legend>The AI tools</legend><div class="kit-group"><div class="kit-field" role="group" aria-labelledby="l-tools" data-field="tools" data-type="tools"><span class="kit-label" id="l-tools">Which AI accounts does the firm provide or allow for work?</span><span class="kit-hint">Tick each account the firm arranged or agreed to. Then answer the short questions that appear for each one.</span><p class="kit-tool-head">ChatGPT</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="chatgpt-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Free, Plus or Pro</span><span class="tag tag-personal">Personal</span></label><div class="kit-toolq" data-for="chatgpt-personal" hidden><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-personal-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-personal-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-personal-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-personal-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="chatgpt-business" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Business (formerly Team)</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="chatgpt-business" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-business-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-business-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-business-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-business-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-business-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="chatgpt-enterprise" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Enterprise</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="chatgpt-enterprise" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-chatgpt-enterprise-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></div><p class="kit-tool-head">Microsoft Copilot</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="copilot-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft Copilot app, personal account</span><span class="tag tag-personal">Personal</span></label><div class="kit-toolq" data-for="copilot-personal" hidden><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-copilot-personal-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-copilot-personal-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-copilot-personal-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-copilot-personal-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="copilot-chat-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft 365 Copilot Chat, work account</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="copilot-chat-work" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-copilot-chat-work-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="m365-copilot" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft 365 Copilot (paid licence, including Copilot Business)</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="m365-copilot" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-m365-copilot-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-m365-copilot-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-m365-copilot-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-m365-copilot-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-m365-copilot-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></div><p class="kit-tool-head">Gemini</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="gemini-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Gemini app, personal Google account (free or Google AI Pro)</span><span class="tag tag-personal">Personal</span></label><div class="kit-toolq" data-for="gemini-personal" hidden><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-gemini-personal-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-gemini-personal-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-gemini-personal-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-gemini-personal-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="gemini-workspace" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Gemini in Google Workspace, work account</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="gemini-workspace" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-gemini-workspace-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-gemini-workspace-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-gemini-workspace-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-gemini-workspace-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-gemini-workspace-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></div><p class="kit-tool-head">Claude</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="claude-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Claude Free, Pro or Max</span><span class="tag tag-personal">Personal</span></label><div class="kit-toolq" data-for="claude-personal" hidden><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-claude-personal-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-claude-personal-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-claude-personal-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-claude-personal-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="claude-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Claude Team or Enterprise</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="claude-work" hidden><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-claude-work-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-claude-work-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-claude-work-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-claude-work-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-claude-work-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></div><p class="kit-tool-head">DeepSeek</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="deepseek-app" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">DeepSeek app and website</span><span class="tag tag-personal">Personal</span></label><div class="kit-toolq" data-for="deepseek-app" hidden><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-deepseek-app-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-deepseek-app-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-deepseek-app-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-deepseek-app-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></div><p class="kit-tool-head">Other</p><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-tools" value="other-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Another AI tool, with a work account</span><span class="tag tag-work">Work</span></label><div class="kit-toolq" data-for="other-work" hidden><label class="kit-field"><span class="kit-label">Which tool, from which vendor?</span><input type="text" class="kit-input" data-toolname="other-work" autocomplete="off" spellcheck="false" maxlength="80" /></label><div class="kit-field" role="radiogroup" aria-label="Processing agreement with the vendor"><span class="kit-hint kit-toolq-label">Processing agreement with the vendor</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-other-work-dpa" value="signed" autocomplete="off" /><span>Signed or accepted</span></label><label class="kit-chip"><input type="radio" name="t-other-work-dpa" value="no" autocomplete="off" /><span>Not yet</span></label><label class="kit-chip"><input type="radio" name="t-other-work-dpa" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Training on your data"><span class="kit-hint kit-toolq-label">Training on your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-other-work-training" value="off_checked" autocomplete="off" /><span>Off: we checked the setting</span></label><label class="kit-chip"><input type="radio" name="t-other-work-training" value="default" autocomplete="off" /><span>Vendor default, not checked</span></label><label class="kit-chip"><input type="radio" name="t-other-work-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="t-other-work-training" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="Where it stores your data"><span class="kit-hint kit-toolq-label">Where it stores your data</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-other-work-region" value="eu" autocomplete="off" /><span>EU or EEA</span></label><label class="kit-chip"><input type="radio" name="t-other-work-region" value="outside" autocomplete="off" /><span>Outside the EU</span></label><label class="kit-chip"><input type="radio" name="t-other-work-region" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-label="How long chats are kept"><span class="kit-hint kit-toolq-label">How long chats are kept</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="t-other-work-retention" value="set" autocomplete="off" /><span>We set it</span></label><label class="kit-chip"><input type="radio" name="t-other-work-retention" value="default" autocomplete="off" /><span>Vendor default</span></label><label class="kit-chip"><input type="radio" name="t-other-work-retention" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div><label class="kit-row"><input type="checkbox" name="f-tools" value="none" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">None: the firm provides or allows no AI tools</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-shadow" data-field="shadow" data-type="radio"><span class="kit-label" id="l-shadow">Do you know which AI tools staff actually use, including their own accounts?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-shadow" value="checked" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Yes: we checked in the past six months (survey, admin screens, billing)</span></label><label class="kit-row"><input type="radio" name="f-shadow" value="asked" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">We asked around, informally</span></label><label class="kit-row"><input type="radio" name="f-shadow" value="assume" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">We go by what the firm pays for</span></label><label class="kit-row"><input type="radio" name="f-shadow" value="unknown" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">We don't know</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-personal" data-field="personal" data-type="radio"><span class="kit-label" id="l-personal">Personal AI accounts (an employee's own ChatGPT, Gemini or Claude) for work</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-personal" value="not_allowed" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not allowed for client work</span></label><label class="kit-row"><input type="radio" name="f-personal" value="no_client_data" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Allowed, but never with client data</span></label><label class="kit-row"><input type="radio" name="f-personal" value="allowed" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Allowed</span></label><label class="kit-row"><input type="radio" name="f-personal" value="no_rule" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No rule yet</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-data"><legend>What goes in</legend><div class="kit-group"><div class="kit-field" role="radiogroup" aria-labelledby="l-client_data" data-field="client_data" data-type="radio"><span class="kit-label" id="l-client_data">Which client data may go into the firm's AI tools?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-client_data" value="none" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">None: only our own material and public information</span></label><label class="kit-row"><input type="radio" name="f-client_data" value="deidentified" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Only with names and identifying details removed</span></label><label class="kit-row"><input type="radio" name="f-client_data" value="work_only" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Client data, in the work accounts only</span></label><label class="kit-row"><input type="radio" name="f-client_data" value="no_rule" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No rule yet</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-special" data-field="special" data-type="radio"><span class="kit-label" id="l-special">Sensitive data: BSN, health data, other special categories</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-special" value="never" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Never goes in</span></label><label class="kit-row"><input type="radio" name="f-special" value="agreed" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Only where the client agreed in writing</span></label><label class="kit-row"><input type="radio" name="f-special" value="no_rule" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No rule yet</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-opt_out" data-field="opt_out" data-type="radio"><span class="kit-label" id="l-opt_out">A client asks you not to use AI on their work</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-opt_out" value="honour" autocomplete="off" /><span>We don't, for that client</span></label><label class="kit-chip"><input type="radio" name="f-opt_out" value="discuss" autocomplete="off" /><span>We agree with them how we work</span></label><label class="kit-chip"><input type="radio" name="f-opt_out" value="undecided" autocomplete="off" /><span>Not decided</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-rules"><legend>How you work</legend><div class="kit-group"><div class="kit-field" role="radiogroup" aria-labelledby="l-review" data-field="review" data-type="radio"><span class="kit-label" id="l-review">Does a person check AI output before it goes to a client?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-review" value="always" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Always, and whoever signs it off is responsible</span></label><label class="kit-row"><input type="radio" name="f-review" value="depends" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">It depends on the task</span></label><label class="kit-row"><input type="radio" name="f-review" value="no_rule" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No rule</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-policy" data-field="policy" data-type="radio"><span class="kit-label" id="l-policy">Written rules for AI tools</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-policy" value="yes" autocomplete="off" /><span>Written and shared with staff</span></label><label class="kit-chip"><input type="radio" name="f-policy" value="drafting" autocomplete="off" /><span>Being written</span></label><label class="kit-chip"><input type="radio" name="f-policy" value="no" autocomplete="off" /><span>None yet</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-literacy" data-field="literacy" data-type="radio"><span class="kit-label" id="l-literacy">Do staff know the rules and the tools' limits?</span><span class="kit-hint">The AI Act's Article 4 asks firms that use AI systems to see to their staff's AI literacy.</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-literacy" value="trained" autocomplete="off" /><span>Briefed or trained, and kept up</span></label><label class="kit-chip"><input type="radio" name="f-literacy" value="planned" autocomplete="off" /><span>Planned</span></label><label class="kit-chip"><input type="radio" name="f-literacy" value="no" autocomplete="off" /><span>Not yet</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-subprocessors" data-field="subprocessors" data-type="radio"><span class="kit-label" id="l-subprocessors">Are the AI vendors on the sub-processor list you give clients?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-subprocessors" value="yes" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Yes</span></label><label class="kit-row"><input type="radio" name="f-subprocessors" value="not_yet" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not yet</span></label><label class="kit-row"><input type="radio" name="f-subprocessors" value="no_list" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">We don't keep a list</span></label><label class="kit-row"><input type="radio" name="f-subprocessors" value="na" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not applicable: we are not a processor</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-incidents" data-field="incidents" data-type="radio"><span class="kit-label" id="l-incidents">If client data goes into an AI tool by mistake</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-incidents" value="procedure" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">We have a procedure: record, assess, tell the client</span></label><label class="kit-row"><input type="radio" name="f-incidents" value="no" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No procedure yet</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-letter"><legend>The letter</legend><div class="kit-group"><label class="kit-field"><span class="kit-label" id="l-signer">Signed by (for the letter) <span class="kit-optional">optional</span></span><span class="kit-hint">Name and role, for example &quot;Anna de Vries, director&quot;.</span><input type="text" class="kit-input" id="f-signer" data-field="signer" data-type="text" autocomplete="off" spellcheck="false" /></label></div></fieldset>
+                <div class="kit-bar" id="kit-bar">
+                  <div class="kit-bar-text" id="kit-bar-text">Answer what you have confirmed</div>
+                  <button type="button" class="kit-btn kit-btn-primary" id="kit-bar-save">Preview and save</button>
+                </div>
+              </div>
+              <aside class="kit-summary" aria-label="Your statement" aria-live="polite">
+                <div class="kit-card" id="open-card">
+                  <p class="kit-card-title">Open points</p>
+                  <div id="open-points"></div>
+                </div>
+                <div class="kit-card kit-role" id="gap-card" hidden>
+                  <p><strong>What a statement can't cover.</strong> Your statement covers the tools your firm arranged. It can't cover what staff use on their own, and that is usually what the client is really asking about. If you aren't sure, the statement says so, as an open point. The AI accounts guide has a 20-minute check you can do yourself. Noxiom's fixed-price AI usage review finds out properly, from an anonymous staff survey, your admin screens and your billing, so the next statement has no open point there.</p>
+                  <div class="guide-cta-row">
+                    <a data-cta="statement-check" href="/ai-accounts#check" class="guide-text-link">Do the 20-minute check &rarr;</a>
+                  </div>
+                </div>
+                <div class="kit-card" id="save-card" tabindex="-1">
+                  <p class="kit-card-title">Save</p>
+                  <div class="kit-actions">
+                    <button type="button" id="st-download" class="kit-btn kit-btn-primary">Statement (Word)</button>
+                    <button type="button" id="lt-download" class="kit-btn kit-btn-primary">Letter (Word)</button>
+                    <button type="button" id="st-share" class="kit-btn" hidden>Share</button>
+                    <button type="button" id="st-print" class="kit-btn">Print or PDF</button>
+                    <button type="button" id="st-copy" class="kit-btn">Copy as text</button>
+                  </div>
+                  <p class="kit-save-why">Word, so you can edit before you send: add your letterhead and the client's name there, not here.</p>
+                  <div class="kit-actions kit-actions-quiet">
+                    <button type="button" id="st-json" class="kit-btn kit-btn-quiet">Save your answers (.json)</button>
+                    <button type="button" id="st-clear" class="kit-btn kit-btn-quiet">Clear</button>
+                  </div>
+                  <p class="kit-save-why">The .json file opens again here with "Open saved facts", or in an AI assistant. Keep it for the next client who asks. Nothing is uploaded.</p>
+                </div>
+                <div class="kit-card kit-doc-card">
+                  <div class="kit-doc-tabs" role="tablist" aria-label="Preview">
+                    <button type="button" role="tab" class="kit-chip-btn" id="tab-statement" aria-selected="true" aria-controls="preview">Statement</button>
+                    <button type="button" role="tab" class="kit-chip-btn" id="tab-letter" aria-selected="false" aria-controls="preview">Letter</button>
+                  </div>
+                  <div class="kit-doc" id="preview" role="tabpanel"></div>
+                </div>
+              </aside>
+            </div>
+            <div id="print-record"></div>
+          </div>
+
+          <h2 id="example">What you get</h2>
+          <p class="guide-measure">
+            A one-page statement and a short letter, in English or Dutch.
+            Lines the firm confirmed say what was checked; lines a vendor
+            promises are kept apart with their sources; anything not confirmed
+            is listed as an open point (<span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Open point</span>). Here is one for an
+            invented payroll office.
+          </p>
+          <div class="guide-downloads">
+            <a data-cta="statement-example" href="/downloads/ai-statement-example.docx" download>Example AI statement (Word): an invented payroll office, with the points it is still checking</a>
+          </div>
+
+          <div class="guide-bridge" id="help">
+            <h2>What a statement can't cover</h2>
+            <p class="guide-measure">Your statement covers the tools your firm arranged. It can't cover what staff use on their own, and that is usually what the client is really asking about. If you aren't sure, the statement says so, as an open point. The AI accounts guide has a 20-minute check you can do yourself. Noxiom's fixed-price AI usage review finds out properly, from an anonymous staff survey, your admin screens and your billing, so the next statement has no open point there.</p>
+            <div class="guide-cta-row">
+              <a data-cta="statement-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="statement-intake" href="/contact" class="guide-text-link">Book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>Does the AI Act require us to tell clients that we use AI?</summary><p>Not for ordinary internal use. Article 50 sets transparency duties for providers of AI systems, such as the makers of chatbots, and for deployers of emotion recognition, deep fakes, and AI-written text published to inform the public on matters of public interest. Using an AI tool on client work isn't one of those. What you owe a client comes from your contract with them, from the GDPR where you are their processor, and from your professional rules. Separately, Article 4 asks firms that use AI systems to see to their staff's AI literacy.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-6" aria-label="Source 6">6</a></sup></p></details>
+<details class="guide-faq"><summary>We are the client's processor. Do we need their permission for an AI tool?</summary><p>A processor may not engage another processor without the controller's prior specific or general written authorisation. Under a general authorisation, it must tell the controller about new ones so the controller can object. An AI vendor that processes your client's personal data is such a sub-processor. Check what your processing agreement with the client says, and put the vendor on the list you give them.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></p></details>
+<details class="guide-faq"><summary>Can we tell the client the tool is GDPR compliant?</summary><p>The statement doesn't say that, and we advise against it. Say what you checked: the agreement with the vendor, the training setting, the storage location, and what the vendor states, with the date. Whether your use meets the GDPR depends on how you use the tool, not on the tool alone.</p></details>
+<details class="guide-faq"><summary>What if we don't know which AI tools our staff use?</summary><p>Then the statement says so, as an open point. A statement that claims more than the firm knows does more harm than an honest open point, especially if the client later finds out. The 20-minute check in the AI accounts guide is a first step.</p></details>
+<details class="guide-faq"><summary>Why does the statement keep what the vendor says apart from what we checked?</summary><p>Because they are different claims. &quot;Training is off: we checked the setting&quot; is your firm's fact. &quot;The vendor says it doesn't train on business data by default&quot; is the vendor's promise. Your client's lawyer reads them differently, and you can only vouch for the first.</p></details>
+<details class="guide-faq"><summary>Does this page send or keep what we enter?</summary><p>No. The builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the statement as Word, or your answers as a .json file to continue later.</p></details>
+</div>
+
+          <h2 id="for-assistants">For AI assistants</h2>
+          <p class="guide-measure">
+            If someone gave you this page and asked for help: here is how to
+            fill in their firm's AI facts with them. People can read it too.
+          </p>
+          <details class="guide-more">
+            <summary>How to fill in the facts <span class="summary-hint">questions and allowed answers</span></summary>
+<p>The facts are one JSON object. The questions and allowed answers are published as a JSON Schema: <a href="/data/firm-ai-facts.schema.json">https://noxiom.com/data/firm-ai-facts.schema.json</a>.</p>
+            <ol class="report-list">
+              <li>Ask the questions one at a time, in plain words, and offer the allowed answers.</li>
+              <li>For each account in <code>tools</code>, ask its short questions and put the answers under <code>tool_facts</code>, keyed by the account.</li>
+              <li>Record only what the person has confirmed. If they aren't sure, use the "not sure" value or leave the question out. Don't fill in what a vendor promises as the firm's own fact.</li>
+              <li>Don't ask for client names or client data. The questions are about the firm's own setup.</li>
+              <li>Give the result as one JSON code block. The person pastes it into "Paste facts" on this page, which checks it in their browser. Anything left out becomes an open point in the statement, never a claim.</li>
+            </ol>
+            <p><strong>Questions:</strong></p>
+            <ul class="kit-assist-fields">
+<li><code>firm_name</code>: Your firm's name (optional) short free text.</li>
+<li><code>contact</code>: Who clients can ask about it (optional) short free text.</li>
+<li><code>role</code>: For your clients' data, what is your firm? one of: <code>processor</code> (Their processor: we handle it for them under a processing agreement), <code>controller</code> (Controller: we decide how we use it for our work), <code>both</code> (Both, depending on the client or the work), <code>unsure</code> (Not sure).</li>
+<li><code>tools</code>: Which AI accounts does the firm provide or allow for work? a list, any of: <code>chatgpt-personal</code> (ChatGPT Free, Plus or Pro (personal account)), <code>chatgpt-business</code> (ChatGPT Business (formerly Team) (work account)), <code>chatgpt-enterprise</code> (ChatGPT Enterprise (work account)), <code>copilot-personal</code> (Microsoft Copilot app, personal account (personal account)), <code>copilot-chat-work</code> (Microsoft 365 Copilot Chat, work account (work account)), <code>m365-copilot</code> (Microsoft 365 Copilot (paid licence, including Copilot Business) (work account)), <code>gemini-personal</code> (Gemini app, personal Google account (free or Google AI Pro) (personal account)), <code>gemini-workspace</code> (Gemini in Google Workspace, work account (work account)), <code>claude-personal</code> (Claude Free, Pro or Max (personal account)), <code>claude-work</code> (Claude Team or Enterprise (work account)), <code>deepseek-app</code> (DeepSeek app and website (personal account)), <code>other-work</code> (Another AI tool, with a work account), <code>none</code> (None: the firm provides or allows no AI tools).</li>
+<li><code>shadow</code>: Do you know which AI tools staff actually use, including their own accounts? one of: <code>checked</code> (Yes: we checked in the past six months (survey, admin screens, billing)), <code>asked</code> (We asked around, informally), <code>assume</code> (We go by what the firm pays for), <code>unknown</code> (We don't know).</li>
+<li><code>personal</code>: Personal AI accounts (an employee's own ChatGPT, Gemini or Claude) for work one of: <code>not_allowed</code> (Not allowed for client work), <code>no_client_data</code> (Allowed, but never with client data), <code>allowed</code> (Allowed), <code>no_rule</code> (No rule yet).</li>
+<li><code>client_data</code>: Which client data may go into the firm's AI tools? one of: <code>none</code> (None: only our own material and public information), <code>deidentified</code> (Only with names and identifying details removed), <code>work_only</code> (Client data, in the work accounts only), <code>no_rule</code> (No rule yet).</li>
+<li><code>special</code>: Sensitive data: BSN, health data, other special categories one of: <code>never</code> (Never goes in), <code>agreed</code> (Only where the client agreed in writing), <code>no_rule</code> (No rule yet).</li>
+<li><code>opt_out</code>: A client asks you not to use AI on their work one of: <code>honour</code> (We don't, for that client), <code>discuss</code> (We agree with them how we work), <code>undecided</code> (Not decided).</li>
+<li><code>review</code>: Does a person check AI output before it goes to a client? one of: <code>always</code> (Always, and whoever signs it off is responsible), <code>depends</code> (It depends on the task), <code>no_rule</code> (No rule).</li>
+<li><code>policy</code>: Written rules for AI tools one of: <code>yes</code> (Written and shared with staff), <code>drafting</code> (Being written), <code>no</code> (None yet).</li>
+<li><code>literacy</code>: Do staff know the rules and the tools' limits? one of: <code>trained</code> (Briefed or trained, and kept up), <code>planned</code> (Planned), <code>no</code> (Not yet).</li>
+<li><code>subprocessors</code>: Are the AI vendors on the sub-processor list you give clients? one of: <code>yes</code> (Yes), <code>not_yet</code> (Not yet), <code>no_list</code> (We don't keep a list), <code>na</code> (Not applicable: we are not a processor).</li>
+<li><code>incidents</code>: If client data goes into an AI tool by mistake one of: <code>procedure</code> (We have a procedure: record, assess, tell the client), <code>no</code> (No procedure yet).</li>
+<li><code>signer</code>: Signed by (for the letter) (optional) short free text.</li>
+            </ul>
+            <p><strong>Per account, under <code>tool_facts</code>:</strong></p>
+            <ul class="kit-assist-fields">
+<li><code>dpa</code>: Processing agreement with the vendor (work accounts) <code>signed</code> (Signed or accepted), <code>no</code> (Not yet), <code>unsure</code> (Not sure).</li>
+<li><code>training</code>: Training on your data (work and personal accounts) <code>off_checked</code> (Off: we checked the setting), <code>default</code> (Vendor default, not checked), <code>on</code> (On), <code>unsure</code> (Not sure).</li>
+<li><code>region</code>: Where it stores your data (work accounts) <code>eu</code> (EU or EEA), <code>outside</code> (Outside the EU), <code>unsure</code> (Not sure).</li>
+<li><code>retention</code>: How long chats are kept (work accounts) <code>set</code> (We set it), <code>default</code> (Vendor default), <code>unsure</code> (Not sure).</li>
+            </ul>
+            <p><strong>Example</strong> (an invented firm):</p>
+            <pre class="kit-code">{
+  &quot;facts&quot;: &quot;firm-ai-facts&quot;,
+  &quot;version&quot;: 1,
+  &quot;language&quot;: &quot;en&quot;,
+  &quot;firm_name&quot;: &quot;Example Payroll BV (an invented firm)&quot;,
+  &quot;contact&quot;: &quot;our office manager, privacy@example.nl&quot;,
+  &quot;role&quot;: &quot;processor&quot;,
+  &quot;tools&quot;: [
+    &quot;copilot-chat-work&quot;,
+    &quot;chatgpt-business&quot;
+  ],
+  &quot;tool_facts&quot;: {
+    &quot;copilot-chat-work&quot;: {
+      &quot;dpa&quot;: &quot;signed&quot;,
+      &quot;training&quot;: &quot;off_checked&quot;,
+      &quot;region&quot;: &quot;eu&quot;,
+      &quot;retention&quot;: &quot;set&quot;
+    },
+    &quot;chatgpt-business&quot;: {
+      &quot;dpa&quot;: &quot;signed&quot;,
+      &quot;training&quot;: &quot;default&quot;,
+      &quot;region&quot;: &quot;unsure&quot;,
+      &quot;retention&quot;: &quot;default&quot;
+    }
+  },
+  &quot;shadow&quot;: &quot;asked&quot;,
+  &quot;personal&quot;: &quot;not_allowed&quot;,
+  &quot;client_data&quot;: &quot;deidentified&quot;,
+  &quot;special&quot;: &quot;never&quot;,
+  &quot;opt_out&quot;: &quot;honour&quot;,
+  &quot;review&quot;: &quot;always&quot;,
+  &quot;policy&quot;: &quot;yes&quot;,
+  &quot;literacy&quot;: &quot;planned&quot;,
+  &quot;subprocessors&quot;: &quot;not_yet&quot;,
+  &quot;incidents&quot;: &quot;procedure&quot;
+}</pre>
+          </details>
+
+          <h2 id="about">About this kit</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't do</summary>
+            <p><strong>It gives you</strong> the questions clients ask, the rules behind them, and a statement and letter written only from what your firm confirmed. Vendor statements come from the <a href="/ai-accounts">AI accounts guide</a>, checked 22 November 2026.</p>
+            <p><strong>It doesn't</strong> check your setup, decide what your contracts allow, or replace advice. The Dutch wording of the statement and letter was written with AI: read it before you send it. It is not legal advice.</p>
+          </details>
+          <details class="guide-more" id="reuse">
+            <summary>Reuse it <span class="summary-hint">CC BY 4.0</span></summary>
+            <p>The text and the sentence model are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. The statement you make is yours.</p>
+            <p>The source is public on GitHub: <a href="https://github.com/noxiom/ai-client-data-kits" rel="noopener">noxiom/ai-client-data-kits</a>. The firm facts are a JSON Schema at <a href="/data/firm-ai-facts.schema.json">/data/firm-ai-facts.schema.json</a>; the same saved file will work with the next kit, for the AI section of client questionnaires.</p>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">version 0.1.0, next check by 22 December 2026</span></summary>
+<ul class="report-list">
+<li><strong>23 November 2026:</strong> First version: the statement builder (AI statement and answer letter, in English or Dutch, as Word), what clients ask and why, and the AI Act question.</li>
+</ul>
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>. We check it, correct it and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">"Checked" is the date we last read the page. The vendor statements in the builder carry their own sources.</p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://acc.com/sites/default/files/2024-08/AI---Vendor-Due-Diligence-Checklist-525861.1-.docx" rel="noopener">Association of Corporate Counsel (ACC): AI Vendor Due Diligence Checklist and Questionnaire</a>. Page dated 1 August 2024. Checked 23 November 2026.</li>
+<li id="src-2"><a href="https://public-buyers-community.ec.europa.eu/communities/procurement-ai/news/updated-eu-ai-model-contractual-clauses-now-available" rel="noopener">European Commission, Public Buyers Community: EU model contractual clauses for the procurement of AI (MCC-AI-Light), updated version</a>. Page dated 5 March 2025. Checked 23 November 2026.</li>
+<li id="src-3"><a href="https://www.purdue.edu/ai/wp-content/uploads/2026/07/AI_Use_Case_Vendor_Questionnaire-DEC.docx" rel="noopener">Purdue University, Data Ethics Committee: AI Use Case Vendor Questionnaire</a>. Page dated 1 July 2026. Checked 23 November 2026.</li>
+<li id="src-4"><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">EUR-Lex: Regulation (EU) 2016/679 (General Data Protection Regulation)</a>. Page dated 27 April 2016. Checked 22 November 2026.</li>
+<li id="src-5"><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="noopener">EUR-Lex: Regulation (EU) 2024/1689 (Artificial Intelligence Act), Articles 4, 50 and 113</a>. Page dated 12 July 2024. Checked 23 November 2026.</li>
+<li id="src-6"><a href="https://www.kvk.nl/wetten-en-regels/moet-je-laten-weten-dat-je-ai-gebruikt-in-je-bedrijf/" rel="noopener">KvK (Netherlands Chamber of Commerce): Moet je laten weten dat je AI gebruikt in je bedrijf?</a>. Page dated 12 October 2026. Checked 23 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>, which reviews how small firms use AI tools with client data. Version 0.1.0, checked 23 November 2026. Not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script type="application/json" id="kit-data">{"id":"client-asks-about-ai","schemaUrl":"https://noxiom.com/data/firm-ai-facts.schema.json","pageUrl":"noxiom.com/client-asks-about-ai","guideChecked":{"en":"22 November 2026","nl":"22 november 2026"},"plans":[{"id":"chatgpt-personal","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","vendor":"OpenAI","name":"ChatGPT Free, Plus or Pro","account":"personal","facts":{"training":{"short":"Yes, by default","tone":"critical","sources":["oai-train","oai-controls"]},"retention":{"short":"Until deleted","tone":"warning","sources":["oai-retention"]},"location":{"short":"Outside the EEA","tone":"warning","sources":["oai-euprivacy"]},"contract":{"short":"None with your firm","tone":"critical","sources":["oai-entprivacy","oai-euprivacy"]}}},{"id":"chatgpt-business","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","vendor":"OpenAI","name":"ChatGPT Business (formerly Team)","account":"work","facts":{"training":{"short":"No, by default","tone":"good","sources":["oai-train","oai-bizdata"]},"retention":{"short":"Admins decide","tone":"good","sources":["oai-entprivacy"]},"location":{"short":"New workspaces pick a region","tone":"warning","sources":["oai-bizstorage"]},"contract":{"short":"DPA available","tone":"good","sources":["oai-entprivacy","oai-dpa"]}}},{"id":"chatgpt-enterprise","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","vendor":"OpenAI","name":"ChatGPT Enterprise","account":"work","facts":{"training":{"short":"No, by default","tone":"good","sources":["oai-entprivacy","oai-train"]},"retention":{"short":"Admins decide","tone":"good","sources":["oai-entprivacy"]},"location":{"short":"EU residency option","tone":"good","sources":["oai-residency"]},"contract":{"short":"DPA available","tone":"good","sources":["oai-entprivacy","oai-dpa"]}}},{"id":"copilot-personal","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","vendor":"Microsoft","name":"Microsoft Copilot app, personal account","account":"personal","facts":{"training":{"short":"No (foundation models)","tone":"warning","sources":["ms-consumer-history","ms-consumer-faq"]},"retention":{"short":"Not stated","tone":"unknown","sources":["ms-consumer-history","ms-consumer-faq"]},"location":{"short":"Not stated","tone":"unknown","sources":["ms-consumer-faq","ms-chat-privacy"]},"contract":{"short":"None with your firm","tone":"critical","sources":["ms-consumer-faq","ms-chat-privacy"]}}},{"id":"copilot-chat-work","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","vendor":"Microsoft","name":"Microsoft 365 Copilot Chat, work account","account":"work","facts":{"training":{"short":"No","tone":"good","sources":["ms-chat-privacy","ms-edp"]},"retention":{"short":"Your policies","tone":"good","sources":["ms-chat-privacy"]},"location":{"short":"EU, except web search","tone":"warning","sources":["ms-chat-privacy"]},"contract":{"short":"DPA included","tone":"good","sources":["ms-chat-privacy","ms-edp"]}}},{"id":"m365-copilot","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","vendor":"Microsoft","name":"Microsoft 365 Copilot (paid licence, including Copilot Business)","account":"work","facts":{"training":{"short":"No","tone":"good","sources":["ms-m365-privacy"]},"retention":{"short":"Your policies","tone":"good","sources":["ms-m365-privacy"]},"location":{"short":"EU, with exceptions","tone":"warning","sources":["ms-m365-privacy","ms-chat-privacy"]},"contract":{"short":"DPA included","tone":"good","sources":["ms-m365-privacy","ms-chat-privacy"]}}},{"id":"gemini-personal","tool":"Gemini","slug":"gemini-personal-vs-workspace","vendor":"Google","name":"Gemini app, personal Google account (free or Google AI Pro)","account":"personal","facts":{"training":{"short":"Yes, by default","tone":"critical","sources":["g-gemini-hub","g-gemini-history"]},"retention":{"short":"18 months by default","tone":"warning","sources":["g-gemini-hub","g-gemini-history"]},"location":{"short":"Not stated","tone":"unknown","sources":["g-gemini-hub"]},"contract":{"short":"None with your firm","tone":"critical","sources":["g-gemini-hub"]}}},{"id":"gemini-workspace","tool":"Gemini","slug":"gemini-personal-vs-workspace","vendor":"Google","name":"Gemini in Google Workspace, work account","account":"work","facts":{"training":{"short":"No, without permission","tone":"good","sources":["g-ws-hub"]},"retention":{"short":"Admins decide","tone":"good","sources":["g-ws-hub"]},"location":{"short":"EU option, most editions","tone":"good","sources":["g-ws-regions"]},"contract":{"short":"DPA included","tone":"good","sources":["g-ws-hub"]}}},{"id":"claude-personal","tool":"Claude","slug":"claude-personal-vs-team","vendor":"Anthropic","name":"Claude Free, Pro or Max","account":"personal","facts":{"training":{"short":"Yes, unless switched off","tone":"critical","sources":["a-consumer-terms","a-consumer-training","a-pricing"]},"retention":{"short":"30 days, or up to 5 years","tone":"warning","sources":["a-consumer-terms","a-consumer-retention"]},"location":{"short":"Not stated","tone":"unknown","sources":["a-consumer-training","a-consumer-retention"]},"contract":{"short":"None with your firm","tone":"critical","sources":["a-consumer-terms","a-dpa"]}}},{"id":"claude-work","tool":"Claude","slug":"claude-personal-vs-team","vendor":"Anthropic","name":"Claude Team or Enterprise","account":"work","facts":{"training":{"short":"No","tone":"good","sources":["a-commercial-terms","a-processor"]},"retention":{"short":"Until deleted; Enterprise can limit","tone":"warning","sources":["a-org-retention","a-ent-retention","a-pricing"]},"location":{"short":"Stored in the US","tone":"warning","sources":["a-servers"]},"contract":{"short":"DPA included","tone":"good","sources":["a-dpa","a-processor","a-commercial-terms"]}}},{"id":"deepseek-app","tool":"DeepSeek","slug":"deepseek-business-data","vendor":"DeepSeek","name":"DeepSeek app and website","account":"personal","facts":{"training":{"short":"Yes","tone":"critical","sources":["ds-privacy"]},"retention":{"short":"While the account exists","tone":"warning","sources":["ds-privacy"]},"location":{"short":"China","tone":"critical","sources":["ds-privacy"]},"contract":{"short":"None","tone":"critical","sources":["ds-privacy"]}}}],"facts":{"id":"firm-ai-facts","title":"Firm AI facts","version":1,"checked":"2026-11-23","sections":[{"id":"firm","title":"Your firm","fields":[{"id":"firm_name","type":"text","label":"Your firm's name","hint":"Used in the statement and the letter. It stays in your browser.","optional":true},{"id":"contact","type":"text","label":"Who clients can ask about it","hint":"A role or a shared address, for example \"our office manager, privacy@yourfirm.nl\".","optional":true},{"id":"role","type":"radio","label":"For your clients' data, what is your firm?","options":[["processor","Their processor: we handle it for them under a processing agreement"],["controller","Controller: we decide how we use it for our work"],["both","Both, depending on the client or the work"],["unsure","Not sure"]]}]},{"id":"tools","title":"The AI tools","fields":[{"id":"tools","type":"tools","label":"Which AI accounts does the firm provide or allow for work?","hint":"Tick each account the firm arranged or agreed to. Then answer the short questions that appear for each one."},{"id":"shadow","type":"radio","label":"Do you know which AI tools staff actually use, including their own accounts?","options":[["checked","Yes: we checked in the past six months (survey, admin screens, billing)"],["asked","We asked around, informally"],["assume","We go by what the firm pays for"],["unknown","We don't know"]]},{"id":"personal","type":"radio","label":"Personal AI accounts (an employee's own ChatGPT, Gemini or Claude) for work","options":[["not_allowed","Not allowed for client work"],["no_client_data","Allowed, but never with client data"],["allowed","Allowed"],["no_rule","No rule yet"]]}]},{"id":"data","title":"What goes in","fields":[{"id":"client_data","type":"radio","label":"Which client data may go into the firm's AI tools?","options":[["none","None: only our own material and public information"],["deidentified","Only with names and identifying details removed"],["work_only","Client data, in the work accounts only"],["no_rule","No rule yet"]]},{"id":"special","type":"radio","label":"Sensitive data: BSN, health data, other special categories","options":[["never","Never goes in"],["agreed","Only where the client agreed in writing"],["no_rule","No rule yet"]]},{"id":"opt_out","type":"radio","label":"A client asks you not to use AI on their work","options":[["honour","We don't, for that client"],["discuss","We agree with them how we work"],["undecided","Not decided"]]}]},{"id":"rules","title":"How you work","fields":[{"id":"review","type":"radio","label":"Does a person check AI output before it goes to a client?","options":[["always","Always, and whoever signs it off is responsible"],["depends","It depends on the task"],["no_rule","No rule"]]},{"id":"policy","type":"radio","label":"Written rules for AI tools","options":[["yes","Written and shared with staff"],["drafting","Being written"],["no","None yet"]]},{"id":"literacy","type":"radio","label":"Do staff know the rules and the tools' limits?","hint":"The AI Act's Article 4 asks firms that use AI systems to see to their staff's AI literacy.","options":[["trained","Briefed or trained, and kept up"],["planned","Planned"],["no","Not yet"]]},{"id":"subprocessors","type":"radio","label":"Are the AI vendors on the sub-processor list you give clients?","options":[["yes","Yes"],["not_yet","Not yet"],["no_list","We don't keep a list"],["na","Not applicable: we are not a processor"]]},{"id":"incidents","type":"radio","label":"If client data goes into an AI tool by mistake","options":[["procedure","We have a procedure: record, assess, tell the client"],["no","No procedure yet"]]}]}],"tool_questions":[{"id":"dpa","label":"Processing agreement with the vendor","accounts":["work"],"options":[["signed","Signed or accepted"],["no","Not yet"],["unsure","Not sure"]]},{"id":"training","label":"Training on your data","accounts":["work","personal"],"options":[["off_checked","Off: we checked the setting"],["default","Vendor default, not checked"],["on","On"],["unsure","Not sure"]]},{"id":"region","label":"Where it stores your data","accounts":["work"],"options":[["eu","EU or EEA"],["outside","Outside the EU"],["unsure","Not sure"]]},{"id":"retention","label":"How long chats are kept","accounts":["work"],"options":[["set","We set it"],["default","Vendor default"],["unsure","Not sure"]]}],"other_tool":{"id":"other-work","label":"Another AI tool, with a work account","account":"work","name_label":"Which tool, from which vendor?"},"no_tools":{"id":"none","label":"None: the firm provides or allows no AI tools"},"lines":{"role":{"processor":{"en":"For our clients' data we usually act as their processor: we handle it on their behalf, under a processing agreement. An AI tool we use on that data is then a sub-processor.","nl":"Voor de gegevens van onze klanten zijn wij meestal verwerker: we verwerken ze namens hen, onder een verwerkersovereenkomst. Een AI-tool die we daarbij gebruiken, is dan een subverwerker."},"controller":{"en":"For our clients' data we act as controller: we decide how we use it for the work we do for them.","nl":"Voor de gegevens van onze klanten zijn wij verwerkingsverantwoordelijke: wij bepalen hoe we ze gebruiken voor het werk dat we voor hen doen."},"both":{"en":"Depending on the work, we act as our clients' processor or as controller. Where we are their processor, an AI tool we use on their data is a sub-processor.","nl":"Afhankelijk van het werk zijn wij verwerker of verwerkingsverantwoordelijke. Waar wij verwerker zijn, is een AI-tool die we gebruiken op de gegevens van de klant een subverwerker."},"unsure":{"check":true,"en":"Whether we act as our clients' processor or as controller, for each type of work.","nl":"Of wij per soort werk verwerker of verwerkingsverantwoordelijke zijn."},"missing":{"check":true,"en":"Whether we act as our clients' processor or as controller, for each type of work.","nl":"Of wij per soort werk verwerker of verwerkingsverantwoordelijke zijn."}},"shadow":{"checked":{"en":"In the past six months we checked which AI tools staff actually use, including their own accounts.","nl":"In het afgelopen halfjaar zijn we nagegaan welke AI-tools medewerkers echt gebruiken, ook hun eigen accounts."},"asked":{"check":true,"en":"Which AI tools staff use on their own, beyond the tools listed here. We have asked around, but not checked.","nl":"Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan. We hebben het rondgevraagd, maar niet nagegaan."},"assume":{"check":true,"en":"Which AI tools staff use on their own, beyond the tools listed here. The list above is based on what the firm pays for.","nl":"Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan. De lijst hierboven is gebaseerd op wat ons bedrijf betaalt."},"unknown":{"check":true,"en":"Which AI tools staff use on their own, beyond the tools listed here.","nl":"Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan."},"missing":{"check":true,"en":"Which AI tools staff use on their own, beyond the tools listed here.","nl":"Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan."}},"personal":{"not_allowed":{"en":"Staff may not use personal AI accounts for client work.","nl":"Medewerkers mogen geen privé-AI-accounts gebruiken voor klantwerk."},"no_client_data":{"en":"Staff may use personal AI accounts only for work that involves no client data.","nl":"Medewerkers mogen privé-AI-accounts alleen gebruiken voor werk zonder klantgegevens."},"allowed":{"en":"Staff may use personal AI accounts for work. These accounts have no processing agreement with the firm.","nl":"Medewerkers mogen privé-AI-accounts gebruiken voor het werk. Voor die accounts is er geen verwerkersovereenkomst met ons bedrijf."},"no_rule":{"check":true,"en":"Our rule on personal AI accounts. There is none yet.","nl":"Onze regel voor privé-AI-accounts. Die is er nog niet."},"missing":{"check":true,"en":"Our rule on personal AI accounts.","nl":"Onze regel voor privé-AI-accounts."}},"client_data":{"none":{"en":"No client data goes into these tools: only our own material and public information.","nl":"Er gaan geen klantgegevens in deze tools: alleen ons eigen materiaal en openbare informatie."},"deidentified":{"en":"Client material goes in only with names and other identifying details removed.","nl":"Klantmateriaal gaat er alleen in als namen en andere herleidbare gegevens eruit zijn gehaald."},"work_only":{"en":"Client data may go only into the firm's work accounts, never into personal accounts.","nl":"Klantgegevens mogen alleen in de werkaccounts van ons bedrijf, nooit in privéaccounts."},"no_rule":{"check":true,"en":"Our rule on which client data may go into AI tools.","nl":"Onze regel over welke klantgegevens in AI-tools mogen."},"missing":{"check":true,"en":"Our rule on which client data may go into AI tools.","nl":"Onze regel over welke klantgegevens in AI-tools mogen."}},"special":{"never":{"en":"Sensitive data, such as citizen service numbers (BSN), health data or other special categories of personal data, never goes into AI tools.","nl":"Gevoelige gegevens, zoals BSN, gezondheidsgegevens of andere bijzondere persoonsgegevens, gaan nooit in AI-tools."},"agreed":{"en":"Sensitive data, such as citizen service numbers (BSN) or health data, goes into AI tools only where the client has agreed in writing.","nl":"Gevoelige gegevens, zoals BSN of gezondheidsgegevens, gaan alleen in AI-tools als de klant daar schriftelijk mee heeft ingestemd."},"no_rule":{"check":true,"en":"Our rule for sensitive data, such as citizen service numbers (BSN) and health data.","nl":"Onze regel voor gevoelige gegevens, zoals BSN en gezondheidsgegevens."},"missing":{"check":true,"en":"Our rule for sensitive data, such as citizen service numbers (BSN) and health data.","nl":"Onze regel voor gevoelige gegevens, zoals BSN en gezondheidsgegevens."}},"opt_out":{"honour":{"en":"If a client prefers that we don't use AI tools on their work, we don't.","nl":"Wil een klant niet dat wij AI-tools gebruiken voor zijn werk, dan doen we dat niet."},"discuss":{"en":"If a client prefers that we don't use AI tools on their work, we agree with them how we work.","nl":"Wil een klant niet dat wij AI-tools gebruiken voor zijn werk, dan spreken we samen af hoe we werken."},"undecided":{"check":true,"en":"How we handle a client's request not to use AI tools on their work.","nl":"Hoe we omgaan met een klant die niet wil dat we AI-tools gebruiken voor zijn werk."},"missing":{"check":true,"en":"How we handle a client's request not to use AI tools on their work.","nl":"Hoe we omgaan met een klant die niet wil dat we AI-tools gebruiken voor zijn werk."}},"review":{"always":{"en":"A person checks AI output before anything goes to a client, and whoever signs it off is responsible for it.","nl":"Een mens controleert AI-uitvoer voordat er iets naar een klant gaat, en wie het aftekent, is ervoor verantwoordelijk."},"depends":{"check":true,"en":"A fixed rule for checking AI output before it goes to a client. Today it depends on the task.","nl":"Een vaste regel voor het controleren van AI-uitvoer voordat die naar een klant gaat. Nu hangt het af van de taak."},"no_rule":{"check":true,"en":"A rule for checking AI output before it goes to a client.","nl":"Een regel voor het controleren van AI-uitvoer voordat die naar een klant gaat."},"missing":{"check":true,"en":"Our rule for checking AI output before it goes to a client.","nl":"Onze regel voor het controleren van AI-uitvoer voordat die naar een klant gaat."}},"policy":{"yes":{"en":"We have written rules for AI tools, shared with all staff.","nl":"We hebben geschreven regels voor AI-tools, gedeeld met alle medewerkers."},"drafting":{"check":true,"en":"Written rules for AI tools. They are being written.","nl":"Geschreven regels voor AI-tools. Die worden nu opgesteld."},"no":{"check":true,"en":"Written rules for AI tools. We don't have them yet.","nl":"Geschreven regels voor AI-tools. Die hebben we nog niet."},"missing":{"check":true,"en":"Written rules for AI tools.","nl":"Geschreven regels voor AI-tools."}},"literacy":{"trained":{"en":"Staff who use AI tools have been briefed on these rules and on the tools' limits, and we keep this up.","nl":"Medewerkers die AI-tools gebruiken, zijn geïnstrueerd over deze regels en over de beperkingen van de tools, en we houden dat bij."},"planned":{"check":true,"en":"Briefing staff on these rules and on the tools' limits. It is planned.","nl":"Medewerkers instrueren over deze regels en over de beperkingen van de tools. Dat staat gepland."},"no":{"check":true,"en":"Briefing staff on these rules and on the tools' limits.","nl":"Medewerkers instrueren over deze regels en over de beperkingen van de tools."},"missing":{"check":true,"en":"Briefing staff on these rules and on the tools' limits.","nl":"Medewerkers instrueren over deze regels en over de beperkingen van de tools."}},"subprocessors":{"yes":{"en":"The AI vendors we use on client data are on the sub-processor list we give our clients.","nl":"De AI-leveranciers die we gebruiken voor klantgegevens, staan op de lijst van subverwerkers die we onze klanten geven."},"not_yet":{"check":true,"en":"Adding the AI vendors to the sub-processor list we give our clients.","nl":"De AI-leveranciers toevoegen aan de lijst van subverwerkers die we onze klanten geven."},"no_list":{"check":true,"en":"A sub-processor list for our clients that includes the AI vendors.","nl":"Een lijst van subverwerkers voor onze klanten, met de AI-leveranciers erop."},"na":{"skip":true},"missing":{"check":true,"en":"Whether the AI vendors are on the sub-processor list we give our clients.","nl":"Of de AI-leveranciers op de lijst van subverwerkers staan die we onze klanten geven."}},"incidents":{"procedure":{"en":"If client data goes into an AI tool by mistake, we record it, assess the risk, and tell the client without undue delay where we are their processor.","nl":"Komen klantgegevens per ongeluk in een AI-tool, dan leggen we dat vast, beoordelen we het risico en informeren we de klant zonder onnodige vertraging als wij zijn verwerker zijn."},"no":{"check":true,"en":"A procedure for when client data goes into an AI tool by mistake.","nl":"Een procedure voor als klantgegevens per ongeluk in een AI-tool komen."},"missing":{"check":true,"en":"Our procedure for when client data goes into an AI tool by mistake.","nl":"Onze procedure voor als klantgegevens per ongeluk in een AI-tool komen."}}},"tool_lines":{"dpa":{"signed":{"en":"Processing agreement with {vendor}: in place.","nl":"Verwerkersovereenkomst met {vendor}: afgesloten."},"no":{"en":"Processing agreement with {vendor}: not yet in place.","nl":"Verwerkersovereenkomst met {vendor}: nog niet afgesloten."},"unsure":{"check":true,"en":"Whether our processing agreement with {vendor} for {tool} is in place.","nl":"Of onze verwerkersovereenkomst met {vendor} voor {tool} is afgesloten."}},"training":{"off_checked":{"en":"Training on our data: switched off. We checked the setting.","nl":"Training op onze gegevens: uitgezet. We hebben de instelling gecontroleerd."},"default":{"check":true,"en":"The training setting in {tool}. Until then we go by what {vendor} states.","nl":"De trainingsinstelling in {tool}. Tot dan gaan we uit van wat {vendor} zegt."},"on":{"en":"Training on our data: the setting is on, so {vendor} may use what we enter to improve its models.","nl":"Training op onze gegevens: de instelling staat aan, dus {vendor} mag wat we invoeren gebruiken om zijn modellen te verbeteren."},"unsure":{"check":true,"en":"The training setting in {tool}.","nl":"De trainingsinstelling in {tool}."}},"region":{"eu":{"en":"Storage: in the EU or EEA.","nl":"Opslag: in de EU of EER."},"outside":{"en":"Storage: outside the EU.","nl":"Opslag: buiten de EU."},"unsure":{"check":true,"en":"Where {tool} stores our data.","nl":"Waar {tool} onze gegevens opslaat."}},"retention":{"set":{"en":"Retention: we set how long chats are kept.","nl":"Bewaren: wij stellen in hoe lang chats bewaard blijven."},"default":{"en":"Retention: the vendor's default for this account.","nl":"Bewaren: de standaard van de leverancier voor dit account."},"unsure":{"check":true,"en":"How long {tool} keeps our chats.","nl":"Hoe lang {tool} onze chats bewaart."}}},"vendor_labels":{"training":{"en":"Training on inputs","nl":"Training op invoer"},"retention":{"en":"Retention","nl":"Bewaren"},"location":{"en":"Storage","nl":"Opslag"},"contract":{"en":"Processing agreement","nl":"Verwerkersovereenkomst"}},"vendor_short":{"Yes, by default":{"en":"Yes, by default","nl":"Ja, standaard"},"No, by default":{"en":"No, by default","nl":"Nee, standaard niet"},"No (foundation models)":{"en":"No (foundation models)","nl":"Nee (basismodellen)"},"No":{"en":"No","nl":"Nee"},"No, without permission":{"en":"No, without permission","nl":"Nee, niet zonder toestemming"},"Yes, unless switched off":{"en":"Yes, unless switched off","nl":"Ja, tenzij uitgezet"},"Yes":{"en":"Yes","nl":"Ja"},"Until deleted":{"en":"Until deleted","nl":"Tot het wordt verwijderd"},"Admins decide":{"en":"Set by the account's admins","nl":"Ingesteld door de beheerders"},"Not stated":{"en":"Not stated by the vendor","nl":"Niet vermeld door de leverancier"},"Your policies":{"en":"Set by the account's own policies","nl":"Volgens het eigen beleid van het account"},"18 months by default":{"en":"18 months by default","nl":"Standaard 18 maanden"},"30 days, or up to 5 years":{"en":"30 days, or up to 5 years","nl":"30 dagen, of tot 5 jaar"},"Until deleted; Enterprise can limit":{"en":"Until deleted; Enterprise can limit it","nl":"Tot het wordt verwijderd; Enterprise kan het beperken"},"While the account exists":{"en":"While the account exists","nl":"Zolang het account bestaat"},"Outside the EEA":{"en":"Outside the EEA","nl":"Buiten de EER"},"New workspaces pick a region":{"en":"New workspaces can pick a region","nl":"Nieuwe werkruimtes kunnen een regio kiezen"},"EU residency option":{"en":"EU residency available","nl":"Opslag in de EU mogelijk"},"EU, except web search":{"en":"EU, except web search","nl":"EU, behalve zoeken op internet"},"EU, with exceptions":{"en":"EU, with exceptions","nl":"EU, met uitzonderingen"},"EU option, most editions":{"en":"EU option in most editions","nl":"EU-optie in de meeste edities"},"Stored in the US":{"en":"Stored in the US","nl":"Opgeslagen in de VS"},"China":{"en":"China","nl":"China"},"None with your firm":{"en":"None for this type of account","nl":"Geen, voor dit soort account"},"DPA available":{"en":"Available","nl":"Beschikbaar"},"DPA included":{"en":"Included in the terms","nl":"Onderdeel van de voorwaarden"},"None":{"en":"None","nl":"Geen"}},"names":{"chatgpt-personal":{"en":"ChatGPT Free, Plus or Pro","nl":"ChatGPT Free, Plus of Pro"},"chatgpt-business":{"en":"ChatGPT Business","nl":"ChatGPT Business"},"chatgpt-enterprise":{"en":"ChatGPT Enterprise","nl":"ChatGPT Enterprise"},"copilot-personal":{"en":"Microsoft Copilot app","nl":"Microsoft Copilot-app"},"copilot-chat-work":{"en":"Microsoft 365 Copilot Chat","nl":"Microsoft 365 Copilot Chat"},"m365-copilot":{"en":"Microsoft 365 Copilot","nl":"Microsoft 365 Copilot"},"gemini-personal":{"en":"Gemini app","nl":"Gemini-app"},"gemini-workspace":{"en":"Gemini in Google Workspace","nl":"Gemini in Google Workspace"},"claude-personal":{"en":"Claude Free, Pro or Max","nl":"Claude Free, Pro of Max"},"claude-work":{"en":"Claude Team or Enterprise","nl":"Claude Team of Enterprise"},"deepseek-app":{"en":"DeepSeek","nl":"DeepSeek"}}},"letter_fields":[{"id":"signer","type":"text","label":"Signed by (for the letter)","hint":"Name and role, for example \"Anna de Vries, director\".","optional":true}],"documents":{"statement":{"en":{"title":"How we use AI tools with client data","of":"Statement of {date}","in_short":"In short","tools":"The AI tools we use","tools_intro":"These are the AI tools the firm provides or allows for work:","tools_none":"The firm does not provide or allow any AI tools for work.","tools_empty":"Which AI tools the firm provides or allows.","work":"work account","personal":"personal account","vendor_says":"What {vendor} states about this account (the vendor's own pages, not checked by us)","other_vendor":"the vendor","other_tool":"the other AI tool","data":"What goes into them","how":"How we work","choices":"Your choices","contact":"Questions about this statement: {contact}.","contact_empty":"Questions about this statement: [contact person or address].","open":"What we are still checking","open_none":"Nothing, at the date of this statement.","summary_tools":"We use {list}.","summary_none":"The firm does not provide or allow any AI tools for work.","summary_dpa":"Each AI vendor we use is bound by a processing agreement with us.","summary_open_one":"One point is still being checked; it is listed at the end.","summary_open_many":"{n} points are still being checked; they are listed at the end.","sources":"Sources for the vendor statements","footer":"Vendor statements come from the vendors' own pages, as collected in the AI accounts guide at noxiom.com/ai-accounts (checked {guide_date}). They are the vendors' promises, not facts checked by us. Made with noxiom.com/client-asks-about-ai (CC BY 4.0).","beyond":"Other AI use","checked":"checked {date}"},"nl":{"title":"Hoe wij AI-tools gebruiken met klantgegevens","of":"Verklaring van {date}","in_short":"In het kort","tools":"De AI-tools die we gebruiken","tools_intro":"Dit zijn de AI-tools die ons bedrijf aanbiedt of toestaat voor het werk:","tools_none":"Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.","tools_empty":"Welke AI-tools ons bedrijf aanbiedt of toestaat.","work":"werkaccount","personal":"privéaccount","vendor_says":"Wat {vendor} zegt over dit account (de eigen pagina's van de leverancier, niet door ons gecontroleerd)","other_vendor":"de leverancier","other_tool":"de andere AI-tool","data":"Wat erin gaat","how":"Hoe we werken","choices":"Uw keuzes","contact":"Vragen over deze verklaring: {contact}.","contact_empty":"Vragen over deze verklaring: [contactpersoon of adres].","open":"Wat we nog nagaan","open_none":"Niets, op de datum van deze verklaring.","summary_tools":"We gebruiken {list}.","summary_none":"Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.","summary_dpa":"Met elke AI-leverancier die we gebruiken, hebben we een verwerkersovereenkomst.","summary_open_one":"Eén punt gaan we nog na; het staat aan het eind.","summary_open_many":"{n} punten gaan we nog na; ze staan aan het eind.","sources":"Bronnen bij wat de leveranciers zeggen","footer":"Wat de leveranciers zeggen, komt van hun eigen pagina's, zoals verzameld in de AI accounts guide op noxiom.com/ai-accounts (gecontroleerd {guide_date}). Het zijn beloften van de leveranciers, geen feiten die wij hebben gecontroleerd. De Nederlandse tekst is geschreven met hulp van AI. Gemaakt met noxiom.com/client-asks-about-ai (CC BY 4.0).","beyond":"Ander AI-gebruik","checked":"gecontroleerd {date}"}},"letter":{"en":{"subject":"How we use AI tools with your data","place_date":"[Place], {date}","dear":"Dear [name],","thanks":"Thank you for asking how we use AI tools with your data. It is a fair question, and here is our answer.","yes":"Yes, we use AI tools in our work: {list}.","none":"The firm does not provide or allow any AI tools for work.","empty":"We are confirming which AI tools we use, and will send you our full statement.","attached":"Our AI statement of {date} is attached. The main points:","open":"A few points are still being checked. They are listed at the end of the statement, and we will tell you the outcome.","contact":"If you have questions, please contact {contact}.","contact_empty":"If you have questions, please contact [contact person].","regards":"Kind regards,","signer_empty":"[Name, role]","firm_empty":"[Firm name]"},"nl":{"subject":"Hoe wij AI-tools gebruiken met uw gegevens","place_date":"[Plaats], {date}","dear":"Beste [naam],","thanks":"Dank voor uw vraag hoe wij AI-tools gebruiken met uw gegevens. Een terechte vraag, en dit is ons antwoord.","yes":"Ja, wij gebruiken AI-tools in ons werk: {list}.","none":"Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.","empty":"We zetten op een rij welke AI-tools we gebruiken, en sturen u daarna onze volledige verklaring.","attached":"Bijgevoegd is onze AI-verklaring van {date}. De belangrijkste punten:","open":"Een paar punten gaan we nog na. Ze staan aan het eind van de verklaring, en we laten u weten wat eruit komt.","contact":"Hebt u vragen, neem dan contact op met {contact}.","contact_empty":"Hebt u vragen, neem dan contact op met [contactpersoon].","regards":"Met vriendelijke groet,","signer_empty":"[Naam, functie]","firm_empty":"[Naam van het bedrijf]"}}},"sources":{"oai-train":{"publisher":"OpenAI","title":"How your data is used to improve model performance","url":"https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance","checked":"2026-11-22"},"oai-controls":{"publisher":"OpenAI","title":"Data Controls FAQ","url":"https://help.openai.com/en/articles/7730893-data-controls-faq","checked":"2026-11-22"},"oai-retention":{"publisher":"OpenAI","title":"Chat and file retention policies in ChatGPT","url":"https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt","checked":"2026-11-22"},"oai-euprivacy":{"publisher":"OpenAI","title":"EU privacy policy","url":"https://openai.com/policies/eu-privacy-policy/","checked":"2026-11-22"},"oai-entprivacy":{"publisher":"OpenAI","title":"Enterprise privacy at OpenAI","url":"https://openai.com/enterprise-privacy/","checked":"2026-11-22"},"oai-bizdata":{"publisher":"OpenAI","title":"Business data privacy, security, and compliance","url":"https://openai.com/business-data/","checked":"2026-11-22"},"oai-bizfaq":{"publisher":"OpenAI","title":"ChatGPT Business: General FAQ","url":"https://help.openai.com/en/articles/12111915-chatgpt-business-rename-faq","checked":"2026-11-22"},"oai-bizstorage":{"publisher":"OpenAI","title":"Where your ChatGPT Business content is stored","url":"https://help.openai.com/en/articles/20001418-where-your-chatgpt-business-content-is-stored","checked":"2026-11-22"},"oai-residency":{"publisher":"OpenAI","title":"Data residency and inference residency for ChatGPT","url":"https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt","checked":"2026-11-22"},"oai-dpa":{"publisher":"OpenAI","title":"Data Processing Addendum","url":"https://openai.com/policies/data-processing-addendum/","checked":"2026-11-22"},"oai-plus":{"publisher":"OpenAI","title":"What is ChatGPT Plus?","url":"https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus","checked":"2026-11-22"},"oai-pricing":{"publisher":"OpenAI","title":"ChatGPT pricing","url":"https://chatgpt.com/pricing","checked":"2026-11-22"},"ms-consumer-history":{"publisher":"Microsoft","title":"Microsoft Copilot activity history (updated app)","url":"https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history","checked":"2026-11-22"},"ms-consumer-faq":{"publisher":"Microsoft","title":"Privacy FAQ for Microsoft Copilot (older app)","url":"https://support.microsoft.com/en-us/topic/privacy-faq-for-microsoft-copilot-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f","checked":"2026-11-22"},"ms-chat-privacy":{"publisher":"Microsoft","title":"Privacy and protections for Microsoft 365 Copilot Chat","url":"https://learn.microsoft.com/en-us/copilot/privacy-and-protections","checked":"2026-11-22"},"ms-edp":{"publisher":"Microsoft","title":"Enterprise data protection in Microsoft 365 Copilot and Copilot Chat","url":"https://learn.microsoft.com/en-us/copilot/microsoft-365/enterprise-data-protection","checked":"2026-11-22"},"ms-copilot-overview":{"publisher":"Microsoft","title":"What is Microsoft Copilot? (licensing overview)","url":"https://learn.microsoft.com/en-us/copilot/faq","checked":"2026-11-22"},"ms-m365-privacy":{"publisher":"Microsoft","title":"Data, privacy, and security for Microsoft 365 Copilot","url":"https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy","checked":"2026-11-22"},"ms-license":{"publisher":"Microsoft","title":"License options for Microsoft Copilot","url":"https://learn.microsoft.com/en-us/copilot/plan/copilot-license-options","checked":"2026-11-22"},"ms-business-price":{"publisher":"Microsoft Tech Community","title":"Act now: lock in current pricing on Microsoft 365 Copilot","url":"https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/act-now-lock-in-current-pricing-on-microsoft-365-copilot/ba-p/4502628","checked":"2026-11-22"},"g-gemini-hub":{"publisher":"Google","title":"Gemini Apps Privacy Hub","url":"https://support.google.com/gemini/answer/13594961?hl=en","checked":"2026-11-22"},"g-gemini-history":{"publisher":"Google","title":"Manage and delete your history in Gemini Apps","url":"https://support.google.com/gemini/answer/13278892?hl=en","checked":"2026-11-22"},"g-ws-hub":{"publisher":"Google","title":"Generative AI in Google Workspace Privacy Hub","url":"https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub?hl=en","checked":"2026-11-22"},"g-ws-regions":{"publisher":"Google","title":"Data covered by data regions","url":"https://knowledge.workspace.google.com/admin/compliance/data-covered-by-data-regions?hl=en","checked":"2026-11-22"},"g-ws-pricing":{"publisher":"Google","title":"Google Workspace pricing (Netherlands)","url":"https://workspace.google.com/pricing?hl=en","checked":"2026-11-22"},"g-ai-plans":{"publisher":"Google","title":"Google One plans","url":"https://one.google.com/about/plans","checked":"2026-11-22"},"a-consumer-terms":{"publisher":"Anthropic","title":"Updates to our consumer terms","url":"https://www.anthropic.com/news/updates-to-our-consumer-terms","checked":"2026-11-22"},"a-consumer-training":{"publisher":"Anthropic","title":"Is my data used for model training?","url":"https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training","checked":"2026-11-22"},"a-consumer-retention":{"publisher":"Anthropic","title":"How long do you store my data?","url":"https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data","checked":"2026-11-22"},"a-org-retention":{"publisher":"Anthropic","title":"How long do you store my organization's data?","url":"https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data","checked":"2026-11-22"},"a-ent-retention":{"publisher":"Anthropic","title":"Configure custom data retention controls for Enterprise plans","url":"https://privacy.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans","checked":"2026-11-22"},"a-processor":{"publisher":"Anthropic","title":"Does Anthropic act as a data processor or controller?","url":"https://privacy.claude.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller","checked":"2026-11-22"},"a-dpa":{"publisher":"Anthropic","title":"How do I view and sign your Data Processing Addendum (DPA)?","url":"https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa","checked":"2026-11-22"},"a-servers":{"publisher":"Anthropic","title":"Where are your servers located?","url":"https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers","checked":"2026-11-22"},"a-commercial-terms":{"publisher":"Anthropic","title":"Commercial Terms of Service","url":"https://www.anthropic.com/legal/commercial-terms","checked":"2026-11-22"},"a-pricing":{"publisher":"Anthropic","title":"Claude pricing","url":"https://claude.com/pricing","checked":"2026-11-22"},"ds-privacy":{"publisher":"DeepSeek","title":"DeepSeek Privacy Policy","url":"https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html","checked":"2026-11-22"},"ds-ap-warning":{"publisher":"DutchNews.nl (reporting the Dutch data protection authority)","title":"Dutch privacy watchdog warns about uploading info to DeepSeek","url":"https://www.dutchnews.nl/?p=247047","checked":"2026-11-22"},"ap-chatbots":{"publisher":"Autoriteit Persoonsgegevens (Dutch data protection authority)","title":"Caution: use of AI chatbot may lead to data breaches","url":"https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches","checked":"2026-11-22"},"gdpr":{"publisher":"EUR-Lex","title":"Regulation (EU) 2016/679 (General Data Protection Regulation)","url":"https://eur-lex.europa.eu/eli/reg/2016/679/oj","checked":"2026-11-22"}},"tones":{"good":{"icon":"✓","sr":"In your favour"},"warning":{"icon":"!","sr":"Has a catch"},"critical":{"icon":"✕","sr":"A problem for client data"},"unknown":{"icon":"?","sr":"The vendor doesn't say"},"neutral":{"icon":"","sr":""}}}</script>
+    <script>
+// AI statement builder: the logic, with no access to the page.
+// Shared by the browser (inlined into /client-asks-about-ai) and the tests
+// (loaded with node:vm). It reads nothing from the network or the device.
+//
+// The one rule: a sentence appears only for an answer the firm gave. A
+// missing or "not sure" answer becomes an open point under "What we are
+// still checking". What a vendor states is shown apart, with its source,
+// and never as the firm's own fact.
+(function (root) {
+  "use strict";
+
+  var MONTHS = {
+    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"]
+  };
+
+  function pad(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  function humanDate(date, lang) {
+    return date.getDate() + " " + MONTHS[lang === "nl" ? "nl" : "en"][date.getMonth()] + " " + date.getFullYear();
+  }
+
+  function localStamp(d) {
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()) + "T" + pad(d.getHours()) + ":" + pad(d.getMinutes());
+  }
+
+  function fill(text, vars) {
+    return String(text).replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; });
+  }
+
+  function langOf(state) {
+    return state && state.language === "nl" ? "nl" : "en";
+  }
+
+  // ------------------------------------------------------------ the questions
+
+  function allFields(K) {
+    var out = [];
+    K.facts.sections.forEach(function (s) { s.fields.forEach(function (f) { out.push(f); }); });
+    K.letter_fields.forEach(function (f) { out.push(f); });
+    return out;
+  }
+
+  function planById(K, id) {
+    for (var i = 0; i < K.plans.length; i++) if (K.plans[i].id === id) return K.plans[i];
+    return null;
+  }
+
+  function accountOf(K, id) {
+    if (id === K.facts.other_tool.id) return K.facts.other_tool.account;
+    var p = planById(K, id);
+    return p ? p.account : "";
+  }
+
+  // The short questions asked for one account.
+  function questionsFor(K, id) {
+    var account = accountOf(K, id);
+    return K.facts.tool_questions.filter(function (q) { return q.accounts.indexOf(account) !== -1; });
+  }
+
+  // ------------------------------------------------------------ sentences
+
+  // One line for one answer: {text, check} or null (nothing to say).
+  function factLine(K, group, value, lang, vars) {
+    var lines = K.facts.lines[group];
+    var line = (value && lines[value]) || lines.missing;
+    if (!line || line.skip) return null;
+    return { text: fill(line[lang], vars || {}), check: !!line.check };
+  }
+
+  function toolLine(K, q, value, lang, vars) {
+    var lines = K.facts.tool_lines[q];
+    var line = (value && lines[value]) || lines.unsure;
+    return { text: fill(line[lang], vars), check: !!line.check };
+  }
+
+  // The tools the firm ticked, in the order of the guide.
+  function chosenTools(K, state) {
+    var ticked = state.tools || [];
+    var ids = K.plans.map(function (p) { return p.id; }).concat([K.facts.other_tool.id]);
+    return ids.filter(function (id) { return ticked.indexOf(id) !== -1; });
+  }
+
+  function toolName(K, id, state, lang) {
+    var named = K.facts.names[id];
+    if (named) return named[lang];
+    var name = ((state.tool_facts || {})[id] || {}).name;
+    return name || K.documents.statement[lang].other_tool;
+  }
+
+  function vendorName(K, id, state, lang) {
+    var p = planById(K, id);
+    if (p) return p.vendor;
+    var name = ((state.tool_facts || {})[id] || {}).name;
+    return name || K.documents.statement[lang].other_vendor;
+  }
+
+  // Everything the firm said, sorted into the statement's sections, with the
+  // open points collected separately.
+  function collect(K, state, lang) {
+    var out = { tools: [], toolsLine: null, afterTools: [], data: [], how: [], choices: [], open: [] };
+    var put = function (bucket, line) {
+      if (!line) return;
+      if (line.check) out.open.push(line.text);
+      else out[bucket].push(line.text);
+    };
+    var D = K.documents.statement[lang];
+    var tools = chosenTools(K, state);
+    var none = (state.tools || []).indexOf(K.facts.no_tools.id) !== -1 && !tools.length;
+
+    if (none) out.toolsLine = D.tools_none;
+    else if (!tools.length) out.open.push(D.tools_empty);
+
+    tools.forEach(function (id) {
+      var facts = (state.tool_facts || {})[id] || {};
+      var vars = { tool: toolName(K, id, state, lang), vendor: vendorName(K, id, state, lang) };
+      var entry = { id: id, name: vars.tool, account: accountOf(K, id), lines: [], vendor: [] };
+      questionsFor(K, id).forEach(function (q) {
+        var line = toolLine(K, q.id, facts[q.id], lang, vars);
+        if (line.check) out.open.push(line.text);
+        else entry.lines.push(line.text);
+      });
+      var p = planById(K, id);
+      if (p) {
+        ["training", "retention", "location", "contract"].forEach(function (f) {
+          var fact = p.facts[f];
+          var short = K.facts.vendor_short[fact.short];
+          entry.vendor.push({ label: K.facts.vendor_labels[f][lang], text: short ? short[lang] : fact.short, sources: fact.sources });
+        });
+      }
+      out.tools.push(entry);
+    });
+
+    if (!none) {
+      put("afterTools", factLine(K, "shadow", state.shadow, lang));
+      put("afterTools", factLine(K, "personal", state.personal, lang));
+      put("data", factLine(K, "client_data", state.client_data, lang));
+      put("data", factLine(K, "special", state.special, lang));
+    } else {
+      // No tools: only what still matters without them.
+      put("afterTools", factLine(K, "shadow", state.shadow, lang));
+      put("afterTools", factLine(K, "personal", state.personal, lang));
+    }
+    if (!none) {
+      put("how", factLine(K, "review", state.review, lang));
+      put("how", factLine(K, "policy", state.policy, lang));
+      put("how", factLine(K, "literacy", state.literacy, lang));
+    }
+    put("how", factLine(K, "role", state.role, lang));
+    var processor = state.role === "processor" || state.role === "both";
+    if (state.subprocessors || processor) put("how", factLine(K, "subprocessors", state.subprocessors, lang));
+    put("how", factLine(K, "incidents", state.incidents, lang));
+    if (!none) put("choices", factLine(K, "opt_out", state.opt_out, lang));
+    return out;
+  }
+
+  function listJoin(items, lang) {
+    if (items.length <= 1) return items.join("");
+    var and = lang === "nl" ? " en " : " and ";
+    return items.slice(0, -1).join(", ") + and + items[items.length - 1];
+  }
+
+  function toolList(K, c, lang) {
+    var D = K.documents.statement[lang];
+    return listJoin(c.tools.map(function (t) { return t.name + " (" + D[t.account] + ")"; }), lang);
+  }
+
+  // The few lines that open the statement and fill the letter, each with
+  // its kind: "tools" (which tools), "point" (a confirmed fact), "open".
+  function summary(K, state, c, lang) {
+    var D = K.documents.statement[lang];
+    var out = [];
+    if (c.toolsLine) out.push({ kind: "tools", text: D.summary_none });
+    if (c.tools.length) out.push({ kind: "tools", text: fill(D.summary_tools, { list: toolList(K, c, lang) }) });
+    var allSigned = c.tools.length > 0 && c.tools.every(function (t) {
+      return t.account === "work" && ((state.tool_facts || {})[t.id] || {}).dpa === "signed";
+    });
+    if (allSigned) out.push({ kind: "point", text: D.summary_dpa });
+    var keep = function (group) {
+      var l = factLine(K, group, state[group], lang);
+      if (l && !l.check) out.push({ kind: "point", text: l.text });
+    };
+    if (c.tools.length) {
+      keep("client_data");
+      keep("review");
+    }
+    if (c.open.length) out.push({ kind: "open", text: c.open.length === 1 ? D.summary_open_one : fill(D.summary_open_many, { n: c.open.length }) });
+    return out;
+  }
+
+  var texts = function (lines) { return lines.map(function (l) { return l.text; }); };
+
+  // ------------------------------------------------------------ the two documents
+
+  function isoToDate(iso) {
+    var p = String(iso).split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+
+  function sourceText(K, id, lang) {
+    var s = K.sources[id];
+    var checked = fill(K.documents.statement[lang].checked, { date: humanDate(isoToDate(s.checked), lang) });
+    return s.publisher + ": " + s.title + ". " + s.url + " (" + checked + ")";
+  }
+
+  function statementBlocks(K, state, now) {
+    var lang = langOf(state);
+    var D = K.documents.statement[lang];
+    var c = collect(K, state, lang);
+    var date = humanDate(now, lang);
+    var b = [];
+    b.push({ type: "title", text: D.title });
+    b.push({ type: "small", text: (state.firm_name ? state.firm_name + ". " : "") + fill(D.of, { date: date }) + "." });
+    b.push({ type: "h1", text: D.in_short });
+    b.push({ type: "bullets", items: texts(summary(K, state, c, lang)) });
+
+    b.push({ type: "h1", text: D.tools });
+    if (c.toolsLine) b.push({ type: "p", text: c.toolsLine });
+    if (c.tools.length) b.push({ type: "p", text: D.tools_intro });
+    var cited = [];
+    c.tools.forEach(function (t) {
+      b.push({ type: "h2", text: t.name + " (" + D[t.account] + ")" });
+      if (t.lines.length) b.push({ type: "bullets", items: t.lines });
+      if (t.vendor.length) {
+        b.push({ type: "p", text: "**" + fill(D.vendor_says, { vendor: vendorName(K, t.id, state, lang) }) + "**" });
+        b.push({
+          type: "bullets",
+          items: t.vendor.map(function (v) {
+            v.sources.forEach(function (s) { if (cited.indexOf(s) === -1) cited.push(s); });
+            return v.label + ": " + v.text + " [" + v.sources.map(function (s) { return cited.indexOf(s) + 1; }).join(", ") + "]";
+          })
+        });
+      }
+    });
+    if (c.afterTools.length) {
+      if (c.tools.length) b.push({ type: "h2", text: D.beyond });
+      b.push({ type: "bullets", items: c.afterTools });
+    }
+
+    if (c.data.length) {
+      b.push({ type: "h1", text: D.data });
+      b.push({ type: "bullets", items: c.data });
+    }
+    if (c.how.length) {
+      b.push({ type: "h1", text: D.how });
+      b.push({ type: "bullets", items: c.how });
+    }
+    b.push({ type: "h1", text: D.choices });
+    var choices = c.choices.slice();
+    choices.push(state.contact ? fill(D.contact, { contact: state.contact }) : D.contact_empty);
+    b.push({ type: "bullets", items: choices });
+
+    b.push({ type: "h1", text: D.open });
+    b.push(c.open.length ? { type: "bullets", items: c.open } : { type: "p", text: D.open_none });
+
+    if (cited.length) {
+      b.push({ type: "h2", text: D.sources });
+      b.push({ type: "numbers", items: cited.map(function (id) { return sourceText(K, id, lang); }) });
+    }
+    b.push({ type: "small", text: fill(D.footer, { guide_date: K.guideChecked[lang] }) });
+    return b;
+  }
+
+  function letterBlocks(K, state, now) {
+    var lang = langOf(state);
+    var D = K.documents.letter[lang];
+    var c = collect(K, state, lang);
+    var date = humanDate(now, lang);
+    var b = [];
+    b.push({ type: "p", text: fill(D.place_date, { date: date }) });
+    b.push({ type: "p", text: "**" + D.subject + "**" });
+    b.push({ type: "p", text: D.dear });
+    b.push({ type: "p", text: D.thanks });
+    if (c.toolsLine) b.push({ type: "p", text: D.none });
+    else if (c.tools.length) b.push({ type: "p", text: fill(D.yes, { list: toolList(K, c, lang) }) });
+    else b.push({ type: "p", text: D.empty });
+    b.push({ type: "p", text: fill(D.attached, { date: date }) });
+    // The tools were named above, and open points get their own paragraph.
+    var points = texts(summary(K, state, c, lang).filter(function (l) { return l.kind === "point"; }));
+    var opt = factLine(K, "opt_out", state.opt_out, lang);
+    if (opt && !opt.check && c.tools.length) points.push(opt.text);
+    if (points.length) b.push({ type: "bullets", items: points });
+    if (c.open.length) b.push({ type: "p", text: D.open });
+    b.push({ type: "p", text: state.contact ? fill(D.contact, { contact: state.contact }) : D.contact_empty });
+    b.push({ type: "p", text: D.regards });
+    b.push({ type: "p", text: state.signer || D.signer_empty });
+    b.push({ type: "p", text: state.firm_name || D.firm_empty });
+    return b;
+  }
+
+  // Plain text, for "Copy as text".
+  function blocksToText(blocks) {
+    var plain = function (t) { return String(t).replace(/\*\*/g, ""); };
+    var out = [];
+    blocks.forEach(function (b) {
+      if (b.type === "title") out.push(plain(b.text).toUpperCase(), "");
+      else if (b.type === "h1") out.push("", plain(b.text).toUpperCase());
+      else if (b.type === "h2") out.push("", plain(b.text));
+      else if (b.type === "bullets") b.items.forEach(function (i) { out.push("- " + plain(i)); });
+      else if (b.type === "numbers") b.items.forEach(function (i, n) { out.push(n + 1 + ". " + plain(i)); });
+      else out.push(plain(b.text), "");
+    });
+    return out.join("\n").replace(/\n{3,}/g, "\n\n").trim() + "\n";
+  }
+
+  // ------------------------------------------------------------ facts as JSON
+  // The saved file is the firm's facts, to continue later, to hand to an
+  // assistant, and (later) to answer the AI section of a client questionnaire.
+
+  function factsJson(K, state, now) {
+    var out = { "$schema": K.schemaUrl, facts: K.facts.id, version: K.facts.version, saved_at: localStamp(now) };
+    allFields(K).forEach(function (f) {
+      var v = state[f.id];
+      if (f.type === "tools") {
+        var tools = (state.tools || []).slice();
+        if (tools.length) out.tools = tools;
+        var tf = {};
+        chosenTools(K, state).forEach(function (id) {
+          var facts = (state.tool_facts || {})[id];
+          if (!facts) return;
+          var keep = {};
+          Object.keys(facts).forEach(function (k) { if (facts[k]) keep[k] = facts[k]; });
+          if (Object.keys(keep).length) tf[id] = keep;
+        });
+        if (Object.keys(tf).length) out.tool_facts = tf;
+      } else if (v) out[f.id] = v;
+    });
+    if (state.language) out.language = state.language;
+    return out;
+  }
+
+  var MAX_TEXT = 300;
+
+  // Check facts from a file or an assistant against the questions. Unknown
+  // fields and values are left out and reported, never guessed.
+  function normalizeFacts(K, input) {
+    var state = { tools: [], tool_facts: {} };
+    var ignored = [];
+    var applied = 0;
+    if (!input || typeof input !== "object" || Array.isArray(input)) return { state: state, applied: 0, ignored: ["the file is not a JSON object"] };
+    var fields = {};
+    allFields(K).forEach(function (f) { fields[f.id] = f; });
+    var toolIds = K.plans.map(function (p) { return p.id; }).concat([K.facts.other_tool.id, K.facts.no_tools.id]);
+    var isOption = function (options, v) { return (options || []).some(function (o) { return o[0] === v; }); };
+    Object.keys(input).forEach(function (key) {
+      if (key === "$schema" || key === "facts" || key === "version" || key === "saved_at") return;
+      var v = input[key];
+      if (key === "language") {
+        if (v === "en" || v === "nl") state.language = v;
+        else ignored.push("language: " + String(v));
+        return;
+      }
+      if (key === "tool_facts") {
+        if (!v || typeof v !== "object" || Array.isArray(v)) { ignored.push("tool_facts (expected an object per account)"); return; }
+        Object.keys(v).forEach(function (id) {
+          if (toolIds.indexOf(id) === -1 || id === K.facts.no_tools.id) { ignored.push("tool_facts." + id); return; }
+          var qs = {};
+          questionsFor(K, id).forEach(function (q) { qs[q.id] = q; });
+          var got = v[id] || {};
+          var keep = {};
+          Object.keys(got).forEach(function (k) {
+            if (k === "name" && id === K.facts.other_tool.id && typeof got[k] === "string") { keep.name = got[k].slice(0, 80); applied++; }
+            else if (qs[k] && isOption(qs[k].options, got[k])) { keep[k] = got[k]; applied++; }
+            else ignored.push("tool_facts." + id + "." + k + ": " + String(got[k]));
+          });
+          state.tool_facts[id] = keep;
+        });
+        return;
+      }
+      var f = fields[key];
+      if (!f) { ignored.push(key + " (not a question here)"); return; }
+      if (f.type === "tools") {
+        var list = Array.isArray(v) ? v : [v];
+        list.forEach(function (x) {
+          if (toolIds.indexOf(x) !== -1 && state.tools.indexOf(x) === -1) state.tools.push(x);
+          else if (toolIds.indexOf(x) === -1) ignored.push("tools: " + String(x));
+        });
+        if (state.tools.length > 1 && state.tools.indexOf(K.facts.no_tools.id) !== -1) {
+          state.tools = state.tools.filter(function (x) { return x !== K.facts.no_tools.id; });
+          ignored.push("tools: none (other accounts were ticked too)");
+        }
+        if (state.tools.length) applied++;
+      } else if (f.options) {
+        if (isOption(f.options, v)) { state[key] = v; applied++; }
+        else ignored.push(key + ": " + String(v));
+      } else if (typeof v === "string") {
+        state[key] = v.slice(0, MAX_TEXT);
+        applied++;
+      } else ignored.push(key);
+    });
+    // Facts about accounts that aren't ticked are dropped, and said so.
+    Object.keys(state.tool_facts).forEach(function (id) {
+      if (state.tools.indexOf(id) === -1) {
+        delete state.tool_facts[id];
+        ignored.push("tool_facts." + id + " (that account isn't in tools)");
+      }
+    });
+    return { state: state, applied: applied, ignored: ignored };
+  }
+
+  function parsePasted(text) {
+    var t = String(text || "").trim();
+    var fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(t);
+    if (fence) t = fence[1].trim();
+    var start = t.indexOf("{");
+    var end = t.lastIndexOf("}");
+    if (start === -1 || end <= start) return null;
+    try { return JSON.parse(t.slice(start, end + 1)); } catch (e) { return null; }
+  }
+
+  var api = {
+    humanDate: humanDate,
+    allFields: allFields,
+    planById: planById,
+    accountOf: accountOf,
+    questionsFor: questionsFor,
+    chosenTools: chosenTools,
+    collect: collect,
+    summary: summary,
+    statementBlocks: statementBlocks,
+    letterBlocks: letterBlocks,
+    blocksToText: blocksToText,
+    factsJson: factsJson,
+    normalizeFacts: normalizeFacts,
+    parsePasted: parsePasted
+  };
+  if (typeof module === "object" && module.exports) module.exports = api;
+  else root.StatementLogic = api;
+})(this);
+    </script>
+    <script>
+// Word (.docx) parts from simple blocks. Shared by the build (Node, which
+// compresses) and the record builder in the browser (which stores without
+// compression, so it needs no library). No network, no storage.
+//
+// Blocks: title, h1, h2, p, small, bullets, numbers, checks, field, kv.
+// Text may contain **bold** runs and tab characters.
+(function (root) {
+  "use strict";
+
+  function xmlEsc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function runs(text) {
+    return String(text)
+      .split(/(\*\*[^*]+\*\*)/)
+      .filter(Boolean)
+      .map(function (part) {
+        var bold = part.slice(0, 2) === "**" && part.slice(-2) === "**";
+        var t = bold ? part.slice(2, -2) : part;
+        var inner = t
+          .split("\t")
+          .map(function (p, i) { return (i ? "<w:tab/>" : "") + '<w:t xml:space="preserve">' + xmlEsc(p) + "</w:t>"; })
+          .join("");
+        return "<w:r>" + (bold ? "<w:rPr><w:b/></w:rPr>" : "") + inner + "</w:r>";
+      })
+      .join("");
+  }
+
+  function para(text, o) {
+    o = o || {};
+    var props = (o.style ? '<w:pStyle w:val="' + o.style + '"/>' : "") +
+      (o.keepNext ? "<w:keepNext/>" : "") +
+      (o.indent ? '<w:ind w:left="' + o.indent + '" w:hanging="300"/>' : "");
+    return "<w:p>" + (props ? "<w:pPr>" + props + "</w:pPr>" : "") + runs(text) + "</w:p>";
+  }
+
+  function line(n) {
+    var out = "";
+    for (var i = 0; i < n; i++) out += para(new Array(61).join("_"));
+    return out;
+  }
+
+  function blockXml(b) {
+    switch (b.type) {
+      case "title": return para(b.text, { style: "Title" });
+      case "h1": return para(b.text, { style: "Heading1", keepNext: true });
+      case "h2": return para(b.text, { style: "Heading2", keepNext: true });
+      case "p": return para(b.text);
+      case "small": return para(b.text, { style: "Small" });
+      case "bullets": return b.items.map(function (i) { return para("•\t" + i, { indent: 300 }); }).join("");
+      case "numbers": return b.items.map(function (i, n) { return para((n + 1) + ".\t" + i, { indent: 300 }); }).join("");
+      case "checks": return b.items.map(function (i) { return para("☐\t" + i, { indent: 300 }); }).join("");
+      case "field":
+        return para("**" + b.label + "**", { keepNext: true }) + (b.hint ? para(b.hint, { style: "Small" }) : "") + line(b.lines == null ? 1 : b.lines);
+      case "kv":
+        return para("**" + b.label + "**", { keepNext: true }) + para(b.value);
+      default: throw new Error("unknown docx block type: " + b.type);
+    }
+  }
+
+  var STYLES = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n' +
+    '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+    '<w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="%LANG%"/></w:rPr></w:rPrDefault>' +
+    '<w:pPrDefault><w:pPr><w:spacing w:after="120" w:line="276" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>' +
+    '<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:spacing w:after="240"/></w:pPr><w:rPr><w:b/><w:sz w:val="40"/><w:szCs w:val="40"/><w:color w:val="1F2937"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="240" w:after="80"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:color w:val="1F2937"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="160" w:after="60"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Small"><w:name w:val="Small"/><w:basedOn w:val="Normal"/><w:qFormat/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:color w:val="555555"/></w:rPr></w:style>' +
+    "</w:styles>";
+
+  // The six parts of a minimal Word document, as text.
+  function parts(blocks, meta) {
+    var body = blocks.map(blockXml).join("");
+    var date = meta.date;
+    return [
+      { name: "[Content_Types].xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/></Types>' },
+      { name: "_rels/.rels", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/></Relationships>' },
+      { name: "docProps/core.xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>' + xmlEsc(meta.title) + '</dc:title><dc:creator>Noxiom</dc:creator><dcterms:created xsi:type="dcterms:W3CDTF">' + date + 'T12:00:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">' + date + "T12:00:00Z</dcterms:modified></cp:coreProperties>" },
+      { name: "word/_rels/document.xml.rels", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>' },
+      { name: "word/document.xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' + body + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/></w:sectPr></w:body></w:document>' },
+      { name: "word/styles.xml", data: STYLES.replace("%LANG%", meta.lang || "en-GB") }
+    ];
+  }
+
+  var CRC_TABLE = (function () {
+    var t = [];
+    for (var n = 0; n < 256; n++) {
+      var c = n;
+      for (var k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+
+  function crc32(bytes) {
+    var c = 0xffffffff;
+    for (var i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
+    return (c ^ 0xffffffff) >>> 0;
+  }
+
+  function utf8(s) {
+    if (typeof TextEncoder !== "undefined") return new TextEncoder().encode(s);
+    return Uint8Array.from(Buffer.from(s, "utf8"));
+  }
+
+  // A zip with stored (uncompressed) entries: valid for Word, no library needed.
+  function zipStored(files, isoDate) {
+    var ymd = isoDate.split("-").map(Number);
+    var time = 12 << 11;
+    var date = ((ymd[0] - 1980) << 9) | (ymd[1] << 5) | ymd[2];
+    var entries = files.map(function (f) {
+      var data = typeof f.data === "string" ? utf8(f.data) : f.data;
+      return { name: utf8(f.name), data: data, crc: crc32(data) };
+    });
+    var size = 22;
+    entries.forEach(function (e) { size += 30 + e.name.length + e.data.length + 46 + e.name.length; });
+    var out = new Uint8Array(size);
+    var view = new DataView(out.buffer);
+    var p = 0;
+    var central = [];
+    entries.forEach(function (e) {
+      var offset = p;
+      view.setUint32(p, 0x04034b50, true); view.setUint16(p + 4, 20, true); view.setUint16(p + 6, 0x0800, true);
+      view.setUint16(p + 8, 0, true); view.setUint16(p + 10, time, true); view.setUint16(p + 12, date, true);
+      view.setUint32(p + 14, e.crc, true); view.setUint32(p + 18, e.data.length, true); view.setUint32(p + 22, e.data.length, true);
+      view.setUint16(p + 26, e.name.length, true); view.setUint16(p + 28, 0, true);
+      out.set(e.name, p + 30); out.set(e.data, p + 30 + e.name.length);
+      p += 30 + e.name.length + e.data.length;
+      central.push({ e: e, offset: offset });
+    });
+    var cdStart = p;
+    central.forEach(function (c) {
+      var e = c.e;
+      view.setUint32(p, 0x02014b50, true); view.setUint16(p + 4, 20, true); view.setUint16(p + 6, 20, true);
+      view.setUint16(p + 8, 0x0800, true); view.setUint16(p + 10, 0, true); view.setUint16(p + 12, time, true);
+      view.setUint16(p + 14, date, true); view.setUint32(p + 16, e.crc, true); view.setUint32(p + 20, e.data.length, true);
+      view.setUint32(p + 24, e.data.length, true); view.setUint16(p + 28, e.name.length, true);
+      view.setUint32(p + 42, c.offset, true);
+      out.set(e.name, p + 46);
+      p += 46 + e.name.length;
+    });
+    view.setUint32(p, 0x06054b50, true); view.setUint16(p + 8, entries.length, true); view.setUint16(p + 10, entries.length, true);
+    view.setUint32(p + 12, p - cdStart, true); view.setUint32(p + 16, cdStart, true);
+    return out;
+  }
+
+  var api = { parts: parts, blockXml: blockXml, crc32: crc32, zipStored: zipStored };
+  if (typeof module === "object" && module.exports) module.exports = api;
+  else root.DocxCore = api;
+})(this);
+    </script>
+    <script>
+// AI statement builder: the page side. Everything stays in this tab.
+// No network requests, no cookies, no storage of any kind: closing the tab
+// discards the answers, which is why the page asks before it closes. Files
+// are only ever made or read here, on the reader's own device.
+(function () {
+  "use strict";
+  var dataEl = document.getElementById("kit-data");
+  var app = document.getElementById("statement-builder");
+  if (!dataEl || !app || !window.StatementLogic || !window.DocxCore) return;
+  var K = JSON.parse(dataEl.textContent);
+  var L = window.StatementLogic;
+  var D = window.DocxCore;
+  var state = { tools: [], tool_facts: {} };
+  var showing = "statement";
+  var $ = function (id) { return document.getElementById(id); };
+  var NONE = K.facts.no_tools.id;
+
+  app.hidden = false;
+  var fallback = $("builder-fallback");
+  if (fallback) fallback.hidden = true;
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function pad(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  function isoDay(d) {
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  }
+
+  // ------------------------------------------------------------ reading and setting the fields
+
+  function showToolQuestions() {
+    app.querySelectorAll(".kit-toolq").forEach(function (box) {
+      var on = app.querySelector('input[name="f-tools"][value="' + box.getAttribute("data-for") + '"]');
+      box.hidden = !(on && on.checked);
+    });
+  }
+
+  function read() {
+    var next = { tools: [], tool_facts: {} };
+    app.querySelectorAll("[data-field]").forEach(function (el) {
+      var id = el.getAttribute("data-field");
+      var type = el.getAttribute("data-type");
+      if (type === "tools") {
+        next.tools = Array.prototype.map.call(el.querySelectorAll('input[name="f-tools"]:checked'), function (i) { return i.value; });
+      } else if (type === "radio") {
+        var on = el.querySelector('input[name="f-' + id + '"]:checked');
+        if (on) next[id] = on.value;
+      } else if (el.value) {
+        next[id] = el.value.trim();
+      }
+    });
+    next.tools.forEach(function (tool) {
+      var facts = {};
+      L.questionsFor(K, tool).forEach(function (q) {
+        var on = app.querySelector('input[name="t-' + tool + "-" + q.id + '"]:checked');
+        if (on) facts[q.id] = on.value;
+      });
+      var name = app.querySelector('[data-toolname="' + tool + '"]');
+      if (name && name.value.trim()) facts.name = name.value.trim();
+      next.tool_facts[tool] = facts;
+    });
+    state = next;
+  }
+
+  function clearControls() {
+    app.querySelectorAll(".kit-form input, .kit-form textarea").forEach(function (el) {
+      if (el.closest(".kit-assist")) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = false;
+      else el.value = "";
+    });
+  }
+
+  function setControls(next) {
+    clearControls();
+    var tick = function (name, value) {
+      var input = app.querySelector('input[name="' + name + '"][value="' + value + '"]');
+      if (input) input.checked = true;
+    };
+    L.allFields(K).forEach(function (f) {
+      var v = next[f.id];
+      if (!v) return;
+      if (f.type === "tools") v.forEach(function (t) { tick("f-tools", t); });
+      else if (f.options) tick("f-" + f.id, v);
+      else {
+        var input = app.querySelector('[data-field="' + f.id + '"]');
+        if (input) input.value = v;
+      }
+    });
+    if (next.language) tick("f-language", next.language);
+    Object.keys(next.tool_facts || {}).forEach(function (tool) {
+      var facts = next.tool_facts[tool];
+      Object.keys(facts).forEach(function (q) {
+        if (q === "name") {
+          var name = app.querySelector('[data-toolname="' + tool + '"]');
+          if (name) name.value = facts.name;
+        } else tick("t-" + tool + "-" + q, facts[q]);
+      });
+    });
+    update();
+  }
+
+  function hasAnswers() {
+    return Array.prototype.some.call(app.querySelectorAll(".kit-form input, .kit-form textarea"), function (el) {
+      if (el.closest(".kit-assist") || el.name === "f-language") return false;
+      return el.type === "radio" || el.type === "checkbox" ? el.checked : el.value !== "";
+    });
+  }
+
+  // "None" and the accounts exclude each other.
+  app.addEventListener("change", function (event) {
+    var t = event.target;
+    if (t.name !== "f-tools" || !t.checked) return;
+    if (t.value === NONE) {
+      app.querySelectorAll('input[name="f-tools"]').forEach(function (i) { if (i !== t) i.checked = false; });
+    } else {
+      var none = app.querySelector('input[name="f-tools"][value="' + NONE + '"]');
+      if (none) none.checked = false;
+    }
+  });
+
+  // ------------------------------------------------------------ the summary column
+
+  function inline(t) {
+    return esc(t).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  }
+
+  function blocksHtml(blocks, openTexts) {
+    var isOpen = function (t) { return openTexts.indexOf(t) !== -1; };
+    var li = function (i) { return "<li" + (isOpen(i) ? ' class="is-open"' : "") + ">" + inline(i) + "</li>"; };
+    return blocks
+      .map(function (b) {
+        if (b.type === "title") return "<h3>" + inline(b.text) + "</h3>";
+        if (b.type === "h1") return "<h4>" + inline(b.text) + "</h4>";
+        if (b.type === "h2") return "<h5>" + inline(b.text) + "</h5>";
+        if (b.type === "bullets") return "<ul>" + b.items.map(li).join("") + "</ul>";
+        if (b.type === "numbers") return "<ol>" + b.items.map(function (i) { return "<li>" + inline(i) + "</li>"; }).join("") + "</ol>";
+        if (b.type === "small") return '<p class="small">' + inline(b.text) + "</p>";
+        return "<p>" + inline(b.text) + "</p>";
+      })
+      .join("");
+  }
+
+  function currentBlocks(kind) {
+    var now = new Date();
+    return kind === "letter" ? L.letterBlocks(K, state, now) : L.statementBlocks(K, state, now);
+  }
+
+  function lang() {
+    return state.language === "nl" ? "nl" : "en";
+  }
+
+  function update() {
+    read();
+    showToolQuestions();
+    var c = L.collect(K, state, lang());
+    var n = c.open.length;
+    var wasOpen = !!$("open-points").querySelector("details[open]");
+    $("open-points").innerHTML =
+      '<p class="kit-open-count">' + n + "</p>" +
+      (n
+        ? '<p class="kit-save-why">These go in the statement under "What we are still checking". Answer them above if you can.</p>' +
+          (n > 5 ? '<details class="kit-plan-more"' + (wasOpen ? " open" : "") + "><summary>Show them</summary>" : "") +
+          '<ul class="kit-open-list">' + c.open.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + "</ul>" +
+          (n > 5 ? "</details>" : "")
+        : '<p class="kit-save-why">Every line in the statement is one your firm confirmed.</p>');
+    $("gap-card").hidden = state.shadow === "checked";
+    $("preview").innerHTML = blocksHtml(currentBlocks(showing), c.open);
+    $("kit-bar-text").innerHTML = "<strong>" + n + (n === 1 ? " open point" : " open points") + "</strong><span>" + (c.tools.length ? c.tools.length + (c.tools.length === 1 ? " AI tool" : " AI tools") : "No tools ticked yet") + "</span>";
+  }
+
+  app.addEventListener("input", function (event) { if (!event.target.closest(".kit-assist")) update(); });
+  app.addEventListener("change", function (event) { if (!event.target.closest(".kit-assist")) update(); });
+
+  ["statement", "letter"].forEach(function (kind) {
+    $("tab-" + kind).addEventListener("click", function () {
+      showing = kind;
+      $("tab-statement").setAttribute("aria-selected", String(kind === "statement"));
+      $("tab-letter").setAttribute("aria-selected", String(kind === "letter"));
+      update();
+    });
+  });
+
+  $("kit-bar-save").addEventListener("click", function () {
+    var card = $("save-card");
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+    card.focus({ preventScroll: true });
+  });
+
+  // ------------------------------------------------------------ copy buttons
+
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    var target = $(button.getAttribute("data-copy"));
+    var label = button.textContent;
+    button.addEventListener("click", function () {
+      if (!target || !navigator.clipboard) return;
+      navigator.clipboard.writeText(target.textContent.trim()).then(function () {
+        button.textContent = button.getAttribute("data-copied") || "Copied";
+        setTimeout(function () { button.textContent = label; }, 2500);
+      });
+    });
+  });
+
+  // ------------------------------------------------------------ loading facts
+
+  var result = $("load-result");
+
+  function showResult(text, ok) {
+    result.hidden = false;
+    result.className = "kit-load-result " + (ok ? "is-ok" : "is-warn");
+    result.textContent = text;
+  }
+
+  function load(obj) {
+    if (!obj) {
+      showResult("That doesn't look like saved facts. Paste the JSON block your assistant gave you, or open a .json file saved from this page.", false);
+      return false;
+    }
+    var res = L.normalizeFacts(K, obj);
+    if (!res.applied) {
+      showResult("Nothing in it matches the questions here, so nothing was filled in.", false);
+      return false;
+    }
+    if (hasAnswers() && !window.confirm("Replace what you filled in with these answers?")) return false;
+    setControls(res.state);
+    showResult(
+      "Filled in " + res.applied + (res.applied === 1 ? " answer" : " answers") + ". Check them, then save." +
+        (res.ignored.length ? " Left out because they didn't match the questions: " + res.ignored.join("; ") + "." : ""),
+      !res.ignored.length
+    );
+    return true;
+  }
+
+  var panel = $("paste-panel");
+  $("paste-open").addEventListener("click", function () {
+    panel.hidden = !panel.hidden;
+    this.setAttribute("aria-expanded", String(!panel.hidden));
+    if (!panel.hidden) $("paste-box").focus();
+  });
+  $("paste-cancel").addEventListener("click", function () {
+    panel.hidden = true;
+    $("paste-open").setAttribute("aria-expanded", "false");
+    $("paste-box").value = "";
+  });
+  $("paste-load").addEventListener("click", function () {
+    if (load(L.parsePasted($("paste-box").value))) {
+      panel.hidden = true;
+      $("paste-open").setAttribute("aria-expanded", "false");
+      $("paste-box").value = "";
+    }
+  });
+  $("file-open").addEventListener("change", function () {
+    var input = this;
+    var file = input.files && input.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      load(L.parsePasted(String(reader.result)));
+      input.value = "";
+    };
+    reader.readAsText(file);
+  });
+
+  // ------------------------------------------------------------ saving
+
+  var DOCX = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+  var NAMES = {
+    statement: { en: "ai-statement", nl: "ai-verklaring" },
+    letter: { en: "ai-letter", nl: "ai-brief" }
+  };
+  var TITLES = {
+    statement: { en: "AI statement", nl: "AI-verklaring" },
+    letter: { en: "Letter about AI", nl: "Brief over AI" }
+  };
+
+  function wordFile(kind) {
+    read();
+    var now = new Date();
+    var day = isoDay(now);
+    var l = lang();
+    var blocks = currentBlocks(kind);
+    return {
+      bytes: D.zipStored(D.parts(blocks, { title: TITLES[kind][l], date: day, lang: l === "nl" ? "nl-NL" : "en-GB" }), day),
+      name: NAMES[kind][l] + "-" + day + ".docx"
+    };
+  }
+
+  function save(bytes, type, filename) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([bytes], { type: type }));
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () {
+      URL.revokeObjectURL(a.href);
+      a.remove();
+    }, 0);
+  }
+
+  $("st-download").addEventListener("click", function () {
+    var w = wordFile("statement");
+    save(w.bytes, DOCX, w.name);
+  });
+  $("lt-download").addEventListener("click", function () {
+    var w = wordFile("letter");
+    save(w.bytes, DOCX, w.name);
+  });
+
+  // Share: the phone's own share sheet. The page sends nothing itself.
+  var shareButton = $("st-share");
+  if (navigator.canShare && navigator.share && typeof File === "function") {
+    try {
+      if (navigator.canShare({ files: [new File(["x"], "test.docx", { type: DOCX })] })) shareButton.hidden = false;
+    } catch (e) { /* not supported */ }
+  }
+  shareButton.addEventListener("click", function () {
+    var s = wordFile("statement");
+    var l = wordFile("letter");
+    navigator.share({
+      files: [new File([s.bytes], s.name, { type: DOCX }), new File([l.bytes], l.name, { type: DOCX })],
+      title: TITLES.statement[lang()]
+    }).catch(function () {});
+  });
+
+  $("st-json").addEventListener("click", function () {
+    read();
+    var now = new Date();
+    save(JSON.stringify(L.factsJson(K, state, now), null, 2) + "\n", "application/json", "firm-ai-facts-" + isoDay(now) + ".json");
+  });
+
+  $("st-copy").addEventListener("click", function (event) {
+    var button = event.currentTarget;
+    if (!navigator.clipboard) return;
+    read();
+    navigator.clipboard.writeText(L.blocksToText(currentBlocks(showing))).then(function () {
+      button.textContent = "Copied";
+      setTimeout(function () { button.textContent = "Copy as text"; }, 2000);
+    });
+  });
+
+  // The print view: the document on the preview tab, nothing else.
+  $("st-print").addEventListener("click", function () {
+    read();
+    $("print-record").innerHTML = blocksHtml(currentBlocks(showing), []);
+    window.print();
+  });
+
+  $("st-clear").addEventListener("click", function () {
+    if (!window.confirm("Clear everything you filled in? Nothing is saved anywhere, so this can't be undone.")) return;
+    clearControls();
+    result.hidden = true;
+    update();
+  });
+
+  window.addEventListener("beforeunload", function (event) {
+    if (hasAnswers()) {
+      event.preventDefault();
+      event.returnValue = "";
+    }
+  });
+
+  var en = app.querySelector('input[name="f-language"][value="en"]');
+  if (en) en.checked = true;
+  update();
+})();
+    </script>
+  </body>
+</html>

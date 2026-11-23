@@ -21,7 +21,7 @@ More are planned: see [`kits/README.md`](kits/README.md).
 ```
 guide/           the AI accounts guide: its dataset (data/ai-accounts.json, 40 vendor sources,
                  every fact dated), renderer, templates, register and tests
-data/            one JSON file per kit: the text, the steps, the factors, the sources
+data/            one JSON file per kit (text, steps, factors, sources), and firm-ai-facts.json, the fact model kits 2 and 3 share
 kits/<kit>/      the templates as Markdown (generated from data/; edit the data)
 templates/       kit page templates, styles and the browser-only scripts
 src/             kit renderer (pages, Word files, Markdown, JSON Schema), a local preview
@@ -34,6 +34,7 @@ Node 22 or later, no install step:
 ```bash
 node src/render.mjs                    # kit pages, Word files, Markdown, schema
 node --test 'test/*.test.mjs'          # kit tests
+node scripts/browser-check.mjs <outdir> # use the statement builder in headless Edge (WSL); report, screenshots, downloads
 cd guide && node src/render.mjs        # guide pages, data, Excel register
 cd guide && node --test 'test/*.test.mjs'   # guide tests
 node src/preview.mjs path/to/website   # local preview of everything inside a copy of the live site

@@ -2,7 +2,7 @@
 
 # AI data incident record
 
-_One record per incident. Keep it with your firm's breach register, also when you decide not to report. Template version 1.1.0, 23 November 2026, from noxiom.com/ai-data-incident (CC BY 4.0). Not legal advice._
+_One record per incident. Keep it with your firm's breach register, also when you decide not to report. Template version 1.2.0, 23 November 2026, from noxiom.com/ai-data-incident (CC BY 4.0). Not legal advice._
 
 Describe the data by type. Don't enter the data itself, or the names of the people or the client: add those in your own copy.
 

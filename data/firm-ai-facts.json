@@ -1,0 +1,869 @@
+{
+  "id": "firm-ai-facts",
+  "title": "Firm AI facts",
+  "description": "What a small firm has confirmed about the AI tools it uses with client data. One answer per question; anything not confirmed stays an open point. Used by kit 2 (AI statement and answer letter) and meant for kit 3 (the AI section of client questionnaires): both read the same saved file.",
+  "version": 1,
+  "checked": "2026-11-23",
+  "rules": [
+    "A sentence appears only for an answer the firm gave. No answer, or a 'not sure' answer, becomes an open point under 'What we are still checking'.",
+    "What the firm checked and what a vendor states are kept apart. Vendor statements come from the AI accounts guide, with their sources and check date.",
+    "No sentence calls a tool or the firm safe or compliant."
+  ],
+  "sections": [
+    {
+      "id": "firm",
+      "title": "Your firm",
+      "fields": [
+        {
+          "id": "firm_name",
+          "type": "text",
+          "label": "Your firm's name",
+          "hint": "Used in the statement and the letter. It stays in your browser.",
+          "optional": true
+        },
+        {
+          "id": "contact",
+          "type": "text",
+          "label": "Who clients can ask about it",
+          "hint": "A role or a shared address, for example \"our office manager, privacy@yourfirm.nl\".",
+          "optional": true
+        },
+        {
+          "id": "role",
+          "type": "radio",
+          "label": "For your clients' data, what is your firm?",
+          "options": [
+            [
+              "processor",
+              "Their processor: we handle it for them under a processing agreement"
+            ],
+            [
+              "controller",
+              "Controller: we decide how we use it for our work"
+            ],
+            [
+              "both",
+              "Both, depending on the client or the work"
+            ],
+            [
+              "unsure",
+              "Not sure"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "The AI tools",
+      "fields": [
+        {
+          "id": "tools",
+          "type": "tools",
+          "label": "Which AI accounts does the firm provide or allow for work?",
+          "hint": "Tick each account the firm arranged or agreed to. Then answer the short questions that appear for each one."
+        },
+        {
+          "id": "shadow",
+          "type": "radio",
+          "label": "Do you know which AI tools staff actually use, including their own accounts?",
+          "options": [
+            [
+              "checked",
+              "Yes: we checked in the past six months (survey, admin screens, billing)"
+            ],
+            [
+              "asked",
+              "We asked around, informally"
+            ],
+            [
+              "assume",
+              "We go by what the firm pays for"
+            ],
+            [
+              "unknown",
+              "We don't know"
+            ]
+          ]
+        },
+        {
+          "id": "personal",
+          "type": "radio",
+          "label": "Personal AI accounts (an employee's own ChatGPT, Gemini or Claude) for work",
+          "options": [
+            [
+              "not_allowed",
+              "Not allowed for client work"
+            ],
+            [
+              "no_client_data",
+              "Allowed, but never with client data"
+            ],
+            [
+              "allowed",
+              "Allowed"
+            ],
+            [
+              "no_rule",
+              "No rule yet"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "What goes in",
+      "fields": [
+        {
+          "id": "client_data",
+          "type": "radio",
+          "label": "Which client data may go into the firm's AI tools?",
+          "options": [
+            [
+              "none",
+              "None: only our own material and public information"
+            ],
+            [
+              "deidentified",
+              "Only with names and identifying details removed"
+            ],
+            [
+              "work_only",
+              "Client data, in the work accounts only"
+            ],
+            [
+              "no_rule",
+              "No rule yet"
+            ]
+          ]
+        },
+        {
+          "id": "special",
+          "type": "radio",
+          "label": "Sensitive data: BSN, health data, other special categories",
+          "options": [
+            [
+              "never",
+              "Never goes in"
+            ],
+            [
+              "agreed",
+              "Only where the client agreed in writing"
+            ],
+            [
+              "no_rule",
+              "No rule yet"
+            ]
+          ]
+        },
+        {
+          "id": "opt_out",
+          "type": "radio",
+          "label": "A client asks you not to use AI on their work",
+          "options": [
+            [
+              "honour",
+              "We don't, for that client"
+            ],
+            [
+              "discuss",
+              "We agree with them how we work"
+            ],
+            [
+              "undecided",
+              "Not decided"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "How you work",
+      "fields": [
+        {
+          "id": "review",
+          "type": "radio",
+          "label": "Does a person check AI output before it goes to a client?",
+          "options": [
+            [
+              "always",
+              "Always, and whoever signs it off is responsible"
+            ],
+            [
+              "depends",
+              "It depends on the task"
+            ],
+            [
+              "no_rule",
+              "No rule"
+            ]
+          ]
+        },
+        {
+          "id": "policy",
+          "type": "radio",
+          "label": "Written rules for AI tools",
+          "options": [
+            [
+              "yes",
+              "Written and shared with staff"
+            ],
+            [
+              "drafting",
+              "Being written"
+            ],
+            [
+              "no",
+              "None yet"
+            ]
+          ]
+        },
+        {
+          "id": "literacy",
+          "type": "radio",
+          "label": "Do staff know the rules and the tools' limits?",
+          "hint": "The AI Act's Article 4 asks firms that use AI systems to see to their staff's AI literacy.",
+          "options": [
+            [
+              "trained",
+              "Briefed or trained, and kept up"
+            ],
+            [
+              "planned",
+              "Planned"
+            ],
+            [
+              "no",
+              "Not yet"
+            ]
+          ]
+        },
+        {
+          "id": "subprocessors",
+          "type": "radio",
+          "label": "Are the AI vendors on the sub-processor list you give clients?",
+          "options": [
+            [
+              "yes",
+              "Yes"
+            ],
+            [
+              "not_yet",
+              "Not yet"
+            ],
+            [
+              "no_list",
+              "We don't keep a list"
+            ],
+            [
+              "na",
+              "Not applicable: we are not a processor"
+            ]
+          ]
+        },
+        {
+          "id": "incidents",
+          "type": "radio",
+          "label": "If client data goes into an AI tool by mistake",
+          "options": [
+            [
+              "procedure",
+              "We have a procedure: record, assess, tell the client"
+            ],
+            [
+              "no",
+              "No procedure yet"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "tool_questions": [
+    {
+      "id": "dpa",
+      "label": "Processing agreement with the vendor",
+      "accounts": [
+        "work"
+      ],
+      "options": [
+        [
+          "signed",
+          "Signed or accepted"
+        ],
+        [
+          "no",
+          "Not yet"
+        ],
+        [
+          "unsure",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "training",
+      "label": "Training on your data",
+      "accounts": [
+        "work",
+        "personal"
+      ],
+      "options": [
+        [
+          "off_checked",
+          "Off: we checked the setting"
+        ],
+        [
+          "default",
+          "Vendor default, not checked"
+        ],
+        [
+          "on",
+          "On"
+        ],
+        [
+          "unsure",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "region",
+      "label": "Where it stores your data",
+      "accounts": [
+        "work"
+      ],
+      "options": [
+        [
+          "eu",
+          "EU or EEA"
+        ],
+        [
+          "outside",
+          "Outside the EU"
+        ],
+        [
+          "unsure",
+          "Not sure"
+        ]
+      ]
+    },
+    {
+      "id": "retention",
+      "label": "How long chats are kept",
+      "accounts": [
+        "work"
+      ],
+      "options": [
+        [
+          "set",
+          "We set it"
+        ],
+        [
+          "default",
+          "Vendor default"
+        ],
+        [
+          "unsure",
+          "Not sure"
+        ]
+      ]
+    }
+  ],
+  "other_tool": {
+    "id": "other-work",
+    "label": "Another AI tool, with a work account",
+    "account": "work",
+    "name_label": "Which tool, from which vendor?"
+  },
+  "no_tools": {
+    "id": "none",
+    "label": "None: the firm provides or allows no AI tools"
+  },
+  "lines": {
+    "role": {
+      "processor": {
+        "en": "For our clients' data we usually act as their processor: we handle it on their behalf, under a processing agreement. An AI tool we use on that data is then a sub-processor.",
+        "nl": "Voor de gegevens van onze klanten zijn wij meestal verwerker: we verwerken ze namens hen, onder een verwerkersovereenkomst. Een AI-tool die we daarbij gebruiken, is dan een subverwerker."
+      },
+      "controller": {
+        "en": "For our clients' data we act as controller: we decide how we use it for the work we do for them.",
+        "nl": "Voor de gegevens van onze klanten zijn wij verwerkingsverantwoordelijke: wij bepalen hoe we ze gebruiken voor het werk dat we voor hen doen."
+      },
+      "both": {
+        "en": "Depending on the work, we act as our clients' processor or as controller. Where we are their processor, an AI tool we use on their data is a sub-processor.",
+        "nl": "Afhankelijk van het werk zijn wij verwerker of verwerkingsverantwoordelijke. Waar wij verwerker zijn, is een AI-tool die we gebruiken op de gegevens van de klant een subverwerker."
+      },
+      "unsure": {
+        "check": true,
+        "en": "Whether we act as our clients' processor or as controller, for each type of work.",
+        "nl": "Of wij per soort werk verwerker of verwerkingsverantwoordelijke zijn."
+      },
+      "missing": {
+        "check": true,
+        "en": "Whether we act as our clients' processor or as controller, for each type of work.",
+        "nl": "Of wij per soort werk verwerker of verwerkingsverantwoordelijke zijn."
+      }
+    },
+    "shadow": {
+      "checked": {
+        "en": "In the past six months we checked which AI tools staff actually use, including their own accounts.",
+        "nl": "In het afgelopen halfjaar zijn we nagegaan welke AI-tools medewerkers echt gebruiken, ook hun eigen accounts."
+      },
+      "asked": {
+        "check": true,
+        "en": "Which AI tools staff use on their own, beyond the tools listed here. We have asked around, but not checked.",
+        "nl": "Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan. We hebben het rondgevraagd, maar niet nagegaan."
+      },
+      "assume": {
+        "check": true,
+        "en": "Which AI tools staff use on their own, beyond the tools listed here. The list above is based on what the firm pays for.",
+        "nl": "Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan. De lijst hierboven is gebaseerd op wat ons bedrijf betaalt."
+      },
+      "unknown": {
+        "check": true,
+        "en": "Which AI tools staff use on their own, beyond the tools listed here.",
+        "nl": "Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan."
+      },
+      "missing": {
+        "check": true,
+        "en": "Which AI tools staff use on their own, beyond the tools listed here.",
+        "nl": "Welke AI-tools medewerkers zelf gebruiken, naast de tools die hier staan."
+      }
+    },
+    "personal": {
+      "not_allowed": {
+        "en": "Staff may not use personal AI accounts for client work.",
+        "nl": "Medewerkers mogen geen privé-AI-accounts gebruiken voor klantwerk."
+      },
+      "no_client_data": {
+        "en": "Staff may use personal AI accounts only for work that involves no client data.",
+        "nl": "Medewerkers mogen privé-AI-accounts alleen gebruiken voor werk zonder klantgegevens."
+      },
+      "allowed": {
+        "en": "Staff may use personal AI accounts for work. These accounts have no processing agreement with the firm.",
+        "nl": "Medewerkers mogen privé-AI-accounts gebruiken voor het werk. Voor die accounts is er geen verwerkersovereenkomst met ons bedrijf."
+      },
+      "no_rule": {
+        "check": true,
+        "en": "Our rule on personal AI accounts. There is none yet.",
+        "nl": "Onze regel voor privé-AI-accounts. Die is er nog niet."
+      },
+      "missing": {
+        "check": true,
+        "en": "Our rule on personal AI accounts.",
+        "nl": "Onze regel voor privé-AI-accounts."
+      }
+    },
+    "client_data": {
+      "none": {
+        "en": "No client data goes into these tools: only our own material and public information.",
+        "nl": "Er gaan geen klantgegevens in deze tools: alleen ons eigen materiaal en openbare informatie."
+      },
+      "deidentified": {
+        "en": "Client material goes in only with names and other identifying details removed.",
+        "nl": "Klantmateriaal gaat er alleen in als namen en andere herleidbare gegevens eruit zijn gehaald."
+      },
+      "work_only": {
+        "en": "Client data may go only into the firm's work accounts, never into personal accounts.",
+        "nl": "Klantgegevens mogen alleen in de werkaccounts van ons bedrijf, nooit in privéaccounts."
+      },
+      "no_rule": {
+        "check": true,
+        "en": "Our rule on which client data may go into AI tools.",
+        "nl": "Onze regel over welke klantgegevens in AI-tools mogen."
+      },
+      "missing": {
+        "check": true,
+        "en": "Our rule on which client data may go into AI tools.",
+        "nl": "Onze regel over welke klantgegevens in AI-tools mogen."
+      }
+    },
+    "special": {
+      "never": {
+        "en": "Sensitive data, such as citizen service numbers (BSN), health data or other special categories of personal data, never goes into AI tools.",
+        "nl": "Gevoelige gegevens, zoals BSN, gezondheidsgegevens of andere bijzondere persoonsgegevens, gaan nooit in AI-tools."
+      },
+      "agreed": {
+        "en": "Sensitive data, such as citizen service numbers (BSN) or health data, goes into AI tools only where the client has agreed in writing.",
+        "nl": "Gevoelige gegevens, zoals BSN of gezondheidsgegevens, gaan alleen in AI-tools als de klant daar schriftelijk mee heeft ingestemd."
+      },
+      "no_rule": {
+        "check": true,
+        "en": "Our rule for sensitive data, such as citizen service numbers (BSN) and health data.",
+        "nl": "Onze regel voor gevoelige gegevens, zoals BSN en gezondheidsgegevens."
+      },
+      "missing": {
+        "check": true,
+        "en": "Our rule for sensitive data, such as citizen service numbers (BSN) and health data.",
+        "nl": "Onze regel voor gevoelige gegevens, zoals BSN en gezondheidsgegevens."
+      }
+    },
+    "opt_out": {
+      "honour": {
+        "en": "If a client prefers that we don't use AI tools on their work, we don't.",
+        "nl": "Wil een klant niet dat wij AI-tools gebruiken voor zijn werk, dan doen we dat niet."
+      },
+      "discuss": {
+        "en": "If a client prefers that we don't use AI tools on their work, we agree with them how we work.",
+        "nl": "Wil een klant niet dat wij AI-tools gebruiken voor zijn werk, dan spreken we samen af hoe we werken."
+      },
+      "undecided": {
+        "check": true,
+        "en": "How we handle a client's request not to use AI tools on their work.",
+        "nl": "Hoe we omgaan met een klant die niet wil dat we AI-tools gebruiken voor zijn werk."
+      },
+      "missing": {
+        "check": true,
+        "en": "How we handle a client's request not to use AI tools on their work.",
+        "nl": "Hoe we omgaan met een klant die niet wil dat we AI-tools gebruiken voor zijn werk."
+      }
+    },
+    "review": {
+      "always": {
+        "en": "A person checks AI output before anything goes to a client, and whoever signs it off is responsible for it.",
+        "nl": "Een mens controleert AI-uitvoer voordat er iets naar een klant gaat, en wie het aftekent, is ervoor verantwoordelijk."
+      },
+      "depends": {
+        "check": true,
+        "en": "A fixed rule for checking AI output before it goes to a client. Today it depends on the task.",
+        "nl": "Een vaste regel voor het controleren van AI-uitvoer voordat die naar een klant gaat. Nu hangt het af van de taak."
+      },
+      "no_rule": {
+        "check": true,
+        "en": "A rule for checking AI output before it goes to a client.",
+        "nl": "Een regel voor het controleren van AI-uitvoer voordat die naar een klant gaat."
+      },
+      "missing": {
+        "check": true,
+        "en": "Our rule for checking AI output before it goes to a client.",
+        "nl": "Onze regel voor het controleren van AI-uitvoer voordat die naar een klant gaat."
+      }
+    },
+    "policy": {
+      "yes": {
+        "en": "We have written rules for AI tools, shared with all staff.",
+        "nl": "We hebben geschreven regels voor AI-tools, gedeeld met alle medewerkers."
+      },
+      "drafting": {
+        "check": true,
+        "en": "Written rules for AI tools. They are being written.",
+        "nl": "Geschreven regels voor AI-tools. Die worden nu opgesteld."
+      },
+      "no": {
+        "check": true,
+        "en": "Written rules for AI tools. We don't have them yet.",
+        "nl": "Geschreven regels voor AI-tools. Die hebben we nog niet."
+      },
+      "missing": {
+        "check": true,
+        "en": "Written rules for AI tools.",
+        "nl": "Geschreven regels voor AI-tools."
+      }
+    },
+    "literacy": {
+      "trained": {
+        "en": "Staff who use AI tools have been briefed on these rules and on the tools' limits, and we keep this up.",
+        "nl": "Medewerkers die AI-tools gebruiken, zijn geïnstrueerd over deze regels en over de beperkingen van de tools, en we houden dat bij."
+      },
+      "planned": {
+        "check": true,
+        "en": "Briefing staff on these rules and on the tools' limits. It is planned.",
+        "nl": "Medewerkers instrueren over deze regels en over de beperkingen van de tools. Dat staat gepland."
+      },
+      "no": {
+        "check": true,
+        "en": "Briefing staff on these rules and on the tools' limits.",
+        "nl": "Medewerkers instrueren over deze regels en over de beperkingen van de tools."
+      },
+      "missing": {
+        "check": true,
+        "en": "Briefing staff on these rules and on the tools' limits.",
+        "nl": "Medewerkers instrueren over deze regels en over de beperkingen van de tools."
+      }
+    },
+    "subprocessors": {
+      "yes": {
+        "en": "The AI vendors we use on client data are on the sub-processor list we give our clients.",
+        "nl": "De AI-leveranciers die we gebruiken voor klantgegevens, staan op de lijst van subverwerkers die we onze klanten geven."
+      },
+      "not_yet": {
+        "check": true,
+        "en": "Adding the AI vendors to the sub-processor list we give our clients.",
+        "nl": "De AI-leveranciers toevoegen aan de lijst van subverwerkers die we onze klanten geven."
+      },
+      "no_list": {
+        "check": true,
+        "en": "A sub-processor list for our clients that includes the AI vendors.",
+        "nl": "Een lijst van subverwerkers voor onze klanten, met de AI-leveranciers erop."
+      },
+      "na": {
+        "skip": true
+      },
+      "missing": {
+        "check": true,
+        "en": "Whether the AI vendors are on the sub-processor list we give our clients.",
+        "nl": "Of de AI-leveranciers op de lijst van subverwerkers staan die we onze klanten geven."
+      }
+    },
+    "incidents": {
+      "procedure": {
+        "en": "If client data goes into an AI tool by mistake, we record it, assess the risk, and tell the client without undue delay where we are their processor.",
+        "nl": "Komen klantgegevens per ongeluk in een AI-tool, dan leggen we dat vast, beoordelen we het risico en informeren we de klant zonder onnodige vertraging als wij zijn verwerker zijn."
+      },
+      "no": {
+        "check": true,
+        "en": "A procedure for when client data goes into an AI tool by mistake.",
+        "nl": "Een procedure voor als klantgegevens per ongeluk in een AI-tool komen."
+      },
+      "missing": {
+        "check": true,
+        "en": "Our procedure for when client data goes into an AI tool by mistake.",
+        "nl": "Onze procedure voor als klantgegevens per ongeluk in een AI-tool komen."
+      }
+    }
+  },
+  "tool_lines": {
+    "dpa": {
+      "signed": {
+        "en": "Processing agreement with {vendor}: in place.",
+        "nl": "Verwerkersovereenkomst met {vendor}: afgesloten."
+      },
+      "no": {
+        "en": "Processing agreement with {vendor}: not yet in place.",
+        "nl": "Verwerkersovereenkomst met {vendor}: nog niet afgesloten."
+      },
+      "unsure": {
+        "check": true,
+        "en": "Whether our processing agreement with {vendor} for {tool} is in place.",
+        "nl": "Of onze verwerkersovereenkomst met {vendor} voor {tool} is afgesloten."
+      }
+    },
+    "training": {
+      "off_checked": {
+        "en": "Training on our data: switched off. We checked the setting.",
+        "nl": "Training op onze gegevens: uitgezet. We hebben de instelling gecontroleerd."
+      },
+      "default": {
+        "check": true,
+        "en": "The training setting in {tool}. Until then we go by what {vendor} states.",
+        "nl": "De trainingsinstelling in {tool}. Tot dan gaan we uit van wat {vendor} zegt."
+      },
+      "on": {
+        "en": "Training on our data: the setting is on, so {vendor} may use what we enter to improve its models.",
+        "nl": "Training op onze gegevens: de instelling staat aan, dus {vendor} mag wat we invoeren gebruiken om zijn modellen te verbeteren."
+      },
+      "unsure": {
+        "check": true,
+        "en": "The training setting in {tool}.",
+        "nl": "De trainingsinstelling in {tool}."
+      }
+    },
+    "region": {
+      "eu": {
+        "en": "Storage: in the EU or EEA.",
+        "nl": "Opslag: in de EU of EER."
+      },
+      "outside": {
+        "en": "Storage: outside the EU.",
+        "nl": "Opslag: buiten de EU."
+      },
+      "unsure": {
+        "check": true,
+        "en": "Where {tool} stores our data.",
+        "nl": "Waar {tool} onze gegevens opslaat."
+      }
+    },
+    "retention": {
+      "set": {
+        "en": "Retention: we set how long chats are kept.",
+        "nl": "Bewaren: wij stellen in hoe lang chats bewaard blijven."
+      },
+      "default": {
+        "en": "Retention: the vendor's default for this account.",
+        "nl": "Bewaren: de standaard van de leverancier voor dit account."
+      },
+      "unsure": {
+        "check": true,
+        "en": "How long {tool} keeps our chats.",
+        "nl": "Hoe lang {tool} onze chats bewaart."
+      }
+    }
+  },
+  "vendor_labels": {
+    "training": {
+      "en": "Training on inputs",
+      "nl": "Training op invoer"
+    },
+    "retention": {
+      "en": "Retention",
+      "nl": "Bewaren"
+    },
+    "location": {
+      "en": "Storage",
+      "nl": "Opslag"
+    },
+    "contract": {
+      "en": "Processing agreement",
+      "nl": "Verwerkersovereenkomst"
+    }
+  },
+  "vendor_short": {
+    "Yes, by default": {
+      "en": "Yes, by default",
+      "nl": "Ja, standaard"
+    },
+    "No, by default": {
+      "en": "No, by default",
+      "nl": "Nee, standaard niet"
+    },
+    "No (foundation models)": {
+      "en": "No (foundation models)",
+      "nl": "Nee (basismodellen)"
+    },
+    "No": {
+      "en": "No",
+      "nl": "Nee"
+    },
+    "No, without permission": {
+      "en": "No, without permission",
+      "nl": "Nee, niet zonder toestemming"
+    },
+    "Yes, unless switched off": {
+      "en": "Yes, unless switched off",
+      "nl": "Ja, tenzij uitgezet"
+    },
+    "Yes": {
+      "en": "Yes",
+      "nl": "Ja"
+    },
+    "Until deleted": {
+      "en": "Until deleted",
+      "nl": "Tot het wordt verwijderd"
+    },
+    "Admins decide": {
+      "en": "Set by the account's admins",
+      "nl": "Ingesteld door de beheerders"
+    },
+    "Not stated": {
+      "en": "Not stated by the vendor",
+      "nl": "Niet vermeld door de leverancier"
+    },
+    "Your policies": {
+      "en": "Set by the account's own policies",
+      "nl": "Volgens het eigen beleid van het account"
+    },
+    "18 months by default": {
+      "en": "18 months by default",
+      "nl": "Standaard 18 maanden"
+    },
+    "30 days, or up to 5 years": {
+      "en": "30 days, or up to 5 years",
+      "nl": "30 dagen, of tot 5 jaar"
+    },
+    "Until deleted; Enterprise can limit": {
+      "en": "Until deleted; Enterprise can limit it",
+      "nl": "Tot het wordt verwijderd; Enterprise kan het beperken"
+    },
+    "While the account exists": {
+      "en": "While the account exists",
+      "nl": "Zolang het account bestaat"
+    },
+    "Outside the EEA": {
+      "en": "Outside the EEA",
+      "nl": "Buiten de EER"
+    },
+    "New workspaces pick a region": {
+      "en": "New workspaces can pick a region",
+      "nl": "Nieuwe werkruimtes kunnen een regio kiezen"
+    },
+    "EU residency option": {
+      "en": "EU residency available",
+      "nl": "Opslag in de EU mogelijk"
+    },
+    "EU, except web search": {
+      "en": "EU, except web search",
+      "nl": "EU, behalve zoeken op internet"
+    },
+    "EU, with exceptions": {
+      "en": "EU, with exceptions",
+      "nl": "EU, met uitzonderingen"
+    },
+    "EU option, most editions": {
+      "en": "EU option in most editions",
+      "nl": "EU-optie in de meeste edities"
+    },
+    "Stored in the US": {
+      "en": "Stored in the US",
+      "nl": "Opgeslagen in de VS"
+    },
+    "China": {
+      "en": "China",
+      "nl": "China"
+    },
+    "None with your firm": {
+      "en": "None for this type of account",
+      "nl": "Geen, voor dit soort account"
+    },
+    "DPA available": {
+      "en": "Available",
+      "nl": "Beschikbaar"
+    },
+    "DPA included": {
+      "en": "Included in the terms",
+      "nl": "Onderdeel van de voorwaarden"
+    },
+    "None": {
+      "en": "None",
+      "nl": "Geen"
+    }
+  },
+  "names": {
+    "chatgpt-personal": {
+      "en": "ChatGPT Free, Plus or Pro",
+      "nl": "ChatGPT Free, Plus of Pro"
+    },
+    "chatgpt-business": {
+      "en": "ChatGPT Business",
+      "nl": "ChatGPT Business"
+    },
+    "chatgpt-enterprise": {
+      "en": "ChatGPT Enterprise",
+      "nl": "ChatGPT Enterprise"
+    },
+    "copilot-personal": {
+      "en": "Microsoft Copilot app",
+      "nl": "Microsoft Copilot-app"
+    },
+    "copilot-chat-work": {
+      "en": "Microsoft 365 Copilot Chat",
+      "nl": "Microsoft 365 Copilot Chat"
+    },
+    "m365-copilot": {
+      "en": "Microsoft 365 Copilot",
+      "nl": "Microsoft 365 Copilot"
+    },
+    "gemini-personal": {
+      "en": "Gemini app",
+      "nl": "Gemini-app"
+    },
+    "gemini-workspace": {
+      "en": "Gemini in Google Workspace",
+      "nl": "Gemini in Google Workspace"
+    },
+    "claude-personal": {
+      "en": "Claude Free, Pro or Max",
+      "nl": "Claude Free, Pro of Max"
+    },
+    "claude-work": {
+      "en": "Claude Team or Enterprise",
+      "nl": "Claude Team of Enterprise"
+    },
+    "deepseek-app": {
+      "en": "DeepSeek",
+      "nl": "DeepSeek"
+    }
+  }
+}

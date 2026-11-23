@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{html_lang}}">
   <head>
     <!-- include: head-meta -->
     <title>{{seo_title}} | Noxiom</title>
@@ -8,7 +8,7 @@
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{meta_description}}" />
     <meta property="og:url" content="{{canonical}}" />
-    <meta property="article:modified_time" content="{{checked_iso}}" />
+{{alternates}}    <meta property="article:modified_time" content="{{checked_iso}}" />
 {{jsonld}}
     <style>
 {{guide_css}}
@@ -16,86 +16,83 @@
     </style>
   </head>
   <body>
-    <!-- include: header -->
+    {{header}}
     <main class="guide">
       <section class="report-wrap guide-wide">
         <article class="report-doc">
           <div class="report-head">
-            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; For staff</span>
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; {{ui_eyebrow}}</span>
             <h1>{{title}}</h1>
             <p class="guide-lead">{{lead}}</p>
             <p class="guide-meta">
-              <span>Checked <strong><time datetime="{{checked_iso}}">{{checked_human}}</time></strong></span>
-              <span>A two-minute read</span>
-              <span><a href="{{owner_url}}">For the person you tell</a></span>
+              <span>{{ui_checked}} <strong><time datetime="{{checked_iso}}">{{checked_human}}</time></strong></span>
+              <span>{{ui_read_time}}</span>{{language_note}}
+              <span><a href="{{owner_url}}"{{owner_hreflang}}>{{ui_owner_link}}</a></span>
             </p>
           </div>
 
           <div class="kit-answer">
-            <p class="kit-answer-label">In short</p>
+            <p class="kit-answer-label">{{ui_in_short}}</p>
 {{answer}}
           </div>
           <p class="guide-alert guide-full">
             <span class="pill-icon" aria-hidden="true">!</span>
-            <span><strong>Why today?</strong> {{why_today}}</span>
+            <span><strong>{{ui_why_today}}</strong> {{why_today}}</span>
           </p>
 
-          <h2 id="steps">Three steps, in this order</h2>
+          <h2 id="steps">{{ui_steps}}</h2>
           <div class="guide-steps kit-steps kit-steps-3">
 {{steps}}
           </div>
 
           <div class="kit-work">
-            <span class="tag tag-work">Work account</span>
+            <span class="tag tag-work">{{ui_work_tag}}</span>
             <p>{{work_account}}</p>
           </div>
 
-          <h2 id="next">What happens next</h2>
+          <h2 id="next">{{ui_next}}</h2>
 {{next}}
 
-          <h2 id="faq">Questions</h2>
+          <h2 id="faq">{{ui_faq}}</h2>
 {{faq}}
 
           <div class="guide-bridge" id="for-firms">
-            <h2>For the firm</h2>
+            <h2>{{ui_firm}}</h2>
             <p class="guide-measure">
-              Give this page to your team before anything happens. The Word
-              version fits on two pages and has a line for your own contact
-              person.
+              {{ui_firm_text}}
             </p>
             <div class="guide-cta-row">
-              <a data-cta="pasted-handout" href="{{handout_url}}" class="cta-button" download>Download the staff handout (Word)</a>
-              <a href="{{owner_url}}" class="guide-text-link">What the firm does in the first 72 hours &rarr;</a>
+              <a data-cta="{{handout_cta}}" href="{{handout_url}}" class="cta-button" download>{{ui_handout_button}}</a>
+              <a href="{{owner_url}}" class="guide-text-link"{{owner_hreflang}}>{{ui_owner_cta}} &rarr;</a>
             </div>
           </div>
 
-          <h2 id="about">About this page</h2>
+          <h2 id="about">{{ui_about}}</h2>
           <details class="guide-more">
-            <summary>What it does and doesn't tell you</summary>
-            <p><strong>It tells you</strong> what to do as an employee, and what each AI vendor says happens to a deleted conversation, as checked in the <a href="{{guide_url}}">AI accounts guide</a> on {{guide_checked_human}}.</p>
-            <p><strong>It doesn't</strong> replace your firm's own rules, decide whether anything must be reported, or give legal advice. If your firm has its own procedure, follow that.</p>
+            <summary>{{ui_about_summary}}</summary>
+            <p>{{ui_about_tells_html}}</p>
+            <p>{{ui_about_not_html}}</p>
           </details>
           <details class="guide-more" id="changes">
-            <summary>Change log and corrections <span class="summary-hint">version {{version}}</span></summary>
+            <summary>{{ui_changes}} <span class="summary-hint">{{ui_version}} {{version}}</span></summary>
 {{changelog}}
-            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>. We check it, correct it and log the change here. The source is public on <a href="https://github.com/noxiom/ai-client-data-kits" rel="noopener">GitHub</a>.</p>
+            <p>{{ui_corrections_html}}</p>
           </details>
           <details class="guide-more" id="sources">
-            <summary>Sources</summary>
-            <p class="guide-note">"Checked" is the date we last read the page.</p>
+            <summary>{{ui_sources}}</summary>
+            <p class="guide-note">{{ui_sources_note}}</p>
             <!-- sources-list -->
           </details>
 
           <p class="report-footnote">
-            Written by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>, which reviews how small firms use AI tools with client data.
-            Free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. Not legal advice.
+            {{ui_footnote_html}}
           </p>
         </article>
       </section>
     </main>
 
     <!-- include: footer -->
-    <script src="scripts.js"></script>
+    <script src="{{scripts_src}}"></script>
     <script>
 {{kit_js}}
     </script>

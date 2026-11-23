@@ -11,6 +11,7 @@ import { cpSync, rmSync, mkdirSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { execFileSync, execSync } from "node:child_process";
 import { ROOT, GUIDE_DIR, render } from "./render.mjs";
+import { renderStatement } from "./statement.mjs";
 
 const website = resolve(process.argv[2] || process.env.WEBSITE_DIR || join(ROOT, "..", "..", "..", "..", "website"));
 const ref = process.argv[3] || "origin/main";
@@ -18,6 +19,7 @@ if (!existsSync(join(website, ".git"))) throw new Error(`${website} is not the w
 
 const site = join(ROOT, "site");
 render(site);
+renderStatement(site);
 
 const preview = join(ROOT, "preview");
 rmSync(preview, { recursive: true, force: true });

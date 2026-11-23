@@ -89,8 +89,8 @@ export function zip(files, isoDate) {
 // browser are made the same way.
 const core = createRequire(import.meta.url)("../templates/docx-core.js");
 
-export function docx(blocks, { title, date }) {
-  return zip(core.parts(blocks, { title, date }), date);
+export function docx(blocks, { title, date, lang }) {
+  return zip(core.parts(blocks, { title, date, lang }), date);
 }
 
 // The same blocks as Markdown, for the repository.

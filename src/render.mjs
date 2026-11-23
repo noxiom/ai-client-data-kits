@@ -10,7 +10,7 @@
 //
 //   node src/render.mjs
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { docx, markdown } from "./docx.mjs";
@@ -24,12 +24,17 @@ export const KIT_DIR = join(ROOT, "kits", "client-data-in-ai");
 export const DOWNLOADS = {
   record: "/downloads/ai-incident-record.docx",
   handout: "/downloads/ai-incident-staff-handout.docx",
+  handout_nl: "/downloads/ai-incident-instructie-medewerkers.docx",
 };
 // The record's questions and answers, machine-readable, for AI assistants.
 export const SCHEMA_PATH = "/data/ai-incident-record.schema.json";
 // Every data-cta tag these pages use. Each must be registered in the
 // website's counter config before release (website CLAUDE.md).
-export const CTA_TAGS = ["incident-template", "incident-handout", "incident-check", "incident-sample", "incident-intake", "pasted-handout"];
+export const CTA_TAGS = ["incident-template", "incident-handout", "incident-check", "incident-sample", "incident-intake", "pasted-handout", "nl-pasted-handout"];
+// The staff page in each language. The Dutch one is rendered from the same
+// template with the Dutch strings in the data file (employee_nl).
+export const LANGS = ["en", "nl"];
+export const employeeOf = (kit, lang = "en") => (lang === "nl" ? kit.employee_nl : kit.employee);
 
 export function loadKit(path = join(ROOT, "data", "client-data-in-ai.json")) {
   return JSON.parse(readFileSync(path, "utf8"));
@@ -43,8 +48,15 @@ export function allSources(kit, data) {
   return [...data.sources, ...kit.sources];
 }
 
-const tpl = (name) => readFileSync(join(ROOT, "templates", name), "utf8");
-const guideTpl = (name) => readFileSync(join(GUIDE_DIR, "templates", name), "utf8").trim();
+// Write a repository file only when its content changes. Tests render in
+// parallel, and a rewrite of an unchanged file would race with a reader.
+export function writeIfChanged(path, text) {
+  if (existsSync(path) && readFileSync(path, "utf8") === text) return;
+  writeFileSync(path, text);
+}
+
+export const tpl = (name) => readFileSync(join(ROOT, "templates", name), "utf8");
+export const guideTpl = (name) => readFileSync(join(GUIDE_DIR, "templates", name), "utf8").trim();
 
 // ---------------------------------------------------------------- shared bits
 
@@ -66,7 +78,7 @@ function common(kit, data) {
   };
 }
 
-function articleLd(kit, data, { headline, description, url }) {
+export function articleLd(kit, data, { headline, description, url, lang = "en", published }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -74,8 +86,8 @@ function articleLd(kit, data, { headline, description, url }) {
     description,
     url,
     mainEntityOfPage: url,
-    inLanguage: "en",
-    datePublished: kit.changelog[kit.changelog.length - 1].date,
+    inLanguage: lang,
+    datePublished: published || kit.changelog[kit.changelog.length - 1].date,
     dateModified: kit.checked,
     author: founder(data),
     publisher: publisher({ publisher: { name: "Noxiom", url: SITE_ORIGIN } }),
@@ -84,7 +96,7 @@ function articleLd(kit, data, { headline, description, url }) {
   };
 }
 
-const breadcrumb = (name, url) => ({
+export const breadcrumb = (name, url) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
@@ -119,11 +131,27 @@ export function planFacts(data) {
 
 // ---------------------------------------------------------------- employee page
 
-function toolNotes(data) {
+function toolNotes(data, e) {
+  const nl = e.lang === "nl";
   return data.tools
     .filter((t) => t.plans.some((p) => p.account === "personal"))
-    .map((t) => `<li><strong>${esc(t.name)}:</strong> ${esc(t.incident_note)}${cite(t.incident_sources)} <a href="/${t.slug}">More on ${esc(t.name)}</a></li>`)
+    .map((t) => {
+      const note = nl ? e.tool_notes[t.id] : t.incident_note;
+      if (!note) throw new Error(`no ${e.lang} tool note for ${t.id}`);
+      const href = nl ? `${e.guide_url}#${t.id}` : `/${t.slug}`;
+      return `<li><strong>${esc(t.name)}:</strong> ${esc(note)}${cite(t.incident_sources)} <a href="${href}">${esc(e.ui.more_on)} ${esc(t.name)}</a></li>`;
+    })
     .join("\n");
+}
+
+// hreflang pair: the English and Dutch staff pages point at each other.
+function alternates(kit) {
+  const en = `${SITE_ORIGIN}/${kit.employee.slug}`;
+  const nl = `${SITE_ORIGIN}/${kit.employee_nl.slug}`;
+  return `    <link rel="alternate" hreflang="en" href="${en}" />
+    <link rel="alternate" hreflang="nl" href="${nl}" />
+    <link rel="alternate" hreflang="x-default" href="${en}" />
+`;
 }
 
 function stepCards(steps, extra = {}) {
@@ -141,22 +169,47 @@ function stepCards(steps, extra = {}) {
     .join("\n");
 }
 
-export function renderEmployee(kit, data) {
-  const e = kit.employee;
+export function renderEmployee(kit, data, lang = "en") {
+  const e = employeeOf(kit, lang);
+  const nl = lang === "nl";
+  const ui = e.ui;
   const url = `${SITE_ORIGIN}/${e.slug}`;
-  const ld = [articleLd(kit, data, { headline: e.title, description: e.meta_description, url }), faqLd(e.faq), breadcrumb(e.title, url)];
+  const changelog = nl ? e.changelog : kit.changelog;
+  const ld = [
+    articleLd(kit, data, { headline: e.title, description: e.meta_description, url, lang, published: changelog[changelog.length - 1].date }),
+    faqLd(e.faq),
+    breadcrumb(e.title, url),
+  ];
   const extra = {
     1: `<p class="kit-message" id="msg">${esc(e.message)}</p>
-              <button type="button" class="kit-copy" data-copy="msg" hidden>Copy the message</button>`,
+              <button type="button" class="kit-copy" data-copy="msg" data-copied="${esc(ui.copied)}" hidden>${esc(ui.copy)}</button>`,
     2: `<details>
-                <summary>What deleting does, per tool</summary>
+                <summary>${esc(ui.per_tool)}</summary>
                 <ul class="kit-tools">
-${toolNotes(data)}
+${toolNotes(data, { ...e, lang })}
                 </ul>
               </details>`,
   };
+  const base = common(kit, data);
+  const guideUrl = nl ? e.guide_url : base.guide_url;
+  const guideChecked = humanDate(data.checked, lang);
+  const uiSlots = Object.fromEntries(
+    Object.entries(ui).map(([k, v]) => [`ui_${k}`, k.endsWith("_html") ? v.replaceAll("{guide_url}", guideUrl).replaceAll("{guide_checked}", guideChecked) : esc(v)]),
+  );
   const html = fill(tpl("employee.html"), {
-    ...common(kit, data),
+    ...base,
+    ...uiSlots,
+    html_lang: lang,
+    header: nl ? "<!-- include: header-nl -->" : "<!-- include: header -->",
+    scripts_src: nl ? "/scripts.js" : "scripts.js",
+    alternates: alternates(kit),
+    language_note: ui.language_note ? `<span>${esc(ui.language_note)}</span>` : "",
+    owner_hreflang: nl ? ' hreflang="en"' : "",
+    handout_cta: nl ? "nl-pasted-handout" : "pasted-handout",
+    handout_url: nl ? DOWNLOADS.handout_nl : DOWNLOADS.handout,
+    checked_human: humanDate(kit.checked, lang),
+    version: esc(kit.version),
+    changelog: `<ul class="report-list">\n${changelog.map((c) => `<li><strong>${humanDate(c.date, lang)}:</strong> ${esc(c.change)}</li>`).join("\n")}\n</ul>`,
     seo_title: esc(e.seo_title),
     meta_description: esc(e.meta_description),
     canonical: url,
@@ -171,7 +224,7 @@ ${toolNotes(data)}
     faq: faqHtml(e.faq),
     kit_js: tpl("kit.js").trim(),
   });
-  return resolveCitations(html, { sources: allSources(kit, data) });
+  return resolveCitations(html, { sources: allSources(kit, data) }, lang);
 }
 
 // ---------------------------------------------------------------- owner page
@@ -196,9 +249,9 @@ function ownerSteps(kit) {
 // Form controls. No native dropdowns or calendar popups: single and multiple
 // choices are tappable chips (short options) or a grouped list (long ones),
 // built on real radio and checkbox inputs so the keyboard works as usual.
-const useRows = (f) => f.type === "actions" || f.options.length > 6 || f.options.some(([, l]) => l.length > 32);
+export const useRows = (f) => f.type === "actions" || f.options.length > 6 || f.options.some(([, l]) => l.length > 32);
 
-function choiceList(name, input, options, rows, stamps = false) {
+export function choiceList(name, input, options, rows, stamps = false) {
   if (rows) {
     return `<div class="kit-rows">${options
       .map(
@@ -227,7 +280,7 @@ function planPicker(field, data, kit) {
 ${groups.map(([tool, opts]) => `<div class="kit-accounts" data-tool="${esc(tool)}" role="radiogroup" aria-label="Account" hidden>${choiceList(`f-${field.id}`, "radio", opts, true)}</div>`).join("\n")}`;
 }
 
-function fieldHtml(field, kit, data) {
+export function fieldHtml(field, kit, data) {
   const opt = field.optional ? ' <span class="kit-optional">optional</span>' : "";
   const label = `<span class="kit-label" id="l-${field.id}">${esc(field.label)}${opt}</span>`;
   const hint = field.hint ? `<span class="kit-hint">${esc(field.hint)}</span>` : "";
@@ -465,8 +518,8 @@ export function recordBlocks(kit, data) {
   return blocks;
 }
 
-export function handoutBlocks(kit) {
-  const e = kit.employee;
+export function handoutBlocks(kit, lang = "en") {
+  const e = employeeOf(kit, lang);
   const h = e.handout;
   const [note, tell, del] = e.steps;
   return [
@@ -477,13 +530,13 @@ export function handoutBlocks(kit) {
     { type: "p", text: note.text },
     { type: "bullets", items: note.items },
     { type: "h1", text: `2. ${tell.title} (${tell.when.toLowerCase()})` },
-    { type: "p", text: "Tell the person named above. You can use this message:" },
+    { type: "p", text: e.ui.handout_tell },
     { type: "p", text: e.message },
     { type: "h1", text: `3. ${del.title} (${del.when.toLowerCase()})` },
     { type: "p", text: del.text },
-    { type: "h2", text: "Why today?" },
+    { type: "h2", text: e.ui.why_today },
     { type: "p", text: e.why_today },
-    { type: "h2", text: "If you used a work account" },
+    { type: "h2", text: e.ui.handout_work },
     { type: "p", text: e.work_account },
     { type: "small", text: h.footer },
   ];
@@ -515,6 +568,7 @@ export function pageList(kit) {
   return [
     { file: `${kit.owner.slug}.html`, path: `/${kit.owner.slug}` },
     { file: `${kit.employee.slug}.html`, path: `/${kit.employee.slug}` },
+    { file: `${kit.employee_nl.slug}.html`, path: `/${kit.employee_nl.slug}` },
   ];
 }
 
@@ -527,21 +581,31 @@ export function render(outDir = join(ROOT, "site"), kit = loadKit(), data = load
   writeFileSync(join(outDir, SCHEMA_PATH), JSON.stringify(recordSchema(kit, data), null, 2) + "\n");
   writeFileSync(join(outDir, `${kit.owner.slug}.html`), renderOwner(kit, data));
   writeFileSync(join(outDir, `${kit.employee.slug}.html`), renderEmployee(kit, data));
+  mkdirSync(join(outDir, "nl"), { recursive: true });
+  writeFileSync(join(outDir, `${kit.employee_nl.slug}.html`), renderEmployee(kit, data, "nl"));
 
   const record = recordBlocks(kit, data);
   const handout = handoutBlocks(kit);
   writeFileSync(join(outDir, DOWNLOADS.record), docx(record, { title: "AI data incident record", date: kit.checked }));
   writeFileSync(join(outDir, DOWNLOADS.handout), docx(handout, { title: kit.employee.handout.title, date: kit.checked }));
+  const handoutNl = handoutBlocks(kit, "nl");
+  writeFileSync(join(outDir, DOWNLOADS.handout_nl), docx(handoutNl, { title: kit.employee_nl.handout.title, date: kit.checked, lang: "nl-NL" }));
 
   const generated = "<!-- Generated from data/client-data-in-ai.json by src/render.mjs. Edit the data, not this file. -->\n\n";
-  writeFileSync(join(KIT_DIR, "incident-record.md"), generated + markdown(record));
-  writeFileSync(join(KIT_DIR, "staff-handout.md"), generated + markdown(handout));
-  writeFileSync(join(KIT_DIR, "first-72-hours.md"), generated + markdown(guideBlocks(kit)));
+  writeIfChanged(join(KIT_DIR, "incident-record.md"), generated + markdown(record));
+  writeIfChanged(join(KIT_DIR, "staff-handout.md"), generated + markdown(handout));
+  writeIfChanged(join(KIT_DIR, "staff-handout-nl.md"), generated + markdown(handoutNl));
+  writeIfChanged(join(KIT_DIR, "first-72-hours.md"), generated + markdown(guideBlocks(kit)));
   return pageList(kit);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
-  const pages = render(process.argv[2] || join(ROOT, "site"));
-  console.log(`Rendered ${pages.length} pages, 2 Word files and 3 Markdown files`);
+  const out = process.argv[2] || join(ROOT, "site");
+  const pages = render(out);
+  console.log(`Kit 1: rendered ${pages.length} pages, 3 Word files and 4 Markdown files`);
   for (const p of pages) console.log(`  ${p.path}`);
+  // Kit 2 renders into the same folder, after kit 1 (which clears it). It runs
+  // as its own process because it imports this module.
+  const { execFileSync } = await import("node:child_process");
+  execFileSync(process.execPath, [join(ROOT, "src", "statement.mjs"), out], { stdio: "inherit" });
 }

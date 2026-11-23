@@ -137,6 +137,33 @@ textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
 .kit-assist-fields code, .kit-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: #d8fff8; }
 .kit-code { display: block; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px 14px; border-radius: 10px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.06); }
 
+/* Statement builder (kit 2): tools with their short questions, the preview */
+.kit-tool-head { font-size: 0.78em; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted) !important; margin: 6px 0 -2px !important; }
+.kit-toolq { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px 14px 46px; border-top: 1px dashed rgba(255, 255, 255, 0.08); background: rgba(40, 247, 216, 0.03); }
+.kit-toolq[hidden] { display: none; }
+.kit-toolq .kit-field { gap: 6px; }
+.kit-toolq-label { margin-top: 0; color: var(--text-soft); }
+.kit-toolq .kit-chip span { padding: 6px 12px; font-size: 0.84em; }
+.kit-open-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 0.86em; color: var(--text-soft); line-height: 1.45; }
+.kit-open-count { font-size: 1.3em; font-weight: 700; color: #f5f5f5 !important; margin: 0 0 6px !important; }
+.kit-doc-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.kit-chip-btn { font: inherit; font-size: 0.84em; font-weight: 600; padding: 6px 14px; border-radius: 999px; cursor: pointer; color: var(--text-soft); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); }
+.kit-chip-btn[aria-selected="true"] { color: #052a24; background: var(--accent); border-color: var(--accent); }
+.kit-doc { background: #fbfbf9; color: #1b1b1b; border-radius: 10px; padding: 18px 20px; font-size: 0.82em; line-height: 1.5; max-height: 70vh; overflow-y: auto; }
+.kit-doc h3, .kit-doc h4, .kit-doc h5 { color: #111 !important; margin: 12px 0 4px !important; letter-spacing: 0; }
+.kit-doc h3 { font-size: 1.35em; margin-top: 0 !important; }
+.kit-doc h4 { font-size: 1.05em; border-bottom: 1px solid #ddd; padding-bottom: 2px; }
+.kit-doc h5 { font-size: 0.98em; }
+.kit-doc p, .kit-doc li { color: #1b1b1b !important; margin: 0 0 6px !important; }
+.kit-doc ul, .kit-doc ol { padding-left: 18px; margin: 0 0 6px; }
+.kit-doc .small { font-size: 0.86em; color: #555 !important; }
+.kit-doc .is-open { background: #fff4d6; border-radius: 4px; padding: 0 3px; }
+.kit-doc a { color: #0b5d52; }
+.kit-asks { list-style: none; padding: 0; margin: 0 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.kit-asks li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; background: rgba(255, 255, 255, 0.03); }
+.kit-asks-q { color: #ececec; font-weight: 600; line-height: 1.4; }
+.kit-asks-a { font-size: 0.84em; color: var(--text-muted); }
+
 /* The bar at the bottom of the screen on phones and tablets */
 .kit-bar { display: none; }
 .kit-static-factors { columns: 2 260px; column-gap: 24px; font-size: 0.9em; }
@@ -179,4 +206,6 @@ textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
   #print-record p, #print-record li { color: #111; margin: 0 0 6pt; }
   #print-record .small { font-size: 8.5pt; color: #555; }
   #print-record .kv strong { color: #111; }
+  #print-record h4 { font-size: 12.5pt; margin: 14pt 0 6pt; color: #111; }
+  #print-record h5 { font-size: 11pt; margin: 10pt 0 4pt; color: #111; }
 }

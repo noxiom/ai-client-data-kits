@@ -8,7 +8,7 @@
     button.addEventListener("click", function () {
       navigator.clipboard.writeText(target.textContent.trim()).then(function () {
         var label = button.textContent;
-        button.textContent = "Copied";
+        button.textContent = button.getAttribute("data-copied") || "Copied";
         setTimeout(function () { button.textContent = label; }, 2000);
       });
     });

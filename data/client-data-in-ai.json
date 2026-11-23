@@ -2,13 +2,14 @@
   "id": "client-data-in-ai",
   "title": "Client data went into an AI tool",
   "description": "What an employee and a small firm do in the first 72 hours after client or company data went into an AI tool: record it, contain it, assess the risk, decide on reporting to the Dutch data protection authority, and fix the cause.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "release",
   "checked": "2026-11-23",
   "next_review": "2026-12-22",
   "uses_dataset": "ai-accounts",
   "license": { "name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
   "changelog": [
+    { "date": "2026-11-23", "change": "A Dutch version of the staff page at /nl/klantgegevens-in-ai-tool, with a Dutch staff handout in Word. The Dutch text was written with AI." },
     { "date": "2026-11-23", "change": "Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word." },
     { "date": "2026-11-23", "change": "First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout." }
   ],
@@ -117,7 +118,179 @@
       "intro": "It happens, and it can be handled. Do these three things, in this order.",
       "contact_line": "Who to tell in our firm: ______________________ (name, phone)",
       "footer": "Adapted from noxiom.com/pasted-company-data-into-ai (CC BY 4.0). Not legal advice."
+    },
+    "ui": {
+      "eyebrow": "For staff",
+      "checked": "Checked",
+      "read_time": "A two-minute read",
+      "language_note": "",
+      "owner_link": "For the person you tell",
+      "in_short": "In short",
+      "why_today": "Why today?",
+      "steps": "Three steps, in this order",
+      "copy": "Copy the message",
+      "copied": "Copied",
+      "per_tool": "What deleting does, per tool",
+      "more_on": "More on",
+      "work_tag": "Work account",
+      "next": "What happens next",
+      "faq": "Questions",
+      "firm": "For the firm",
+      "firm_text": "Give this page to your team before anything happens. The Word version fits on two pages and has a line for your own contact person.",
+      "handout_button": "Download the staff handout (Word)",
+      "owner_cta": "What the firm does in the first 72 hours",
+      "about": "About this page",
+      "about_summary": "What it does and doesn't tell you",
+      "about_tells_html": "<strong>It tells you</strong> what to do as an employee, and what each AI vendor says happens to a deleted conversation, as checked in the <a href=\"{guide_url}\">AI accounts guide</a> on {guide_checked}.",
+      "about_not_html": "<strong>It doesn't</strong> replace your firm's own rules, decide whether anything must be reported, or give legal advice. If your firm has its own procedure, follow that.",
+      "changes": "Change log and corrections",
+      "version": "version",
+      "corrections_html": "Spot something wrong or out of date? Email <a href=\"mailto:contact@noxiom.com\">contact@noxiom.com</a>. We check it, correct it and log the change here. The source is public on <a href=\"https://github.com/noxiom/ai-client-data-kits\" rel=\"noopener\">GitHub</a>.",
+      "sources": "Sources",
+      "sources_note": "\"Checked\" is the date we last read the page.",
+      "footnote_html": "Written by <a href=\"/about\">Samuil Gnocchi</a>, founder of <span class=\"brandname\">Noxiom</span>, which reviews how small firms use AI tools with client data. Free to reuse under <a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"license noopener\">CC BY 4.0</a>. Not legal advice.",
+      "handout_tell": "Tell the person named above. You can use this message:",
+      "handout_work": "If you used a work account"
     }
+  },
+
+  "employee_nl": {
+    "lang": "nl",
+    "slug": "nl/klantgegevens-in-ai-tool",
+    "pair": "pasted-company-data-into-ai",
+    "guide_url": "/nl/ai-tools-bedrijfsgegevens",
+    "seo_title": "Klantgegevens in ChatGPT gezet? Datalek: dit doe je nu",
+    "meta_description": "Persoonsgegevens of klantgegevens in ChatGPT, Copilot, Gemini of een andere AI-tool gezet? Schrijf op wat erin ging, meld het vandaag, verwijder het daarna.",
+    "title": "Klantgegevens in een AI-tool gezet. Wat nu?",
+    "lead": "Het gebeurt, en het is op te lossen. Het belangrijkste is dat de juiste persoon in je bedrijf het vandaag hoort, van jou.",
+    "answer": [
+      "Schrijf op wat erin ging en waar, zonder de gegevens zelf over te nemen.",
+      "Meld het vandaag bij de persoon die je bedrijf hiervoor heeft aangewezen: je leidinggevende, de officemanager of de privacycontactpersoon.",
+      "Verwijder daarna het gesprek, tenzij je bedrijf vraagt om te wachten."
+    ],
+    "why_today": "Gingen er persoonsgegevens in, dan moet je bedrijf misschien binnen 72 uur nadat het ervan weet beslissen of het een datalek meldt bij de Autoriteit Persoonsgegevens. Het moet ook elk incident als dit vastleggen, ook de incidenten die het niet meldt. Allebei kan alleen als het ervan weet.",
+    "steps": [
+      {
+        "title": "Schrijf het op",
+        "when": "Nu, 5 minuten",
+        "text": "Beschrijf wat er gebeurde. Plak de gegevens nergens opnieuw, ook niet in een mail aan je leidinggevende.",
+        "items": [
+          "Welke tool, en welk account: je privéaccount, of een werkaccount van je bedrijf.",
+          "Wanneer, ongeveer.",
+          "Wat voor gegevens, en van wie: bijvoorbeeld \"de salarisadministratie van een klant, met ongeveer 40 namen en salarissen\".",
+          "Geplakte tekst, een geüpload bestand, of een gekoppelde mailbox of map.",
+          "Of je de chat met een link hebt gedeeld, en of de trainingsinstelling van de tool aan stond."
+        ]
+      },
+      {
+        "title": "Meld het bij je bedrijf",
+        "when": "Vandaag",
+        "text": "Vertel het je leidinggevende, de officemanager of de privacycontactpersoon. Een kort bericht is genoeg; je kunt het bericht hieronder kopiëren.",
+        "items": []
+      },
+      {
+        "title": "Verwijder het",
+        "when": "Nadat je het hebt opgeschreven",
+        "text": "Verwijder het gesprek en haal een deellink weg. Stond de trainingsinstelling aan, zet die dan uit. Wacht eerst als je bedrijf daarom vraagt: het wil de chat misschien zien voor het eigen verslag.",
+        "items": []
+      }
+    ],
+    "message": "Hoi [naam], ik moet iets melden. Op [datum] rond [tijd] heb ik [beschrijf het soort gegevens, niet de gegevens zelf] van [een klant / ons eigen bedrijf] in [tool] gezet, met mijn [privé / werk]account. Ik heb het gesprek [nog niet] verwijderd. Kunnen we vandaag even praten?",
+    "work_account": "Heeft je bedrijf je een werkaccount gegeven (bijvoorbeeld ChatGPT Business, of Copilot met het groene schild) en staan jullie afspraken dit soort gegevens daarin toe? Dan is het misschien helemaal geen incident. Volgens de Autoriteit Persoonsgegevens is het geen datalek als het gebruik van de chatbot bij het beleid van de organisatie hoort. Weet je niet zeker wat de afspraken toestaan, meld het dan toch.",
+    "work_account_sources": ["ap-chatbots"],
+    "next": [
+      "Je bedrijf legt het incident vast.",
+      "Het beoordeelt het risico voor de mensen van wie de gegevens zijn.",
+      "Het beslist of het een datalek meldt bij de Autoriteit Persoonsgegevens, en of het de klant en de betrokkenen inlicht.",
+      "Misschien vraagt het je om details. De beslissingen neemt je bedrijf, niet jij."
+    ],
+    "faq": [
+      {
+        "q": "Is het een datalek als ik klantgegevens in ChatGPT zet?",
+        "a": "Zaten er persoonsgegevens bij en gebruikte je de tool tegen de afspraken met je werkgever in, dan is het volgens de Autoriteit Persoonsgegevens een datalek. Niet elk datalek hoeft gemeld te worden bij de AP: alleen als het waarschijnlijk een risico oplevert voor de mensen om wie het gaat. Dat beoordeelt je bedrijf.",
+        "sources": ["ap-chatbots", "gdpr"]
+      },
+      {
+        "q": "Binnen hoeveel tijd moet een datalek gemeld worden?",
+        "a": "Binnen 72 uur nadat het bedrijf ervan weet, tenzij het datalek waarschijnlijk geen risico oplevert voor de mensen om wie het gaat. Een latere melding moet de reden voor de vertraging noemen. Melden is de taak van je bedrijf, niet van jou. Jouw deel is dat het bedrijf het vandaag weet.",
+        "sources": ["gdpr", "edpb-breach"]
+      },
+      {
+        "q": "Moet ik het gesprek meteen verwijderen?",
+        "a": "Schrijf eerst op wat erin ging, en meld het bij je bedrijf. Verwijder het daarna, tenzij je bedrijf vraagt om te wachten omdat het de chat wil zien voor het eigen verslag. Verwijderen haalt niet altijd alles weg: sommige tools bewaren verwijderde chats nog een tijd, en wat al voor training is gebruikt, blijft daar. Hieronder staat per tool wat de leverancier zegt.",
+        "sources": []
+      },
+      {
+        "q": "Ik heb een wachtwoord of toegangssleutel in een AI-tool geplakt.",
+        "a": "Verander het wachtwoord of vervang de sleutel nu, overal waar die gebruikt wordt, en meld het bij wie jullie IT beheert. Verwijder daarna het gesprek. Een gewijzigd wachtwoord heeft voor iemand die de chat later ziet geen waarde meer.",
+        "sources": []
+      },
+      {
+        "q": "Het waren bedrijfsgegevens, maar niets over personen. Maakt het dan uit?",
+        "a": "Dan is het geen datalek onder de AVG, want er zaten geen persoonsgegevens bij. Het kan toch uitmaken: contracten met klanten eisen vaak geheimhouding, en de tool kan bewaren of trainen op wat je typte. Meld het bij je leidinggevende, zodat het bedrijf het kan nagaan.",
+        "sources": ["gdpr"]
+      },
+      {
+        "q": "Kan mijn werkgever zien wat ik in ChatGPT typ?",
+        "a": "Niet in je privéaccount: je bedrijf kan daar niet bij. In een werkaccount hangt het af van het abonnement en de instellingen. Het overzicht AI-tools en je bedrijfsgegevens laat per tool zien wat de leverancier belooft.",
+        "sources": []
+      },
+      {
+        "q": "Krijg ik hier problemen mee?",
+        "a": "Deze pagina kan niet namens je werkgever spreken. Wel dit: je bedrijf moet het weten om aan de eigen plichten te voldoen, en hoe eerder het dat weet, hoe meer het kan doen.",
+        "sources": []
+      }
+    ],
+    "tool_notes_from": "2026-11-22",
+    "tool_notes": {
+      "chatgpt": "Verwijder in een privéaccount het gesprek: OpenAI plant verwijderde chats in voor definitieve verwijdering binnen 30 dagen. Kijk of \"Improve the model for everyone\" aan stond op dat moment, en noteer het.",
+      "copilot": "Verwijder in de consumentenapp het gesprek uit de chatlijst. De pagina's van Microsoft over de vernieuwde app zeggen niet hoe lang verwijderde of bewaarde chats blijven bestaan. Noteer dat je dat niet kon nagaan.",
+      "gemini": "Verwijder in een privéaccount de chat uit de Gemini-geschiedenis. Let op: chats die al zijn gekozen voor beoordeling door mensen, worden tot drie jaar bewaard en verdwijnen niet met de geschiedenis.",
+      "claude": "Verwijder in een privéaccount de chat: Anthropic verwijdert die binnen 30 dagen uit de opslag. Stond de instelling Model Improvement aan, dan kunnen gegevens zonder directe identificatie al in trainingsprocessen zitten, waar Anthropic ze tot vijf jaar kan bewaren. Noteer welke van de twee het was.",
+      "deepseek": "Wis de chatgeschiedenis in de instellingen van DeepSeek. Volgens het privacybeleid van DeepSeek gebruik je je privacyrechten, ook bezwaar tegen training, door te mailen naar privacy@deepseek.com. Noteer wat je vroeg en wanneer."
+    },
+    "handout": {
+      "title": "Per ongeluk bedrijfsgegevens in een AI-tool gezet?",
+      "intro": "Het gebeurt, en het is op te lossen. Doe deze drie dingen, in deze volgorde.",
+      "contact_line": "Bij ons meld je het bij: ______________________ (naam, telefoon)",
+      "footer": "Bewerkt van noxiom.com/nl/klantgegevens-in-ai-tool (CC BY 4.0). De Nederlandse tekst is geschreven met hulp van AI. Geen juridisch advies."
+    },
+    "ui": {
+      "eyebrow": "Voor medewerkers",
+      "checked": "Gecontroleerd",
+      "read_time": "Twee minuten lezen",
+      "language_note": "De Nederlandse tekst is geschreven met hulp van AI",
+      "owner_link": "Voor wie je het meldt (Engels)",
+      "in_short": "In het kort",
+      "why_today": "Waarom vandaag?",
+      "steps": "Drie stappen, in deze volgorde",
+      "copy": "Kopieer het bericht",
+      "copied": "Gekopieerd",
+      "per_tool": "Wat verwijderen doet, per tool",
+      "more_on": "Meer over",
+      "work_tag": "Werkaccount",
+      "next": "Wat er daarna gebeurt",
+      "faq": "Vragen",
+      "firm": "Voor het bedrijf",
+      "firm_text": "Geef deze pagina aan je team voordat er iets gebeurt. De Word-versie past op twee pagina's en heeft een regel voor je eigen contactpersoon.",
+      "handout_button": "Download de instructie voor medewerkers (Word)",
+      "owner_cta": "Wat het bedrijf doet in de eerste 72 uur (Engels)",
+      "about": "Over deze pagina",
+      "about_summary": "Wat deze pagina wel en niet zegt",
+      "about_tells_html": "<strong>Ze zegt</strong> wat je als medewerker doet, en wat elke AI-leverancier zegt over een verwijderd gesprek, zoals nagekeken in <a href=\"{guide_url}\">AI-tools en je bedrijfsgegevens</a> op {guide_checked}.",
+      "about_not_html": "<strong>Ze vervangt niet</strong> de eigen regels van je bedrijf, beslist niet of iets gemeld moet worden, en is geen juridisch advies. Heeft je bedrijf een eigen procedure, volg die dan.",
+      "changes": "Wijzigingen en correcties",
+      "version": "versie",
+      "corrections_html": "Klopt er iets niet, of is iets verouderd? Mail naar <a href=\"mailto:contact@noxiom.com\">contact@noxiom.com</a>. We zoeken het uit, verbeteren het en zetten de wijziging hier. De bron staat openbaar op <a href=\"https://github.com/noxiom/ai-client-data-kits\" rel=\"noopener\">GitHub</a>.",
+      "sources": "Bronnen",
+      "sources_note": "\"Gecontroleerd\" is de datum waarop we de pagina het laatst lazen. De bronnen zijn Engelstalig.",
+      "footnote_html": "Geschreven door <a href=\"/about\" hreflang=\"en\">Samuil Gnocchi</a>, oprichter van <span class=\"brandname\">Noxiom</span>, dat onderzoekt hoe kleine bedrijven AI-tools gebruiken met klantgegevens. Gesprekken voeren we in het Engels. Vrij te hergebruiken onder <a href=\"https://creativecommons.org/licenses/by/4.0/deed.nl\" rel=\"license noopener\">CC BY 4.0</a>. Geen juridisch advies.",
+      "handout_tell": "Meld het bij de persoon hierboven. Je kunt dit bericht gebruiken:",
+      "handout_work": "Als je een werkaccount gebruikte"
+    },
+    "changelog": [
+      { "date": "2026-11-23", "change": "Eerste Nederlandse versie van de pagina voor medewerkers, met een Word-instructie om uit te delen." }
+    ]
   },
 
   "owner": {

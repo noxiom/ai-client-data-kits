@@ -88,4 +88,4 @@ If using it with this data was within your rules, the Dutch authority doesn't tr
 
 No. The record builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the record as a file or print it before you close.
 
-_From noxiom.com/ai-data-incident, version 1.1.0, checked 23 November 2026. CC BY 4.0. Not legal advice._
+_From noxiom.com/ai-data-incident, version 1.2.0, checked 23 November 2026. CC BY 4.0. Not legal advice._

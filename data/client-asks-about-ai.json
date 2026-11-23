@@ -1,0 +1,315 @@
+{
+  "id": "client-asks-about-ai",
+  "title": "A client asks how you use AI with their data",
+  "description": "A one-page AI statement and a short answer letter, in English and Dutch, built in the browser from what the firm has confirmed about its AI tools. Unconfirmed points become open points, never claims.",
+  "version": "0.1.0",
+  "status": "draft",
+  "checked": "2026-11-23",
+  "next_review": "2026-12-22",
+  "uses_dataset": "ai-accounts",
+  "uses_facts": "firm-ai-facts",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "changelog": [
+    {
+      "date": "2026-11-23",
+      "change": "First version: the statement builder (AI statement and answer letter, in English or Dutch, as Word), what clients ask and why, and the AI Act question."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ai-act",
+      "publisher": "EUR-Lex",
+      "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act), Articles 4, 50 and 113",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "page_date": "2024-07-12",
+      "checked": "2026-11-23",
+      "note": "EUR-Lex refused automated reading on 23 Nov 2026. Article 50 was read on artificialintelligenceact.eu, which marks it as amended by Regulation (EU) 2026/1744.",
+      "needs_manual_check": "Open Article 50 on EUR-Lex (the consolidated text, which includes Regulation (EU) 2026/1744) and confirm: paragraphs 1 and 2 bind providers; paragraph 3 covers emotion recognition and biometric categorisation; paragraph 4 covers deep fakes and AI-generated text published to inform the public on matters of public interest, with the human review exception; it applies from 2 August 2026. Also confirm that Article 4 still applies to deployers."
+    },
+    {
+      "id": "kvk-ai",
+      "publisher": "KvK (Netherlands Chamber of Commerce)",
+      "title": "Moet je laten weten dat je AI gebruikt in je bedrijf?",
+      "url": "https://www.kvk.nl/wetten-en-regels/moet-je-laten-weten-dat-je-ai-gebruikt-in-je-bedrijf/",
+      "page_date": "2026-10-12",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "acc-dd",
+      "publisher": "Association of Corporate Counsel (ACC)",
+      "title": "AI Vendor Due Diligence Checklist and Questionnaire",
+      "url": "https://acc.com/sites/default/files/2024-08/AI---Vendor-Due-Diligence-Checklist-525861.1-.docx",
+      "page_date": "2024-08-01",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "purdue-ai",
+      "publisher": "Purdue University, Data Ethics Committee",
+      "title": "AI Use Case Vendor Questionnaire",
+      "url": "https://www.purdue.edu/ai/wp-content/uploads/2026/07/AI_Use_Case_Vendor_Questionnaire-DEC.docx",
+      "page_date": "2026-07-01",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "mcc-ai",
+      "publisher": "European Commission, Public Buyers Community",
+      "title": "EU model contractual clauses for the procurement of AI (MCC-AI-Light), updated version",
+      "url": "https://public-buyers-community.ec.europa.eu/communities/procurement-ai/news/updated-eu-ai-model-contractual-clauses-now-available",
+      "page_date": "2025-03-05",
+      "checked": "2026-11-23"
+    }
+  ],
+  "page": {
+    "slug": "client-asks-about-ai",
+    "seo_title": "Client asks how you use AI? A one-page answer and letter",
+    "meta_description": "A client asks whether you use AI with their data. Build a truthful one-page AI statement and answer letter, in English or Dutch, from what you have confirmed.",
+    "title": "A client asks how you use AI with their data",
+    "lead": "Often there is a renewal or a new contract waiting. Here is what clients ask, why they ask it, and a builder that turns what your firm has confirmed into a one-page statement and a short letter.",
+    "answer": "Tell them which AI tools you use and under which accounts, what may go into them, who checks the output, and what you are still checking. Say only what you have confirmed, and keep what the vendor promises apart from what you checked yourself. The builder below writes the statement and the letter that way, in English or Dutch.",
+    "asks_intro": "Client questionnaires and contract clauses come back to the same points. Here they are in the clients' own words, and where your statement answers each one.",
+    "asks": [
+      {
+        "q": "Do you use AI on our data, or only for your own back office?",
+        "where": "The AI tools you use; what goes in",
+        "sources": [
+          "acc-dd"
+        ]
+      },
+      {
+        "q": "Which AI tools, from which vendors?",
+        "where": "The AI tools you use",
+        "sources": [
+          "acc-dd"
+        ]
+      },
+      {
+        "q": "Will our data be used to train the AI?",
+        "where": "Per tool: training, and what the vendor states",
+        "sources": [
+          "acc-dd",
+          "mcc-ai"
+        ]
+      },
+      {
+        "q": "Where is our data stored, and how long is it kept?",
+        "where": "Per tool: storage and retention",
+        "sources": [
+          "acc-dd",
+          "purdue-ai"
+        ]
+      },
+      {
+        "q": "Who checks the output, and who is responsible if it is wrong?",
+        "where": "How we work",
+        "sources": [
+          "purdue-ai",
+          "mcc-ai"
+        ]
+      },
+      {
+        "q": "Are your staff trained to use it?",
+        "where": "How we work",
+        "sources": [
+          "purdue-ai"
+        ]
+      },
+      {
+        "q": "Is the AI vendor a sub-processor we approved?",
+        "where": "How we work (for processors)",
+        "sources": [
+          "gdpr"
+        ]
+      },
+      {
+        "q": "Can we ask you not to use AI on our work?",
+        "where": "Your choices",
+        "sources": [
+          "mcc-ai"
+        ]
+      }
+    ],
+    "why": [
+      {
+        "title": "If you are their processor",
+        "text": "Under the GDPR a processor may not engage another processor without the client's prior written authorisation, specific or general. Under a general authorisation it must tell the client about a new one, so the client can object. An AI vendor that processes the client's personal data for you is such a sub-processor.",
+        "sources": [
+          "gdpr"
+        ]
+      },
+      {
+        "title": "Their contracts",
+        "text": "Model contract clauses for AI, published for public buyers by the European Commission's procurement community, ask suppliers not to use client data for anything but the agreed work, to delete it on request, to keep a person watching for over-reliance on AI output, and to give information on request. A client's own contract may use similar wording.",
+        "sources": [
+          "mcc-ai"
+        ]
+      },
+      {
+        "title": "Not the AI Act, mostly",
+        "text": "Article 50 of the AI Act, which applies from 2 August 2026, sets transparency duties for providers of AI systems, and for deployers of emotion recognition, of deep fakes, and of AI-written text published to inform the public on matters of public interest. Using ChatGPT or Copilot on client work is none of those. A KvK page explains those duties; it doesn't answer your client's question.",
+        "sources": [
+          "ai-act",
+          "kvk-ai"
+        ]
+      }
+    ],
+    "gap_title": "What a statement can't cover",
+    "gap_text": "Your statement covers the tools your firm arranged. It can't cover what staff use on their own, and that is usually what the client is really asking about. If you aren't sure, the statement says so, as an open point. The AI accounts guide has a 20-minute check you can do yourself. Noxiom's fixed-price AI usage review finds out properly, from an anonymous staff survey, your admin screens and your billing, so the next statement has no open point there.",
+    "faq": [
+      {
+        "q": "Does the AI Act require us to tell clients that we use AI?",
+        "a": "Not for ordinary internal use. Article 50 sets transparency duties for providers of AI systems, such as the makers of chatbots, and for deployers of emotion recognition, deep fakes, and AI-written text published to inform the public on matters of public interest. Using an AI tool on client work isn't one of those. What you owe a client comes from your contract with them, from the GDPR where you are their processor, and from your professional rules. Separately, Article 4 asks firms that use AI systems to see to their staff's AI literacy.",
+        "sources": [
+          "ai-act",
+          "kvk-ai"
+        ]
+      },
+      {
+        "q": "We are the client's processor. Do we need their permission for an AI tool?",
+        "a": "A processor may not engage another processor without the controller's prior specific or general written authorisation. Under a general authorisation, it must tell the controller about new ones so the controller can object. An AI vendor that processes your client's personal data is such a sub-processor. Check what your processing agreement with the client says, and put the vendor on the list you give them.",
+        "sources": [
+          "gdpr"
+        ]
+      },
+      {
+        "q": "Can we tell the client the tool is GDPR compliant?",
+        "a": "The statement doesn't say that, and we advise against it. Say what you checked: the agreement with the vendor, the training setting, the storage location, and what the vendor states, with the date. Whether your use meets the GDPR depends on how you use the tool, not on the tool alone.",
+        "sources": []
+      },
+      {
+        "q": "What if we don't know which AI tools our staff use?",
+        "a": "Then the statement says so, as an open point. A statement that claims more than the firm knows does more harm than an honest open point, especially if the client later finds out. The 20-minute check in the AI accounts guide is a first step.",
+        "sources": []
+      },
+      {
+        "q": "Why does the statement keep what the vendor says apart from what we checked?",
+        "a": "Because they are different claims. \"Training is off: we checked the setting\" is your firm's fact. \"The vendor says it doesn't train on business data by default\" is the vendor's promise. Your client's lawyer reads them differently, and you can only vouch for the first.",
+        "sources": []
+      },
+      {
+        "q": "Does this page send or keep what we enter?",
+        "a": "No. The builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the statement as Word, or your answers as a .json file to continue later.",
+        "sources": []
+      }
+    ]
+  },
+  "builder": {
+    "intro": "Answer what you have confirmed. Leave the rest, or pick \"not sure\": it becomes an open point in the statement, never a claim.",
+    "language_label": "Language of the statement and the letter",
+    "language_note": "The Dutch wording was written with AI. Read it before you send it.",
+    "letter_fields": [
+      {
+        "id": "signer",
+        "type": "text",
+        "label": "Signed by (for the letter)",
+        "hint": "Name and role, for example \"Anna de Vries, director\".",
+        "optional": true
+      }
+    ]
+  },
+  "assistant": {
+    "intro": "Rather talk it through, or on your phone? An AI assistant can ask you the questions and give you the answers as one block of JSON. You paste it back here, check it, and save.",
+    "caution": "Use your firm's work account for this. Don't give it client names or client data: the questions are about your firm's own setup.",
+    "prompt": "Help me fill in my firm's AI facts, for an AI statement to clients. The questions and the allowed answers are at https://noxiom.com/data/firm-ai-facts.schema.json (the same list is on https://noxiom.com/client-asks-about-ai under \"For AI assistants\"). Ask me the questions one at a time, in plain words, and offer the allowed answers. For each AI account the firm provides, also ask the short questions about it (tool_facts). Only record what I have confirmed: if I'm not sure, use the \"not sure\" answer or leave it out; don't guess, and don't fill in what a vendor promises as if it were my firm's fact. Don't ask for client names or client data. When we're done, give me the whole result as one JSON code block, so I can paste it back into the page."
+  },
+  "documents": {
+    "statement": {
+      "en": {
+        "title": "How we use AI tools with client data",
+        "of": "Statement of {date}",
+        "in_short": "In short",
+        "tools": "The AI tools we use",
+        "tools_intro": "These are the AI tools the firm provides or allows for work:",
+        "tools_none": "The firm does not provide or allow any AI tools for work.",
+        "tools_empty": "Which AI tools the firm provides or allows.",
+        "work": "work account",
+        "personal": "personal account",
+        "vendor_says": "What {vendor} states about this account (the vendor's own pages, not checked by us)",
+        "other_vendor": "the vendor",
+        "other_tool": "the other AI tool",
+        "data": "What goes into them",
+        "how": "How we work",
+        "choices": "Your choices",
+        "contact": "Questions about this statement: {contact}.",
+        "contact_empty": "Questions about this statement: [contact person or address].",
+        "open": "What we are still checking",
+        "open_none": "Nothing, at the date of this statement.",
+        "summary_tools": "We use {list}.",
+        "summary_none": "The firm does not provide or allow any AI tools for work.",
+        "summary_dpa": "Each AI vendor we use is bound by a processing agreement with us.",
+        "summary_open_one": "One point is still being checked; it is listed at the end.",
+        "summary_open_many": "{n} points are still being checked; they are listed at the end.",
+        "sources": "Sources for the vendor statements",
+        "footer": "Vendor statements come from the vendors' own pages, as collected in the AI accounts guide at noxiom.com/ai-accounts (checked {guide_date}). They are the vendors' promises, not facts checked by us. Made with noxiom.com/client-asks-about-ai (CC BY 4.0).",
+        "beyond": "Other AI use",
+        "checked": "checked {date}"
+      },
+      "nl": {
+        "title": "Hoe wij AI-tools gebruiken met klantgegevens",
+        "of": "Verklaring van {date}",
+        "in_short": "In het kort",
+        "tools": "De AI-tools die we gebruiken",
+        "tools_intro": "Dit zijn de AI-tools die ons bedrijf aanbiedt of toestaat voor het werk:",
+        "tools_none": "Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.",
+        "tools_empty": "Welke AI-tools ons bedrijf aanbiedt of toestaat.",
+        "work": "werkaccount",
+        "personal": "privéaccount",
+        "vendor_says": "Wat {vendor} zegt over dit account (de eigen pagina's van de leverancier, niet door ons gecontroleerd)",
+        "other_vendor": "de leverancier",
+        "other_tool": "de andere AI-tool",
+        "data": "Wat erin gaat",
+        "how": "Hoe we werken",
+        "choices": "Uw keuzes",
+        "contact": "Vragen over deze verklaring: {contact}.",
+        "contact_empty": "Vragen over deze verklaring: [contactpersoon of adres].",
+        "open": "Wat we nog nagaan",
+        "open_none": "Niets, op de datum van deze verklaring.",
+        "summary_tools": "We gebruiken {list}.",
+        "summary_none": "Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.",
+        "summary_dpa": "Met elke AI-leverancier die we gebruiken, hebben we een verwerkersovereenkomst.",
+        "summary_open_one": "Eén punt gaan we nog na; het staat aan het eind.",
+        "summary_open_many": "{n} punten gaan we nog na; ze staan aan het eind.",
+        "sources": "Bronnen bij wat de leveranciers zeggen",
+        "footer": "Wat de leveranciers zeggen, komt van hun eigen pagina's, zoals verzameld in de AI accounts guide op noxiom.com/ai-accounts (gecontroleerd {guide_date}). Het zijn beloften van de leveranciers, geen feiten die wij hebben gecontroleerd. De Nederlandse tekst is geschreven met hulp van AI. Gemaakt met noxiom.com/client-asks-about-ai (CC BY 4.0).",
+        "beyond": "Ander AI-gebruik",
+        "checked": "gecontroleerd {date}"
+      }
+    },
+    "letter": {
+      "en": {
+        "subject": "How we use AI tools with your data",
+        "place_date": "[Place], {date}",
+        "dear": "Dear [name],",
+        "thanks": "Thank you for asking how we use AI tools with your data. It is a fair question, and here is our answer.",
+        "yes": "Yes, we use AI tools in our work: {list}.",
+        "none": "The firm does not provide or allow any AI tools for work.",
+        "empty": "We are confirming which AI tools we use, and will send you our full statement.",
+        "attached": "Our AI statement of {date} is attached. The main points:",
+        "open": "A few points are still being checked. They are listed at the end of the statement, and we will tell you the outcome.",
+        "contact": "If you have questions, please contact {contact}.",
+        "contact_empty": "If you have questions, please contact [contact person].",
+        "regards": "Kind regards,",
+        "signer_empty": "[Name, role]",
+        "firm_empty": "[Firm name]"
+      },
+      "nl": {
+        "subject": "Hoe wij AI-tools gebruiken met uw gegevens",
+        "place_date": "[Plaats], {date}",
+        "dear": "Beste [naam],",
+        "thanks": "Dank voor uw vraag hoe wij AI-tools gebruiken met uw gegevens. Een terechte vraag, en dit is ons antwoord.",
+        "yes": "Ja, wij gebruiken AI-tools in ons werk: {list}.",
+        "none": "Ons bedrijf biedt geen AI-tools aan voor het werk en staat ze niet toe.",
+        "empty": "We zetten op een rij welke AI-tools we gebruiken, en sturen u daarna onze volledige verklaring.",
+        "attached": "Bijgevoegd is onze AI-verklaring van {date}. De belangrijkste punten:",
+        "open": "Een paar punten gaan we nog na. Ze staan aan het eind van de verklaring, en we laten u weten wat eruit komt.",
+        "contact": "Hebt u vragen, neem dan contact op met {contact}.",
+        "contact_empty": "Hebt u vragen, neem dan contact op met [contactpersoon].",
+        "regards": "Met vriendelijke groet,",
+        "signer_empty": "[Naam, functie]",
+        "firm_empty": "[Naam van het bedrijf]"
+      }
+    }
+  }
+}

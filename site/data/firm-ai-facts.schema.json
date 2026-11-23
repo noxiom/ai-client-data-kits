@@ -1,0 +1,1010 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxiom.com/data/firm-ai-facts.schema.json",
+  "title": "Firm AI facts",
+  "description": "What a small firm has confirmed about the AI tools it uses with client data, from https://noxiom.com/client-asks-about-ai. For AI assistants helping someone fill it in: ask the questions one at a time in plain words; for each account in tools, ask its questions under tool_facts; record only what the person has confirmed, and use the not sure value or leave a question out otherwise; never record what a vendor promises as the firm's own fact; don't ask for client names or client data; give the result as one JSON object. The person pastes it into the statement builder on the page, which checks it in their browser. Any answer left out becomes an open point in the statement, never a claim.",
+  "x-version": 1,
+  "x-license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://noxiom.com/data/firm-ai-facts.schema.json"
+    },
+    "facts": {
+      "const": "firm-ai-facts"
+    },
+    "version": {
+      "const": 1
+    },
+    "saved_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+      "description": "When the facts were saved, local time."
+    },
+    "language": {
+      "title": "Language of the statement and the letter",
+      "enum": [
+        "en",
+        "nl"
+      ]
+    },
+    "firm_name": {
+      "title": "Your firm's name",
+      "description": "Used in the statement and the letter. It stays in your browser.",
+      "type": "string",
+      "maxLength": 300
+    },
+    "contact": {
+      "title": "Who clients can ask about it",
+      "description": "A role or a shared address, for example \"our office manager, privacy@yourfirm.nl\".",
+      "type": "string",
+      "maxLength": 300
+    },
+    "role": {
+      "title": "For your clients' data, what is your firm?",
+      "oneOf": [
+        {
+          "const": "processor",
+          "title": "Their processor: we handle it for them under a processing agreement"
+        },
+        {
+          "const": "controller",
+          "title": "Controller: we decide how we use it for our work"
+        },
+        {
+          "const": "both",
+          "title": "Both, depending on the client or the work"
+        },
+        {
+          "const": "unsure",
+          "title": "Not sure"
+        }
+      ]
+    },
+    "tools": {
+      "title": "Which AI accounts does the firm provide or allow for work?",
+      "description": "Tick each account the firm arranged or agreed to. Then answer the short questions that appear for each one.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "const": "chatgpt-personal",
+            "title": "ChatGPT Free, Plus or Pro (personal account)"
+          },
+          {
+            "const": "chatgpt-business",
+            "title": "ChatGPT Business (formerly Team) (work account)"
+          },
+          {
+            "const": "chatgpt-enterprise",
+            "title": "ChatGPT Enterprise (work account)"
+          },
+          {
+            "const": "copilot-personal",
+            "title": "Microsoft Copilot app, personal account (personal account)"
+          },
+          {
+            "const": "copilot-chat-work",
+            "title": "Microsoft 365 Copilot Chat, work account (work account)"
+          },
+          {
+            "const": "m365-copilot",
+            "title": "Microsoft 365 Copilot (paid licence, including Copilot Business) (work account)"
+          },
+          {
+            "const": "gemini-personal",
+            "title": "Gemini app, personal Google account (free or Google AI Pro) (personal account)"
+          },
+          {
+            "const": "gemini-workspace",
+            "title": "Gemini in Google Workspace, work account (work account)"
+          },
+          {
+            "const": "claude-personal",
+            "title": "Claude Free, Pro or Max (personal account)"
+          },
+          {
+            "const": "claude-work",
+            "title": "Claude Team or Enterprise (work account)"
+          },
+          {
+            "const": "deepseek-app",
+            "title": "DeepSeek app and website (personal account)"
+          },
+          {
+            "const": "other-work",
+            "title": "Another AI tool, with a work account"
+          },
+          {
+            "const": "none",
+            "title": "None: the firm provides or allows no AI tools"
+          }
+        ]
+      }
+    },
+    "shadow": {
+      "title": "Do you know which AI tools staff actually use, including their own accounts?",
+      "oneOf": [
+        {
+          "const": "checked",
+          "title": "Yes: we checked in the past six months (survey, admin screens, billing)"
+        },
+        {
+          "const": "asked",
+          "title": "We asked around, informally"
+        },
+        {
+          "const": "assume",
+          "title": "We go by what the firm pays for"
+        },
+        {
+          "const": "unknown",
+          "title": "We don't know"
+        }
+      ]
+    },
+    "personal": {
+      "title": "Personal AI accounts (an employee's own ChatGPT, Gemini or Claude) for work",
+      "oneOf": [
+        {
+          "const": "not_allowed",
+          "title": "Not allowed for client work"
+        },
+        {
+          "const": "no_client_data",
+          "title": "Allowed, but never with client data"
+        },
+        {
+          "const": "allowed",
+          "title": "Allowed"
+        },
+        {
+          "const": "no_rule",
+          "title": "No rule yet"
+        }
+      ]
+    },
+    "client_data": {
+      "title": "Which client data may go into the firm's AI tools?",
+      "oneOf": [
+        {
+          "const": "none",
+          "title": "None: only our own material and public information"
+        },
+        {
+          "const": "deidentified",
+          "title": "Only with names and identifying details removed"
+        },
+        {
+          "const": "work_only",
+          "title": "Client data, in the work accounts only"
+        },
+        {
+          "const": "no_rule",
+          "title": "No rule yet"
+        }
+      ]
+    },
+    "special": {
+      "title": "Sensitive data: BSN, health data, other special categories",
+      "oneOf": [
+        {
+          "const": "never",
+          "title": "Never goes in"
+        },
+        {
+          "const": "agreed",
+          "title": "Only where the client agreed in writing"
+        },
+        {
+          "const": "no_rule",
+          "title": "No rule yet"
+        }
+      ]
+    },
+    "opt_out": {
+      "title": "A client asks you not to use AI on their work",
+      "oneOf": [
+        {
+          "const": "honour",
+          "title": "We don't, for that client"
+        },
+        {
+          "const": "discuss",
+          "title": "We agree with them how we work"
+        },
+        {
+          "const": "undecided",
+          "title": "Not decided"
+        }
+      ]
+    },
+    "review": {
+      "title": "Does a person check AI output before it goes to a client?",
+      "oneOf": [
+        {
+          "const": "always",
+          "title": "Always, and whoever signs it off is responsible"
+        },
+        {
+          "const": "depends",
+          "title": "It depends on the task"
+        },
+        {
+          "const": "no_rule",
+          "title": "No rule"
+        }
+      ]
+    },
+    "policy": {
+      "title": "Written rules for AI tools",
+      "oneOf": [
+        {
+          "const": "yes",
+          "title": "Written and shared with staff"
+        },
+        {
+          "const": "drafting",
+          "title": "Being written"
+        },
+        {
+          "const": "no",
+          "title": "None yet"
+        }
+      ]
+    },
+    "literacy": {
+      "title": "Do staff know the rules and the tools' limits?",
+      "description": "The AI Act's Article 4 asks firms that use AI systems to see to their staff's AI literacy.",
+      "oneOf": [
+        {
+          "const": "trained",
+          "title": "Briefed or trained, and kept up"
+        },
+        {
+          "const": "planned",
+          "title": "Planned"
+        },
+        {
+          "const": "no",
+          "title": "Not yet"
+        }
+      ]
+    },
+    "subprocessors": {
+      "title": "Are the AI vendors on the sub-processor list you give clients?",
+      "oneOf": [
+        {
+          "const": "yes",
+          "title": "Yes"
+        },
+        {
+          "const": "not_yet",
+          "title": "Not yet"
+        },
+        {
+          "const": "no_list",
+          "title": "We don't keep a list"
+        },
+        {
+          "const": "na",
+          "title": "Not applicable: we are not a processor"
+        }
+      ]
+    },
+    "incidents": {
+      "title": "If client data goes into an AI tool by mistake",
+      "oneOf": [
+        {
+          "const": "procedure",
+          "title": "We have a procedure: record, assess, tell the client"
+        },
+        {
+          "const": "no",
+          "title": "No procedure yet"
+        }
+      ]
+    },
+    "signer": {
+      "title": "Signed by (for the letter)",
+      "description": "Name and role, for example \"Anna de Vries, director\".",
+      "type": "string",
+      "maxLength": 300
+    },
+    "tool_facts": {
+      "title": "The short questions per account, for each account in tools",
+      "type": "object",
+      "properties": {
+        "chatgpt-personal": {
+          "type": "object",
+          "properties": {
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "chatgpt-business": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "chatgpt-enterprise": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "copilot-personal": {
+          "type": "object",
+          "properties": {
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "copilot-chat-work": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "m365-copilot": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "gemini-personal": {
+          "type": "object",
+          "properties": {
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "gemini-workspace": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "claude-personal": {
+          "type": "object",
+          "properties": {
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "claude-work": {
+          "type": "object",
+          "properties": {
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "deepseek-app": {
+          "type": "object",
+          "properties": {
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "other-work": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxLength": 80,
+              "title": "Which tool, from which vendor?"
+            },
+            "dpa": {
+              "title": "Processing agreement with the vendor",
+              "oneOf": [
+                {
+                  "const": "signed",
+                  "title": "Signed or accepted"
+                },
+                {
+                  "const": "no",
+                  "title": "Not yet"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "training": {
+              "title": "Training on your data",
+              "oneOf": [
+                {
+                  "const": "off_checked",
+                  "title": "Off: we checked the setting"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default, not checked"
+                },
+                {
+                  "const": "on",
+                  "title": "On"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "region": {
+              "title": "Where it stores your data",
+              "oneOf": [
+                {
+                  "const": "eu",
+                  "title": "EU or EEA"
+                },
+                {
+                  "const": "outside",
+                  "title": "Outside the EU"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            },
+            "retention": {
+              "title": "How long chats are kept",
+              "oneOf": [
+                {
+                  "const": "set",
+                  "title": "We set it"
+                },
+                {
+                  "const": "default",
+                  "title": "Vendor default"
+                },
+                {
+                  "const": "unsure",
+                  "title": "Not sure"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
