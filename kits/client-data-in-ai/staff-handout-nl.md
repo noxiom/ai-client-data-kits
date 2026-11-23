@@ -14,7 +14,7 @@ Beschrijf wat er gebeurde. Plak de gegevens nergens opnieuw, ook niet in een mai
 - Wanneer, ongeveer.
 - Wat voor gegevens, en van wie: bijvoorbeeld "de salarisadministratie van een klant, met ongeveer 40 namen en salarissen".
 - Geplakte tekst, een geüpload bestand, of een gekoppelde mailbox of map.
-- Of je de chat met een link hebt gedeeld, en of de trainingsinstelling van de tool aan stond.
+- Of je de chat met een link hebt gedeeld, en of de trainingsinstelling van de tool aanstond.
 
 ## 2. Meld het bij je bedrijf (vandaag)
 
@@ -24,11 +24,11 @@ Hoi [naam], ik moet iets melden. Op [datum] rond [tijd] heb ik [beschrijf het so
 
 ## 3. Verwijder het (nadat je het hebt opgeschreven)
 
-Verwijder het gesprek en haal een deellink weg. Stond de trainingsinstelling aan, zet die dan uit. Wacht eerst als je bedrijf daarom vraagt: het wil de chat misschien zien voor het eigen verslag.
+Verwijder het gesprek en haal een eventuele deellink weg. Stond de trainingsinstelling aan, zet die dan uit. Wacht eerst als je bedrijf daarom vraagt: het wil de chat misschien zien voor het eigen verslag.
 
 ### Waarom vandaag?
 
-Gingen er persoonsgegevens in, dan moet je bedrijf misschien binnen 72 uur nadat het ervan weet beslissen of het een datalek meldt bij de Autoriteit Persoonsgegevens. Het moet ook elk incident als dit vastleggen, ook de incidenten die het niet meldt. Allebei kan alleen als het ervan weet.
+Gingen er persoonsgegevens in, dan moet je bedrijf misschien binnen 72 uur nadat het ervan weet beslissen of het een datalek meldt bij de Autoriteit Persoonsgegevens. Het moet ook elk incident als dit vastleggen, ook de incidenten die het niet meldt. Dat kan allebei alleen als het ervan weet.
 
 ### Als je een werkaccount gebruikte
 

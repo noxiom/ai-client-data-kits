@@ -191,6 +191,7 @@ ${toolNotes(data, { ...e, lang })}
     html_lang: lang,
     res_key: resKey(e.slug),
     header: nl ? "<!-- include: header-nl -->" : "<!-- include: header -->",
+    footer: nl ? "<!-- include: footer-nl -->" : "<!-- include: footer -->",
     scripts_src: nl ? "/scripts.js" : "scripts.js",
     alternates: alternates(kit),
     language_note: ui.language_note ? `<span>${esc(ui.language_note)}</span>` : "",

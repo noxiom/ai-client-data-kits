@@ -424,6 +424,8 @@ test("Dutch staff page: language, header, hreflang pair, and it says AI wrote th
   assert.ok(nl.startsWith('<!doctype html>\n<html lang="nl">'));
   assert.ok(nl.includes("<!-- include: header-nl -->") && !nl.includes("<!-- include: header -->"));
   assert.ok(en.includes("<!-- include: header -->"));
+  assert.ok(nl.includes("<!-- include: footer-nl -->") && !nl.includes("<!-- include: footer -->"), "the Dutch page has the Dutch footer");
+  assert.ok(en.includes("<!-- include: footer -->"));
   const pairs = (html) => [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)" \/>/g)].map((m) => `${m[1]} ${m[2]}`);
   assert.deepEqual(pairs(nl), pairs(en), "both pages carry the same three hreflang tags");
   assert.deepEqual(pairs(en), [
