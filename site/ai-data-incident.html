@@ -1,0 +1,1750 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Client data went into an AI tool: the first 72 hours | Noxiom</title>
+    <meta name="description" content="Client data went into ChatGPT or another AI tool? Record it, contain it, weigh the risk and decide on reporting within 72 hours. Free record builder." />
+    <link rel="canonical" href="https://noxiom.com/ai-data-incident" />
+    <meta property="og:title" content="Client data went into an AI tool: the first 72 hours" />
+    <meta property="og:description" content="Client data went into ChatGPT or another AI tool? Record it, contain it, weigh the risk and decide on reporting within 72 hours. Free record builder." />
+    <meta property="og:url" content="https://noxiom.com/ai-data-incident" />
+    <meta property="article:modified_time" content="2026-11-23" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Client data went into an AI tool: the first 72 hours",
+  "description": "Client data went into ChatGPT or another AI tool? Record it, contain it, weigh the risk and decide on reporting within 72 hours. Free record builder.",
+  "url": "https://noxiom.com/ai-data-incident",
+  "mainEntityOfPage": "https://noxiom.com/ai-data-incident",
+  "inLanguage": "en",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do we have to report it to the Autoriteit Persoonsgegevens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only you can decide that. The rule: report within 72 hours of becoming aware, unless the breach is unlikely to result in a risk to the people concerned. The Dutch authority says reporting is mandatory in many chatbot cases. The European guidance says that if in doubt, you should report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do the 72 hours start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When your firm has a reasonable degree of certainty that personal data was compromised. A short first investigation to establish that doesn't count, but it should start straight away."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We handle this data for a client. Who reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you are the client's processor, your duty is to tell the client without undue delay. You don't have to assess the risk first; the client does that and decides about reporting. Your processing agreement may set a shorter deadline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We decided not to report. Do we still need a record?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The GDPR requires a record of every personal data breach, including the facts, the effects and what you did. The authority can ask to see it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was it a breach if the employee used a work account we pay for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If using it with this data was within your rules, the Dutch authority doesn't treat it as a data breach, though it says such use is often not permitted by law. Record what happened and check that the use had a proper basis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this page send or keep what I type?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The record builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the record as a file or print it before you close."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Client data went into an AI tool: the first 72 hours",
+      "item": "https://noxiom.com/ai-data-incident"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+/* Situation kits: additions to the guide's stylesheet (guide.css is inlined
+   first). Same rules: status colours only with an icon and a label. */
+.kit-answer { border: 1px solid rgba(40, 247, 216, 0.3); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 18px; background: rgba(40, 247, 216, 0.05); margin: 4px 0 12px; }
+.kit-answer-label { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent) !important; margin: 0 0 6px !important; }
+.kit-answer p { color: #ececec !important; margin: 0 !important; line-height: 1.55; }
+.kit-answer ol { margin: 0; padding-left: 20px; color: #ececec; display: flex; flex-direction: column; gap: 6px; line-height: 1.5; }
+.kit-when { font-size: 0.74em; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); }
+.kit-steps .step-card h3 { margin: 0; }
+.kit-steps { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.kit-steps-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.kit-message { border: 1px dashed var(--field-border); border-radius: 10px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); color: var(--text-soft); font-size: 0.9em; line-height: 1.55; margin: 4px 0 0; white-space: pre-wrap; }
+.kit-copy { font: inherit; font-size: 0.84em; font-weight: 600; color: var(--accent); background: none; border: 1px solid rgba(40, 247, 216, 0.35); border-radius: 999px; padding: 4px 12px; cursor: pointer; align-self: flex-start; }
+.kit-copy[hidden] { display: none; }
+.kit-tools { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88em; color: var(--text-soft); }
+.kit-tools strong { color: #e5e5e5; }
+.kit-work { border: 1px solid rgba(40, 247, 216, 0.25); border-top: 3px solid var(--accent); border-radius: 12px; padding: 12px 16px; background: rgba(255, 255, 255, 0.02); margin: 10px 0 12px; }
+.kit-work p { margin: 6px 0 0 !important; color: var(--text-soft); }
+
+/* ------------------------------------------------------------ record builder */
+.kit-privacy { display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); font-size: 0.9em; color: var(--text-soft); margin: 0 0 18px; }
+.kit-privacy .pill-icon { background: #0ca30c; margin-top: 2px; }
+.kit-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.kit-layout[hidden] { display: none; }
+.kit-form { display: flex; flex-direction: column; gap: 22px; }
+
+/* Sections: a quiet heading above a rounded card, like a grouped settings list */
+.kit-section { border: none; padding: 0; margin: 0; min-width: 0; }
+.kit-section legend { float: left; width: 100%; padding: 0 4px; margin: 0 0 8px; font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.kit-section legend + * { clear: both; }
+.kit-group { background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; overflow: hidden; }
+.kit-group > .kit-field { padding: 16px 18px; margin: 0; }
+.kit-group > .kit-field + .kit-field { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-field { display: flex; flex-direction: column; gap: 10px; }
+.kit-label { font-size: 0.95em; font-weight: 600; color: #f2f2f2; letter-spacing: -0.005em; }
+.kit-optional { font-weight: 400; font-size: 0.86em; color: var(--text-muted); margin-left: 6px; }
+.kit-hint { font-size: 0.82em; color: var(--text-muted); line-height: 1.45; margin-top: -4px; }
+
+/* Text fields */
+.kit-input { font: inherit; font-size: 0.95em; color: #f2f2f2; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 12px; width: 100%; box-sizing: border-box; color-scheme: dark; transition: border-color 0.15s, box-shadow 0.15s, background 0.15s; }
+.kit-input:hover { background: rgba(255, 255, 255, 0.07); }
+.kit-input:focus { outline: none; border-color: rgba(40, 247, 216, 0.7); box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.16); }
+textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
+.kit-input::placeholder { color: var(--text-muted); }
+
+/* Chips: single or multiple choice with short labels */
+.kit-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-chip { position: relative; cursor: pointer; }
+.kit-chip input, .kit-row input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.kit-chip span { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 0.88em; line-height: 1.2; color: #e8e8e8; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); transition: background 0.15s, border-color 0.15s, color 0.15s; user-select: none; }
+.kit-chip:hover span { background: rgba(255, 255, 255, 0.1); }
+.kit-chip input:checked + span { color: #ffffff; background: rgba(40, 247, 216, 0.16); border-color: rgba(40, 247, 216, 0.75); }
+.kit-chip input:checked + span::before { content: "\2713"; font-weight: 700; color: var(--accent); font-size: 0.9em; }
+.kit-chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+
+/* Grouped list: options with long labels, and the containment steps */
+.kit-rows { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden; background: rgba(0, 0, 0, 0.12); }
+.kit-row { position: relative; display: flex; align-items: center; gap: 12px; padding: 11px 14px; cursor: pointer; font-size: 0.9em; line-height: 1.4; color: #e2e2e2; transition: background 0.15s; }
+.kit-row + .kit-row { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-row:hover { background: rgba(255, 255, 255, 0.04); }
+.kit-row-text { flex: 1 1 auto; min-width: 0; }
+.kit-row .tag { flex: 0 0 auto; }
+.kit-ind { flex: 0 0 auto; width: 20px; height: 20px; box-sizing: border-box; border: 1.5px solid rgba(255, 255, 255, 0.3); display: grid; place-items: center; transition: background 0.15s, border-color 0.15s; }
+.kit-row input[type="radio"] ~ .kit-ind { border-radius: 50%; }
+.kit-row input[type="checkbox"] ~ .kit-ind { border-radius: 6px; }
+.kit-row input:checked ~ .kit-ind { background: var(--accent); border-color: var(--accent); }
+.kit-row input[type="checkbox"]:checked ~ .kit-ind::after { content: "\2713"; color: #052a24; font-size: 0.75em; font-weight: 800; }
+.kit-row input[type="radio"]:checked ~ .kit-ind::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #052a24; }
+.kit-row input:checked ~ .kit-row-text { color: #ffffff; }
+.kit-row input:focus-visible ~ .kit-ind { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+.kit-stamp { flex: 0 0 auto; font-size: 0.85em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.kit-accounts { margin-top: 2px; }
+.kit-accounts[hidden] { display: none; }
+
+/* Day and time */
+.kit-clock { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.kit-clock .kit-date { width: auto; min-width: 170px; }
+.kit-clock .kit-date[hidden] { display: none; }
+.kit-clock .kit-time { width: 112px; font-variant-numeric: tabular-nums; text-align: center; }
+.kit-time::-webkit-calendar-picker-indicator { display: none; }
+.kit-date::-webkit-calendar-picker-indicator { filter: invert(0.85); opacity: 0.6; cursor: pointer; }
+.kit-now { font: inherit; font-size: 0.86em; font-weight: 600; color: var(--accent); background: none; border: none; padding: 8px 6px; cursor: pointer; border-radius: 8px; }
+.kit-now:hover { background: rgba(40, 247, 216, 0.08); }
+.kit-now:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Summary column */
+.kit-summary { position: sticky; top: 96px; max-height: calc(100vh - 112px); overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 12px; padding: 22px 2px 2px 0; }
+.kit-card { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 14px 18px; background: rgba(255, 255, 255, 0.035); }
+.kit-card[hidden] { display: none; }
+.kit-card-title { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted) !important; margin: 0 0 8px !important; }
+.kit-deadline-label { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-deadline-time { font-size: 1.45em; font-weight: 700; letter-spacing: -0.01em; color: #f5f5f5 !important; margin: 2px 0 8px !important; font-variant-numeric: tabular-nums; }
+.kit-deadline-left { font-size: 0.86em; margin: 0 !important; color: var(--text-soft); }
+.kit-deadline-empty { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-role { border-color: rgba(250, 178, 25, 0.35); background: rgba(250, 178, 25, 0.05); font-size: 0.9em; color: var(--text-soft); }
+.kit-role p { margin: 0 !important; }
+.kit-plan .plan-row { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
+.kit-plan-title { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; }
+.kit-fact { font-size: 0.86em; margin: 6px 0 2px !important; color: var(--text-soft); line-height: 1.45; }
+.kit-src { font-size: 0.76em; color: var(--text-muted) !important; margin: 0 !important; overflow-wrap: anywhere; }
+.kit-plan-more summary { font-size: 0.84em; color: var(--accent); padding: 6px 0 2px; }
+.kit-plan-more[open] summary { margin-bottom: 4px; }
+.kit-plan-todo { font-size: 0.88em; margin: 10px 0 6px !important; color: var(--text-soft); }
+.kit-factor-group + .kit-factor-group { margin-top: 12px; }
+.kit-factor-head { margin: 0 0 6px !important; }
+.kit-factor-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: 0.87em; color: var(--text-soft); line-height: 1.45; }
+.kit-factor-list strong { color: #e5e5e5; }
+.kit-high { display: block; font-size: 0.92em; color: #f3c35b; margin-top: 2px; }
+.kit-factor-list .kit-src { display: block; margin-top: 2px !important; }
+.kit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-actions-quiet { margin-top: 10px; }
+.kit-save-why { font-size: 0.78em; color: var(--text-muted) !important; margin: 8px 0 0 !important; line-height: 1.45; }
+
+/* Buttons */
+.kit-btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-size: 0.88em; font-weight: 600; border-radius: 999px; padding: 8px 15px; min-height: 38px; box-sizing: border-box; cursor: pointer; border: 1px solid rgba(40, 247, 216, 0.4); color: var(--accent); background: rgba(40, 247, 216, 0.06); transition: background 0.15s, filter 0.15s; text-decoration: none; }
+.kit-btn:hover { background: rgba(40, 247, 216, 0.12); }
+.kit-btn-primary { background: var(--accent); color: #052a24; border-color: var(--accent); }
+.kit-btn-primary:hover { background: var(--accent); filter: brightness(1.06); }
+.kit-btn-quiet { border-color: rgba(255, 255, 255, 0.12); color: var(--text-muted); background: none; }
+.kit-btn-quiet:hover { background: rgba(255, 255, 255, 0.05); }
+.kit-btn[hidden] { display: none; }
+.kit-btn:focus-visible, .visually-hidden:focus-visible + .kit-btn { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Fill it in with an assistant */
+.kit-assist { border: 1px solid rgba(40, 247, 216, 0.22); border-radius: 16px; padding: 16px 18px; background: linear-gradient(180deg, rgba(40, 247, 216, 0.06), rgba(40, 247, 216, 0.02)); display: flex; flex-direction: column; gap: 10px; }
+.kit-assist-title { font-weight: 700; color: #f2f2f2 !important; margin: 0 !important; }
+.kit-assist-text { font-size: 0.9em; color: var(--text-soft); margin: 0 !important; line-height: 1.5; }
+.kit-assist-caution { font-size: 0.84em; color: #f3c35b !important; margin: 0 !important; line-height: 1.45; }
+.kit-assist-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-paste { display: flex; flex-direction: column; gap: 8px; }
+.kit-paste[hidden] { display: none; }
+.kit-paste textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+.kit-load-result { font-size: 0.86em; margin: 0 !important; padding: 10px 12px; border-radius: 10px; line-height: 1.45; }
+.kit-load-result[hidden] { display: none; }
+.kit-load-result.is-ok { background: rgba(12, 163, 12, 0.1); color: #cfeccf !important; }
+.kit-load-result.is-warn { background: rgba(250, 178, 25, 0.08); color: #f3d79b !important; }
+.kit-assist-fields { font-size: 0.86em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; padding-left: 18px; }
+.kit-assist-fields code, .kit-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: #d8fff8; }
+.kit-code { display: block; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px 14px; border-radius: 10px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.06); }
+
+/* The bar at the bottom of the screen on phones and tablets */
+.kit-bar { display: none; }
+.kit-static-factors { columns: 2 260px; column-gap: 24px; font-size: 0.9em; }
+.kit-static-factors li { break-inside: avoid; margin-bottom: 6px; color: var(--text-soft); }
+#print-record { display: none; }
+
+@media (max-width: 960px) {
+  .kit-layout { grid-template-columns: 1fr; }
+  .kit-summary { position: static; max-height: none; overflow: visible; padding-top: 0; }
+  .kit-bar { display: flex; position: sticky; bottom: 10px; z-index: 5; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 16px; background: rgba(22, 26, 40, 0.92); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+  .kit-bar-text { display: flex; flex-direction: column; font-size: 0.82em; color: var(--text-muted); line-height: 1.3; min-width: 0; }
+  .kit-bar-text strong { color: #f5f5f5; font-size: 1.08em; font-variant-numeric: tabular-nums; }
+  .kit-bar-text span { font-variant-numeric: tabular-nums; }
+}
+@media (max-width: 600px) {
+  .kit-group > .kit-field { padding: 14px 14px; }
+  .kit-assist { padding: 14px; }
+}
+/* Touch screens: targets of at least 44 px, and 16 px text in fields so
+   iPhones don't zoom in when a field is tapped */
+@media (pointer: coarse) {
+  .kit-chip span { padding: 11px 16px; min-height: 44px; box-sizing: border-box; font-size: 0.92em; }
+  .kit-row { min-height: 48px; padding: 12px 14px; }
+  .kit-ind { width: 22px; height: 22px; }
+  .kit-input { font-size: 16px; padding: 12px; }
+  .kit-btn { min-height: 44px; padding: 10px 18px; }
+  .kit-now { min-height: 44px; padding: 10px 12px; }
+  .kit-clock .kit-time { width: 120px; }
+}
+
+/* Print: only the record, as a plain document */
+@media print {
+  body > *:not(main), .guide .report-doc > *:not(#builder-wrap) { display: none !important; }
+  #builder-wrap > *:not(#print-record) { display: none !important; }
+  body, main, .report-doc, .report-wrap { background: #fff !important; color: #000 !important; border: none !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; }
+  #print-record { display: block !important; color: #111; font: 10.5pt/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #print-record h1 { font-size: 18pt; margin: 0 0 8pt; color: #111; }
+  #print-record h2 { font-size: 12.5pt; margin: 14pt 0 6pt; padding-bottom: 3pt; border-bottom: 1px solid #ccc; color: #111; }
+  #print-record h3 { font-size: 11pt; margin: 10pt 0 4pt; color: #111; }
+  #print-record p, #print-record li { color: #111; margin: 0 0 6pt; }
+  #print-record .small { font-size: 8.5pt; color: #555; }
+  #print-record .kv strong { color: #111; }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free kit</span>
+            <h1>Client data went into an AI tool: the first 72 hours</h1>
+            <p class="guide-lead">Someone at your firm put client or personal data into ChatGPT, Copilot, Gemini, Claude or another AI tool. Here is what to do, in order, with a record you can fill in and save.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-23">23 November 2026</time></strong></span>
+              <span><a href="#record">Record builder: runs in your browser</a></span>
+              <span><a href="#word">Templates</a></span>
+              <span><a href="/pasted-company-data-into-ai">For staff</a></span>
+            </p>
+          </div>
+
+          <div class="kit-answer">
+            <p class="kit-answer-label">In short</p>
+            <p>Write it down, contain it, check whether you are the controller or the client's processor, weigh the risk to the people concerned, and decide within 72 hours of becoming aware whether to report it to the Autoriteit Persoonsgegevens. Record the decision either way.</p>
+          </div>
+
+          <h2 id="steps">The first 72 hours, step by step</h2>
+          <div class="guide-steps kit-steps">
+<div class="step-card" id="step-record">
+              <span class="step-num" aria-hidden="true">1</span>
+              <span class="kit-when">First hour</span>
+              <h3>Write it down</h3>
+              <p>Which tool and account, when, what kind of data and whose, how it went in, who found it. Describe the data; don't copy it.</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>The GDPR requires a record of every personal data breach, including the ones you don't report: the facts, the effects and what you did about it. The record builder below produces one.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></p>
+              </details>
+            </div>
+<div class="step-card" id="step-contain">
+              <span class="step-num" aria-hidden="true">2</span>
+              <span class="kit-when">First hour</span>
+              <h3>Contain it</h3>
+              <p>Delete the conversation, remove share links, switch off training, change any password or key that went in.</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>What deletion does differs per vendor and per account. Choose the tool and account in the record builder to see it, with sources.</p>
+              </details>
+            </div>
+<div class="step-card" id="step-role">
+              <span class="step-num" aria-hidden="true">3</span>
+              <span class="kit-when">Day 1</span>
+              <h3>Check your role</h3>
+              <p>Is this your firm's own data, or do you handle it for a client under a processing agreement?</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>If you are the client's processor, tell the client without undue delay. The client assesses the risk and decides about the authority; your processing agreement may set its own deadline. If you are the controller, the next steps are yours.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p>
+              </details>
+            </div>
+<div class="step-card" id="step-assess">
+              <span class="step-num" aria-hidden="true">4</span>
+              <span class="kit-when">Day 1 to 2</span>
+              <h3>Weigh the risk</h3>
+              <p>To the people whose data it was: how sensitive, how many, can it be undone, can the recipient be relied on.</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>These are the criteria the European data protection authorities use. The record builder shows which of your answers point towards reporting and which may lower the risk. It never decides for you.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p>
+              </details>
+            </div>
+<div class="step-card" id="step-decide">
+              <span class="step-num" aria-hidden="true">5</span>
+              <span class="kit-when">Within 72 hours</span>
+              <h3>Decide and record why</h3>
+              <p>Report to the Autoriteit Persoonsgegevens unless the breach is unlikely to put anyone at risk. Tell the people concerned too if the risk is high.</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>The 72 hours run from when your firm became reasonably certain that personal data was compromised. If you don't have every detail yet, you can report in phases. Record the decision and the reasons, whichever way it goes.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></p>
+              </details>
+            </div>
+<div class="step-card" id="step-fix">
+              <span class="step-num" aria-hidden="true">6</span>
+              <span class="kit-when">After</span>
+              <h3>Fix the cause</h3>
+              <p>A work account for the people who need one, clear rules about which data may go in, and a short word with the team.</p>
+              <details>
+                <summary>Why and how</summary>
+                <p>One incident is usually the first one you hear about, not the only one. The AI accounts guide has a 20-minute check of which accounts your team really uses.</p>
+              </details>
+            </div>
+          </div>
+
+          <h2 id="record">Fill in the record</h2>
+          <div id="builder-wrap">
+            <p class="kit-privacy">
+              <span class="pill-icon" aria-hidden="true">&#x2713;</span>
+              <span>
+                <strong>Runs in your browser.</strong> Nothing you type is sent
+                anywhere or stored, not even on this device. Close the tab and
+                it's gone, so save or print the record first. Describe the data by type. Don't enter the data itself, or the names of the people or the client: add those in your own copy.
+              </span>
+            </p>
+            <p class="guide-note" id="record-fallback">
+              The record builder needs JavaScript. The
+              <a href="/downloads/ai-incident-record.docx" download>Word template</a> has the same
+              questions.
+            </p>
+            <div class="kit-layout" id="record-builder" hidden>
+              <div class="kit-form">
+                <section class="kit-assist" aria-labelledby="assist-title">
+                  <p class="kit-assist-title" id="assist-title">Let an AI assistant fill it in</p>
+                  <p class="kit-assist-text">On your phone, or rather talk it through? An AI assistant can ask you the questions and fill in the record. You paste its answer back here, check it, and save.</p>
+                  <p class="kit-assist-caution">Use your firm's work account for this, not a personal one, and describe the data by type, never the data itself.</p>
+                  <div class="kit-assist-actions">
+                    <button type="button" class="kit-btn kit-btn-primary" data-copy="assistant-prompt" data-copied="Copied. Paste it into your assistant">Copy instructions</button>
+                    <button type="button" class="kit-btn" id="paste-open" aria-expanded="false" aria-controls="paste-panel">Paste a record</button>
+                    <input type="file" id="file-open" class="visually-hidden" accept=".json,application/json" autocomplete="off" />
+                    <label class="kit-btn" for="file-open">Open a saved record</label>
+                  </div>
+                  <details class="kit-plan-more">
+                    <summary>Show the instructions</summary>
+                    <p class="kit-message" id="assistant-prompt">Help me fill in an AI data incident record. The questions and the allowed answers are at https://noxiom.com/data/ai-incident-record.schema.json (the same list is on https://noxiom.com/ai-data-incident under &quot;For AI assistants&quot;). Ask me the questions one at a time, in plain words, and offer the allowed answers. Only describe the data by type: don't ask for the data itself, or for the names of the people or the client. If I'm not sure, use the &quot;not sure&quot; answer or leave the question out; don't guess. Use local times written as YYYY-MM-DDTHH:MM. When we're done, give me the whole record as one JSON code block, so I can paste it back into the page.</p>
+                  </details>
+                  <div class="kit-paste" id="paste-panel" hidden>
+                    <label class="kit-label" for="paste-box">Paste the JSON from your assistant</label>
+                    <textarea class="kit-input" id="paste-box" rows="5" autocomplete="off" spellcheck="false" placeholder="{ &quot;aware_at&quot;: &quot;...&quot;, ... }"></textarea>
+                    <div class="kit-assist-actions">
+                      <button type="button" class="kit-btn kit-btn-primary" id="paste-load">Fill in the form</button>
+                      <button type="button" class="kit-btn kit-btn-quiet" id="paste-cancel">Cancel</button>
+                    </div>
+                  </div>
+                  <p class="kit-load-result" id="load-result" role="status" hidden></p>
+                </section>
+<fieldset class="kit-section" id="sec-discovery"><legend>Discovery</legend><div class="kit-group"><div class="kit-field" role="group" aria-labelledby="l-aware_at" data-field="aware_at" data-type="datetime"><span class="kit-label" id="l-aware_at">When did the firm become aware?</span><span class="kit-hint">When someone responsible was reasonably certain that personal data went in. The 72 hours count from here.</span><div class="kit-chips kit-days" data-days="f-aware_at-day"></div>
+<div class="kit-clock"><input type="date" class="kit-input kit-date" aria-label="Date" autocomplete="off" hidden /><input type="time" class="kit-input kit-time" aria-label="Time" autocomplete="off" /><button type="button" class="kit-now">Now</button></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-reported_by" data-field="reported_by" data-type="radio"><span class="kit-label" id="l-reported_by">How was it found?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-reported_by" value="self" autocomplete="off" /><span>They reported it themselves</span></label><label class="kit-chip"><input type="radio" name="f-reported_by" value="colleague" autocomplete="off" /><span>A colleague noticed</span></label><label class="kit-chip"><input type="radio" name="f-reported_by" value="outside" autocomplete="off" /><span>A client or outsider told us</span></label><label class="kit-chip"><input type="radio" name="f-reported_by" value="check" autocomplete="off" /><span>We found it in a check</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-what"><legend>What happened</legend><div class="kit-group"><div class="kit-field" role="group" aria-labelledby="l-happened_at" data-field="happened_at" data-type="datetime"><span class="kit-label" id="l-happened_at">When did it happen (roughly)? <span class="kit-optional">optional</span></span><div class="kit-chips kit-days" data-days="f-happened_at-day"></div>
+<div class="kit-clock"><input type="date" class="kit-input kit-date" aria-label="Date" autocomplete="off" hidden /><input type="time" class="kit-input kit-time" aria-label="Time" autocomplete="off" /><button type="button" class="kit-now">Now</button></div></div><div class="kit-field" role="group" aria-labelledby="l-plan" data-field="plan" data-type="plan"><span class="kit-label" id="l-plan">Which tool and account?</span><span class="kit-hint">Not sure? Each tool page in the AI accounts guide explains how to tell a personal account from a work account.</span><div class="kit-chips" role="radiogroup" aria-label="Tool"><label class="kit-chip"><input type="radio" name="f-plan-tool" value="chatgpt" autocomplete="off" /><span>ChatGPT</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="copilot" autocomplete="off" /><span>Microsoft Copilot</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="gemini" autocomplete="off" /><span>Gemini</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="claude" autocomplete="off" /><span>Claude</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="deepseek" autocomplete="off" /><span>DeepSeek</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="other" autocomplete="off" /><span>Another tool</span></label><label class="kit-chip"><input type="radio" name="f-plan-tool" value="unknown" autocomplete="off" /><span>Not sure</span></label></div>
+<div class="kit-accounts" data-tool="chatgpt" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="chatgpt-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Free, Plus or Pro</span><span class="tag tag-personal">Personal</span></label><label class="kit-row"><input type="radio" name="f-plan" value="chatgpt-business" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Business (formerly Team)</span><span class="tag tag-work">Work</span></label><label class="kit-row"><input type="radio" name="f-plan" value="chatgpt-enterprise" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">ChatGPT Enterprise</span><span class="tag tag-work">Work</span></label></div></div>
+<div class="kit-accounts" data-tool="copilot" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="copilot-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft Copilot app, personal account</span><span class="tag tag-personal">Personal</span></label><label class="kit-row"><input type="radio" name="f-plan" value="copilot-chat-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft 365 Copilot Chat, work account</span><span class="tag tag-work">Work</span></label><label class="kit-row"><input type="radio" name="f-plan" value="m365-copilot" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Microsoft 365 Copilot (paid licence, including Copilot Business)</span><span class="tag tag-work">Work</span></label></div></div>
+<div class="kit-accounts" data-tool="gemini" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="gemini-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Gemini app, personal Google account (free or Google AI Pro)</span><span class="tag tag-personal">Personal</span></label><label class="kit-row"><input type="radio" name="f-plan" value="gemini-workspace" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Gemini in Google Workspace, work account</span><span class="tag tag-work">Work</span></label></div></div>
+<div class="kit-accounts" data-tool="claude" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="claude-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Claude Free, Pro or Max</span><span class="tag tag-personal">Personal</span></label><label class="kit-row"><input type="radio" name="f-plan" value="claude-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Claude Team or Enterprise</span><span class="tag tag-work">Work</span></label></div></div>
+<div class="kit-accounts" data-tool="deepseek" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="deepseek-app" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">DeepSeek app and website</span><span class="tag tag-personal">Personal</span></label></div></div>
+<div class="kit-accounts" data-tool="other" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="other-personal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">a personal or free account</span><span class="tag tag-personal">Personal</span></label><label class="kit-row"><input type="radio" name="f-plan" value="other-work" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">a work account with a contract</span><span class="tag tag-work">Work</span></label></div></div>
+<div class="kit-accounts" data-tool="unknown" role="radiogroup" aria-label="Account" hidden><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-plan" value="unknown" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not sure which tool or account</span></label></div></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-how" data-field="how" data-type="radio"><span class="kit-label" id="l-how">How did it go in?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-how" value="pasted" autocomplete="off" /><span>Pasted or typed text</span></label><label class="kit-chip"><input type="radio" name="f-how" value="upload" autocomplete="off" /><span>Uploaded a file</span></label><label class="kit-chip"><input type="radio" name="f-how" value="connected" autocomplete="off" /><span>Connected mailbox or drive</span></label><label class="kit-chip"><input type="radio" name="f-how" value="meeting" autocomplete="off" /><span>Meeting recording or transcript</span></label><label class="kit-chip"><input type="radio" name="f-how" value="other" autocomplete="off" /><span>Something else</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-rules" data-field="rules" data-type="radio"><span class="kit-label" id="l-rules">Was this within your rules for AI tools?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-rules" value="allowed" autocomplete="off" /><span>Allowed under our rules</span></label><label class="kit-chip"><input type="radio" name="f-rules" value="against" autocomplete="off" /><span>Against our rules</span></label><label class="kit-chip"><input type="radio" name="f-rules" value="none" autocomplete="off" /><span>We have no rules on this</span></label><label class="kit-chip"><input type="radio" name="f-rules" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-training" data-field="training" data-type="radio"><span class="kit-label" id="l-training">Was the tool's training setting on at the time?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-training" value="on" autocomplete="off" /><span>On</span></label><label class="kit-chip"><input type="radio" name="f-training" value="off" autocomplete="off" /><span>Off, or a temporary chat</span></label><label class="kit-chip"><input type="radio" name="f-training" value="unsure" autocomplete="off" /><span>Not sure</span></label><label class="kit-chip"><input type="radio" name="f-training" value="na" autocomplete="off" /><span>Not applicable: work account</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-shared" data-field="shared" data-type="radio"><span class="kit-label" id="l-shared">Was the chat shared with a link?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-shared" value="yes" autocomplete="off" /><span>Yes</span></label><label class="kit-chip"><input type="radio" name="f-shared" value="no" autocomplete="off" /><span>No</span></label><label class="kit-chip"><input type="radio" name="f-shared" value="unsure" autocomplete="off" /><span>Not sure</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-data"><legend>The data</legend><div class="kit-group"><div class="kit-field" role="group" aria-labelledby="l-categories" data-field="categories" data-type="checkbox"><span class="kit-label" id="l-categories">What kind of data went in?</span><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-categories" value="contact" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Names and contact details</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="financial" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Financial details: bank account, salary, invoices, debts</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="id_numbers" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Identity numbers or documents: BSN, passport, driving licence</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="health" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Health information, including sick leave</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="special" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Other special categories: ethnic origin, religion, political views, trade union membership, sexual orientation, biometric or genetic data</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="criminal" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Criminal records or offences</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="children" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Data about children</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="hr" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Employee or job applicant information: CVs, assessments</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="credentials" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Passwords, access keys or tokens</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="business" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Confidential business information, no personal data</span></label><label class="kit-row"><input type="checkbox" name="f-categories" value="unsure" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not sure what was in it</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-people" data-field="people" data-type="radio"><span class="kit-label" id="l-people">About how many people's data?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-people" value="1" autocomplete="off" /><span>1</span></label><label class="kit-chip"><input type="radio" name="f-people" value="2-10" autocomplete="off" /><span>2 to 10</span></label><label class="kit-chip"><input type="radio" name="f-people" value="11-100" autocomplete="off" /><span>11 to 100</span></label><label class="kit-chip"><input type="radio" name="f-people" value="101-1000" autocomplete="off" /><span>101 to 1,000</span></label><label class="kit-chip"><input type="radio" name="f-people" value="1000+" autocomplete="off" /><span>More than 1,000</span></label><label class="kit-chip"><input type="radio" name="f-people" value="unknown" autocomplete="off" /><span>Not known yet</span></label></div></div><div class="kit-field" role="group" aria-labelledby="l-whose" data-field="whose" data-type="checkbox"><span class="kit-label" id="l-whose">Whose data?</span><div class="kit-chips"><label class="kit-chip"><input type="checkbox" name="f-whose" value="client" autocomplete="off" /><span>A client's customers or staff</span></label><label class="kit-chip"><input type="checkbox" name="f-whose" value="staff" autocomplete="off" /><span>Our own staff</span></label><label class="kit-chip"><input type="checkbox" name="f-whose" value="applicants" autocomplete="off" /><span>Job applicants</span></label><label class="kit-chip"><input type="checkbox" name="f-whose" value="other" autocomplete="off" /><span>Someone else</span></label></div></div><label class="kit-field"><span class="kit-label" id="l-description">Short description <span class="kit-optional">optional</span></span><span class="kit-hint">By type only. For example: &quot;payroll export with names, salaries and bank account numbers of about 40 employees of a client&quot;.</span><textarea class="kit-input" id="f-description" data-field="description" data-type="textarea" rows="3" autocomplete="off" spellcheck="false"></textarea></label></div></fieldset>
+<fieldset class="kit-section" id="sec-role"><legend>Your firm's role</legend><div class="kit-group"><div class="kit-field" role="radiogroup" aria-labelledby="l-role" data-field="role" data-type="radio"><span class="kit-label" id="l-role">For this data, is your firm the controller or a processor?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-role" value="controller" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Controller: our own data, or we decide what happens with it</span></label><label class="kit-row"><input type="radio" name="f-role" value="processor" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Processor: we handle it for a client under a processing agreement</span></label><label class="kit-row"><input type="radio" name="f-role" value="unsure" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not sure</span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-contain"><legend>Containment</legend><div class="kit-group"><div class="kit-field" role="group" aria-labelledby="l-actions" data-field="actions" data-type="actions"><span class="kit-label" id="l-actions">What has been done? Tick each step as it happens; the time is added to the record.</span><div class="kit-rows"><label class="kit-row"><input type="checkbox" name="f-actions" value="deleted" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Conversation deleted</span><span class="kit-stamp" data-stamp="deleted"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="link" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Share link removed</span><span class="kit-stamp" data-stamp="link"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="training_off" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Training setting switched off</span><span class="kit-stamp" data-stamp="training_off"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="secrets" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Passwords or keys that went in changed</span><span class="kit-stamp" data-stamp="secrets"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="vendor" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Vendor asked to delete the data, where it offers that</span><span class="kit-stamp" data-stamp="vendor"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="client" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Client informed</span><span class="kit-stamp" data-stamp="client"></span></label><label class="kit-row"><input type="checkbox" name="f-actions" value="contact" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Privacy officer or adviser involved</span><span class="kit-stamp" data-stamp="contact"></span></label></div></div></div></fieldset>
+<fieldset class="kit-section" id="sec-decision"><legend>Decision</legend><div class="kit-group"><div class="kit-field" role="radiogroup" aria-labelledby="l-decision" data-field="decision" data-type="radio"><span class="kit-label" id="l-decision">Report to the Autoriteit Persoonsgegevens?</span><div class="kit-rows"><label class="kit-row"><input type="radio" name="f-decision" value="report" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Yes, reported</span></label><label class="kit-row"><input type="radio" name="f-decision" value="no" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">No: unlikely to result in a risk to the people concerned</span></label><label class="kit-row"><input type="radio" name="f-decision" value="client" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not ours to decide: we are the processor and told the client</span></label><label class="kit-row"><input type="radio" name="f-decision" value="open" autocomplete="off" /><span class="kit-ind" aria-hidden="true"></span><span class="kit-row-text">Not decided yet</span></label></div></div><div class="kit-field" role="radiogroup" aria-labelledby="l-individuals" data-field="individuals" data-type="radio"><span class="kit-label" id="l-individuals">Tell the people concerned?</span><div class="kit-chips"><label class="kit-chip"><input type="radio" name="f-individuals" value="yes" autocomplete="off" /><span>Yes</span></label><label class="kit-chip"><input type="radio" name="f-individuals" value="no" autocomplete="off" /><span>No: the risk is not high</span></label><label class="kit-chip"><input type="radio" name="f-individuals" value="open" autocomplete="off" /><span>Not decided yet</span></label></div></div><label class="kit-field"><span class="kit-label" id="l-reasons">Reasons for the decision</span><span class="kit-hint">Which factors weighed most, and who advised.</span><textarea class="kit-input" id="f-reasons" data-field="reasons" data-type="textarea" rows="3" autocomplete="off" spellcheck="false"></textarea></label><label class="kit-field"><span class="kit-label" id="l-decided_by">Decided by (role)</span><span class="kit-hint">For example: owner, after advice from our privacy adviser.</span><input type="text" class="kit-input" id="f-decided_by" data-field="decided_by" data-type="text" autocomplete="off" spellcheck="false" /></label><label class="kit-field"><span class="kit-label" id="l-fix">What changes so it doesn't happen again <span class="kit-optional">optional</span></span><textarea class="kit-input" id="f-fix" data-field="fix" data-type="textarea" rows="3" autocomplete="off" spellcheck="false"></textarea></label></div></fieldset>
+                <div class="kit-bar" id="kit-bar">
+                  <div class="kit-bar-text" id="kit-bar-text">72-hour point: add when the firm became aware</div>
+                  <button type="button" class="kit-btn kit-btn-primary" id="kit-bar-save">Save</button>
+                </div>
+              </div>
+              <aside class="kit-summary" aria-label="Summary" aria-live="polite">
+                <div class="kit-card">
+                  <p class="kit-card-title">The 72-hour point</p>
+                  <div id="deadline"></div>
+                </div>
+                <div class="kit-card kit-role" id="role-note" hidden>
+                  <p>
+                    <strong>You handle this data for a client.</strong> Tell the
+                    client without undue delay. You don't have to assess the risk
+                    first: the client does that and decides about reporting. Your
+                    processing agreement may set its own deadline.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup>
+                  </p>
+                </div>
+                <div class="kit-card" id="plan-panel" hidden></div>
+                <div class="kit-card">
+                  <p class="kit-card-title">Factors</p>
+                  <div id="factors"></div>
+                  <p class="guide-note">The firm decides, not this page. If in doubt, the European guidance is to report.</p>
+                </div>
+                <div class="kit-card" id="save-card" tabindex="-1">
+                  <p class="kit-card-title">Save the record</p>
+                  <div class="kit-actions">
+                    <button type="button" id="rec-download" class="kit-btn kit-btn-primary">Save as Word</button>
+                    <button type="button" id="rec-share" class="kit-btn" hidden>Share</button>
+                    <button type="button" id="rec-print" class="kit-btn">Print or PDF</button>
+                    <button type="button" id="rec-copy" class="kit-btn">Copy as text</button>
+                  </div>
+                  <p class="kit-save-why">Word is the record you keep, with your breach register. Share sends it to mail or chat from your phone.</p>
+                  <div class="kit-actions kit-actions-quiet">
+                    <button type="button" id="rec-json" class="kit-btn kit-btn-quiet">Save to continue later (.json)</button>
+                    <button type="button" id="rec-clear" class="kit-btn kit-btn-quiet">Clear</button>
+                  </div>
+                  <p class="kit-save-why">The .json file opens again here with "Open a saved record", or in an AI assistant. Nothing is uploaded.</p>
+                </div>
+              </aside>
+            </div>
+            <div id="print-record"></div>
+          </div>
+
+          <h2 id="word">Templates to keep ready</h2>
+          <div class="guide-downloads">
+            <a data-cta="incident-template" href="/downloads/ai-incident-record.docx" download>The incident record (Word): blank, the same questions, to fill in by hand</a>
+            <a data-cta="incident-handout" href="/downloads/ai-incident-staff-handout.docx" download>The staff handout (Word): what to do if you put company information into an AI tool</a>
+          </div>
+
+          <h2 id="factors-all">What points towards reporting, and what doesn't</h2>
+          <p class="guide-measure">
+            The record builder uses these factors. They follow the criteria the
+            European data protection authorities use to weigh the risk to the
+            people concerned.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup>
+          </p>
+          <details class="guide-more">
+            <summary>All factors <span class="summary-hint">with sources</span></summary>
+<h3><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Point towards reporting</span></h3>
+            <ul class="kit-static-factors">
+<li><strong>Who received it.</strong> A personal account has no processor agreement with your firm, so the vendor isn't bound by your instructions about this data.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Can it be undone.</strong> Training was on, or may have been. The vendor may use the data to train its models, and deleting the chat may not undo that.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Is it a breach.</strong> The Dutch authority says personal data entered into a chatbot against the employer's agreements is a data breach.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></li>
+<li><strong>Sensitivity of the data.</strong> Health, other special categories or criminal data: the harm to the people concerned can be especially severe.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Sensitivity of the data.</strong> Identity numbers or financial details can cause harm on their own, and together they can be used for identity theft.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Who the people are.</strong> Data about children: the people concerned may be at greater risk.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Sensitivity of the data.</strong> CVs and assessments often reveal more about a person than they seem to.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Severity of the consequences.</strong> Passwords or keys open other systems. Until they are changed, the risk reaches everything they give access to.</li>
+<li><strong>Number of people.</strong> More people affected generally means more impact.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>How far it spread.</strong> A share link may let anyone who has it read the chat. Remove it and record when.</li>
+<li><strong>If in doubt.</strong> You can't rule out sensitive data yet. The European guidance is to report when in doubt.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+            </ul>
+<h3><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>May lower the risk</span></h3>
+            <ul class="kit-static-factors">
+<li><strong>Who received it.</strong> A work account under a processor agreement binds the vendor to your firm's instructions, if your firm accepted or signed that agreement. A recipient you can rely on can lower the risk; it doesn't mean nothing happened.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Is it a breach.</strong> Within your own rules, the Dutch authority doesn't treat chatbot use as a data breach, though it says such use is often not permitted by law. Record it and check the basis for the use.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></li>
+<li><strong>Sensitivity of the data.</strong> Only names and contact details of a few people. In ordinary circumstances that is unlikely to cause substantial damage, though context can change that.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Is it a breach.</strong> No personal data: this is not a personal data breach under the GDPR. Check your client contract's confidentiality clause all the same.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></li>
+<li><strong>Can it be undone.</strong> Deleted, with training off: this lowers the chance of further use. It doesn't undo what the vendor has already received.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+            </ul>
+<h3><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Still to find out</span></h3>
+            <ul class="kit-static-factors">
+<li><strong>Who received it.</strong> Find out which account it was. It decides whether a contract covers the data.</li>
+<li><strong>Number of people.</strong> Estimate how many people's data it was. The number matters, though even one person can be seriously affected.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+<li><strong>Is it a breach.</strong> The Dutch authority's statement is about use against the employer's agreements. Without clear rules, your firm has to judge whether this use was authorised.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></li>
+<li><strong>Who decides.</strong> Check your processing agreement with the client. If you are their processor, your duty is to tell them without undue delay, and they decide about reporting.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+            </ul>
+          </details>
+
+          <h2 id="for-assistants">For AI assistants</h2>
+          <p class="guide-measure">
+            If someone gave you this page and asked for help: here is how to fill
+            in the record with them. People can read it too.
+          </p>
+          <details class="guide-more">
+            <summary>How to fill in the record <span class="summary-hint">questions and allowed answers</span></summary>
+<p>The record is one JSON object. The full list of questions and allowed answers is published as a JSON Schema: <a href="/data/ai-incident-record.schema.json">https://noxiom.com/data/ai-incident-record.schema.json</a>.</p>
+            <ol class="report-list">
+              <li>Ask the questions one at a time, in plain words, and offer the allowed answers.</li>
+              <li>Describe the data by type only. Never ask for the data itself, or for the names of the people or the client.</li>
+              <li>Use only the listed values. If the person doesn't know, use the "not sure" value or leave the question out. Don't guess.</li>
+              <li>Don't decide whether the breach must be reported. The page shows the factors; the firm decides.</li>
+              <li>Give the result as one JSON code block. The person pastes it into "Paste a record" on this page, which checks it and fills the form in their browser.</li>
+            </ol>
+            <p><strong>Fields:</strong></p>
+            <ul class="kit-assist-fields">
+<li><code>aware_at</code>: When did the firm become aware? local time, <code>YYYY-MM-DDTHH:MM</code>.</li>
+<li><code>reported_by</code>: How was it found? one of: <code>self</code> (They reported it themselves), <code>colleague</code> (A colleague noticed), <code>outside</code> (A client or outsider told us), <code>check</code> (We found it in a check).</li>
+<li><code>happened_at</code>: When did it happen (roughly)? (optional) local time, <code>YYYY-MM-DDTHH:MM</code>.</li>
+<li><code>plan</code>: Which tool and account? one of: <code>chatgpt-personal</code> (ChatGPT Free, Plus or Pro (personal account)), <code>chatgpt-business</code> (ChatGPT Business (formerly Team) (work account)), <code>chatgpt-enterprise</code> (ChatGPT Enterprise (work account)), <code>copilot-personal</code> (Microsoft Copilot app, personal account (personal account)), <code>copilot-chat-work</code> (Microsoft 365 Copilot Chat, work account (work account)), <code>m365-copilot</code> (Microsoft 365 Copilot (paid licence, including Copilot Business) (work account)), <code>gemini-personal</code> (Gemini app, personal Google account (free or Google AI Pro) (personal account)), <code>gemini-workspace</code> (Gemini in Google Workspace, work account (work account)), <code>claude-personal</code> (Claude Free, Pro or Max (personal account)), <code>claude-work</code> (Claude Team or Enterprise (work account)), <code>deepseek-app</code> (DeepSeek app and website (personal account)), <code>other-personal</code> (Another AI tool: a personal or free account), <code>other-work</code> (Another AI tool: a work account with a contract), <code>unknown</code> (Not sure which tool or account).</li>
+<li><code>how</code>: How did it go in? one of: <code>pasted</code> (Pasted or typed text), <code>upload</code> (Uploaded a file), <code>connected</code> (Connected mailbox or drive), <code>meeting</code> (Meeting recording or transcript), <code>other</code> (Something else).</li>
+<li><code>rules</code>: Was this within your rules for AI tools? one of: <code>allowed</code> (Allowed under our rules), <code>against</code> (Against our rules), <code>none</code> (We have no rules on this), <code>unsure</code> (Not sure).</li>
+<li><code>training</code>: Was the tool's training setting on at the time? one of: <code>on</code> (On), <code>off</code> (Off, or a temporary chat), <code>unsure</code> (Not sure), <code>na</code> (Not applicable: work account).</li>
+<li><code>shared</code>: Was the chat shared with a link? one of: <code>yes</code> (Yes), <code>no</code> (No), <code>unsure</code> (Not sure).</li>
+<li><code>categories</code>: What kind of data went in? a list, any of: <code>contact</code> (Names and contact details), <code>financial</code> (Financial details: bank account, salary, invoices, debts), <code>id_numbers</code> (Identity numbers or documents: BSN, passport, driving licence), <code>health</code> (Health information, including sick leave), <code>special</code> (Other special categories: ethnic origin, religion, political views, trade union membership, sexual orientation, biometric or genetic data), <code>criminal</code> (Criminal records or offences), <code>children</code> (Data about children), <code>hr</code> (Employee or job applicant information: CVs, assessments), <code>credentials</code> (Passwords, access keys or tokens), <code>business</code> (Confidential business information, no personal data), <code>unsure</code> (Not sure what was in it).</li>
+<li><code>people</code>: About how many people's data? one of: <code>1</code> (1), <code>2-10</code> (2 to 10), <code>11-100</code> (11 to 100), <code>101-1000</code> (101 to 1,000), <code>1000+</code> (More than 1,000), <code>unknown</code> (Not known yet).</li>
+<li><code>whose</code>: Whose data? a list, any of: <code>client</code> (A client's customers or staff), <code>staff</code> (Our own staff), <code>applicants</code> (Job applicants), <code>other</code> (Someone else).</li>
+<li><code>description</code>: Short description (optional) free text, by type only.</li>
+<li><code>role</code>: For this data, is your firm the controller or a processor? one of: <code>controller</code> (Controller: our own data, or we decide what happens with it), <code>processor</code> (Processor: we handle it for a client under a processing agreement), <code>unsure</code> (Not sure).</li>
+<li><code>actions</code>: What has been done? Tick each step as it happens; the time is added to the record. an object of step: local time, steps: <code>deleted</code> (Conversation deleted), <code>link</code> (Share link removed), <code>training_off</code> (Training setting switched off), <code>secrets</code> (Passwords or keys that went in changed), <code>vendor</code> (Vendor asked to delete the data, where it offers that), <code>client</code> (Client informed), <code>contact</code> (Privacy officer or adviser involved).</li>
+<li><code>decision</code>: Report to the Autoriteit Persoonsgegevens? one of: <code>report</code> (Yes, reported), <code>no</code> (No: unlikely to result in a risk to the people concerned), <code>client</code> (Not ours to decide: we are the processor and told the client), <code>open</code> (Not decided yet).</li>
+<li><code>individuals</code>: Tell the people concerned? one of: <code>yes</code> (Yes), <code>no</code> (No: the risk is not high), <code>open</code> (Not decided yet).</li>
+<li><code>reasons</code>: Reasons for the decision free text, by type only.</li>
+<li><code>decided_by</code>: Decided by (role) free text, by type only.</li>
+<li><code>fix</code>: What changes so it doesn't happen again (optional) free text, by type only.</li>
+            </ul>
+            <p><strong>Example:</strong></p>
+            <pre class="kit-code">{
+  &quot;kit&quot;: &quot;client-data-in-ai&quot;,
+  &quot;version&quot;: 1,
+  &quot;aware_at&quot;: &quot;2026-11-23T09:15&quot;,
+  &quot;reported_by&quot;: &quot;self&quot;,
+  &quot;plan&quot;: &quot;chatgpt-personal&quot;,
+  &quot;how&quot;: &quot;upload&quot;,
+  &quot;rules&quot;: &quot;against&quot;,
+  &quot;training&quot;: &quot;unsure&quot;,
+  &quot;categories&quot;: [
+    &quot;contact&quot;,
+    &quot;financial&quot;
+  ],
+  &quot;people&quot;: &quot;11-100&quot;,
+  &quot;whose&quot;: [
+    &quot;client&quot;
+  ],
+  &quot;description&quot;: &quot;Payroll export with names, salaries and bank account numbers of about 40 employees of a client&quot;,
+  &quot;role&quot;: &quot;processor&quot;,
+  &quot;actions&quot;: {
+    &quot;deleted&quot;: &quot;2026-11-23T09:40&quot;
+  }
+}</pre>
+          </details>
+
+          <div class="guide-bridge" id="help">
+            <h2>One incident is rarely the only one</h2>
+            <p class="guide-measure">
+              If one person put client data into a personal account, others may
+              be using AI tools your firm hasn't seen. The AI accounts guide has a
+              20-minute check you can do yourself. Noxiom's fixed-price AI usage
+              review finds out properly, from an anonymous staff survey, your
+              admin screens and your billing, and turns it into rules that fit
+              how your team works.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="incident-check" href="/ai-accounts#check" class="cta-button">Do the 20-minute check</a>
+              <a data-cta="incident-sample" href="/sample-report" class="guide-text-link">Read a sample report &rarr;</a>
+              <a data-cta="incident-intake" href="/contact" class="guide-text-link">Book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>Do we have to report it to the Autoriteit Persoonsgegevens?</summary><p>Only you can decide that. The rule: report within 72 hours of becoming aware, unless the breach is unlikely to result in a risk to the people concerned. The Dutch authority says reporting is mandatory in many chatbot cases. The European guidance says that if in doubt, you should report.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-4" aria-label="Source 4">4</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>When do the 72 hours start?</summary><p>When your firm has a reasonable degree of certainty that personal data was compromised. A short first investigation to establish that doesn't count, but it should start straight away.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>We handle this data for a client. Who reports?</summary><p>If you are the client's processor, your duty is to tell the client without undue delay. You don't have to assess the risk first; the client does that and decides about reporting. Your processing agreement may set a shorter deadline.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>We decided not to report. Do we still need a record?</summary><p>Yes. The GDPR requires a record of every personal data breach, including the facts, the effects and what you did. The authority can ask to see it.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>Was it a breach if the employee used a work account we pay for?</summary><p>If using it with this data was within your rules, the Dutch authority doesn't treat it as a data breach, though it says such use is often not permitted by law. Record what happened and check that the use had a proper basis.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></p></details>
+<details class="guide-faq"><summary>Does this page send or keep what I type?</summary><p>No. The record builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the record as a file or print it before you close.</p></details>
+</div>
+
+          <h2 id="about">About this kit</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't do</summary>
+            <p><strong>It gives you</strong> the order of steps, the rules they come from, the criteria for weighing the risk, what each AI vendor says about the account involved (from the <a href="/ai-accounts">AI accounts guide</a>, checked 22 November 2026), and a record to keep.</p>
+            <p><strong>It doesn't</strong> decide whether you must report, assess your specific case, or replace a privacy officer or lawyer. For the decision itself, get advice. It is written for firms in the Netherlands; the GDPR rules are the same across the EU, but the authority you report to differs. It is not legal advice.</p>
+          </details>
+          <details class="guide-more" id="reuse">
+            <summary>Reuse it <span class="summary-hint">CC BY 4.0</span></summary>
+            <p>The text, the templates and the factors are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. Put them in your own procedures or client materials; credit Noxiom and link to this page.</p>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">next check by 22 December 2026</span></summary>
+<ul class="report-list">
+<li><strong>23 November 2026:</strong> Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word.</li>
+<li><strong>23 November 2026:</strong> First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout.</li>
+</ul>
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>. We check it, correct it and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">"Checked" is the date we last read the page. The vendor facts in the record builder carry their own sources.</p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">EUR-Lex: Regulation (EU) 2016/679 (General Data Protection Regulation)</a>. Page dated 27 April 2016. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf" rel="noopener">European Data Protection Board: Guidelines 9/2022 on personal data breach notification under GDPR, version 2.0</a>. Page dated 28 March 2023. Checked 23 November 2026.</li>
+<li id="src-3"><a href="https://www.autoriteitpersoonsgegevens.nl/en/themes/security/data-breaches/this-is-how-you-report-a-data-breach" rel="noopener">Autoriteit Persoonsgegevens (Dutch data protection authority): This is how you report a data breach</a>. Checked 23 November 2026.</li>
+<li id="src-4"><a href="https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches" rel="noopener">Autoriteit Persoonsgegevens (Dutch data protection authority): Caution: use of AI chatbot may lead to data breaches</a>. Page dated 6 August 2024. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>. Version 1.1.0, checked 23 November 2026.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script type="application/json" id="kit-data">{"id":"client-data-in-ai","schemaUrl":"https://noxiom.com/data/ai-incident-record.schema.json","pageUrl":"noxiom.com/ai-data-incident","guideCheckedHuman":"22 November 2026","plans":[{"id":"chatgpt-personal","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","name":"ChatGPT Free, Plus or Pro","account":"personal","facts":[{"id":"training","label":"Trains on what you type?","short":"Yes, by default","tone":"critical","text":"OpenAI may use what you type to train its models. Each person can switch this off under Settings > Data controls > \"Improve the model for everyone\". Temporary Chats are not used for training. Rating a response can send that whole conversation to training even after opting out.","sources":["oai-train","oai-controls"]},{"id":"retention","label":"How long it is kept","short":"Until deleted","tone":"warning","text":"Chats stay in the account until the user deletes them. Deleted chats are scheduled for permanent deletion within 30 days. For Temporary Chats, OpenAI may keep a copy for up to 30 days for safety.","sources":["oai-retention"]},{"id":"contract","label":"Contract with your firm","short":"None with your firm","tone":"critical","text":"The individual accepts OpenAI's terms for themselves. OpenAI offers its Data Processing Addendum only for Business, Enterprise and the API.","sources":["oai-entprivacy","oai-euprivacy"]}],"incident_note":"In a personal account, delete the conversation: OpenAI schedules deleted chats for permanent deletion within 30 days. Check whether \"Improve the model for everyone\" was on at the time, and note it in your record.","incident_sources":["oai-retention","oai-train"]},{"id":"chatgpt-business","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","name":"ChatGPT Business (formerly Team)","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No, by default","tone":"good","text":"OpenAI says it doesn't use Business inputs or outputs to improve its models by default. Training would need a separate agreement signed by your organisation.","sources":["oai-train","oai-bizdata"]},{"id":"retention","label":"How long it is kept","short":"Admins decide","tone":"good","text":"Workspace admins can control how long data is kept. Deleted or unsaved conversations are removed within 30 days, unless the law requires longer.","sources":["oai-entprivacy"]},{"id":"contract","label":"Contract with your firm","short":"DPA available","tone":"good","text":"OpenAI signs a Data Processing Addendum for Business through its DPA form. Customers in the EEA contract with OpenAI Ireland Ltd.","sources":["oai-entprivacy","oai-dpa"]}],"incident_note":null,"incident_sources":[]},{"id":"chatgpt-enterprise","tool":"ChatGPT","slug":"chatgpt-personal-vs-business","name":"ChatGPT Enterprise","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No, by default","tone":"good","text":"OpenAI says it does not use Enterprise business data to train its models by default.","sources":["oai-entprivacy","oai-train"]},{"id":"retention","label":"How long it is kept","short":"Admins decide","tone":"good","text":"Workspace admins control how long data is kept. Deleted conversations are removed within 30 days unless OpenAI is legally required to keep them.","sources":["oai-entprivacy"]},{"id":"contract","label":"Contract with your firm","short":"DPA available","tone":"good","text":"OpenAI signs a Data Processing Addendum for Enterprise. Customers in the EEA contract with OpenAI Ireland Ltd.","sources":["oai-entprivacy","oai-dpa"]}],"incident_note":null,"incident_sources":[]},{"id":"copilot-personal","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","name":"Microsoft Copilot app, personal account","account":"personal","facts":[{"id":"training","label":"Trains on what you type?","short":"No (foundation models)","tone":"warning","text":"Microsoft says prompts, responses and files in the updated Copilot app (available since 18 August 2026) aren't used to train foundation models. Optional feedback may be used to improve Copilot. The older app trained on conversations by default unless you opted out.","sources":["ms-consumer-history","ms-consumer-faq"]},{"id":"retention","label":"How long it is kept","short":"Not stated","tone":"unknown","text":"Microsoft's pages for the updated app don't state a retention period. Chats are kept so you can return to them and can be deleted one by one. The older app kept activity for 18 months by default. Older-app chats not moved to the updated app by 31 December 2026 are permanently deleted.","sources":["ms-consumer-history","ms-consumer-faq"]},{"id":"contract","label":"Contract with your firm","short":"None with your firm","tone":"critical","text":"Use is governed by Microsoft's consumer privacy terms, with the individual. Microsoft's Data Protection Addendum covers Copilot only when people sign in with a work (Entra ID) account.","sources":["ms-consumer-faq","ms-chat-privacy"]}],"incident_note":"In the consumer app, delete the conversation from the chat list. Microsoft's pages for the updated app don't state how long deleted or kept chats are retained, so record that you could not confirm it.","incident_sources":["ms-consumer-history"]},{"id":"copilot-chat-work","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","name":"Microsoft 365 Copilot Chat, work account","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No","tone":"good","text":"Microsoft: \"Copilot Chat does not use your data to train foundation models.\"","sources":["ms-chat-privacy","ms-edp"]},{"id":"retention","label":"How long it is kept","short":"Your policies","tone":"good","text":"Prompts and responses are stored in your Microsoft 365 tenant (in Exchange) for audit and eDiscovery, under the same Purview retention policies you use for Microsoft 365.","sources":["ms-chat-privacy"]},{"id":"contract","label":"Contract with your firm","short":"DPA included","tone":"good","text":"Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.","sources":["ms-chat-privacy","ms-edp"]}],"incident_note":null,"incident_sources":[]},{"id":"m365-copilot","tool":"Microsoft Copilot","slug":"copilot-personal-vs-work","name":"Microsoft 365 Copilot (paid licence, including Copilot Business)","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No","tone":"good","text":"Microsoft says prompts, responses and data accessed through Microsoft Graph aren't used to train foundation models.","sources":["ms-m365-privacy"]},{"id":"retention","label":"How long it is kept","short":"Your policies","tone":"good","text":"Interactions are stored in your tenant. Admins can search them and set retention policies, and users can delete their own history.","sources":["ms-m365-privacy"]},{"id":"contract","label":"Contract with your firm","short":"DPA included","tone":"good","text":"Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.","sources":["ms-m365-privacy","ms-chat-privacy"]}],"incident_note":null,"incident_sources":[]},{"id":"gemini-personal","tool":"Gemini","slug":"gemini-personal-vs-workspace","name":"Gemini app, personal Google account (free or Google AI Pro)","account":"personal","facts":[{"id":"training","label":"Trains on what you type?","short":"Yes, by default","tone":"critical","text":"With the History setting on, which is the default for adults, Google uses your future chats to train generative AI models. Switching History off stops that, except for chats you give feedback on.","sources":["g-gemini-hub","g-gemini-history"]},{"id":"retention","label":"How long it is kept","short":"18 months by default","tone":"warning","text":"History older than 18 months is deleted automatically by default; 3 or 36 months, or never, are the other options. With History off, chats are still kept for about two months. Chats seen by human reviewers are kept for up to three years and are not deleted when you delete your history.","sources":["g-gemini-hub","g-gemini-history"]},{"id":"contract","label":"Contract with your firm","short":"None with your firm","tone":"critical","text":"Google's consumer privacy notice applies, with the individual. Google notes that work accounts may be subject to different data handling terms.","sources":["g-gemini-hub"]}],"incident_note":"In a personal account, delete the chat from Gemini's history. Note that chats already selected for human review are kept for up to three years and aren't deleted along with the history.","incident_sources":["g-gemini-hub"]},{"id":"gemini-workspace","tool":"Gemini","slug":"gemini-personal-vs-workspace","name":"Gemini in Google Workspace, work account","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No, without permission","tone":"good","text":"Google: \"Workspace does not use customer data for training models without customer's prior permission or instruction.\"","sources":["g-ws-hub"]},{"id":"retention","label":"How long it is kept","short":"Admins decide","tone":"good","text":"Admins set it: up to 36 months for the Gemini app (18 months by default) and from 90 days to indefinitely inside Gmail, Docs and the other apps. With history off, new chats are kept for up to 72 hours.","sources":["g-ws-hub"]},{"id":"contract","label":"Contract with your firm","short":"DPA included","tone":"good","text":"Prompts count as customer data under Google's Cloud Data Processing Addendum.","sources":["g-ws-hub"]}],"incident_note":null,"incident_sources":[]},{"id":"claude-personal","tool":"Claude","slug":"claude-personal-vs-team","name":"Claude Free, Pro or Max","account":"personal","facts":[{"id":"training","label":"Trains on what you type?","short":"Yes, unless switched off","tone":"critical","text":"Each user chooses through the Model Improvement privacy setting, and Anthropic's pricing page lists training for these plans as opt-out. Incognito chats are never used. Chats flagged for safety review, and chats you give feedback on, can be used either way.","sources":["a-consumer-terms","a-consumer-training","a-pricing"]},{"id":"retention","label":"How long it is kept","short":"30 days, or up to 5 years","tone":"warning","text":"With training off: 30 days. With training on: up to 5 years, de-identified, in Anthropic's training pipelines. Deleted chats leave back-end storage within 30 days. Chats flagged for safety: inputs and outputs for up to 2 years.","sources":["a-consumer-terms","a-consumer-retention"]},{"id":"contract","label":"Contract with your firm","short":"None with your firm","tone":"critical","text":"Personal plans run on Anthropic's consumer terms. Anthropic's Data Processing Addendum comes with its Commercial Terms, which cover Team and Enterprise.","sources":["a-consumer-terms","a-dpa"]}],"incident_note":"In a personal account, delete the chat: Anthropic deletes it from back-end storage within 30 days. If the Model Improvement setting was on, de-identified data may already be in training pipelines, where Anthropic says it can be kept for up to five years. Record which it was.","incident_sources":["a-consumer-retention","a-consumer-terms"]},{"id":"claude-work","tool":"Claude","slug":"claude-personal-vs-team","name":"Claude Team or Enterprise","account":"work","facts":[{"id":"training","label":"Trains on what you type?","short":"No","tone":"good","text":"Anthropic's Commercial Terms say it may not train models on customer content. The exception is an organisation that opts into Anthropic's Development Partner Program.","sources":["a-commercial-terms","a-processor"]},{"id":"retention","label":"How long it is kept","short":"Until deleted; Enterprise can limit","tone":"warning","text":"Chats stay in the product until the organisation deletes them. Deleted chats leave back-end storage within 30 days, and flagged content is kept for up to 2 years. Enterprise can set a custom retention period (at least 30 days); Team can't.","sources":["a-org-retention","a-ent-retention","a-pricing"]},{"id":"contract","label":"Contract with your firm","short":"DPA included","tone":"good","text":"The Data Processing Addendum, with standard contractual clauses, is part of the Commercial Terms: accepting them accepts the DPA. Anthropic acts as processor, and customers in the EEA contract with Anthropic Ireland.","sources":["a-dpa","a-processor","a-commercial-terms"]}],"incident_note":null,"incident_sources":[]},{"id":"deepseek-app","tool":"DeepSeek","slug":"deepseek-business-data","name":"DeepSeek app and website","account":"personal","facts":[{"id":"training","label":"Trains on what you type?","short":"Yes","tone":"critical","text":"DeepSeek's privacy policy lists training and improving its models as a purpose. It gives users a right to opt out of training, exercised by emailing DeepSeek. Third-party guides mention an in-app setting; we haven't verified it.","sources":["ds-privacy"]},{"id":"retention","label":"How long it is kept","short":"While the account exists","tone":"warning","text":"Kept for as long as you have an account. You can delete chat history in the settings.","sources":["ds-privacy"]},{"id":"contract","label":"Contract with your firm","short":"None","tone":"critical","text":"No business plan or processor agreement found. The controller is Hangzhou DeepSeek Artificial Intelligence Co., Ltd., and its EU representative is Prighter.","sources":["ds-privacy"]}],"incident_note":"Delete the chat history in DeepSeek's settings. DeepSeek's policy says users exercise their privacy rights, including the training opt-out, by emailing privacy@deepseek.com. Record what you asked and when.","incident_sources":["ds-privacy"]}],"other_accounts":[{"id":"other-personal","label":"Another AI tool: a personal or free account","account":"personal","advice":"Look up in the tool's own help pages how to delete a conversation, whether deleted chats are kept for a while, and whether there is a training setting. Without a contract with your firm, assume the vendor keeps and uses what its consumer terms allow."},{"id":"other-work","label":"Another AI tool: a work account with a contract","account":"work","advice":"Check your processing agreement with the vendor: what it says about deletion, retention and incidents, and whether you can ask the vendor to delete this data. Ask your admin which retention setting applies."},{"id":"unknown","label":"Not sure which tool or account","account":"unknown","advice":"Ask the person which tool and which login they used. Each tool page in the AI accounts guide explains how to tell a personal account from a work account."}],"factors":[{"id":"no-contract","direction":"up","when":{"field":"account","in":["personal"]},"text":"A personal account has no processor agreement with your firm, so the vendor isn't bound by your instructions about this data.","criterion":"Who received it","sources":["edpb-breach"]},{"id":"training-on","direction":"up","when":{"all":[{"field":"account","in":["personal"]},{"field":"training","in":["on","unsure"]}]},"text":"Training was on, or may have been. The vendor may use the data to train its models, and deleting the chat may not undo that.","criterion":"Can it be undone","sources":["edpb-breach"]},{"id":"against-rules","direction":"up","when":{"field":"rules","in":["against"]},"text":"The Dutch authority says personal data entered into a chatbot against the employer's agreements is a data breach.","criterion":"Is it a breach","sources":["ap-chatbots"]},{"id":"special","direction":"up","high_risk":true,"when":{"field":"categories","any":["health","special","criminal"]},"text":"Health, other special categories or criminal data: the harm to the people concerned can be especially severe.","criterion":"Sensitivity of the data","sources":["edpb-breach"]},{"id":"id-financial","direction":"up","high_risk":true,"when":{"field":"categories","any":["id_numbers","financial"]},"text":"Identity numbers or financial details can cause harm on their own, and together they can be used for identity theft.","criterion":"Sensitivity of the data","sources":["edpb-breach"]},{"id":"children","direction":"up","high_risk":true,"when":{"field":"categories","any":["children"]},"text":"Data about children: the people concerned may be at greater risk.","criterion":"Who the people are","sources":["edpb-breach"]},{"id":"hr","direction":"up","when":{"field":"categories","any":["hr"]},"text":"CVs and assessments often reveal more about a person than they seem to.","criterion":"Sensitivity of the data","sources":["edpb-breach"]},{"id":"credentials","direction":"up","when":{"field":"categories","any":["credentials"]},"text":"Passwords or keys open other systems. Until they are changed, the risk reaches everything they give access to.","criterion":"Severity of the consequences","sources":[]},{"id":"many","direction":"up","when":{"field":"people","in":["11-100","101-1000","1000+"]},"text":"More people affected generally means more impact.","criterion":"Number of people","sources":["edpb-breach"]},{"id":"shared-link","direction":"up","when":{"field":"shared","in":["yes"]},"text":"A share link may let anyone who has it read the chat. Remove it and record when.","criterion":"How far it spread","sources":[]},{"id":"unsure-data","direction":"up","when":{"field":"categories","any":["unsure"]},"text":"You can't rule out sensitive data yet. The European guidance is to report when in doubt.","criterion":"If in doubt","sources":["edpb-breach"]},{"id":"work-contract","direction":"down","when":{"field":"account","in":["work"]},"text":"A work account under a processor agreement binds the vendor to your firm's instructions, if your firm accepted or signed that agreement. A recipient you can rely on can lower the risk; it doesn't mean nothing happened.","criterion":"Who received it","sources":["edpb-breach"]},{"id":"within-rules","direction":"down","when":{"field":"rules","in":["allowed"]},"text":"Within your own rules, the Dutch authority doesn't treat chatbot use as a data breach, though it says such use is often not permitted by law. Record it and check the basis for the use.","criterion":"Is it a breach","sources":["ap-chatbots"]},{"id":"contact-only","direction":"down","when":{"all":[{"field":"categories","only":["contact","business"]},{"field":"categories","any":["contact"]},{"field":"people","in":["1","2-10"]}]},"text":"Only names and contact details of a few people. In ordinary circumstances that is unlikely to cause substantial damage, though context can change that.","criterion":"Sensitivity of the data","sources":["edpb-breach"]},{"id":"no-personal","direction":"down","when":{"field":"categories","only":["business"]},"text":"No personal data: this is not a personal data breach under the GDPR. Check your client contract's confidentiality clause all the same.","criterion":"Is it a breach","sources":["gdpr"]},{"id":"contained","direction":"down","when":{"all":[{"field":"actions","any":["deleted"]},{"field":"training","in":["off","na"]}]},"text":"Deleted, with training off: this lowers the chance of further use. It doesn't undo what the vendor has already received.","criterion":"Can it be undone","sources":["edpb-breach"]},{"id":"plan-unknown","direction":"unknown","when":{"field":"account","in":["unknown"]},"text":"Find out which account it was. It decides whether a contract covers the data.","criterion":"Who received it","sources":[]},{"id":"people-unknown","direction":"unknown","when":{"field":"people","in":["unknown"]},"text":"Estimate how many people's data it was. The number matters, though even one person can be seriously affected.","criterion":"Number of people","sources":["edpb-breach"]},{"id":"no-rules","direction":"unknown","when":{"field":"rules","in":["none","unsure"]},"text":"The Dutch authority's statement is about use against the employer's agreements. Without clear rules, your firm has to judge whether this use was authorised.","criterion":"Is it a breach","sources":["ap-chatbots"]},{"id":"role-unsure","direction":"unknown","when":{"field":"role","in":["unsure"]},"text":"Check your processing agreement with the client. If you are their processor, your duty is to tell them without undue delay, and they decide about reporting.","criterion":"Who decides","sources":["edpb-breach"]}],"record":{"intro":"Describe the data by type. Don't enter the data itself, or the names of the people or the client: add those in your own copy.","sections":[{"id":"discovery","title":"Discovery","fields":[{"id":"aware_at","type":"datetime","label":"When did the firm become aware?","hint":"When someone responsible was reasonably certain that personal data went in. The 72 hours count from here."},{"id":"reported_by","type":"select","label":"How was it found?","options":[["self","They reported it themselves"],["colleague","A colleague noticed"],["outside","A client or outsider told us"],["check","We found it in a check"]]}]},{"id":"what","title":"What happened","fields":[{"id":"happened_at","type":"datetime","label":"When did it happen (roughly)?","optional":true},{"id":"plan","type":"plan","label":"Which tool and account?","hint":"Not sure? Each tool page in the AI accounts guide explains how to tell a personal account from a work account."},{"id":"how","type":"select","label":"How did it go in?","options":[["pasted","Pasted or typed text"],["upload","Uploaded a file"],["connected","Connected mailbox or drive"],["meeting","Meeting recording or transcript"],["other","Something else"]]},{"id":"rules","type":"radio","label":"Was this within your rules for AI tools?","options":[["allowed","Allowed under our rules"],["against","Against our rules"],["none","We have no rules on this"],["unsure","Not sure"]]},{"id":"training","type":"radio","label":"Was the tool's training setting on at the time?","options":[["on","On"],["off","Off, or a temporary chat"],["unsure","Not sure"],["na","Not applicable: work account"]]},{"id":"shared","type":"radio","label":"Was the chat shared with a link?","options":[["yes","Yes"],["no","No"],["unsure","Not sure"]]}]},{"id":"data","title":"The data","fields":[{"id":"categories","type":"checkbox","label":"What kind of data went in?","options":[["contact","Names and contact details"],["financial","Financial details: bank account, salary, invoices, debts"],["id_numbers","Identity numbers or documents: BSN, passport, driving licence"],["health","Health information, including sick leave"],["special","Other special categories: ethnic origin, religion, political views, trade union membership, sexual orientation, biometric or genetic data"],["criminal","Criminal records or offences"],["children","Data about children"],["hr","Employee or job applicant information: CVs, assessments"],["credentials","Passwords, access keys or tokens"],["business","Confidential business information, no personal data"],["unsure","Not sure what was in it"]]},{"id":"people","type":"select","label":"About how many people's data?","options":[["1","1"],["2-10","2 to 10"],["11-100","11 to 100"],["101-1000","101 to 1,000"],["1000+","More than 1,000"],["unknown","Not known yet"]]},{"id":"whose","type":"checkbox","label":"Whose data?","options":[["client","A client's customers or staff"],["staff","Our own staff"],["applicants","Job applicants"],["other","Someone else"]]},{"id":"description","type":"textarea","label":"Short description","hint":"By type only. For example: \"payroll export with names, salaries and bank account numbers of about 40 employees of a client\".","optional":true}]},{"id":"role","title":"Your firm's role","fields":[{"id":"role","type":"radio","label":"For this data, is your firm the controller or a processor?","options":[["controller","Controller: our own data, or we decide what happens with it"],["processor","Processor: we handle it for a client under a processing agreement"],["unsure","Not sure"]]}]},{"id":"contain","title":"Containment","fields":[{"id":"actions","type":"actions","label":"What has been done? Tick each step as it happens; the time is added to the record.","options":[["deleted","Conversation deleted"],["link","Share link removed"],["training_off","Training setting switched off"],["secrets","Passwords or keys that went in changed"],["vendor","Vendor asked to delete the data, where it offers that"],["client","Client informed"],["contact","Privacy officer or adviser involved"]]}]},{"id":"decision","title":"Decision","fields":[{"id":"decision","type":"radio","label":"Report to the Autoriteit Persoonsgegevens?","options":[["report","Yes, reported"],["no","No: unlikely to result in a risk to the people concerned"],["client","Not ours to decide: we are the processor and told the client"],["open","Not decided yet"]]},{"id":"individuals","type":"radio","label":"Tell the people concerned?","options":[["yes","Yes"],["no","No: the risk is not high"],["open","Not decided yet"]]},{"id":"reasons","type":"textarea","label":"Reasons for the decision","hint":"Which factors weighed most, and who advised."},{"id":"decided_by","type":"text","label":"Decided by (role)","hint":"For example: owner, after advice from our privacy adviser."},{"id":"fix","type":"textarea","label":"What changes so it doesn't happen again","optional":true}]}]},"sources":{"oai-train":{"publisher":"OpenAI","short":"OpenAI","title":"How your data is used to improve model performance","url":"https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance","checkedHuman":"22 November 2026"},"oai-controls":{"publisher":"OpenAI","short":"OpenAI","title":"Data Controls FAQ","url":"https://help.openai.com/en/articles/7730893-data-controls-faq","checkedHuman":"22 November 2026"},"oai-retention":{"publisher":"OpenAI","short":"OpenAI","title":"Chat and file retention policies in ChatGPT","url":"https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt","checkedHuman":"22 November 2026"},"oai-euprivacy":{"publisher":"OpenAI","short":"OpenAI","title":"EU privacy policy","url":"https://openai.com/policies/eu-privacy-policy/","checkedHuman":"22 November 2026"},"oai-entprivacy":{"publisher":"OpenAI","short":"OpenAI","title":"Enterprise privacy at OpenAI","url":"https://openai.com/enterprise-privacy/","checkedHuman":"22 November 2026"},"oai-bizdata":{"publisher":"OpenAI","short":"OpenAI","title":"Business data privacy, security, and compliance","url":"https://openai.com/business-data/","checkedHuman":"22 November 2026"},"oai-bizfaq":{"publisher":"OpenAI","short":"OpenAI","title":"ChatGPT Business: General FAQ","url":"https://help.openai.com/en/articles/12111915-chatgpt-business-rename-faq","checkedHuman":"22 November 2026"},"oai-bizstorage":{"publisher":"OpenAI","short":"OpenAI","title":"Where your ChatGPT Business content is stored","url":"https://help.openai.com/en/articles/20001418-where-your-chatgpt-business-content-is-stored","checkedHuman":"22 November 2026"},"oai-residency":{"publisher":"OpenAI","short":"OpenAI","title":"Data residency and inference residency for ChatGPT","url":"https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt","checkedHuman":"22 November 2026"},"oai-dpa":{"publisher":"OpenAI","short":"OpenAI","title":"Data Processing Addendum","url":"https://openai.com/policies/data-processing-addendum/","checkedHuman":"22 November 2026"},"oai-plus":{"publisher":"OpenAI","short":"OpenAI","title":"What is ChatGPT Plus?","url":"https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus","checkedHuman":"22 November 2026"},"oai-pricing":{"publisher":"OpenAI","short":"OpenAI","title":"ChatGPT pricing","url":"https://chatgpt.com/pricing","checkedHuman":"22 November 2026"},"ms-consumer-history":{"publisher":"Microsoft","short":"Microsoft","title":"Microsoft Copilot activity history (updated app)","url":"https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history","checkedHuman":"22 November 2026"},"ms-consumer-faq":{"publisher":"Microsoft","short":"Microsoft","title":"Privacy FAQ for Microsoft Copilot (older app)","url":"https://support.microsoft.com/en-us/topic/privacy-faq-for-microsoft-copilot-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f","checkedHuman":"22 November 2026"},"ms-chat-privacy":{"publisher":"Microsoft","short":"Microsoft","title":"Privacy and protections for Microsoft 365 Copilot Chat","url":"https://learn.microsoft.com/en-us/copilot/privacy-and-protections","checkedHuman":"22 November 2026"},"ms-edp":{"publisher":"Microsoft","short":"Microsoft","title":"Enterprise data protection in Microsoft 365 Copilot and Copilot Chat","url":"https://learn.microsoft.com/en-us/copilot/microsoft-365/enterprise-data-protection","checkedHuman":"22 November 2026"},"ms-copilot-overview":{"publisher":"Microsoft","short":"Microsoft","title":"What is Microsoft Copilot? (licensing overview)","url":"https://learn.microsoft.com/en-us/copilot/faq","checkedHuman":"22 November 2026"},"ms-m365-privacy":{"publisher":"Microsoft","short":"Microsoft","title":"Data, privacy, and security for Microsoft 365 Copilot","url":"https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy","checkedHuman":"22 November 2026"},"ms-license":{"publisher":"Microsoft","short":"Microsoft","title":"License options for Microsoft Copilot","url":"https://learn.microsoft.com/en-us/copilot/plan/copilot-license-options","checkedHuman":"22 November 2026"},"ms-business-price":{"publisher":"Microsoft Tech Community","short":"Microsoft Tech Community","title":"Act now: lock in current pricing on Microsoft 365 Copilot","url":"https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/act-now-lock-in-current-pricing-on-microsoft-365-copilot/ba-p/4502628","checkedHuman":"22 November 2026"},"g-gemini-hub":{"publisher":"Google","short":"Google","title":"Gemini Apps Privacy Hub","url":"https://support.google.com/gemini/answer/13594961?hl=en","checkedHuman":"22 November 2026"},"g-gemini-history":{"publisher":"Google","short":"Google","title":"Manage and delete your history in Gemini Apps","url":"https://support.google.com/gemini/answer/13278892?hl=en","checkedHuman":"22 November 2026"},"g-ws-hub":{"publisher":"Google","short":"Google","title":"Generative AI in Google Workspace Privacy Hub","url":"https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub?hl=en","checkedHuman":"22 November 2026"},"g-ws-regions":{"publisher":"Google","short":"Google","title":"Data covered by data regions","url":"https://knowledge.workspace.google.com/admin/compliance/data-covered-by-data-regions?hl=en","checkedHuman":"22 November 2026"},"g-ws-pricing":{"publisher":"Google","short":"Google","title":"Google Workspace pricing (Netherlands)","url":"https://workspace.google.com/pricing?hl=en","checkedHuman":"22 November 2026"},"g-ai-plans":{"publisher":"Google","short":"Google","title":"Google One plans","url":"https://one.google.com/about/plans","checkedHuman":"22 November 2026"},"a-consumer-terms":{"publisher":"Anthropic","short":"Anthropic","title":"Updates to our consumer terms","url":"https://www.anthropic.com/news/updates-to-our-consumer-terms","checkedHuman":"22 November 2026"},"a-consumer-training":{"publisher":"Anthropic","short":"Anthropic","title":"Is my data used for model training?","url":"https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training","checkedHuman":"22 November 2026"},"a-consumer-retention":{"publisher":"Anthropic","short":"Anthropic","title":"How long do you store my data?","url":"https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data","checkedHuman":"22 November 2026"},"a-org-retention":{"publisher":"Anthropic","short":"Anthropic","title":"How long do you store my organization's data?","url":"https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data","checkedHuman":"22 November 2026"},"a-ent-retention":{"publisher":"Anthropic","short":"Anthropic","title":"Configure custom data retention controls for Enterprise plans","url":"https://privacy.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans","checkedHuman":"22 November 2026"},"a-processor":{"publisher":"Anthropic","short":"Anthropic","title":"Does Anthropic act as a data processor or controller?","url":"https://privacy.claude.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller","checkedHuman":"22 November 2026"},"a-dpa":{"publisher":"Anthropic","short":"Anthropic","title":"How do I view and sign your Data Processing Addendum (DPA)?","url":"https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa","checkedHuman":"22 November 2026"},"a-servers":{"publisher":"Anthropic","short":"Anthropic","title":"Where are your servers located?","url":"https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers","checkedHuman":"22 November 2026"},"a-commercial-terms":{"publisher":"Anthropic","short":"Anthropic","title":"Commercial Terms of Service","url":"https://www.anthropic.com/legal/commercial-terms","checkedHuman":"22 November 2026"},"a-pricing":{"publisher":"Anthropic","short":"Anthropic","title":"Claude pricing","url":"https://claude.com/pricing","checkedHuman":"22 November 2026"},"ds-privacy":{"publisher":"DeepSeek","short":"DeepSeek","title":"DeepSeek Privacy Policy","url":"https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html","checkedHuman":"22 November 2026"},"ds-ap-warning":{"publisher":"DutchNews.nl (reporting the Dutch data protection authority)","short":"DutchNews.nl (reporting the Dutch data protection authority)","title":"Dutch privacy watchdog warns about uploading info to DeepSeek","url":"https://www.dutchnews.nl/?p=247047","checkedHuman":"22 November 2026"},"ap-chatbots":{"publisher":"Autoriteit Persoonsgegevens (Dutch data protection authority)","short":"Dutch DPA (AP)","title":"Caution: use of AI chatbot may lead to data breaches","url":"https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches","checkedHuman":"22 November 2026"},"gdpr":{"publisher":"EUR-Lex","short":"GDPR","title":"Regulation (EU) 2016/679 (General Data Protection Regulation)","url":"https://eur-lex.europa.eu/eli/reg/2016/679/oj","checkedHuman":"22 November 2026"},"edpb-breach":{"publisher":"European Data Protection Board","short":"EDPB breach guidelines","title":"Guidelines 9/2022 on personal data breach notification under GDPR, version 2.0","url":"https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf","checkedHuman":"23 November 2026"},"ap-report":{"publisher":"Autoriteit Persoonsgegevens (Dutch data protection authority)","short":"Dutch DPA (AP)","title":"This is how you report a data breach","url":"https://www.autoriteitpersoonsgegevens.nl/en/themes/security/data-breaches/this-is-how-you-report-a-data-breach","checkedHuman":"23 November 2026"}},"tones":{"good":{"icon":"✓","sr":"In your favour"},"warning":{"icon":"!","sr":"Has a catch"},"critical":{"icon":"✕","sr":"A problem for client data"},"unknown":{"icon":"?","sr":"The vendor doesn't say"},"neutral":{"icon":"","sr":""}}}</script>
+    <script>
+// Incident record builder: the logic, with no access to the page.
+// Shared by the browser (inlined into /ai-data-incident) and the tests
+// (loaded with node:vm). It reads nothing from the network or the device,
+// and it never decides whether to report: it lists factors.
+(function (root) {
+  "use strict";
+
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  function pad(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  // "2026-11-23T09:15" (a datetime-local value, read as local time) -> Date
+  function parseLocal(value) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/.exec(value || "");
+    if (!m) return null;
+    return new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+  }
+
+  function formatDateTime(date) {
+    return date.getDate() + " " + MONTHS[date.getMonth()] + " " + date.getFullYear() + ", " + pad(date.getHours()) + ":" + pad(date.getMinutes());
+  }
+
+  function duration(ms) {
+    var minutes = Math.round(Math.abs(ms) / 60000);
+    var days = Math.floor(minutes / 1440);
+    var hours = Math.floor((minutes % 1440) / 60);
+    var mins = minutes % 60;
+    var parts = [];
+    if (days) parts.push(days + (days === 1 ? " day" : " days"));
+    if (hours) parts.push(hours + (hours === 1 ? " hour" : " hours"));
+    if (!days && mins) parts.push(mins + (mins === 1 ? " minute" : " minutes"));
+    return parts.length ? parts.join(" ") : "less than a minute";
+  }
+
+  // The 72-hour point counted from awareness (Art. 33(1) GDPR).
+  function deadline(awareValue, now) {
+    var aware = parseLocal(awareValue);
+    if (!aware) return null;
+    var at = new Date(aware.getTime() + 72 * 3600 * 1000);
+    var left = at.getTime() - now.getTime();
+    return { aware: aware, at: at, msLeft: left, passed: left < 0, label: formatDateTime(at), remaining: duration(left) };
+  }
+
+  function values(state, field) {
+    var v = state[field];
+    if (v == null || v === "") return [];
+    if (Array.isArray(v)) return v;
+    if (typeof v === "object") return Object.keys(v);
+    return [String(v)];
+  }
+
+  // Conditions: {field, in:[..]} | {field, any:[..]} | {field, only:[..]} | {all:[..]} | {any:[..]}
+  function match(cond, state) {
+    if (cond.all) return cond.all.every(function (c) { return match(c, state); });
+    if (cond.any && !cond.field) return cond.any.some(function (c) { return match(c, state); });
+    var got = values(state, cond.field);
+    if (cond["in"]) return got.length === 1 && cond["in"].indexOf(got[0]) !== -1;
+    if (cond.any) return got.some(function (v) { return cond.any.indexOf(v) !== -1; });
+    if (cond.only) return got.length > 0 && got.every(function (v) { return cond.only.indexOf(v) !== -1; });
+    throw new Error("unknown condition: " + JSON.stringify(cond));
+  }
+
+  function factors(kit, state) {
+    var out = { up: [], down: [], unknown: [] };
+    kit.factors.forEach(function (f) {
+      if (match(f.when, state)) out[f.direction].push(f);
+    });
+    return out;
+  }
+
+  // The account type behind the chosen option: personal, work or unknown.
+  function accountOf(kit, planId) {
+    if (!planId) return "";
+    for (var i = 0; i < kit.plans.length; i++) if (kit.plans[i].id === planId) return kit.plans[i].account;
+    for (var j = 0; j < kit.other_accounts.length; j++) if (kit.other_accounts[j].id === planId) return kit.other_accounts[j].account;
+    return "unknown";
+  }
+
+  function planById(kit, planId) {
+    for (var i = 0; i < kit.plans.length; i++) if (kit.plans[i].id === planId) return kit.plans[i];
+    return null;
+  }
+
+  function optionLabel(field, value) {
+    for (var i = 0; i < (field.options || []).length; i++) if (field.options[i][0] === value) return field.options[i][1];
+    return value;
+  }
+
+  function sourceLine(kit, id) {
+    var s = kit.sources[id];
+    return s ? s.publisher + ": " + s.title + " (" + s.url + "), checked " + s.checkedHuman : id;
+  }
+
+  function fieldValue(kit, field, state) {
+    var v = state[field.id];
+    if (field.type === "datetime") {
+      var d = parseLocal(v);
+      return d ? formatDateTime(d) : "";
+    }
+    if (field.type === "plan") {
+      var plan = planById(kit, v);
+      var other = null;
+      kit.other_accounts.forEach(function (o) { if (o.id === v) other = o; });
+      return plan ? plan.name + " (" + plan.account + " account)" : other ? other.label : "";
+    }
+    if (field.type === "checkbox") return values(state, field.id).map(function (x) { return optionLabel(field, x); }).join("; ");
+    if (field.type === "actions") {
+      var done = state.actions || {};
+      return field.options
+        .filter(function (o) { return done[o[0]]; })
+        .map(function (o) { return o[1] + " (" + formatDateTime(new Date(done[o[0]])) + ")"; })
+        .join("; ");
+    }
+    if (field.options) return v ? optionLabel(field, v) : "";
+    return v || "";
+  }
+
+  // The record a firm keeps (Art. 33(5) GDPR: facts, effects, remedial action),
+  // as blocks. The same blocks become the Word file, the text and the print view.
+  function recordBlocks(kit, state, now) {
+    var b = [];
+    b.push({ type: "title", text: "AI data incident record" });
+    b.push({ type: "small", text: "Made with " + kit.pageUrl + " on " + formatDateTime(now) + ". The page sent and stored nothing. Keep this record with your firm's breach register." });
+    b.push({ type: "small", text: "Client and people concerned: add names in your own copy, not on the website." });
+
+    kit.record.sections.forEach(function (section) {
+      b.push({ type: "h1", text: section.title });
+      section.fields.forEach(function (field) {
+        var v = state[field.id];
+        b.push({ type: "kv", label: field.label, value: fieldValue(kit, field, state) || "(not filled in)" });
+        if (field.id === "aware_at") {
+          var dl = deadline(v, now);
+          if (dl) b.push({ type: "kv", label: "72 hours after awareness", value: dl.label + (dl.passed ? " (passed " + dl.remaining + " ago at the time of this record)" : "") });
+        }
+        if (field.id === "role" && v === "processor") {
+          b.push({ type: "p", text: "As the client's processor: tell the client without undue delay. The client assesses the risk and decides about reporting (GDPR Art. 33(2))." });
+        }
+        if (field.type === "plan") {
+          var p = planById(kit, v);
+          if (p) {
+            b.push({ type: "h2", text: "What the vendor states about this account (from the AI accounts guide, checked " + kit.guideCheckedHuman + ")" });
+            b.push({
+              type: "bullets",
+              items: p.facts.map(function (fact) {
+                return "**" + fact.label + "** " + fact.short + ". " + fact.text + " Source: " + fact.sources.map(function (sid) { return sourceLine(kit, sid); }).join("; ");
+              }).concat(p.incident_note ? ["**In this account:** " + p.incident_note] : [])
+            });
+          }
+        }
+      });
+    });
+
+    var f = factors(kit, state);
+    b.push({ type: "h1", text: "Factors considered" });
+    b.push({ type: "p", text: "The firm decides; these are not a verdict. If in doubt, the European guidance is to report." });
+    [["up", "Point towards reporting"], ["down", "May lower the risk"], ["unknown", "Still to find out"]].forEach(function (group) {
+      b.push({ type: "h2", text: group[1] });
+      var items = f[group[0]].map(function (x) {
+        return "**" + x.criterion + ".** " + x.text + (x.high_risk ? " Can point to a high risk: consider telling the people concerned too." : "");
+      });
+      b.push(items.length ? { type: "bullets", items: items } : { type: "p", text: "(none from the answers given)" });
+    });
+    b.push({ type: "small", text: "Legal basis: GDPR Articles 33 and 34; EDPB Guidelines 9/2022 on personal data breach notification. Made with a free tool; not legal advice." });
+    return b;
+  }
+
+  // Plain text, for "Copy as text".
+  function blocksToText(blocks) {
+    var rule = "------------------------------------------------------------";
+    var plain = function (t) { return String(t).replace(/\*\*/g, ""); };
+    var out = [];
+    blocks.forEach(function (b) {
+      if (b.type === "title") out.push(plain(b.text).toUpperCase());
+      else if (b.type === "h1") out.push("", rule, plain(b.text).toUpperCase(), rule);
+      else if (b.type === "h2") out.push(plain(b.text) + ":");
+      else if (b.type === "kv") out.push(plain(b.label), "  " + plain(b.value));
+      else if (b.type === "bullets") b.items.forEach(function (i) { out.push("  - " + plain(i)); });
+      else out.push(plain(b.text));
+    });
+    return out.join("\n");
+  }
+
+  function recordText(kit, state, now) {
+    return blocksToText(recordBlocks(kit, state, now));
+  }
+
+  // ---------------------------------------------------------------- records as JSON
+  // JSON is for continuing later and for AI assistants: the builder can load
+  // it back. People keep the Word file. Times are local, "YYYY-MM-DDTHH:MM".
+
+  function allFields(kit) {
+    var out = [];
+    kit.record.sections.forEach(function (s) { s.fields.forEach(function (f) { out.push(f); }); });
+    return out;
+  }
+
+  function localStamp(d) {
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()) + "T" + pad(d.getHours()) + ":" + pad(d.getMinutes());
+  }
+
+  function recordJson(kit, state, now) {
+    var out = { "$schema": kit.schemaUrl, kit: kit.id, version: 1, saved_at: localStamp(now) };
+    allFields(kit).forEach(function (f) {
+      var v = state[f.id];
+      if (f.type === "actions") {
+        var acts = {};
+        Object.keys(state.actions || {}).forEach(function (k) { acts[k] = localStamp(new Date(state.actions[k])); });
+        if (Object.keys(acts).length) out.actions = acts;
+      } else if (Array.isArray(v)) {
+        if (v.length) out[f.id] = v.slice();
+      } else if (v) {
+        out[f.id] = v;
+      }
+    });
+    return out;
+  }
+
+  var MAX_TEXT = 2000;
+
+  // Check a record from a file or an assistant against the questions. Unknown
+  // fields and values are left out and reported, never guessed.
+  function normalizeRecord(kit, input) {
+    var state = { actions: {} };
+    var ignored = [];
+    var applied = 0;
+    if (!input || typeof input !== "object" || Array.isArray(input)) return { state: state, applied: 0, ignored: ["the record is not a JSON object"] };
+    var fields = {};
+    allFields(kit).forEach(function (f) { fields[f.id] = f; });
+    var planIds = kit.plans.map(function (p) { return p.id; }).concat(kit.other_accounts.map(function (o) { return o.id; }));
+    var isOption = function (f, v) { return (f.options || []).some(function (o) { return o[0] === v; }); };
+    Object.keys(input).forEach(function (key) {
+      if (key === "$schema" || key === "kit" || key === "version" || key === "saved_at") return;
+      var f = fields[key];
+      var v = input[key];
+      if (!f) { ignored.push(key + " (not a question in this record)"); return; }
+      if (f.type === "datetime") {
+        if (typeof v === "string" && parseLocal(v.slice(0, 16))) { state[key] = v.slice(0, 16); applied++; }
+        else ignored.push(key + " (use YYYY-MM-DDTHH:MM)");
+      } else if (f.type === "plan") {
+        if (planIds.indexOf(v) !== -1) { state.plan = v; applied++; }
+        else ignored.push(key + ": " + String(v));
+      } else if (f.type === "checkbox") {
+        var list = Array.isArray(v) ? v : [v];
+        var ok = list.filter(function (x) { return isOption(f, x); });
+        list.filter(function (x) { return !isOption(f, x); }).forEach(function (x) { ignored.push(key + ": " + String(x)); });
+        if (ok.length) { state[key] = ok.filter(function (x, i) { return ok.indexOf(x) === i; }); applied++; }
+      } else if (f.type === "actions") {
+        if (v && typeof v === "object" && !Array.isArray(v)) {
+          Object.keys(v).forEach(function (k) {
+            var d = parseLocal(String(v[k]).slice(0, 16));
+            if (isOption(f, k) && d) { state.actions[k] = d.getTime(); applied++; }
+            else ignored.push("actions." + k);
+          });
+        } else ignored.push(key + " (expected an object of step: time)");
+      } else if (f.options) {
+        if (isOption(f, v)) { state[key] = v; applied++; }
+        else ignored.push(key + ": " + String(v));
+      } else {
+        if (typeof v === "string" || typeof v === "number") { state[key] = String(v).slice(0, MAX_TEXT); applied++; }
+        else ignored.push(key);
+      }
+    });
+    state.account = accountOf(kit, state.plan);
+    return { state: state, applied: applied, ignored: ignored };
+  }
+
+  // Pull the JSON object out of whatever was pasted: an assistant's answer
+  // often wraps it in a code fence or a sentence.
+  function parsePasted(text) {
+    var t = String(text || "").trim();
+    var fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(t);
+    if (fence) t = fence[1].trim();
+    var start = t.indexOf("{");
+    var end = t.lastIndexOf("}");
+    if (start === -1 || end <= start) return null;
+    try { return JSON.parse(t.slice(start, end + 1)); } catch (e) { return null; }
+  }
+
+  var api = {
+    parseLocal: parseLocal,
+    formatDateTime: formatDateTime,
+    duration: duration,
+    deadline: deadline,
+    match: match,
+    factors: factors,
+    accountOf: accountOf,
+    planById: planById,
+    recordBlocks: recordBlocks,
+    blocksToText: blocksToText,
+    recordText: recordText,
+    recordJson: recordJson,
+    normalizeRecord: normalizeRecord,
+    parsePasted: parsePasted
+  };
+  if (typeof module === "object" && module.exports) module.exports = api;
+  else root.KitLogic = api;
+})(this);
+    </script>
+    <script>
+// Word (.docx) parts from simple blocks. Shared by the build (Node, which
+// compresses) and the record builder in the browser (which stores without
+// compression, so it needs no library). No network, no storage.
+//
+// Blocks: title, h1, h2, p, small, bullets, numbers, checks, field, kv.
+// Text may contain **bold** runs and tab characters.
+(function (root) {
+  "use strict";
+
+  function xmlEsc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function runs(text) {
+    return String(text)
+      .split(/(\*\*[^*]+\*\*)/)
+      .filter(Boolean)
+      .map(function (part) {
+        var bold = part.slice(0, 2) === "**" && part.slice(-2) === "**";
+        var t = bold ? part.slice(2, -2) : part;
+        var inner = t
+          .split("\t")
+          .map(function (p, i) { return (i ? "<w:tab/>" : "") + '<w:t xml:space="preserve">' + xmlEsc(p) + "</w:t>"; })
+          .join("");
+        return "<w:r>" + (bold ? "<w:rPr><w:b/></w:rPr>" : "") + inner + "</w:r>";
+      })
+      .join("");
+  }
+
+  function para(text, o) {
+    o = o || {};
+    var props = (o.style ? '<w:pStyle w:val="' + o.style + '"/>' : "") +
+      (o.keepNext ? "<w:keepNext/>" : "") +
+      (o.indent ? '<w:ind w:left="' + o.indent + '" w:hanging="300"/>' : "");
+    return "<w:p>" + (props ? "<w:pPr>" + props + "</w:pPr>" : "") + runs(text) + "</w:p>";
+  }
+
+  function line(n) {
+    var out = "";
+    for (var i = 0; i < n; i++) out += para(new Array(61).join("_"));
+    return out;
+  }
+
+  function blockXml(b) {
+    switch (b.type) {
+      case "title": return para(b.text, { style: "Title" });
+      case "h1": return para(b.text, { style: "Heading1", keepNext: true });
+      case "h2": return para(b.text, { style: "Heading2", keepNext: true });
+      case "p": return para(b.text);
+      case "small": return para(b.text, { style: "Small" });
+      case "bullets": return b.items.map(function (i) { return para("•\t" + i, { indent: 300 }); }).join("");
+      case "numbers": return b.items.map(function (i, n) { return para((n + 1) + ".\t" + i, { indent: 300 }); }).join("");
+      case "checks": return b.items.map(function (i) { return para("☐\t" + i, { indent: 300 }); }).join("");
+      case "field":
+        return para("**" + b.label + "**", { keepNext: true }) + (b.hint ? para(b.hint, { style: "Small" }) : "") + line(b.lines == null ? 1 : b.lines);
+      case "kv":
+        return para("**" + b.label + "**", { keepNext: true }) + para(b.value);
+      default: throw new Error("unknown docx block type: " + b.type);
+    }
+  }
+
+  var STYLES = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n' +
+    '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+    '<w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="en-GB"/></w:rPr></w:rPrDefault>' +
+    '<w:pPrDefault><w:pPr><w:spacing w:after="120" w:line="276" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>' +
+    '<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:spacing w:after="240"/></w:pPr><w:rPr><w:b/><w:sz w:val="40"/><w:szCs w:val="40"/><w:color w:val="1F2937"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="240" w:after="80"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:color w:val="1F2937"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="160" w:after="60"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>' +
+    '<w:style w:type="paragraph" w:styleId="Small"><w:name w:val="Small"/><w:basedOn w:val="Normal"/><w:qFormat/><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/><w:color w:val="555555"/></w:rPr></w:style>' +
+    "</w:styles>";
+
+  // The six parts of a minimal Word document, as text.
+  function parts(blocks, meta) {
+    var body = blocks.map(blockXml).join("");
+    var date = meta.date;
+    return [
+      { name: "[Content_Types].xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/></Types>' },
+      { name: "_rels/.rels", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/></Relationships>' },
+      { name: "docProps/core.xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>' + xmlEsc(meta.title) + '</dc:title><dc:creator>Noxiom</dc:creator><dcterms:created xsi:type="dcterms:W3CDTF">' + date + 'T12:00:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">' + date + "T12:00:00Z</dcterms:modified></cp:coreProperties>" },
+      { name: "word/_rels/document.xml.rels", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>' },
+      { name: "word/document.xml", data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' + body + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/></w:sectPr></w:body></w:document>' },
+      { name: "word/styles.xml", data: STYLES }
+    ];
+  }
+
+  var CRC_TABLE = (function () {
+    var t = [];
+    for (var n = 0; n < 256; n++) {
+      var c = n;
+      for (var k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+      t[n] = c >>> 0;
+    }
+    return t;
+  })();
+
+  function crc32(bytes) {
+    var c = 0xffffffff;
+    for (var i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
+    return (c ^ 0xffffffff) >>> 0;
+  }
+
+  function utf8(s) {
+    if (typeof TextEncoder !== "undefined") return new TextEncoder().encode(s);
+    return Uint8Array.from(Buffer.from(s, "utf8"));
+  }
+
+  // A zip with stored (uncompressed) entries: valid for Word, no library needed.
+  function zipStored(files, isoDate) {
+    var ymd = isoDate.split("-").map(Number);
+    var time = 12 << 11;
+    var date = ((ymd[0] - 1980) << 9) | (ymd[1] << 5) | ymd[2];
+    var entries = files.map(function (f) {
+      var data = typeof f.data === "string" ? utf8(f.data) : f.data;
+      return { name: utf8(f.name), data: data, crc: crc32(data) };
+    });
+    var size = 22;
+    entries.forEach(function (e) { size += 30 + e.name.length + e.data.length + 46 + e.name.length; });
+    var out = new Uint8Array(size);
+    var view = new DataView(out.buffer);
+    var p = 0;
+    var central = [];
+    entries.forEach(function (e) {
+      var offset = p;
+      view.setUint32(p, 0x04034b50, true); view.setUint16(p + 4, 20, true); view.setUint16(p + 6, 0x0800, true);
+      view.setUint16(p + 8, 0, true); view.setUint16(p + 10, time, true); view.setUint16(p + 12, date, true);
+      view.setUint32(p + 14, e.crc, true); view.setUint32(p + 18, e.data.length, true); view.setUint32(p + 22, e.data.length, true);
+      view.setUint16(p + 26, e.name.length, true); view.setUint16(p + 28, 0, true);
+      out.set(e.name, p + 30); out.set(e.data, p + 30 + e.name.length);
+      p += 30 + e.name.length + e.data.length;
+      central.push({ e: e, offset: offset });
+    });
+    var cdStart = p;
+    central.forEach(function (c) {
+      var e = c.e;
+      view.setUint32(p, 0x02014b50, true); view.setUint16(p + 4, 20, true); view.setUint16(p + 6, 20, true);
+      view.setUint16(p + 8, 0x0800, true); view.setUint16(p + 10, 0, true); view.setUint16(p + 12, time, true);
+      view.setUint16(p + 14, date, true); view.setUint32(p + 16, e.crc, true); view.setUint32(p + 20, e.data.length, true);
+      view.setUint32(p + 24, e.data.length, true); view.setUint16(p + 28, e.name.length, true);
+      view.setUint32(p + 42, c.offset, true);
+      out.set(e.name, p + 46);
+      p += 46 + e.name.length;
+    });
+    view.setUint32(p, 0x06054b50, true); view.setUint16(p + 8, entries.length, true); view.setUint16(p + 10, entries.length, true);
+    view.setUint32(p + 12, p - cdStart, true); view.setUint32(p + 16, cdStart, true);
+    return out;
+  }
+
+  var api = { parts: parts, blockXml: blockXml, crc32: crc32, zipStored: zipStored };
+  if (typeof module === "object" && module.exports) module.exports = api;
+  else root.DocxCore = api;
+})(this);
+    </script>
+    <script>
+// Incident record builder: the page side. Everything stays in this tab.
+// No network requests, no cookies, no storage of any kind: closing the tab
+// discards the record, which is why the page asks before it closes. Files
+// are only ever made or read here, on the reader's own device.
+(function () {
+  "use strict";
+  var dataEl = document.getElementById("kit-data");
+  var app = document.getElementById("record-builder");
+  if (!dataEl || !app || !window.KitLogic || !window.DocxCore) return;
+  var kit = JSON.parse(dataEl.textContent);
+  var L = window.KitLogic;
+  var D = window.DocxCore;
+  var state = { actions: {} };
+  var $ = function (id) { return document.getElementById(id); };
+
+  app.hidden = false;
+  var fallback = $("record-fallback");
+  if (fallback) fallback.hidden = true;
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function pad(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  function isoDay(d) {
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  }
+
+  function pill(text, tone) {
+    var t = kit.tones[tone] || kit.tones.neutral;
+    var icon = t.icon ? '<span class="pill-icon" aria-hidden="true">' + t.icon + "</span>" : "";
+    var sr = t.sr ? '<span class="visually-hidden">' + t.sr + ": </span>" : "";
+    return '<span class="pill pill-' + tone + '">' + icon + sr + esc(text) + "</span>";
+  }
+
+  // Short labels in the factor list; full titles in the vendor facts.
+  function sourceLinks(ids, full) {
+    var links = ids
+      .map(function (id) {
+        var s = kit.sources[id];
+        if (!s) return "";
+        return '<a href="' + esc(s.url) + '" rel="noopener">' + esc(full ? s.publisher + ": " + s.title : s.short) + "</a>";
+      })
+      .filter(Boolean);
+    return links.length ? "Source: " + links.join(", ") : "";
+  }
+
+  // ------------------------------------------------------------ date and time controls
+
+  var WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  app.querySelectorAll("[data-days]").forEach(function (box) {
+    var name = box.getAttribute("data-days");
+    var today = new Date();
+    var html = "";
+    for (var i = 0; i < 7; i++) {
+      var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i);
+      var label = i === 0 ? "Today" : i === 1 ? "Yesterday" : WEEKDAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()];
+      html += '<label class="kit-chip"><input type="radio" name="' + name + '" value="' + isoDay(d) + '" autocomplete="off" /><span>' + label + "</span></label>";
+    }
+    html += '<label class="kit-chip"><input type="radio" name="' + name + '" value="earlier" autocomplete="off" /><span>Earlier</span></label>';
+    box.innerHTML = html;
+  });
+
+  app.querySelectorAll('[data-type="datetime"]').forEach(function (field) {
+    var date = field.querySelector(".kit-date");
+    var time = field.querySelector(".kit-time");
+    field.addEventListener("change", function (event) {
+      if (event.target.type !== "radio") return;
+      date.hidden = event.target.value !== "earlier";
+      if (!date.hidden) date.focus();
+    });
+    field.querySelector(".kit-now").addEventListener("click", function () {
+      var now = new Date();
+      field.querySelector('input[type="radio"]').checked = true;
+      date.hidden = true;
+      time.value = pad(now.getHours()) + ":" + pad(now.getMinutes());
+      update();
+    });
+  });
+
+  function readDateTime(field) {
+    var day = field.querySelector('input[type="radio"]:checked');
+    var date = field.querySelector(".kit-date").value;
+    var time = field.querySelector(".kit-time").value;
+    var d = day ? (day.value === "earlier" ? date : day.value) : "";
+    return { value: d && time ? d + "T" + time : "", partial: !!(d || time) && !(d && time) };
+  }
+
+  function setDateTime(field, value) {
+    var day = value.slice(0, 10);
+    var chip = field.querySelector('input[type="radio"][value="' + day + '"]');
+    var date = field.querySelector(".kit-date");
+    if (chip) {
+      chip.checked = true;
+      date.hidden = true;
+    } else {
+      field.querySelector('input[type="radio"][value="earlier"]').checked = true;
+      date.hidden = false;
+      date.value = day;
+    }
+    field.querySelector(".kit-time").value = value.slice(11, 16);
+  }
+
+  // ------------------------------------------------------------ tool, then account
+
+  function showTool(field, tool) {
+    field.querySelectorAll("[data-tool]").forEach(function (g) {
+      var show = g.getAttribute("data-tool") === tool;
+      g.hidden = !show;
+      var inputs = g.querySelectorAll("input");
+      if (!show) inputs.forEach(function (i) { i.checked = false; });
+      else if (inputs.length === 1) inputs[0].checked = true;
+    });
+  }
+
+  app.querySelectorAll('[data-type="plan"]').forEach(function (field) {
+    field.addEventListener("change", function (event) {
+      if (/-tool$/.test(event.target.name)) showTool(field, event.target.value);
+    });
+  });
+
+  function setPlan(field, planId) {
+    var input = field.querySelector('input[name="f-plan"][value="' + planId + '"]');
+    if (!input) return;
+    var tool = input.closest("[data-tool]").getAttribute("data-tool");
+    field.querySelector('input[name="f-plan-tool"][value="' + tool + '"]').checked = true;
+    showTool(field, tool);
+    input.checked = true;
+  }
+
+  // ------------------------------------------------------------ reading and setting the fields
+
+  function read() {
+    state.partial = {};
+    app.querySelectorAll("[data-field]").forEach(function (el) {
+      var id = el.getAttribute("data-field");
+      var type = el.getAttribute("data-type");
+      if (type === "datetime") {
+        var dt = readDateTime(el);
+        state[id] = dt.value;
+        state.partial[id] = dt.partial;
+      } else if (type === "radio" || type === "plan") {
+        var on = el.querySelector('input[name="f-' + id + '"]:checked');
+        state[id] = on ? on.value : "";
+      } else if (type === "checkbox") {
+        state[id] = Array.prototype.map.call(el.querySelectorAll('input[name="f-' + id + '"]:checked'), function (i) {
+          return i.value;
+        });
+      } else if (type === "actions") {
+        var next = {};
+        el.querySelectorAll("input").forEach(function (i) {
+          if (i.checked) next[i.value] = state.actions[i.value] || new Date().getTime();
+          var stamp = el.querySelector('[data-stamp="' + i.value + '"]');
+          if (stamp) stamp.textContent = i.checked ? L.formatDateTime(new Date(next[i.value])) : "";
+        });
+        state.actions = next;
+      } else {
+        state[id] = el.value;
+      }
+    });
+    state.account = L.accountOf(kit, state.plan);
+  }
+
+  function clearControls() {
+    app.querySelectorAll(".kit-form input, .kit-form textarea").forEach(function (el) {
+      if (el.closest(".kit-assist")) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = false;
+      else el.value = "";
+    });
+    app.querySelectorAll("[data-tool], .kit-date").forEach(function (el) { el.hidden = true; });
+  }
+
+  function setControls(next) {
+    clearControls();
+    app.querySelectorAll("[data-field]").forEach(function (el) {
+      var id = el.getAttribute("data-field");
+      var type = el.getAttribute("data-type");
+      var v = next[id];
+      var tick = function (value) {
+        var input = el.querySelector('input[name="f-' + id + '"][value="' + value + '"]');
+        if (input) input.checked = true;
+      };
+      if (type === "datetime") { if (v) setDateTime(el, v); }
+      else if (type === "plan") { if (v) setPlan(el, v); }
+      else if (type === "radio") { if (v) tick(v); }
+      else if (type === "checkbox") (v || []).forEach(tick);
+      else if (type === "actions") Object.keys(next.actions || {}).forEach(tick);
+      else el.value = v || "";
+    });
+    state = { actions: Object.assign({}, next.actions) };
+    update();
+  }
+
+  function hasAnswers() {
+    return Array.prototype.some.call(app.querySelectorAll(".kit-form input, .kit-form textarea"), function (el) {
+      if (el.closest(".kit-assist")) return false;
+      return el.type === "radio" || el.type === "checkbox" ? el.checked : el.value !== "";
+    });
+  }
+
+  // ------------------------------------------------------------ the summary panel
+
+  function showDeadline() {
+    var box = $("deadline");
+    var bar = $("kit-bar-text");
+    var dl = L.deadline(state.aware_at, new Date());
+    if (!dl) {
+      var msg = state.partial && state.partial.aware_at ? "Add the day and the time to see the 72-hour point." : "Fill in when the firm became aware, and the 72-hour point appears here.";
+      box.innerHTML = '<p class="kit-deadline-empty">' + msg + "</p>";
+      bar.textContent = "72-hour point: add when the firm became aware";
+      return;
+    }
+    var processor = state.role === "processor";
+    box.innerHTML =
+      '<p class="kit-deadline-label">' + (processor ? "72 hours after your firm became aware (for reference)" : "72 hours after becoming aware") + "</p>" +
+      '<p class="kit-deadline-time">' + esc(dl.label) + "</p>" +
+      '<p class="kit-deadline-left">' +
+      (dl.passed
+        ? pill("Passed " + dl.remaining + " ago", "warning") + " A late report must give the reasons for the delay."
+        : pill(dl.remaining + " left", "neutral")) +
+      "</p>";
+    bar.innerHTML = "<strong>" + esc(dl.label) + "</strong><span>" + esc(dl.passed ? "passed " + dl.remaining + " ago" : dl.remaining + " left") + "</span>";
+  }
+
+  function showRole() {
+    $("role-note").hidden = state.role !== "processor";
+  }
+
+  function showPlan() {
+    var box = $("plan-panel");
+    var plan = L.planById(kit, state.plan);
+    if (!state.plan) {
+      box.hidden = true;
+      return;
+    }
+    box.hidden = false;
+    box.className = "kit-card kit-plan";
+    if (!plan) {
+      var other = kit.other_accounts.filter(function (o) { return o.id === state.plan; })[0];
+      box.innerHTML = '<p class="kit-plan-title">' + esc(other ? other.label : "") + '</p><p class="kit-fact">' + esc(other ? other.advice : "") + "</p>";
+      return;
+    }
+    var tag = plan.account === "work" ? '<span class="tag tag-work">Work</span>' : '<span class="tag tag-personal">Personal</span>';
+    var rows = plan.facts
+      .map(function (f) {
+        return '<div class="plan-row"><dt>' + esc(f.label) + "</dt><dd>" + pill(f.short, f.tone) + "</dd></div>";
+      })
+      .join("");
+    var words = plan.facts
+      .map(function (f) {
+        return '<p class="kit-fact"><strong>' + esc(f.label) + "</strong> " + esc(f.text) + '</p><p class="kit-src">' + sourceLinks(f.sources, true) + "</p>";
+      })
+      .join("");
+    box.innerHTML =
+      '<div class="plan-head">' + tag + '<p class="kit-plan-title">' + esc(plan.name) + "</p></div>" +
+      '<dl class="plan-rows">' + rows + "</dl>" +
+      '<details class="kit-plan-more"><summary>In the vendor\'s words, with sources</summary>' + words + "</details>" +
+      (plan.incident_note ? '<p class="kit-plan-todo"><strong>In this account:</strong> ' + esc(plan.incident_note) + "</p>" : "") +
+      '<p class="kit-src">From the <a href="/' + esc(plan.slug) + '">' + esc(plan.tool) + " page</a> of the AI accounts guide, checked " + esc(kit.guideCheckedHuman) + ".</p>";
+  }
+
+  function showFactors() {
+    var f = L.factors(kit, state);
+    var groups = [
+      ["up", "Point towards reporting", "critical"],
+      ["down", "May lower the risk", "good"],
+      ["unknown", "Still to find out", "unknown"]
+    ];
+    $("factors").innerHTML = groups
+      .map(function (g) {
+        var items = f[g[0]];
+        if (!items.length) return "";
+        return '<div class="kit-factor-group"><p class="kit-factor-head">' + pill(g[1], g[2]) + '</p><ul class="kit-factor-list">' +
+          items
+            .map(function (x) {
+              return "<li><strong>" + esc(x.criterion) + ".</strong> " + esc(x.text) +
+                (x.high_risk ? ' <span class="kit-high">Can point to a high risk: consider telling the people concerned too.</span>' : "") +
+                (x.sources.length ? ' <span class="kit-src">' + sourceLinks(x.sources) + "</span>" : "") + "</li>";
+            })
+            .join("") +
+          "</ul></div>";
+      })
+      .join("") || '<p class="kit-deadline-empty">Answer the questions; the factors appear here as you go.</p>';
+  }
+
+  function update() {
+    read();
+    showDeadline();
+    showRole();
+    showPlan();
+    showFactors();
+  }
+
+  app.addEventListener("input", function (event) { if (!event.target.closest(".kit-assist")) update(); });
+  app.addEventListener("change", function (event) { if (!event.target.closest(".kit-assist")) update(); });
+  setInterval(showDeadline, 30000);
+
+  $("kit-bar-save").addEventListener("click", function () {
+    var card = $("save-card");
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+    card.focus({ preventScroll: true });
+  });
+
+  // ------------------------------------------------------------ copy buttons
+
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    var target = $(button.getAttribute("data-copy"));
+    var label = button.textContent;
+    button.addEventListener("click", function () {
+      if (!target || !navigator.clipboard) return;
+      navigator.clipboard.writeText(target.textContent.trim()).then(function () {
+        button.textContent = button.getAttribute("data-copied") || "Copied";
+        setTimeout(function () { button.textContent = label; }, 2500);
+      });
+    });
+  });
+
+  // ------------------------------------------------------------ loading a record
+
+  var result = $("load-result");
+
+  function showResult(text, ok) {
+    result.hidden = false;
+    result.className = "kit-load-result " + (ok ? "is-ok" : "is-warn");
+    result.textContent = text;
+  }
+
+  function load(obj) {
+    if (!obj) {
+      showResult("That doesn't look like a record. Paste the JSON block your assistant gave you, or open a .json file saved from this page.", false);
+      return false;
+    }
+    var res = L.normalizeRecord(kit, obj);
+    if (!res.applied) {
+      showResult("Nothing in it matches the questions here, so nothing was filled in.", false);
+      return false;
+    }
+    if (hasAnswers() && !window.confirm("Replace what you filled in with this record?")) return false;
+    setControls(res.state);
+    showResult(
+      "Filled in " + res.applied + (res.applied === 1 ? " answer" : " answers") + ". Check them, then save." +
+        (res.ignored.length ? " Left out because they didn't match the questions: " + res.ignored.join("; ") + "." : ""),
+      !res.ignored.length
+    );
+    return true;
+  }
+
+  var panel = $("paste-panel");
+  $("paste-open").addEventListener("click", function () {
+    panel.hidden = !panel.hidden;
+    this.setAttribute("aria-expanded", String(!panel.hidden));
+    if (!panel.hidden) $("paste-box").focus();
+  });
+  $("paste-cancel").addEventListener("click", function () {
+    panel.hidden = true;
+    $("paste-open").setAttribute("aria-expanded", "false");
+    $("paste-box").value = "";
+  });
+  $("paste-load").addEventListener("click", function () {
+    if (load(L.parsePasted($("paste-box").value))) {
+      panel.hidden = true;
+      $("paste-open").setAttribute("aria-expanded", "false");
+      $("paste-box").value = "";
+    }
+  });
+  $("file-open").addEventListener("change", function () {
+    var input = this;
+    var file = input.files && input.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      load(L.parsePasted(String(reader.result)));
+      input.value = "";
+    };
+    reader.readAsText(file);
+  });
+
+  // ------------------------------------------------------------ saving the record
+
+  var DOCX = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
+  function blocks() {
+    read();
+    return L.recordBlocks(kit, state, new Date());
+  }
+
+  function wordFile() {
+    var day = isoDay(new Date());
+    return { bytes: D.zipStored(D.parts(blocks(), { title: "AI data incident record", date: day }), day), name: "ai-incident-record-" + day + ".docx" };
+  }
+
+  function save(bytes, type, filename) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([bytes], { type: type }));
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () {
+      URL.revokeObjectURL(a.href);
+      a.remove();
+    }, 0);
+  }
+
+  $("rec-download").addEventListener("click", function () {
+    var w = wordFile();
+    save(w.bytes, DOCX, w.name);
+  });
+
+  // Share: the phone's own share sheet (mail, chat, files). The page sends nothing itself.
+  var shareButton = $("rec-share");
+  if (navigator.canShare && navigator.share && typeof File === "function") {
+    try {
+      if (navigator.canShare({ files: [new File(["x"], "test.docx", { type: DOCX })] })) shareButton.hidden = false;
+    } catch (e) { /* not supported */ }
+  }
+  shareButton.addEventListener("click", function () {
+    var w = wordFile();
+    navigator.share({ files: [new File([w.bytes], w.name, { type: DOCX })], title: "AI data incident record" }).catch(function () {});
+  });
+
+  $("rec-json").addEventListener("click", function () {
+    read();
+    var now = new Date();
+    save(JSON.stringify(L.recordJson(kit, state, now), null, 2) + "\n", "application/json", "ai-incident-record-" + isoDay(now) + ".json");
+  });
+
+  $("rec-copy").addEventListener("click", function (event) {
+    var button = event.currentTarget;
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(L.blocksToText(blocks())).then(function () {
+      button.textContent = "Copied";
+      setTimeout(function () { button.textContent = "Copy as text"; }, 2000);
+    });
+  });
+
+  // The print view: the record as a clean document, nothing else.
+  function inline(t) {
+    return esc(t).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  }
+
+  $("rec-print").addEventListener("click", function () {
+    $("print-record").innerHTML = blocks()
+      .map(function (b) {
+        if (b.type === "title") return "<h1>" + inline(b.text) + "</h1>";
+        if (b.type === "h1") return "<h2>" + inline(b.text) + "</h2>";
+        if (b.type === "h2") return "<h3>" + inline(b.text) + "</h3>";
+        if (b.type === "kv") return '<p class="kv"><strong>' + inline(b.label) + "</strong><br />" + inline(b.value) + "</p>";
+        if (b.type === "bullets") return "<ul>" + b.items.map(function (i) { return "<li>" + inline(i) + "</li>"; }).join("") + "</ul>";
+        if (b.type === "small") return '<p class="small">' + inline(b.text) + "</p>";
+        return "<p>" + inline(b.text) + "</p>";
+      })
+      .join("");
+    window.print();
+  });
+
+  $("rec-clear").addEventListener("click", function () {
+    if (!window.confirm("Clear everything you filled in? Nothing is saved anywhere, so this can't be undone.")) return;
+    clearControls();
+    result.hidden = true;
+    state = { actions: {} };
+    update();
+  });
+
+  window.addEventListener("beforeunload", function (event) {
+    if (hasAnswers()) {
+      event.preventDefault();
+      event.returnValue = "";
+    }
+  });
+
+  update();
+})();
+    </script>
+  </body>
+</html>

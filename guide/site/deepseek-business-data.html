@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>DeepSeek and GDPR: what the app does with your business data | Noxiom</title>
+    <meta name="description" content="DeepSeek's app stores personal data in China and uses it for training unless you opt out by email. What that means for client data, with sources and dates." />
+    <link rel="canonical" href="https://noxiom.com/deepseek-business-data" />
+    <meta property="og:title" content="DeepSeek and business data: what the app does with what you type" />
+    <meta property="og:description" content="DeepSeek's app stores personal data in China and uses it for training unless you opt out by email. What that means for client data, with sources and dates." />
+    <meta property="og:url" content="https://noxiom.com/deepseek-business-data" />
+    <meta property="article:modified_time" content="2026-11-22" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DeepSeek and business data: what the app does with what you type",
+  "description": "DeepSeek's app stores personal data in China and uses it for training unless you opt out by email. What that means for client data, with sources and dates.",
+  "url": "https://noxiom.com/deepseek-business-data",
+  "mainEntityOfPage": "https://noxiom.com/deepseek-business-data",
+  "inLanguage": "en",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is DeepSeek GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We don't label any tool compliant or not, but DeepSeek's own app is a poor fit for client data: personal data is stored in China, it is used for training unless you opt out by email, and there is no processor agreement. In February 2025 the Dutch data protection authority warned users to be very careful and announced an investigation into data transfers to China."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DeepSeek have a business plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We found none for the app and website: its privacy policy describes no business accounts or processor agreement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about DeepSeek models run by other providers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DeepSeek's privacy policy says it doesn't cover apps that developers build on its platform, and companies that run DeepSeek's models on their own infrastructure have their own terms. Those can be very different, so assess each one separately."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Personal or work account?",
+      "item": "https://noxiom.com/ai-accounts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DeepSeek",
+      "item": "https://noxiom.com/deepseek-business-data"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap">
+        <a class="report-back" href="/ai-accounts">&larr; All AI accounts</a>
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide &middot; DeepSeek</span>
+            <h1>DeepSeek and business data: what the app does with what you type</h1>
+            <p class="guide-lead">DeepSeek's own app and website store personal data in China, use it for training unless you opt out by email, and have no business plan or processor agreement. This page covers the DeepSeek service itself, not other companies that run DeepSeek's models on their own infrastructure.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-22">22 November 2026</time></strong></span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span>Part of <a href="/ai-accounts">the AI accounts guide</a></span>
+            </p>
+          </div>
+
+<div class="guide-plans guide-plans-1">
+<article class="plan-card plan-personal" id="plan-deepseek-app">
+  <div class="plan-head"><span class="tag tag-personal">Personal</span><h3>DeepSeek app and website</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></p>
+  <p class="plan-why">Data is stored in China, it is used for training unless you opt out by email, and there is no business contract. The Dutch data protection authority warned users to be very careful with DeepSeek in February 2025.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>China</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>While the account exists</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Free app</p>
+</article>
+</div>
+<p class="guide-legend">
+  <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>In your favour</span>
+  <span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Has a catch</span>
+  <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>A problem for client data</span>
+  <span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>The vendor doesn't say</span>
+</p>
+
+          <h2 id="tell">How to tell which one someone is using</h2>
+<ul class="report-list">
+<li>Every use of the DeepSeek app or website is the consumer service. There is no work account to switch to.</li>
+</ul>
+
+          <details class="guide-more" id="compare">
+            <summary>Full comparison, in the vendor's words <span class="summary-hint">with sources</span></summary>
+            <p class="guide-note">What DeepSeek itself states, in our words. Where the vendor doesn't say, we say "not stated" rather than guess.</p>
+<div class="report-table-wrap">
+<table class="report-table guide-compare guide-cols-1">
+<thead><tr><th scope="col"><span class="visually-hidden">Question</span></th><th scope="col"><span class="tag tag-personal">Personal</span> DeepSeek app</th></tr></thead>
+<tbody>
+<tr><th scope="row">Trains on what you type?</th><td data-label="DeepSeek app"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes</span> DeepSeek's privacy policy lists training and improving its models as a purpose. It gives users a right to opt out of training, exercised by emailing DeepSeek. Third-party guides mention an in-app setting; we haven't verified it.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">How long it is kept</th><td data-label="DeepSeek app"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>While the account exists</span> Kept for as long as you have an account. You can delete chat history in the settings.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">People reading chats</th><td data-label="DeepSeek app"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span> The privacy policy doesn't say whether people review chats.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Where it is stored</th><td data-label="DeepSeek app"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>China</span> DeepSeek: &quot;we directly collect, process and store your Personal Data in People's Republic of China.&quot;<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Contract with your firm</th><td data-label="DeepSeek app"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None</span> No business plan or processor agreement found. The controller is Hangzhou DeepSeek Artificial Intelligence Co., Ltd., and its EU representative is Prighter.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Can your firm manage it?</th><td data-label="DeepSeek app"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span> There is no work version to manage.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Price</th><td data-label="DeepSeek app"><span class="pill pill-neutral">Free app</span> Free to use. No paid business plan is described.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+          </details>
+          <details class="guide-more" id="admin">
+            <summary>What to decide</summary>
+<ul class="report-list">
+<li>There is no work version to configure. Decide whether DeepSeek is allowed at all, write the decision into your rules, and tell staff.</li>
+<li>If you block it on company devices or the office network, remember that blocking doesn't reach personal phones.</li>
+</ul>
+          </details>
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account?</summary>
+            <p>Delete the chat history in DeepSeek's settings. DeepSeek's policy says users exercise their privacy rights, including the training opt-out, by emailing privacy@deepseek.com. Record what you asked and when.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p>
+            <p>Then write down what happened, assess the risk to the people concerned, and decide on notification within 72 hours. Step by step, with a record you can fill in: <a href="/ai-data-incident">the first 72 hours</a>.</p>
+          </details>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>Is DeepSeek GDPR compliant?</summary><p>We don't label any tool compliant or not, but DeepSeek's own app is a poor fit for client data: personal data is stored in China, it is used for training unless you opt out by email, and there is no processor agreement. In February 2025 the Dutch data protection authority warned users to be very careful and announced an investigation into data transfers to China.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a>, <a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
+<details class="guide-faq"><summary>Does DeepSeek have a business plan?</summary><p>We found none for the app and website: its privacy policy describes no business accounts or processor agreement.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>What about DeepSeek models run by other providers?</summary><p>DeepSeek's privacy policy says it doesn't cover apps that developers build on its platform, and companies that run DeepSeek's models on their own infrastructure have their own terms. Those can be very different, so assess each one separately.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+</div>
+
+          <div class="guide-bridge" id="help">
+            <h2>Which account is your team really using?</h2>
+            <p>
+              This page shows what each DeepSeek account promises, not
+              which one your colleagues use.
+              <a href="/ai-accounts#check">The 20-minute check</a> gives you a
+              first picture for free. Noxiom's fixed-price AI usage review
+              finds out properly and turns it into rules that fit how your
+              team works.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="other-tools">Other tools</h2>
+<nav class="guide-chips" aria-label="Tool pages">
+<a href="/chatgpt-personal-vs-business">ChatGPT personal vs Business &rarr;</a>
+<a href="/copilot-personal-vs-work">Copilot personal vs work account &rarr;</a>
+<a href="/gemini-personal-vs-workspace">Gemini personal vs Workspace &rarr;</a>
+<a href="/claude-personal-vs-team">Claude personal vs Team &rarr;</a>
+</nav>
+
+          <details class="guide-more" id="sources">
+            <summary>Sources and changes</summary>
+            <p class="guide-note">
+              The vendor's own page unless marked otherwise. "Checked" is the
+              date we last read it. Changes are recorded in the
+              <a href="/ai-accounts#changes">change log</a>; corrections to
+              <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>.
+            </p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://www.dutchnews.nl/?p=247047" rel="noopener">DutchNews.nl (reporting the Dutch data protection authority): Dutch privacy watchdog warns about uploading info to DeepSeek</a>. Page dated 3 February 2025. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" rel="noopener">DeepSeek: DeepSeek Privacy Policy</a>. Page dated 10 February 2026. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked 22 November 2026, next check by 22 December 2026. This
+            page describes vendors' published terms; it does not verify them
+            and is not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+// Guide pages: open the collapsed section a link points into, and make the
+// comparison grid filterable and sortable. Reads and stores nothing; without
+// JavaScript the grid is a plain table and the sections still open on click.
+(function () {
+  function openTo(id) {
+    var el = id && document.getElementById(id);
+    for (var d = el; d; d = d.parentElement) if (d.tagName === "DETAILS") d.open = true;
+  }
+  openTo(decodeURIComponent(location.hash.slice(1)));
+  window.addEventListener("hashchange", function () {
+    openTo(decodeURIComponent(location.hash.slice(1)));
+  });
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+    if (link) openTo(link.getAttribute("href").slice(1));
+  });
+
+  var table = document.getElementById("matrix");
+  var controls = document.getElementById("matrixControls");
+  if (!table || !controls) return;
+  var body = table.tBodies[0];
+  var rows = Array.prototype.slice.call(body.rows);
+  var state = { account: "all", tool: "all" };
+  controls.hidden = false;
+
+  controls.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button) return;
+    var key = button.hasAttribute("data-account") ? "account" : "tool";
+    state[key] = button.getAttribute("data-" + key);
+    button.parentElement.querySelectorAll("button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    rows.forEach(function (row) {
+      row.hidden =
+        (state.account !== "all" && row.getAttribute("data-account") !== state.account) ||
+        (state.tool !== "all" && row.getAttribute("data-tool") !== state.tool);
+    });
+  });
+
+  table.querySelectorAll("button.sort").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var col = Number(button.getAttribute("data-col"));
+      var th = button.parentElement;
+      var dir = th.getAttribute("aria-sort") === "ascending" ? "descending" : "ascending";
+      table.querySelectorAll("th[aria-sort]").forEach(function (h) {
+        h.setAttribute("aria-sort", "none");
+      });
+      th.setAttribute("aria-sort", dir);
+      var sign = dir === "ascending" ? 1 : -1;
+      rows
+        .slice()
+        .sort(function (a, b) {
+          var diff = Number(a.cells[col].getAttribute("data-sort")) - Number(b.cells[col].getAttribute("data-sort"));
+          return diff !== 0 ? sign * diff : Number(a.getAttribute("data-order")) - Number(b.getAttribute("data-order"));
+        })
+        .forEach(function (row) {
+          body.appendChild(row);
+        });
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

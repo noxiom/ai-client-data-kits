@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Copilot work vs personal account: the green shield explained | Noxiom</title>
+    <meta name="description" content="Consumer Copilot, Copilot Chat and Microsoft 365 Copilot handle business data differently. Training, storage, contracts and the green shield, sourced." />
+    <link rel="canonical" href="https://noxiom.com/copilot-personal-vs-work" />
+    <meta property="og:title" content="Copilot personal vs work account: what happens to your business data" />
+    <meta property="og:description" content="Consumer Copilot, Copilot Chat and Microsoft 365 Copilot handle business data differently. Training, storage, contracts and the green shield, sourced." />
+    <meta property="og:url" content="https://noxiom.com/copilot-personal-vs-work" />
+    <meta property="article:modified_time" content="2026-11-22" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Copilot personal vs work account: what happens to your business data",
+  "description": "Consumer Copilot, Copilot Chat and Microsoft 365 Copilot handle business data differently. Training, storage, contracts and the green shield, sourced.",
+  "url": "https://noxiom.com/copilot-personal-vs-work",
+  "mainEntityOfPage": "https://noxiom.com/copilot-personal-vs-work",
+  "inLanguage": "en",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the green shield in Copilot mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It shows that enterprise data protection applies: the person is signed in with a work (Entra ID) account, and prompts and responses fall under Microsoft's Data Protection Addendum and Product Terms. No green shield means a personal Microsoft account and consumer terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Copilot Chat and Microsoft 365 Copilot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copilot Chat comes with eligible Microsoft 365 work accounts at no extra cost and works from the web plus whatever people paste or upload. Microsoft 365 Copilot is a paid licence that can also draw on your organisation's mail, files, meetings and Teams through Microsoft Graph, limited to what each user is allowed to open."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Microsoft 365 Copilot GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No tool is compliant on its own; compliance depends on how your firm uses it. Microsoft 365 Copilot gives you what compliant use needs from the vendor: a DPA with Microsoft as processor, no training on your prompts, and EU Data Boundary processing for EU customers. Two things fall outside: web search queries sent to Bing, and Anthropic models, which Microsoft lists as currently excluded from the EU Data Boundary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the consumer Copilot app train on my conversations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the updated app (available since 18 August 2026), Microsoft says prompts, responses and files aren't used to train foundation models. Optional feedback may still be used to improve Copilot. The older app did train on conversations unless you opted out."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Personal or work account?",
+      "item": "https://noxiom.com/ai-accounts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Microsoft Copilot",
+      "item": "https://noxiom.com/copilot-personal-vs-work"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap">
+        <a class="report-back" href="/ai-accounts">&larr; All AI accounts</a>
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide &middot; Microsoft</span>
+            <h1>Copilot personal vs work account: what happens to your business data</h1>
+            <p class="guide-lead">&quot;Copilot&quot; is three different products. The consumer app with a personal Microsoft account has no contract with your firm. Microsoft 365 Copilot Chat, used with a work account, is covered by Microsoft's Data Protection Addendum, shows a green shield and costs nothing extra. The paid Microsoft 365 Copilot licence adds access to your organisation's mail and files. In both work versions, web search queries sit outside the DPA.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-22">22 November 2026</time></strong></span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span>Part of <a href="/ai-accounts">the AI accounts guide</a></span>
+            </p>
+          </div>
+
+<div class="guide-plans guide-plans-3">
+<article class="plan-card plan-personal" id="plan-copilot-personal">
+  <div class="plan-head"><span class="tag tag-personal">Personal</span><h3>Microsoft Copilot app, personal account</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></p>
+  <p class="plan-why">Microsoft's training change helps, but there is still no contract with your firm and no admin control, and retention and review aren't stated for the updated app.</p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>No (foundation models)</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Free</p>
+</article>
+<article class="plan-card plan-work" id="plan-copilot-chat-work">
+  <div class="plan-head"><span class="tag tag-work">Work</span><h3>Microsoft 365 Copilot Chat, work account</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></p>
+  <p class="plan-why">If staff are signed in with their work account (green shield), your firm has decided which data may go in, and you have made a decision about web search, which falls outside the DPA.</p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, except web search</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Your policies</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Opted out</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Included</p>
+</article>
+<article class="plan-card plan-work" id="plan-m365-copilot">
+  <div class="plan-head"><span class="tag tag-work">Work</span><h3>Microsoft 365 Copilot (paid licence, including Copilot Business)</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></p>
+  <p class="plan-why">The same conditions as Copilot Chat, plus one more: fix file and mailbox permissions before rollout, because Copilot shows people whatever they already have access to.</p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, with exceptions</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Your policies</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Opted out</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Business: $21 per user a month</p>
+</article>
+</div>
+<p class="guide-legend">
+  <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>In your favour</span>
+  <span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Has a catch</span>
+  <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>A problem for client data</span>
+  <span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>The vendor doesn't say</span>
+</p>
+
+          <h2 id="tell">How to tell which one someone is using</h2>
+<ul class="report-list">
+<li>Work account with enterprise data protection: Microsoft shows a green shield at the top of Copilot, next to the New Chat button.</li>
+<li>No green shield means a personal Microsoft account, under consumer terms.</li>
+<li>Copilot inside Word or Outlook from a Microsoft 365 Personal or Family subscription is the consumer product too, even on a work laptop.</li>
+</ul>
+
+          <details class="guide-more" id="compare">
+            <summary>Full comparison, in the vendor's words <span class="summary-hint">with sources</span></summary>
+            <p class="guide-note">What Microsoft itself states, in our words. Where the vendor doesn't say, we say "not stated" rather than guess.</p>
+<div class="report-table-wrap">
+<table class="report-table guide-compare guide-cols-3">
+<thead><tr><th scope="col"><span class="visually-hidden">Question</span></th><th scope="col"><span class="tag tag-personal">Personal</span> Copilot app (personal)</th><th scope="col"><span class="tag tag-work">Work</span> Copilot Chat (work)</th><th scope="col"><span class="tag tag-work">Work</span> Microsoft 365 Copilot</th></tr></thead>
+<tbody>
+<tr><th scope="row">Trains on what you type?</th><td data-label="Copilot app (personal)"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>No (foundation models)</span> Microsoft says prompts, responses and files in the updated Copilot app (available since 18 August 2026) aren't used to train foundation models. Optional feedback may be used to improve Copilot. The older app trained on conversations by default unless you opted out.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span> Microsoft: &quot;Copilot Chat does not use your data to train foundation models.&quot;<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-4" aria-label="Source 4">4</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span> Microsoft says prompts, responses and data accessed through Microsoft Graph aren't used to train foundation models.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td></tr>
+<tr><th scope="row">How long it is kept</th><td data-label="Copilot app (personal)"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span> Microsoft's pages for the updated app don't state a retention period. Chats are kept so you can return to them and can be deleted one by one. The older app kept activity for 18 months by default. Older-app chats not moved to the updated app by 31 December 2026 are permanently deleted.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Your policies</span> Prompts and responses are stored in your Microsoft 365 tenant (in Exchange) for audit and eDiscovery, under the same Purview retention policies you use for Microsoft 365.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Your policies</span> Interactions are stored in your tenant. Admins can search them and set retention policies, and users can delete their own history.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td></tr>
+<tr><th scope="row">People reading chats</th><td data-label="Copilot app (personal)"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span> Microsoft's pages for the updated app don't say. For the older app, Microsoft said some conversations get automated and human review for product improvement and safety, with no opt-out.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Opted out</span> Microsoft says its Copilot services have opted out of the human abuse-monitoring review used in Azure OpenAI (stated on its Microsoft 365 Copilot privacy page).<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Opted out</span> Microsoft says its Copilot services have opted out of the human abuse-monitoring review used in Azure OpenAI.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td></tr>
+<tr><th scope="row">Where it is stored</th><td data-label="Copilot app (personal)"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span> The consumer pages we read don't say where conversations are stored. The EU Data Boundary is a commitment for Microsoft's work services.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, except web search</span> EU traffic stays within the EU Data Boundary. Exception: web search queries sent to Bing are not covered by the EU Data Boundary or the DPA, and Bing handles them as an independent controller.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, with exceptions</span> For EU customers it is an EU Data Boundary service. Exceptions: web search queries sent to Bing, and Anthropic models, which Microsoft lists as currently excluded from the EU Data Boundary.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Contract with your firm</th><td data-label="Copilot app (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span> Use is governed by Microsoft's consumer privacy terms, with the individual. Microsoft's Data Protection Addendum covers Copilot only when people sign in with a work (Entra ID) account.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span> Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-4" aria-label="Source 4">4</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span> Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Can your firm manage it?</th><td data-label="Copilot app (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span> Nothing for the firm to manage. On company devices, admins can stop personal-account sign-in to Copilot with tenant restrictions.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span> Admins can remove access, switch web search off with the &quot;Allow web search in Copilot&quot; policy, and see a usage report. Users see a green shield next to New Chat when enterprise data protection applies. Copilot Chat can't search your organisation's mail and files by itself; people bring data in by pasting or uploading.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-6" aria-label="Source 6">6</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span> Everything Copilot Chat offers, plus Microsoft Purview and SharePoint Advanced Management. Copilot can draw on everything a user is allowed to open in mail, files, Teams and calendars, so loose sharing permissions become visible quickly.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td></tr>
+<tr><th scope="row">Price</th><td data-label="Copilot app (personal)"><span class="pill pill-neutral">Free</span> The app is free. Copilot features are also built into Microsoft 365 Personal and Family subscriptions, which are consumer products.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Copilot Chat (work)"><span class="pill pill-neutral">Included</span> Included with eligible Microsoft 365 work accounts at no extra cost.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></td><td data-label="Microsoft 365 Copilot"><span class="pill pill-neutral">Business: $21 per user a month</span> Microsoft 365 Copilot Business, for organisations of up to 300 users: USD 21 per user per month on annual billing (Microsoft, March 2026). We did not check the enterprise licence price.<sup class="cite"><a href="#src-7" aria-label="Source 7">7</a>, <a href="#src-8" aria-label="Source 8">8</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+          </details>
+          <details class="guide-more" id="admin">
+            <summary>What an admin should check</summary>
+<ul class="report-list">
+<li>Make sure people use Copilot signed in with their work account. Ask them to look for the green shield.</li>
+<li>Decide on web search. Queries sent to Bing aren't covered by the DPA or the EU Data Boundary. The &quot;Allow web search in Copilot&quot; policy switches it off.</li>
+<li>Stop personal-account sign-in to Copilot on company devices with tenant restrictions. Microsoft advises against simply blocking the Copilot address.</li>
+<li>Check the Copilot Chat usage report to see who uses it.</li>
+<li>Before buying Microsoft 365 Copilot licences, review who can open which SharePoint sites, Teams and shared files. Copilot surfaces everything a user can open.</li>
+</ul>
+          </details>
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account?</summary>
+            <p>In the consumer app, delete the conversation from the chat list. Microsoft's pages for the updated app don't state how long deleted or kept chats are retained, so record that you could not confirm it.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p>
+            <p>Then write down what happened, assess the risk to the people concerned, and decide on notification within 72 hours. Step by step, with a record you can fill in: <a href="/ai-data-incident">the first 72 hours</a>.</p>
+          </details>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>What does the green shield in Copilot mean?</summary><p>It shows that enterprise data protection applies: the person is signed in with a work (Entra ID) account, and prompts and responses fall under Microsoft's Data Protection Addendum and Product Terms. No green shield means a personal Microsoft account and consumer terms.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-4" aria-label="Source 4">4</a></sup></p></details>
+<details class="guide-faq"><summary>What's the difference between Copilot Chat and Microsoft 365 Copilot?</summary><p>Copilot Chat comes with eligible Microsoft 365 work accounts at no extra cost and works from the web plus whatever people paste or upload. Microsoft 365 Copilot is a paid licence that can also draw on your organisation's mail, files, meetings and Teams through Microsoft Graph, limited to what each user is allowed to open.<sup class="cite"><a href="#src-6" aria-label="Source 6">6</a>, <a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-4" aria-label="Source 4">4</a></sup></p></details>
+<details class="guide-faq"><summary>Is Microsoft 365 Copilot GDPR compliant?</summary><p>No tool is compliant on its own; compliance depends on how your firm uses it. Microsoft 365 Copilot gives you what compliant use needs from the vendor: a DPA with Microsoft as processor, no training on your prompts, and EU Data Boundary processing for EU customers. Two things fall outside: web search queries sent to Bing, and Anthropic models, which Microsoft lists as currently excluded from the EU Data Boundary.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></p></details>
+<details class="guide-faq"><summary>Does the consumer Copilot app train on my conversations?</summary><p>For the updated app (available since 18 August 2026), Microsoft says prompts, responses and files aren't used to train foundation models. Optional feedback may still be used to improve Copilot. The older app did train on conversations unless you opted out.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+</div>
+
+          <div class="guide-bridge" id="help">
+            <h2>Which account is your team really using?</h2>
+            <p>
+              This page shows what each Microsoft Copilot account promises, not
+              which one your colleagues use.
+              <a href="/ai-accounts#check">The 20-minute check</a> gives you a
+              first picture for free. Noxiom's fixed-price AI usage review
+              finds out properly and turns it into rules that fit how your
+              team works.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="other-tools">Other tools</h2>
+<nav class="guide-chips" aria-label="Tool pages">
+<a href="/chatgpt-personal-vs-business">ChatGPT personal vs Business &rarr;</a>
+<a href="/gemini-personal-vs-workspace">Gemini personal vs Workspace &rarr;</a>
+<a href="/claude-personal-vs-team">Claude personal vs Team &rarr;</a>
+<a href="/deepseek-business-data">DeepSeek and business data &rarr;</a>
+</nav>
+
+          <details class="guide-more" id="sources">
+            <summary>Sources and changes</summary>
+            <p class="guide-note">
+              The vendor's own page unless marked otherwise. "Checked" is the
+              date we last read it. Changes are recorded in the
+              <a href="/ai-accounts#changes">change log</a>; corrections to
+              <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>.
+            </p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history" rel="noopener">Microsoft: Microsoft Copilot activity history (updated app)</a>. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://support.microsoft.com/en-us/topic/privacy-faq-for-microsoft-copilot-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f" rel="noopener">Microsoft: Privacy FAQ for Microsoft Copilot (older app)</a>. Checked 22 November 2026.</li>
+<li id="src-3"><a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Microsoft: Privacy and protections for Microsoft 365 Copilot Chat</a>. Page dated 19 November 2026. Checked 22 November 2026.</li>
+<li id="src-4"><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/enterprise-data-protection" rel="noopener">Microsoft: Enterprise data protection in Microsoft 365 Copilot and Copilot Chat</a>. Page dated 4 November 2026. Checked 22 November 2026.</li>
+<li id="src-5"><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy" rel="noopener">Microsoft: Data, privacy, and security for Microsoft 365 Copilot</a>. Page dated 4 November 2026. Checked 22 November 2026.</li>
+<li id="src-6"><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Microsoft: What is Microsoft Copilot? (licensing overview)</a>. Page dated 17 November 2026. Checked 22 November 2026.</li>
+<li id="src-7"><a href="https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/act-now-lock-in-current-pricing-on-microsoft-365-copilot/ba-p/4502628" rel="noopener">Microsoft Tech Community: Act now: lock in current pricing on Microsoft 365 Copilot</a>. Page dated 17 March 2026. Checked 22 November 2026.</li>
+<li id="src-8"><a href="https://learn.microsoft.com/en-us/copilot/plan/copilot-license-options" rel="noopener">Microsoft: License options for Microsoft Copilot</a>. Page dated 4 November 2026. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked 22 November 2026, next check by 22 December 2026. This
+            page describes vendors' published terms; it does not verify them
+            and is not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+// Guide pages: open the collapsed section a link points into, and make the
+// comparison grid filterable and sortable. Reads and stores nothing; without
+// JavaScript the grid is a plain table and the sections still open on click.
+(function () {
+  function openTo(id) {
+    var el = id && document.getElementById(id);
+    for (var d = el; d; d = d.parentElement) if (d.tagName === "DETAILS") d.open = true;
+  }
+  openTo(decodeURIComponent(location.hash.slice(1)));
+  window.addEventListener("hashchange", function () {
+    openTo(decodeURIComponent(location.hash.slice(1)));
+  });
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+    if (link) openTo(link.getAttribute("href").slice(1));
+  });
+
+  var table = document.getElementById("matrix");
+  var controls = document.getElementById("matrixControls");
+  if (!table || !controls) return;
+  var body = table.tBodies[0];
+  var rows = Array.prototype.slice.call(body.rows);
+  var state = { account: "all", tool: "all" };
+  controls.hidden = false;
+
+  controls.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button) return;
+    var key = button.hasAttribute("data-account") ? "account" : "tool";
+    state[key] = button.getAttribute("data-" + key);
+    button.parentElement.querySelectorAll("button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    rows.forEach(function (row) {
+      row.hidden =
+        (state.account !== "all" && row.getAttribute("data-account") !== state.account) ||
+        (state.tool !== "all" && row.getAttribute("data-tool") !== state.tool);
+    });
+  });
+
+  table.querySelectorAll("button.sort").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var col = Number(button.getAttribute("data-col"));
+      var th = button.parentElement;
+      var dir = th.getAttribute("aria-sort") === "ascending" ? "descending" : "ascending";
+      table.querySelectorAll("th[aria-sort]").forEach(function (h) {
+        h.setAttribute("aria-sort", "none");
+      });
+      th.setAttribute("aria-sort", dir);
+      var sign = dir === "ascending" ? 1 : -1;
+      rows
+        .slice()
+        .sort(function (a, b) {
+          var diff = Number(a.cells[col].getAttribute("data-sort")) - Number(b.cells[col].getAttribute("data-sort"));
+          return diff !== 0 ? sign * diff : Number(a.getAttribute("data-order")) - Number(b.getAttribute("data-order"));
+        })
+        .forEach(function (row) {
+          body.appendChild(row);
+        });
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

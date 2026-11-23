@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Pasted company or client data into ChatGPT? What to do now | Noxiom</title>
+    <meta name="description" content="Put client or company information into ChatGPT, Copilot, Gemini or another AI tool? Note what went in, tell your firm today, then delete it. What to do, per tool." />
+    <link rel="canonical" href="https://noxiom.com/pasted-company-data-into-ai" />
+    <meta property="og:title" content="I put company information into an AI tool. What now?" />
+    <meta property="og:description" content="Put client or company information into ChatGPT, Copilot, Gemini or another AI tool? Note what went in, tell your firm today, then delete it. What to do, per tool." />
+    <meta property="og:url" content="https://noxiom.com/pasted-company-data-into-ai" />
+    <meta property="article:modified_time" content="2026-11-23" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I put company information into an AI tool. What now?",
+  "description": "Put client or company information into ChatGPT, Copilot, Gemini or another AI tool? Note what went in, tell your firm today, then delete it. What to do, per tool.",
+  "url": "https://noxiom.com/pasted-company-data-into-ai",
+  "mainEntityOfPage": "https://noxiom.com/pasted-company-data-into-ai",
+  "inLanguage": "en",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it a data breach if I put client data into ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I delete the conversation straight away?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Note what went in first, and tell your firm. Then delete it, unless your firm asks you to wait because it wants to see the chat for its record. Deleting doesn't always remove everything: some tools keep deleted chats for a while, and anything already used for training stays there. The per-tool notes on this page say what each vendor does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I pasted a password or an access key into an AI tool.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Change the password or replace the key now, everywhere it is used, and tell whoever manages your IT. Then delete the conversation. A changed password is worthless to anyone who sees the chat later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "It was company information, but nothing about people. Does it still matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It isn't a personal data breach under the GDPR, because no personal data was involved. It can still matter: client contracts often require confidentiality, and the tool may keep or train on what you typed. Tell your manager so the firm can check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my employer see what I typed into ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in your personal account: your firm has no access to it. In a work account it depends on the plan and the settings. The AI accounts guide shows what admins can see per tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I get into trouble?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This page can't speak for your employer. What it can say: your firm needs to know to meet its own obligations, and the sooner it knows, the more options it has."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "I put company information into an AI tool. What now?",
+      "item": "https://noxiom.com/pasted-company-data-into-ai"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+/* Situation kits: additions to the guide's stylesheet (guide.css is inlined
+   first). Same rules: status colours only with an icon and a label. */
+.kit-answer { border: 1px solid rgba(40, 247, 216, 0.3); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 18px; background: rgba(40, 247, 216, 0.05); margin: 4px 0 12px; }
+.kit-answer-label { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent) !important; margin: 0 0 6px !important; }
+.kit-answer p { color: #ececec !important; margin: 0 !important; line-height: 1.55; }
+.kit-answer ol { margin: 0; padding-left: 20px; color: #ececec; display: flex; flex-direction: column; gap: 6px; line-height: 1.5; }
+.kit-when { font-size: 0.74em; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); }
+.kit-steps .step-card h3 { margin: 0; }
+.kit-steps { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.kit-steps-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.kit-message { border: 1px dashed var(--field-border); border-radius: 10px; padding: 12px 14px; background: rgba(255, 255, 255, 0.03); color: var(--text-soft); font-size: 0.9em; line-height: 1.55; margin: 4px 0 0; white-space: pre-wrap; }
+.kit-copy { font: inherit; font-size: 0.84em; font-weight: 600; color: var(--accent); background: none; border: 1px solid rgba(40, 247, 216, 0.35); border-radius: 999px; padding: 4px 12px; cursor: pointer; align-self: flex-start; }
+.kit-copy[hidden] { display: none; }
+.kit-tools { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88em; color: var(--text-soft); }
+.kit-tools strong { color: #e5e5e5; }
+.kit-work { border: 1px solid rgba(40, 247, 216, 0.25); border-top: 3px solid var(--accent); border-radius: 12px; padding: 12px 16px; background: rgba(255, 255, 255, 0.02); margin: 10px 0 12px; }
+.kit-work p { margin: 6px 0 0 !important; color: var(--text-soft); }
+
+/* ------------------------------------------------------------ record builder */
+.kit-privacy { display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); font-size: 0.9em; color: var(--text-soft); margin: 0 0 18px; }
+.kit-privacy .pill-icon { background: #0ca30c; margin-top: 2px; }
+.kit-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.kit-layout[hidden] { display: none; }
+.kit-form { display: flex; flex-direction: column; gap: 22px; }
+
+/* Sections: a quiet heading above a rounded card, like a grouped settings list */
+.kit-section { border: none; padding: 0; margin: 0; min-width: 0; }
+.kit-section legend { float: left; width: 100%; padding: 0 4px; margin: 0 0 8px; font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.kit-section legend + * { clear: both; }
+.kit-group { background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 16px; overflow: hidden; }
+.kit-group > .kit-field { padding: 16px 18px; margin: 0; }
+.kit-group > .kit-field + .kit-field { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-field { display: flex; flex-direction: column; gap: 10px; }
+.kit-label { font-size: 0.95em; font-weight: 600; color: #f2f2f2; letter-spacing: -0.005em; }
+.kit-optional { font-weight: 400; font-size: 0.86em; color: var(--text-muted); margin-left: 6px; }
+.kit-hint { font-size: 0.82em; color: var(--text-muted); line-height: 1.45; margin-top: -4px; }
+
+/* Text fields */
+.kit-input { font: inherit; font-size: 0.95em; color: #f2f2f2; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 12px; width: 100%; box-sizing: border-box; color-scheme: dark; transition: border-color 0.15s, box-shadow 0.15s, background 0.15s; }
+.kit-input:hover { background: rgba(255, 255, 255, 0.07); }
+.kit-input:focus { outline: none; border-color: rgba(40, 247, 216, 0.7); box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.16); }
+textarea.kit-input { min-height: 84px; resize: vertical; line-height: 1.5; }
+.kit-input::placeholder { color: var(--text-muted); }
+
+/* Chips: single or multiple choice with short labels */
+.kit-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-chip { position: relative; cursor: pointer; }
+.kit-chip input, .kit-row input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.kit-chip span { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 0.88em; line-height: 1.2; color: #e8e8e8; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); transition: background 0.15s, border-color 0.15s, color 0.15s; user-select: none; }
+.kit-chip:hover span { background: rgba(255, 255, 255, 0.1); }
+.kit-chip input:checked + span { color: #ffffff; background: rgba(40, 247, 216, 0.16); border-color: rgba(40, 247, 216, 0.75); }
+.kit-chip input:checked + span::before { content: "\2713"; font-weight: 700; color: var(--accent); font-size: 0.9em; }
+.kit-chip input:focus-visible + span { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+
+/* Grouped list: options with long labels, and the containment steps */
+.kit-rows { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden; background: rgba(0, 0, 0, 0.12); }
+.kit-row { position: relative; display: flex; align-items: center; gap: 12px; padding: 11px 14px; cursor: pointer; font-size: 0.9em; line-height: 1.4; color: #e2e2e2; transition: background 0.15s; }
+.kit-row + .kit-row { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.kit-row:hover { background: rgba(255, 255, 255, 0.04); }
+.kit-row-text { flex: 1 1 auto; min-width: 0; }
+.kit-row .tag { flex: 0 0 auto; }
+.kit-ind { flex: 0 0 auto; width: 20px; height: 20px; box-sizing: border-box; border: 1.5px solid rgba(255, 255, 255, 0.3); display: grid; place-items: center; transition: background 0.15s, border-color 0.15s; }
+.kit-row input[type="radio"] ~ .kit-ind { border-radius: 50%; }
+.kit-row input[type="checkbox"] ~ .kit-ind { border-radius: 6px; }
+.kit-row input:checked ~ .kit-ind { background: var(--accent); border-color: var(--accent); }
+.kit-row input[type="checkbox"]:checked ~ .kit-ind::after { content: "\2713"; color: #052a24; font-size: 0.75em; font-weight: 800; }
+.kit-row input[type="radio"]:checked ~ .kit-ind::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #052a24; }
+.kit-row input:checked ~ .kit-row-text { color: #ffffff; }
+.kit-row input:focus-visible ~ .kit-ind { box-shadow: 0 0 0 3px rgba(40, 247, 216, 0.3); }
+.kit-stamp { flex: 0 0 auto; font-size: 0.85em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.kit-accounts { margin-top: 2px; }
+.kit-accounts[hidden] { display: none; }
+
+/* Day and time */
+.kit-clock { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.kit-clock .kit-date { width: auto; min-width: 170px; }
+.kit-clock .kit-date[hidden] { display: none; }
+.kit-clock .kit-time { width: 112px; font-variant-numeric: tabular-nums; text-align: center; }
+.kit-time::-webkit-calendar-picker-indicator { display: none; }
+.kit-date::-webkit-calendar-picker-indicator { filter: invert(0.85); opacity: 0.6; cursor: pointer; }
+.kit-now { font: inherit; font-size: 0.86em; font-weight: 600; color: var(--accent); background: none; border: none; padding: 8px 6px; cursor: pointer; border-radius: 8px; }
+.kit-now:hover { background: rgba(40, 247, 216, 0.08); }
+.kit-now:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Summary column */
+.kit-summary { position: sticky; top: 96px; max-height: calc(100vh - 112px); overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 12px; padding: 22px 2px 2px 0; }
+.kit-card { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 14px 18px; background: rgba(255, 255, 255, 0.035); }
+.kit-card[hidden] { display: none; }
+.kit-card-title { font-size: 0.74em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted) !important; margin: 0 0 8px !important; }
+.kit-deadline-label { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-deadline-time { font-size: 1.45em; font-weight: 700; letter-spacing: -0.01em; color: #f5f5f5 !important; margin: 2px 0 8px !important; font-variant-numeric: tabular-nums; }
+.kit-deadline-left { font-size: 0.86em; margin: 0 !important; color: var(--text-soft); }
+.kit-deadline-empty { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 !important; }
+.kit-role { border-color: rgba(250, 178, 25, 0.35); background: rgba(250, 178, 25, 0.05); font-size: 0.9em; color: var(--text-soft); }
+.kit-role p { margin: 0 !important; }
+.kit-plan .plan-row { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
+.kit-plan-title { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; }
+.kit-fact { font-size: 0.86em; margin: 6px 0 2px !important; color: var(--text-soft); line-height: 1.45; }
+.kit-src { font-size: 0.76em; color: var(--text-muted) !important; margin: 0 !important; overflow-wrap: anywhere; }
+.kit-plan-more summary { font-size: 0.84em; color: var(--accent); padding: 6px 0 2px; }
+.kit-plan-more[open] summary { margin-bottom: 4px; }
+.kit-plan-todo { font-size: 0.88em; margin: 10px 0 6px !important; color: var(--text-soft); }
+.kit-factor-group + .kit-factor-group { margin-top: 12px; }
+.kit-factor-head { margin: 0 0 6px !important; }
+.kit-factor-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: 0.87em; color: var(--text-soft); line-height: 1.45; }
+.kit-factor-list strong { color: #e5e5e5; }
+.kit-high { display: block; font-size: 0.92em; color: #f3c35b; margin-top: 2px; }
+.kit-factor-list .kit-src { display: block; margin-top: 2px !important; }
+.kit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-actions-quiet { margin-top: 10px; }
+.kit-save-why { font-size: 0.78em; color: var(--text-muted) !important; margin: 8px 0 0 !important; line-height: 1.45; }
+
+/* Buttons */
+.kit-btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-size: 0.88em; font-weight: 600; border-radius: 999px; padding: 8px 15px; min-height: 38px; box-sizing: border-box; cursor: pointer; border: 1px solid rgba(40, 247, 216, 0.4); color: var(--accent); background: rgba(40, 247, 216, 0.06); transition: background 0.15s, filter 0.15s; text-decoration: none; }
+.kit-btn:hover { background: rgba(40, 247, 216, 0.12); }
+.kit-btn-primary { background: var(--accent); color: #052a24; border-color: var(--accent); }
+.kit-btn-primary:hover { background: var(--accent); filter: brightness(1.06); }
+.kit-btn-quiet { border-color: rgba(255, 255, 255, 0.12); color: var(--text-muted); background: none; }
+.kit-btn-quiet:hover { background: rgba(255, 255, 255, 0.05); }
+.kit-btn[hidden] { display: none; }
+.kit-btn:focus-visible, .visually-hidden:focus-visible + .kit-btn { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Fill it in with an assistant */
+.kit-assist { border: 1px solid rgba(40, 247, 216, 0.22); border-radius: 16px; padding: 16px 18px; background: linear-gradient(180deg, rgba(40, 247, 216, 0.06), rgba(40, 247, 216, 0.02)); display: flex; flex-direction: column; gap: 10px; }
+.kit-assist-title { font-weight: 700; color: #f2f2f2 !important; margin: 0 !important; }
+.kit-assist-text { font-size: 0.9em; color: var(--text-soft); margin: 0 !important; line-height: 1.5; }
+.kit-assist-caution { font-size: 0.84em; color: #f3c35b !important; margin: 0 !important; line-height: 1.45; }
+.kit-assist-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kit-paste { display: flex; flex-direction: column; gap: 8px; }
+.kit-paste[hidden] { display: none; }
+.kit-paste textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+.kit-load-result { font-size: 0.86em; margin: 0 !important; padding: 10px 12px; border-radius: 10px; line-height: 1.45; }
+.kit-load-result[hidden] { display: none; }
+.kit-load-result.is-ok { background: rgba(12, 163, 12, 0.1); color: #cfeccf !important; }
+.kit-load-result.is-warn { background: rgba(250, 178, 25, 0.08); color: #f3d79b !important; }
+.kit-assist-fields { font-size: 0.86em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; padding-left: 18px; }
+.kit-assist-fields code, .kit-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; color: #d8fff8; }
+.kit-code { display: block; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px 14px; border-radius: 10px; background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.06); }
+
+/* The bar at the bottom of the screen on phones and tablets */
+.kit-bar { display: none; }
+.kit-static-factors { columns: 2 260px; column-gap: 24px; font-size: 0.9em; }
+.kit-static-factors li { break-inside: avoid; margin-bottom: 6px; color: var(--text-soft); }
+#print-record { display: none; }
+
+@media (max-width: 960px) {
+  .kit-layout { grid-template-columns: 1fr; }
+  .kit-summary { position: static; max-height: none; overflow: visible; padding-top: 0; }
+  .kit-bar { display: flex; position: sticky; bottom: 10px; z-index: 5; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 16px; background: rgba(22, 26, 40, 0.92); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+  .kit-bar-text { display: flex; flex-direction: column; font-size: 0.82em; color: var(--text-muted); line-height: 1.3; min-width: 0; }
+  .kit-bar-text strong { color: #f5f5f5; font-size: 1.08em; font-variant-numeric: tabular-nums; }
+  .kit-bar-text span { font-variant-numeric: tabular-nums; }
+}
+@media (max-width: 600px) {
+  .kit-group > .kit-field { padding: 14px 14px; }
+  .kit-assist { padding: 14px; }
+}
+/* Touch screens: targets of at least 44 px, and 16 px text in fields so
+   iPhones don't zoom in when a field is tapped */
+@media (pointer: coarse) {
+  .kit-chip span { padding: 11px 16px; min-height: 44px; box-sizing: border-box; font-size: 0.92em; }
+  .kit-row { min-height: 48px; padding: 12px 14px; }
+  .kit-ind { width: 22px; height: 22px; }
+  .kit-input { font-size: 16px; padding: 12px; }
+  .kit-btn { min-height: 44px; padding: 10px 18px; }
+  .kit-now { min-height: 44px; padding: 10px 12px; }
+  .kit-clock .kit-time { width: 120px; }
+}
+
+/* Print: only the record, as a plain document */
+@media print {
+  body > *:not(main), .guide .report-doc > *:not(#builder-wrap) { display: none !important; }
+  #builder-wrap > *:not(#print-record) { display: none !important; }
+  body, main, .report-doc, .report-wrap { background: #fff !important; color: #000 !important; border: none !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; }
+  #print-record { display: block !important; color: #111; font: 10.5pt/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #print-record h1 { font-size: 18pt; margin: 0 0 8pt; color: #111; }
+  #print-record h2 { font-size: 12.5pt; margin: 14pt 0 6pt; padding-bottom: 3pt; border-bottom: 1px solid #ccc; color: #111; }
+  #print-record h3 { font-size: 11pt; margin: 10pt 0 4pt; color: #111; }
+  #print-record p, #print-record li { color: #111; margin: 0 0 6pt; }
+  #print-record .small { font-size: 8.5pt; color: #555; }
+  #print-record .kv strong { color: #111; }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; For staff</span>
+            <h1>I put company information into an AI tool. What now?</h1>
+            <p class="guide-lead">It happens, and it can be handled. What matters most is that the right person at your firm hears about it today, from you.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-23">23 November 2026</time></strong></span>
+              <span>A two-minute read</span>
+              <span><a href="/ai-data-incident">For the person you tell</a></span>
+            </p>
+          </div>
+
+          <div class="kit-answer">
+            <p class="kit-answer-label">In short</p>
+<ol>
+<li>Write down what went in and where, without copying the information itself.</li>
+<li>Tell the person your firm has named for this today: your manager, office manager or privacy contact.</li>
+<li>Then delete the conversation, unless your firm asks you to wait.</li>
+</ol>
+          </div>
+          <p class="guide-alert guide-full">
+            <span class="pill-icon" aria-hidden="true">!</span>
+            <span><strong>Why today?</strong> If personal data was involved, your firm may have to decide within 72 hours of finding out whether to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). It has to keep a record of every incident like this, including the ones it doesn't report. It can only do either if it knows.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></span>
+          </p>
+
+          <h2 id="steps">Three steps, in this order</h2>
+          <div class="guide-steps kit-steps kit-steps-3">
+<div class="step-card">
+              <span class="step-num" aria-hidden="true">1</span>
+              <span class="kit-when">Now, 5 minutes</span>
+              <h3>Note it</h3>
+              <p>Describe what happened. Don't paste the information again anywhere, not even into an email to your manager.</p>
+              <ul>
+<li>Which tool, and which account: your personal account, or a work account your firm gave you.</li>
+<li>When, roughly.</li>
+<li>What kind of information, and whose: for example &quot;a client's payroll file with about 40 names and salaries&quot;.</li>
+<li>Pasted text, an uploaded file, or a connected mailbox or drive.</li>
+<li>Whether you shared the chat with a link, and whether the tool's training setting was on.</li>
+</ul>
+            </div>
+<div class="step-card">
+              <span class="step-num" aria-hidden="true">2</span>
+              <span class="kit-when">Today</span>
+              <h3>Tell your firm</h3>
+              <p>Tell your manager, office manager or the privacy contact. A short message is enough; you can copy the one below.</p>
+              <p class="kit-message" id="msg">Hi [name], I need to report something. On [date] at about [time] I put [describe the kind of information, not the information itself] from [a client / our own files] into [tool], using my [personal / work] account. I have [not yet] deleted the conversation. Can we talk today?</p>
+              <button type="button" class="kit-copy" data-copy="msg" hidden>Copy the message</button>
+            </div>
+<div class="step-card">
+              <span class="step-num" aria-hidden="true">3</span>
+              <span class="kit-when">After you've noted it</span>
+              <h3>Delete it</h3>
+              <p>Delete the conversation and remove any share link. If the training setting was on, switch it off. Wait first if your firm asks you to: it may want to see the chat for its record.</p>
+              <details>
+                <summary>What deleting does, per tool</summary>
+                <ul class="kit-tools">
+<li><strong>ChatGPT:</strong> In a personal account, delete the conversation: OpenAI schedules deleted chats for permanent deletion within 30 days. Check whether &quot;Improve the model for everyone&quot; was on at the time, and note it in your record.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-4" aria-label="Source 4">4</a></sup> <a href="/chatgpt-personal-vs-business">More on ChatGPT</a></li>
+<li><strong>Microsoft Copilot:</strong> In the consumer app, delete the conversation from the chat list. Microsoft's pages for the updated app don't state how long deleted or kept chats are retained, so record that you could not confirm it.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup> <a href="/copilot-personal-vs-work">More on Microsoft Copilot</a></li>
+<li><strong>Gemini:</strong> In a personal account, delete the chat from Gemini's history. Note that chats already selected for human review are kept for up to three years and aren't deleted along with the history.<sup class="cite"><a href="#src-6" aria-label="Source 6">6</a></sup> <a href="/gemini-personal-vs-workspace">More on Gemini</a></li>
+<li><strong>Claude:</strong> In a personal account, delete the chat: Anthropic deletes it from back-end storage within 30 days. If the Model Improvement setting was on, de-identified data may already be in training pipelines, where Anthropic says it can be kept for up to five years. Record which it was.<sup class="cite"><a href="#src-7" aria-label="Source 7">7</a>, <a href="#src-8" aria-label="Source 8">8</a></sup> <a href="/claude-personal-vs-team">More on Claude</a></li>
+<li><strong>DeepSeek:</strong> Delete the chat history in DeepSeek's settings. DeepSeek's policy says users exercise their privacy rights, including the training opt-out, by emailing privacy@deepseek.com. Record what you asked and when.<sup class="cite"><a href="#src-9" aria-label="Source 9">9</a></sup> <a href="/deepseek-business-data">More on DeepSeek</a></li>
+                </ul>
+              </details>
+            </div>
+          </div>
+
+          <div class="kit-work">
+            <span class="tag tag-work">Work account</span>
+            <p>If your firm gave you a work account (for example ChatGPT Business, or Copilot with the green shield) and its rules allow this kind of information in it, this may not be an incident at all. The Dutch data protection authority says that when chatbot use is part of an organisation's policy, it is not a data breach. If you're not sure what the rules allow, tell your manager anyway.<sup class="cite"><a href="#src-10" aria-label="Source 10">10</a></sup></p>
+          </div>
+
+          <h2 id="next">What happens next</h2>
+<ol class="report-list">
+<li>Your firm writes the incident down.</li>
+<li>It assesses the risk to the people whose information it was.</li>
+<li>It decides whether to report it to the Autoriteit Persoonsgegevens, and whether to tell the client and the people concerned.</li>
+<li>You may be asked for details. The decisions are the firm's, not yours.</li>
+</ol>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>Is it a data breach if I put client data into ChatGPT?</summary><p>If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call.<sup class="cite"><a href="#src-10" aria-label="Source 10">10</a>, <a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
+<details class="guide-faq"><summary>Should I delete the conversation straight away?</summary><p>Note what went in first, and tell your firm. Then delete it, unless your firm asks you to wait because it wants to see the chat for its record. Deleting doesn't always remove everything: some tools keep deleted chats for a while, and anything already used for training stays there. The per-tool notes on this page say what each vendor does.</p></details>
+<details class="guide-faq"><summary>I pasted a password or an access key into an AI tool.</summary><p>Change the password or replace the key now, everywhere it is used, and tell whoever manages your IT. Then delete the conversation. A changed password is worthless to anyone who sees the chat later.</p></details>
+<details class="guide-faq"><summary>It was company information, but nothing about people. Does it still matter?</summary><p>It isn't a personal data breach under the GDPR, because no personal data was involved. It can still matter: client contracts often require confidentiality, and the tool may keep or train on what you typed. Tell your manager so the firm can check.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
+<details class="guide-faq"><summary>Can my employer see what I typed into ChatGPT?</summary><p>Not in your personal account: your firm has no access to it. In a work account it depends on the plan and the settings. The AI accounts guide shows what admins can see per tool.</p></details>
+<details class="guide-faq"><summary>Will I get into trouble?</summary><p>This page can't speak for your employer. What it can say: your firm needs to know to meet its own obligations, and the sooner it knows, the more options it has.</p></details>
+</div>
+
+          <div class="guide-bridge" id="for-firms">
+            <h2>For the firm</h2>
+            <p class="guide-measure">
+              Give this page to your team before anything happens. The Word
+              version fits on two pages and has a line for your own contact
+              person.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="pasted-handout" href="/downloads/ai-incident-staff-handout.docx" class="cta-button" download>Download the staff handout (Word)</a>
+              <a href="/ai-data-incident" class="guide-text-link">What the firm does in the first 72 hours &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="about">About this page</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't tell you</summary>
+            <p><strong>It tells you</strong> what to do as an employee, and what each AI vendor says happens to a deleted conversation, as checked in the <a href="/ai-accounts">AI accounts guide</a> on 22 November 2026.</p>
+            <p><strong>It doesn't</strong> replace your firm's own rules, decide whether anything must be reported, or give legal advice. If your firm has its own procedure, follow that.</p>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">version 1.1.0</span></summary>
+<ul class="report-list">
+<li><strong>23 November 2026:</strong> Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word.</li>
+<li><strong>23 November 2026:</strong> First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout.</li>
+</ul>
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>. We check it, correct it and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">"Checked" is the date we last read the page.</p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">EUR-Lex: Regulation (EU) 2016/679 (General Data Protection Regulation)</a>. Page dated 27 April 2016. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf" rel="noopener">European Data Protection Board: Guidelines 9/2022 on personal data breach notification under GDPR, version 2.0</a>. Page dated 28 March 2023. Checked 23 November 2026.</li>
+<li id="src-3"><a href="https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt" rel="noopener">OpenAI: Chat and file retention policies in ChatGPT</a>. Checked 22 November 2026.</li>
+<li id="src-4"><a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" rel="noopener">OpenAI: How your data is used to improve model performance</a>. Checked 22 November 2026.</li>
+<li id="src-5"><a href="https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history" rel="noopener">Microsoft: Microsoft Copilot activity history (updated app)</a>. Checked 22 November 2026.</li>
+<li id="src-6"><a href="https://support.google.com/gemini/answer/13594961?hl=en" rel="noopener">Google: Gemini Apps Privacy Hub</a>. Page dated 16 November 2026. Checked 22 November 2026.</li>
+<li id="src-7"><a href="https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data" rel="noopener">Anthropic: How long do you store my data?</a>. Page dated 1 July 2026. Checked 22 November 2026.</li>
+<li id="src-8"><a href="https://www.anthropic.com/news/updates-to-our-consumer-terms" rel="noopener">Anthropic: Updates to our consumer terms</a>. Page dated 28 August 2025. Checked 22 November 2026.</li>
+<li id="src-9"><a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" rel="noopener">DeepSeek: DeepSeek Privacy Policy</a>. Page dated 10 February 2026. Checked 22 November 2026.</li>
+<li id="src-10"><a href="https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches" rel="noopener">Autoriteit Persoonsgegevens (Dutch data protection authority): Caution: use of AI chatbot may lead to data breaches</a>. Page dated 6 August 2024. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>, which reviews how small firms use AI tools with client data.
+            Free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. Not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+// Kit pages: copy buttons for ready-made text. Reads and stores nothing.
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    var target = document.getElementById(button.getAttribute("data-copy"));
+    if (!target || !navigator.clipboard) return;
+    button.hidden = false;
+    button.addEventListener("click", function () {
+      navigator.clipboard.writeText(target.textContent.trim()).then(function () {
+        var label = button.textContent;
+        button.textContent = "Copied";
+        setTimeout(function () { button.textContent = label; }, 2000);
+      });
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Personal vs work AI accounts: what happens to business data | Noxiom</title>
+    <meta name="description" content="ChatGPT, Copilot, Gemini, Claude and DeepSeek handle business data differently per account. A sourced, dated guide for small firms, with a free check." />
+    <link rel="canonical" href="https://noxiom.com/ai-accounts" />
+    <meta property="og:title" content="Personal or work account? What AI tools do with your business data" />
+    <meta property="og:description" content="ChatGPT, Copilot, Gemini, Claude and DeepSeek handle business data differently per account. A sourced, dated guide for small firms, with a free check." />
+    <meta property="og:url" content="https://noxiom.com/ai-accounts" />
+    <meta property="article:modified_time" content="2026-11-22" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Personal or work account? What AI tools do with your business data",
+  "description": "ChatGPT, Copilot, Gemini, Claude and DeepSeek handle business data differently per account. A sourced, dated guide for small firms, with a free check.",
+  "url": "https://noxiom.com/ai-accounts",
+  "mainEntityOfPage": "https://noxiom.com/ai-accounts",
+  "inLanguage": "en",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "AI accounts and business data",
+  "description": "What ChatGPT, Microsoft Copilot, Gemini, Claude and DeepSeek do with business data, per account type: training, retention, human review, storage location, contract and admin control. Every fact is sourced to the vendor's own page and dated.",
+  "url": "https://noxiom.com/ai-accounts",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "dateModified": "2026-11-22",
+  "version": "1.1.0",
+  "keywords": [
+    "ChatGPT",
+    "Microsoft Copilot",
+    "Gemini",
+    "Claude",
+    "DeepSeek",
+    "GDPR",
+    "data processing agreement",
+    "model training",
+    "data retention"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://noxiom.com/data/ai-accounts.json"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ChatGPT (or Copilot, Gemini, Claude) GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No tool is GDPR compliant or non-compliant by itself. The GDPR applies to how your firm uses it. What a vendor can give you is a processor agreement (GDPR Article 28), no training on your data, admin control and clear storage terms. Work plans offer those; personal accounts don't, because the contract is between the vendor and the individual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to put company data into ChatGPT, Copilot or Gemini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the account someone is signed in to, not on the brand. A personal account has no contract with your firm, and most personal accounts may use what is typed for training unless it is switched off. Work accounts (ChatGPT Business, Microsoft 365 Copilot Chat with a work login, Gemini in Google Workspace) don't train on your data by default and come with a processing agreement. Which data may go in is then your firm's decision. The comparison above shows each account, with sources."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it a data breach if an employee puts client data into ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Netherlands, the Dutch data protection authority (Autoriteit Persoonsgegevens) says that if employees enter personal data into a chatbot contrary to the agreements made with their employer, that is a data breach. If chatbot use is the organisation's own policy, it is not a breach, but it is often not permitted by law. Notifying the authority and the people affected is mandatory in many cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does buying a business plan solve it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only for the people who use it. A business plan covers work accounts. It does nothing about a colleague who keeps using a personal account on the same laptop, and from the outside you often can't tell which one was used. That's why the check below starts with asking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we just block personal AI accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. Microsoft lets admins stop personal-account sign-in to Copilot on company devices with tenant restrictions, and network filters can block whole sites. None of that reaches personal phones or home computers, so clear rules and a work account people actually like using matter more than blocking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often is this guide checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every fact carries the date it was last checked against the vendor's own page. We re-check all of them at least once a month and record every change in the change log at the bottom of this page. If you spot something out of date, tell us and we'll fix it and log it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reuse this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The data behind this guide is open under CC BY 4.0. Use it, adapt it, put it in your own client materials, as long as you credit Noxiom and link to this page. The JSON file is linked below."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who wrote this, and what's in it for them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sam, founder of Noxiom, an independent consultancy in Zeewolde that reviews how small firms use AI with client data. That review is what we sell. We don't sell any of the tools on this page and get nothing from their vendors. The guide is free and ungated because it's more useful that way."
+      }
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide</span>
+            <h1>Personal or work account? What AI tools do with your business data</h1>
+            <p class="guide-lead">
+              What happens to client data in ChatGPT, Copilot, Gemini, Claude
+              or DeepSeek depends less on the tool than on the account someone
+              is signed in to.
+            </p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-22">22 November 2026</time></strong></span>
+              <span>5 tools, 11 account types</span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span><a href="#reuse">Open data</a></span>
+            </p>
+          </div>
+
+          <div class="guide-versus">
+            <section class="versus-card versus-personal" aria-labelledby="personal-title">
+              <span class="tag tag-personal">Personal account</span>
+              <h2 id="personal-title">Free or paid, signed up by the employee</h2>
+              <ul class="versus-list">
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>No processor agreement with your firm</span></li>
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>Most train on what people type, unless it is switched off</span></li>
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>Your firm can't see, manage or delete it</span></li>
+              </ul>
+              <p class="versus-bottom">Keep client data out</p>
+            </section>
+            <section class="versus-card versus-work" aria-labelledby="work-title">
+              <span class="tag tag-work">Work account</span>
+              <h2 id="work-title">Bought and managed by the firm</h2>
+              <ul class="versus-list">
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>A processor agreement (DPA) with your firm</span></li>
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>No training on your data by default</span></li>
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>Your admins control access, retention and settings</span></li>
+              </ul>
+              <p class="versus-bottom">Can carry client data, within your own rules</p>
+            </section>
+          </div>
+          <p class="guide-alert guide-full">
+            <span class="pill-icon" aria-hidden="true">!</span>
+            <span>
+              <strong>A work plan only covers the people who actually use it.</strong>
+              In the Netherlands, personal data put into a chatbot against your
+              firm's agreements counts as a data breach.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup>
+            </span>
+          </p>
+
+          <h2 id="compare">Compare all 11 account types</h2>
+          <p class="guide-note">
+            Filter or sort, then select an account for the full comparison
+            with sources.
+          </p>
+<div class="guide-controls" id="matrixControls" hidden>
+  <div class="guide-filter" role="group" aria-label="Account type">
+    <button type="button" data-account="all" aria-pressed="true">All accounts</button>
+    <button type="button" data-account="personal" aria-pressed="false">Personal</button>
+    <button type="button" data-account="work" aria-pressed="false">Work</button>
+  </div>
+  <div class="guide-filter" role="group" aria-label="Tool">
+    <button type="button" data-tool="all" aria-pressed="true">All tools</button>
+    <button type="button" data-tool="chatgpt" aria-pressed="false">ChatGPT</button>
+    <button type="button" data-tool="copilot" aria-pressed="false">Copilot</button>
+    <button type="button" data-tool="gemini" aria-pressed="false">Gemini</button>
+    <button type="button" data-tool="claude" aria-pressed="false">Claude</button>
+    <button type="button" data-tool="deepseek" aria-pressed="false">DeepSeek</button>
+  </div>
+</div>
+<div class="report-table-wrap">
+<table class="report-table guide-matrix" id="matrix">
+<caption class="visually-hidden">AI account types compared. Select a column heading to sort.</caption>
+<thead><tr><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="0">Account<span class="sort-mark" aria-hidden="true"></span></button></th><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="1">Trains on what you type?<span class="sort-mark" aria-hidden="true"></span></button></th><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="2">Processor agreement with your firm<span class="sort-mark" aria-hidden="true"></span></button></th><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="3">Your firm controls it<span class="sort-mark" aria-hidden="true"></span></button></th><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="4">Where it's stored<span class="sort-mark" aria-hidden="true"></span></button></th><th scope="col" class="sortable" aria-sort="none"><button type="button" class="sort" data-col="5">Client data in it?<span class="sort-mark" aria-hidden="true"></span></button></th></tr></thead>
+<tbody>
+<tr data-account="personal" data-tool="chatgpt" data-order="0">
+  <td data-label="Account" data-sort="0"><span class="matrix-account"><span class="tag tag-personal">Personal</span><a href="/chatgpt-personal-vs-business#plan-chatgpt-personal">ChatGPT Free, Plus or Pro</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes, by default</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></td>
+  <td data-label="Your firm controls it" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></td>
+  <td data-label="Where it's stored" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Outside the EEA</span></td>
+  <td data-label="Client data in it?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></td>
+</tr>
+<tr data-account="work" data-tool="chatgpt" data-order="1">
+  <td data-label="Account" data-sort="1"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/chatgpt-personal-vs-business#plan-chatgpt-business">ChatGPT Business (formerly Team)</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No, by default</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA available</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>New workspaces pick a region</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="work" data-tool="chatgpt" data-order="2">
+  <td data-label="Account" data-sort="2"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/chatgpt-personal-vs-business#plan-chatgpt-enterprise">ChatGPT Enterprise</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No, by default</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA available</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>EU residency option</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="personal" data-tool="copilot" data-order="3">
+  <td data-label="Account" data-sort="3"><span class="matrix-account"><span class="tag tag-personal">Personal</span><a href="/copilot-personal-vs-work#plan-copilot-personal">Microsoft Copilot app, personal account</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>No (foundation models)</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></td>
+  <td data-label="Your firm controls it" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></td>
+  <td data-label="Where it's stored" data-sort="2"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></td>
+  <td data-label="Client data in it?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></td>
+</tr>
+<tr data-account="work" data-tool="copilot" data-order="4">
+  <td data-label="Account" data-sort="4"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/copilot-personal-vs-work#plan-copilot-chat-work">Microsoft 365 Copilot Chat, work account</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, except web search</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="work" data-tool="copilot" data-order="5">
+  <td data-label="Account" data-sort="5"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/copilot-personal-vs-work#plan-m365-copilot">Microsoft 365 Copilot (paid licence, including Copilot Business)</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>EU, with exceptions</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="personal" data-tool="gemini" data-order="6">
+  <td data-label="Account" data-sort="6"><span class="matrix-account"><span class="tag tag-personal">Personal</span><a href="/gemini-personal-vs-workspace#plan-gemini-personal">Gemini app, personal Google account (free or Google AI Pro)</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes, by default</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></td>
+  <td data-label="Your firm controls it" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></td>
+  <td data-label="Where it's stored" data-sort="2"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></td>
+  <td data-label="Client data in it?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></td>
+</tr>
+<tr data-account="work" data-tool="gemini" data-order="7">
+  <td data-label="Account" data-sort="7"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/gemini-personal-vs-workspace#plan-gemini-workspace">Gemini in Google Workspace, work account</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No, without permission</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>EU option, most editions</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="personal" data-tool="claude" data-order="8">
+  <td data-label="Account" data-sort="8"><span class="matrix-account"><span class="tag tag-personal">Personal</span><a href="/claude-personal-vs-team#plan-claude-personal">Claude Free, Pro or Max</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes, unless switched off</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></td>
+  <td data-label="Your firm controls it" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></td>
+  <td data-label="Where it's stored" data-sort="2"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></td>
+  <td data-label="Client data in it?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></td>
+</tr>
+<tr data-account="work" data-tool="claude" data-order="9">
+  <td data-label="Account" data-sort="9"><span class="matrix-account"><span class="tag tag-work">Work</span><a href="/claude-personal-vs-team#plan-claude-work">Claude Team or Enterprise</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></td>
+  <td data-label="Your firm controls it" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></td>
+  <td data-label="Where it's stored" data-sort="1"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Stored in the US</span></td>
+  <td data-label="Client data in it?" data-sort="0"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></td>
+</tr>
+<tr data-account="personal" data-tool="deepseek" data-order="10">
+  <td data-label="Account" data-sort="10"><span class="matrix-account"><span class="tag tag-personal">Personal</span><a href="/deepseek-business-data#plan-deepseek-app">DeepSeek app and website</a></span></td>
+  <td data-label="Trains on what you type?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes</span></td>
+  <td data-label="Processor agreement with your firm" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None</span></td>
+  <td data-label="Your firm controls it" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></td>
+  <td data-label="Where it's stored" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>China</span></td>
+  <td data-label="Client data in it?" data-sort="3"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="guide-legend">
+  <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>In your favour</span>
+  <span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Has a catch</span>
+  <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>A problem for client data</span>
+  <span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>The vendor doesn't say</span>
+</p>
+          <p class="guide-note">Full comparison per tool:</p>
+<nav class="guide-chips" aria-label="Tool pages">
+<a href="/chatgpt-personal-vs-business">ChatGPT personal vs Business &rarr;</a>
+<a href="/copilot-personal-vs-work">Copilot personal vs work account &rarr;</a>
+<a href="/gemini-personal-vs-workspace">Gemini personal vs Workspace &rarr;</a>
+<a href="/claude-personal-vs-team">Claude personal vs Team &rarr;</a>
+<a href="/deepseek-business-data">DeepSeek and business data &rarr;</a>
+</nav>
+
+          <h2 id="check">Check your own team in 20 minutes</h2>
+          <p class="guide-measure">The step most firms skip: finding out which accounts people really use.</p>
+          <div class="guide-steps">
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3>Billing</h3>
+              <p>Look for AI subscriptions on card statements and expense claims.</p>
+              <details>
+                <summary>What to look for</summary>
+                <p>OpenAI, Anthropic, Google One or Google AI, Microsoft 365 Personal or Family. Each one is a personal account being used for work.</p>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3>Admin screens</h3>
+              <p>See what your own admin consoles already show.</p>
+              <details>
+                <summary>Where to look</summary>
+                <ul>
+                  <li>Microsoft 365: the Copilot Chat usage report, and the web search setting.</li>
+                  <li>Google Workspace: whether the Gemini app is on, and how long chats are kept.</li>
+                  <li>ChatGPT Business or Claude Team: the member list next to your staff list.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3>Ask</h3>
+              <p>Six anonymous questions, in your own form tool.</p>
+              <details>
+                <summary>The six questions</summary>
+                <ol>
+                  <li>In the last month, which AI tools have you used for work?</li>
+                  <li>For each: work account, personal account, or not signed in?</li>
+                  <li>Do you pay for any yourself, or claim them as expenses?</li>
+                  <li>What have you put in? Nothing about clients / client names / client documents or emails / financial or HR information / health or other sensitive information / not sure.</li>
+                  <li>Which AI tool would you use more if the firm provided it?</li>
+                  <li>Is there anything you're unsure is allowed?</li>
+                </ol>
+                <p>Say plainly that honest answers have no consequences: you want the real picture.</p>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">4</span>
+              <h3>Write it down</h3>
+              <p>Per tool: which account is allowed, and which data may go in.</p>
+              <a class="step-download" data-cta="guide-register" href="/downloads/ai-accounts-register.xlsx" download>Download the register (Excel) &darr;</a>
+            </div>
+          </div>
+          <p class="guide-note">
+            This shows what people tell you and what your screens and billing
+            show. It can't see personal phones, and it can't prove that
+            something isn't used.
+          </p>
+
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account? <span class="summary-hint">6 steps</span></summary>
+            <ol class="report-list">
+              <li><strong>Write it down now:</strong> which tool and account, when, what data and whose, who entered it, what has been done since. The GDPR requires you to document every personal data breach, including ones you don't report.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></li>
+              <li><strong>Remove what you can:</strong> delete the conversation and, if training was on, switch it off. Each tool page says what that vendor does after deletion.</li>
+              <li><strong>Assess the risk</strong> to the people whose data it was. Health information, identity numbers or financial details weigh heavier than a name and an email address.</li>
+              <li><strong>Decide on notification within 72 hours.</strong> Unless the breach is unlikely to put those people at any risk, it must be reported to the data protection authority without undue delay and within 72 hours of becoming aware of it; if the risk is high, the people affected must be told too.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup> The Dutch authority says reporting is mandatory in many chatbot cases.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></li>
+              <li><strong>Check your client contracts</strong> for clauses on reporting incidents to the client.</li>
+              <li><strong>Fix the cause:</strong> a work account and clear rules about what may go in.</li>
+            </ol>
+            <p>Step by step, with a record you can fill in and save: <a href="/ai-data-incident">the first 72 hours</a>. For staff: <a href="/pasted-company-data-into-ai">what to do if you pasted something</a>.</p>
+            <p class="guide-note">For the notification decision itself, involve your privacy officer or a privacy lawyer. This guide is not legal advice.</p>
+          </details>
+
+          <div class="guide-bridge" id="help">
+            <h2>Want to know for sure?</h2>
+            <p class="guide-measure">
+              This guide shows what each account promises. It can't show which
+              accounts your team really uses, or with which data. Noxiom's
+              fixed-price AI usage review finds out from an anonymous staff
+              survey, your admin screens and your billing, and turns it into a
+              report and rules that fit how your team works. If you're fine,
+              the report says so.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>Is ChatGPT (or Copilot, Gemini, Claude) GDPR compliant?</summary><p>No tool is GDPR compliant or non-compliant by itself. The GDPR applies to how your firm uses it. What a vendor can give you is a processor agreement (GDPR Article 28), no training on your data, admin control and clear storage terms. Work plans offer those; personal accounts don't, because the contract is between the vendor and the individual.<sup class="cite"><a href="#src-2" aria-label="Source 2">2</a></sup></p></details>
+<details class="guide-faq"><summary>Is it safe to put company data into ChatGPT, Copilot or Gemini?</summary><p>It depends on the account someone is signed in to, not on the brand. A personal account has no contract with your firm, and most personal accounts may use what is typed for training unless it is switched off. Work accounts (ChatGPT Business, Microsoft 365 Copilot Chat with a work login, Gemini in Google Workspace) don't train on your data by default and come with a processing agreement. Which data may go in is then your firm's decision. The comparison above shows each account, with sources.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a>, <a href="#src-4" aria-label="Source 4">4</a>, <a href="#src-5" aria-label="Source 5">5</a></sup></p></details>
+<details class="guide-faq"><summary>Is it a data breach if an employee puts client data into ChatGPT?</summary><p>In the Netherlands, the Dutch data protection authority (Autoriteit Persoonsgegevens) says that if employees enter personal data into a chatbot contrary to the agreements made with their employer, that is a data breach. If chatbot use is the organisation's own policy, it is not a breach, but it is often not permitted by law. Notifying the authority and the people affected is mandatory in many cases.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p></details>
+<details class="guide-faq"><summary>Does buying a business plan solve it?</summary><p>Only for the people who use it. A business plan covers work accounts. It does nothing about a colleague who keeps using a personal account on the same laptop, and from the outside you often can't tell which one was used. That's why the check below starts with asking.</p></details>
+<details class="guide-faq"><summary>Can we just block personal AI accounts?</summary><p>Partly. Microsoft lets admins stop personal-account sign-in to Copilot on company devices with tenant restrictions, and network filters can block whole sites. None of that reaches personal phones or home computers, so clear rules and a work account people actually like using matter more than blocking.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></p></details>
+<details class="guide-faq"><summary>How often is this guide checked?</summary><p>Every fact carries the date it was last checked against the vendor's own page. We re-check all of them at least once a month and record every change in the change log at the bottom of this page. If you spot something out of date, tell us and we'll fix it and log it.</p></details>
+<details class="guide-faq"><summary>Can I reuse this?</summary><p>Yes. The data behind this guide is open under CC BY 4.0. Use it, adapt it, put it in your own client materials, as long as you credit Noxiom and link to this page. The JSON file is linked below.</p></details>
+<details class="guide-faq"><summary>Who wrote this, and what's in it for them?</summary><p>Sam, founder of Noxiom, an independent consultancy in Zeewolde that reviews how small firms use AI with client data. That review is what we sell. We don't sell any of the tools on this page and get nothing from their vendors. The guide is free and ungated because it's more useful that way.</p></details>
+</div>
+
+          <h2 id="about">About this guide</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't tell you</summary>
+            <p><strong>It tells you</strong> what each vendor publicly states about each account type on the date shown, where vendors are silent, and where their own pages contradict each other.</p>
+            <p><strong>It doesn't</strong> verify that vendors keep their promises (we read their terms; we don't audit them), cover negotiated enterprise contracts or every setting, tell you whether your firm's use is lawful, or show which tools and accounts your team actually uses. It is not legal advice.</p>
+          </details>
+          <details class="guide-more">
+            <summary>What we couldn't confirm</summary>
+<ul class="report-list">
+<li>Consumer Copilot (the app updated on 18 August 2026): Microsoft's pages don't state the retention period, human review or data location.</li>
+<li>ChatGPT Business: OpenAI doesn't list which storage regions are offered, and its pages disagree on whether admins can read members' chats.</li>
+<li>Claude Team and Enterprise: we found no EU data residency option.</li>
+<li>DeepSeek: an in-app training opt-out is described by third parties only; the policy describes opting out by email.</li>
+<li>Microsoft 365 Copilot: only the Copilot Business price was checked, from a March 2026 Microsoft post; Microsoft's pricing page did not load.</li>
+</ul>
+          </details>
+          <details class="guide-more">
+            <summary>Why the account matters more than the brand</summary>
+            <p>Five different things get called "using ChatGPT". Vendors' promises depend on the plan, and only apply to the account someone actually signs in to.</p>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th scope="col">Layer</th><th scope="col">Example</th><th scope="col">Who decides</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Layer">The tool</td><td data-label="Example">ChatGPT, Copilot, Gemini</td><td data-label="Who decides">The vendor</td></tr>
+                  <tr><td data-label="Layer">The account</td><td data-label="Example">A colleague's personal login, or the firm's workspace</td><td data-label="Who decides">Whoever signs in</td></tr>
+                  <tr><td data-label="Layer">The plan</td><td data-label="Example">Free, Plus, Business, Enterprise</td><td data-label="Who decides">Whoever pays</td></tr>
+                  <tr><td data-label="Layer">The settings</td><td data-label="Example">Training on or off, how long chats are kept, web search</td><td data-label="Who decides">The user, or your admin on work plans</td></tr>
+                  <tr><td data-label="Layer">The actual use</td><td data-label="Example">What someone pastes in on a busy afternoon</td><td data-label="Who decides">Nobody, unless there are rules and you know what is used</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <details class="guide-more" id="reuse">
+            <summary>Reuse the data <span class="summary-hint">CC BY 4.0</span></summary>
+            <p>Everything here comes from one data file, published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. Use it in your own client materials or tools; credit Noxiom and link to this page.</p>
+            <div class="guide-downloads">
+              <a data-cta="guide-data" href="/data/ai-accounts.json">The data (JSON, every fact with its source and check date)</a>
+              <a data-cta="guide-register" href="/downloads/ai-accounts-register.xlsx" download>The one-page AI accounts register (Excel; the example rows are in grey)</a>
+            </div>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">next check by 22 December 2026</span></summary>
+<ul class="report-list">
+<li><strong>23 November 2026:</strong> Added the questions people ask in their own words (company data in ChatGPT, confidential information, whether an employer can see chats). The register is now an Excel file, which opens correctly in Dutch Excel too. Linked to the new incident kit. No vendor facts changed.</li>
+<li><strong>22 November 2026:</strong> First version: 5 tools and 11 account types, every fact checked against the vendors' own pages on 22 November 2026.</li>
+</ul>
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a> with the page and the source. We check it against the vendor's page, correct it, and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">The vendor's own page unless marked otherwise. "Checked" is the date we last read it. The tool pages cite a source for every value in the comparison.</p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches" rel="noopener">Autoriteit Persoonsgegevens (Dutch data protection authority): Caution: use of AI chatbot may lead to data breaches</a>. Page dated 6 August 2024. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" rel="noopener">EUR-Lex: Regulation (EU) 2016/679 (General Data Protection Regulation)</a>. Page dated 27 April 2016. Checked 22 November 2026.</li>
+<li id="src-3"><a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" rel="noopener">OpenAI: How your data is used to improve model performance</a>. Checked 22 November 2026.</li>
+<li id="src-4"><a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Microsoft: Privacy and protections for Microsoft 365 Copilot Chat</a>. Page dated 19 November 2026. Checked 22 November 2026.</li>
+<li id="src-5"><a href="https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub?hl=en" rel="noopener">Google: Generative AI in Google Workspace Privacy Hub</a>. Page dated 10 November 2026. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked 22 November 2026. In het Nederlands:
+            <a href="/nl/ai-tools-bedrijfsgegevens" hreflang="nl" lang="nl">Wat doen AI-tools met je bedrijfsgegevens?</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+// Guide pages: open the collapsed section a link points into, and make the
+// comparison grid filterable and sortable. Reads and stores nothing; without
+// JavaScript the grid is a plain table and the sections still open on click.
+(function () {
+  function openTo(id) {
+    var el = id && document.getElementById(id);
+    for (var d = el; d; d = d.parentElement) if (d.tagName === "DETAILS") d.open = true;
+  }
+  openTo(decodeURIComponent(location.hash.slice(1)));
+  window.addEventListener("hashchange", function () {
+    openTo(decodeURIComponent(location.hash.slice(1)));
+  });
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+    if (link) openTo(link.getAttribute("href").slice(1));
+  });
+
+  var table = document.getElementById("matrix");
+  var controls = document.getElementById("matrixControls");
+  if (!table || !controls) return;
+  var body = table.tBodies[0];
+  var rows = Array.prototype.slice.call(body.rows);
+  var state = { account: "all", tool: "all" };
+  controls.hidden = false;
+
+  controls.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button) return;
+    var key = button.hasAttribute("data-account") ? "account" : "tool";
+    state[key] = button.getAttribute("data-" + key);
+    button.parentElement.querySelectorAll("button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    rows.forEach(function (row) {
+      row.hidden =
+        (state.account !== "all" && row.getAttribute("data-account") !== state.account) ||
+        (state.tool !== "all" && row.getAttribute("data-tool") !== state.tool);
+    });
+  });
+
+  table.querySelectorAll("button.sort").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var col = Number(button.getAttribute("data-col"));
+      var th = button.parentElement;
+      var dir = th.getAttribute("aria-sort") === "ascending" ? "descending" : "ascending";
+      table.querySelectorAll("th[aria-sort]").forEach(function (h) {
+        h.setAttribute("aria-sort", "none");
+      });
+      th.setAttribute("aria-sort", dir);
+      var sign = dir === "ascending" ? 1 : -1;
+      rows
+        .slice()
+        .sort(function (a, b) {
+          var diff = Number(a.cells[col].getAttribute("data-sort")) - Number(b.cells[col].getAttribute("data-sort"));
+          return diff !== 0 ? sign * diff : Number(a.getAttribute("data-order")) - Number(b.getAttribute("data-order"));
+        })
+        .forEach(function (row) {
+          body.appendChild(row);
+        });
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

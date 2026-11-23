@@ -1,0 +1,9 @@
+Tool,Account (work or personal),Plan,Who uses it,What for,Data that may go in,Data that must not go in,Training setting checked (date),Processor agreement (DPA) in place,Decision,Next check,Notes
+ChatGPT,Work,Business (5 seats),Account managers,Drafting client emails and proposals,Client names and project details,"Health data, identity numbers, passwords",Not needed: Business does not train by default (checked 2026-11-25),Yes: signed 2026-11-25,Allowed,2027-02-25,Storage region chosen at checkout
+ChatGPT,Personal,Plus (paid by the employee),Designer,Image ideas,Nothing about clients,Any client data,Training switched off (checked 2026-11-25),No,Move to a Business seat by 15 Dec,2026-12-15,Found through an expense claim
+Microsoft 365 Copilot Chat,Work,Included with Microsoft 365 Business Standard,Everyone,Summaries and first drafts,Internal documents; client data without sensitive categories,Health data,Not needed: no training on work accounts,Yes: Microsoft DPA,Allowed; web search switched off,2027-02-25,Ask staff to check for the green shield
+DeepSeek,Personal,Free app,Unknown (mentioned in the staff survey),Unknown,None,All client and company data,Unknown,No,Not allowed; told staff on 2026-11-26,2026-12-26,Data stored in China
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,

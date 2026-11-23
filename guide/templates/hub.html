@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>{{seo_title}} | Noxiom</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="canonical" href="{{canonical}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="article:modified_time" content="{{checked_iso}}" />
+{{jsonld}}
+    <style>
+{{guide_css}}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap guide-wide">
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide</span>
+            <h1>{{title}}</h1>
+            <p class="guide-lead">
+              What happens to client data in ChatGPT, Copilot, Gemini, Claude
+              or DeepSeek depends less on the tool than on the account someone
+              is signed in to.
+            </p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="{{checked_iso}}">{{checked_human}}</time></strong></span>
+              <span>{{tool_count}} tools, {{plan_count}} account types</span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span><a href="#reuse">Open data</a></span>
+            </p>
+          </div>
+
+          <div class="guide-versus">
+            <section class="versus-card versus-personal" aria-labelledby="personal-title">
+              <span class="tag tag-personal">Personal account</span>
+              <h2 id="personal-title">Free or paid, signed up by the employee</h2>
+              <ul class="versus-list">
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>No processor agreement with your firm</span></li>
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>Most train on what people type, unless it is switched off</span></li>
+                <li><span class="pill-icon is-critical" aria-hidden="true">&#x2715;</span><span>Your firm can't see, manage or delete it</span></li>
+              </ul>
+              <p class="versus-bottom">Keep client data out</p>
+            </section>
+            <section class="versus-card versus-work" aria-labelledby="work-title">
+              <span class="tag tag-work">Work account</span>
+              <h2 id="work-title">Bought and managed by the firm</h2>
+              <ul class="versus-list">
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>A processor agreement (DPA) with your firm</span></li>
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>No training on your data by default</span></li>
+                <li><span class="pill-icon is-good" aria-hidden="true">&#x2713;</span><span>Your admins control access, retention and settings</span></li>
+              </ul>
+              <p class="versus-bottom">Can carry client data, within your own rules</p>
+            </section>
+          </div>
+          <p class="guide-alert guide-full">
+            <span class="pill-icon" aria-hidden="true">!</span>
+            <span>
+              <strong>A work plan only covers the people who actually use it.</strong>
+              In the Netherlands, personal data put into a chatbot against your
+              firm's agreements counts as a data breach.[[cite:ap-chatbots]]
+            </span>
+          </p>
+
+          <h2 id="compare">Compare all {{plan_count}} account types</h2>
+          <p class="guide-note">
+            Filter or sort, then select an account for the full comparison
+            with sources.
+          </p>
+{{matrix}}
+          <p class="guide-note">Full comparison per tool:</p>
+{{tool_links}}
+
+          <h2 id="check">Check your own team in 20 minutes</h2>
+          <p class="guide-measure">The step most firms skip: finding out which accounts people really use.</p>
+          <div class="guide-steps">
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">1</span>
+              <h3>Billing</h3>
+              <p>Look for AI subscriptions on card statements and expense claims.</p>
+              <details>
+                <summary>What to look for</summary>
+                <p>OpenAI, Anthropic, Google One or Google AI, Microsoft 365 Personal or Family. Each one is a personal account being used for work.</p>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">2</span>
+              <h3>Admin screens</h3>
+              <p>See what your own admin consoles already show.</p>
+              <details>
+                <summary>Where to look</summary>
+                <ul>
+                  <li>Microsoft 365: the Copilot Chat usage report, and the web search setting.</li>
+                  <li>Google Workspace: whether the Gemini app is on, and how long chats are kept.</li>
+                  <li>ChatGPT Business or Claude Team: the member list next to your staff list.</li>
+                </ul>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">3</span>
+              <h3>Ask</h3>
+              <p>Six anonymous questions, in your own form tool.</p>
+              <details>
+                <summary>The six questions</summary>
+                <ol>
+                  <li>In the last month, which AI tools have you used for work?</li>
+                  <li>For each: work account, personal account, or not signed in?</li>
+                  <li>Do you pay for any yourself, or claim them as expenses?</li>
+                  <li>What have you put in? Nothing about clients / client names / client documents or emails / financial or HR information / health or other sensitive information / not sure.</li>
+                  <li>Which AI tool would you use more if the firm provided it?</li>
+                  <li>Is there anything you're unsure is allowed?</li>
+                </ol>
+                <p>Say plainly that honest answers have no consequences: you want the real picture.</p>
+              </details>
+            </div>
+            <div class="step-card">
+              <span class="step-num" aria-hidden="true">4</span>
+              <h3>Write it down</h3>
+              <p>Per tool: which account is allowed, and which data may go in.</p>
+              <a class="step-download" data-cta="guide-register" href="{{register_url}}" download>Download the register (Excel) &darr;</a>
+            </div>
+          </div>
+          <p class="guide-note">
+            This shows what people tell you and what your screens and billing
+            show. It can't see personal phones, and it can't prove that
+            something isn't used.
+          </p>
+
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account? <span class="summary-hint">6 steps</span></summary>
+            <ol class="report-list">
+              <li><strong>Write it down now:</strong> which tool and account, when, what data and whose, who entered it, what has been done since. The GDPR requires you to document every personal data breach, including ones you don't report.[[cite:gdpr]]</li>
+              <li><strong>Remove what you can:</strong> delete the conversation and, if training was on, switch it off. Each tool page says what that vendor does after deletion.</li>
+              <li><strong>Assess the risk</strong> to the people whose data it was. Health information, identity numbers or financial details weigh heavier than a name and an email address.</li>
+              <li><strong>Decide on notification within 72 hours.</strong> Unless the breach is unlikely to put those people at any risk, it must be reported to the data protection authority without undue delay and within 72 hours of becoming aware of it; if the risk is high, the people affected must be told too.[[cite:gdpr]] The Dutch authority says reporting is mandatory in many chatbot cases.[[cite:ap-chatbots]]</li>
+              <li><strong>Check your client contracts</strong> for clauses on reporting incidents to the client.</li>
+              <li><strong>Fix the cause:</strong> a work account and clear rules about what may go in.</li>
+            </ol>
+            <p>Step by step, with a record you can fill in and save: <a href="/ai-data-incident">the first 72 hours</a>. For staff: <a href="/pasted-company-data-into-ai">what to do if you pasted something</a>.</p>
+            <p class="guide-note">For the notification decision itself, involve your privacy officer or a privacy lawyer. This guide is not legal advice.</p>
+          </details>
+
+          <div class="guide-bridge" id="help">
+            <h2>Want to know for sure?</h2>
+            <p class="guide-measure">
+              This guide shows what each account promises. It can't show which
+              accounts your team really uses, or with which data. Noxiom's
+              fixed-price AI usage review finds out from an anonymous staff
+              survey, your admin screens and your billing, and turns it into a
+              report and rules that fit how your team works. If you're fine,
+              the report says so.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="faq">Questions</h2>
+{{faq}}
+
+          <h2 id="about">About this guide</h2>
+          <details class="guide-more">
+            <summary>What it does and doesn't tell you</summary>
+            <p><strong>It tells you</strong> what each vendor publicly states about each account type on the date shown, where vendors are silent, and where their own pages contradict each other.</p>
+            <p><strong>It doesn't</strong> verify that vendors keep their promises (we read their terms; we don't audit them), cover negotiated enterprise contracts or every setting, tell you whether your firm's use is lawful, or show which tools and accounts your team actually uses. It is not legal advice.</p>
+          </details>
+          <details class="guide-more">
+            <summary>What we couldn't confirm</summary>
+{{known_gaps}}
+          </details>
+          <details class="guide-more">
+            <summary>Why the account matters more than the brand</summary>
+            <p>Five different things get called "using ChatGPT". Vendors' promises depend on the plan, and only apply to the account someone actually signs in to.</p>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th scope="col">Layer</th><th scope="col">Example</th><th scope="col">Who decides</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Layer">The tool</td><td data-label="Example">ChatGPT, Copilot, Gemini</td><td data-label="Who decides">The vendor</td></tr>
+                  <tr><td data-label="Layer">The account</td><td data-label="Example">A colleague's personal login, or the firm's workspace</td><td data-label="Who decides">Whoever signs in</td></tr>
+                  <tr><td data-label="Layer">The plan</td><td data-label="Example">Free, Plus, Business, Enterprise</td><td data-label="Who decides">Whoever pays</td></tr>
+                  <tr><td data-label="Layer">The settings</td><td data-label="Example">Training on or off, how long chats are kept, web search</td><td data-label="Who decides">The user, or your admin on work plans</td></tr>
+                  <tr><td data-label="Layer">The actual use</td><td data-label="Example">What someone pastes in on a busy afternoon</td><td data-label="Who decides">Nobody, unless there are rules and you know what is used</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <details class="guide-more" id="reuse">
+            <summary>Reuse the data <span class="summary-hint">CC BY 4.0</span></summary>
+            <p>Everything here comes from one data file, published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>. Use it in your own client materials or tools; credit Noxiom and link to this page.</p>
+            <div class="guide-downloads">
+              <a data-cta="guide-data" href="{{data_url}}">The data (JSON, every fact with its source and check date)</a>
+              <a data-cta="guide-register" href="{{register_url}}" download>The one-page AI accounts register (Excel; the example rows are in grey)</a>
+            </div>
+          </details>
+          <details class="guide-more" id="changes">
+            <summary>Change log and corrections <span class="summary-hint">next check by {{next_review_human}}</span></summary>
+{{changelog}}
+            <p>Spot something wrong or out of date? Email <a href="mailto:contact@noxiom.com">contact@noxiom.com</a> with the page and the source. We check it against the vendor's page, correct it, and log the change here.</p>
+          </details>
+          <details class="guide-more" id="sources">
+            <summary>Sources</summary>
+            <p class="guide-note">The vendor's own page unless marked otherwise. "Checked" is the date we last read it. The tool pages cite a source for every value in the comparison.</p>
+            <!-- sources-list -->
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked {{checked_human}}. In het Nederlands:
+            <a href="{{nl_url}}" hreflang="nl" lang="nl">Wat doen AI-tools met je bedrijfsgegevens?</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+{{guide_js}}
+    </script>
+  </body>
+</html>

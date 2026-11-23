@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Email instead
+    url: mailto:contact@noxiom.com
+    about: No GitHub account needed. Same rule applies; never send client data.
+  - name: Suggest a new situation kit
+    url: https://noxiom.com/contact
+    about: Tell us the situation in one sentence, in the words someone would use when it happens.

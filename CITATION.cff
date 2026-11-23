@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you reuse or cite this material, please credit it like this."
+title: "AI and client data: kits for small firms"
+abstract: "Free, sourced kits for small firms using AI tools with client data, and a dated dataset of what ChatGPT, Microsoft Copilot, Gemini, Claude and DeepSeek do with business data per account type."
+type: dataset
+authors:
+  - name: "Noxiom"
+    website: "https://noxiom.com"
+  - given-names: "Samuil"
+    family-names: "Gnocchi"
+license: CC-BY-4.0
+url: "https://noxiom.com/ai-accounts"
+keywords:
+  - AI governance
+  - GDPR
+  - data breach
+  - shadow AI
+  - ChatGPT
+  - Microsoft Copilot

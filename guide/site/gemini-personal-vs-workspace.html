@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>Gemini personal vs Workspace: training, review and retention | Noxiom</title>
+    <meta name="description" content="A personal Google account and a Workspace account get very different Gemini terms: training, human review, retention, EU data regions and contracts, sourced." />
+    <link rel="canonical" href="https://noxiom.com/gemini-personal-vs-workspace" />
+    <meta property="og:title" content="Gemini personal vs Workspace: what happens to your business data" />
+    <meta property="og:description" content="A personal Google account and a Workspace account get very different Gemini terms: training, human review, retention, EU data regions and contracts, sourced." />
+    <meta property="og:url" content="https://noxiom.com/gemini-personal-vs-workspace" />
+    <meta property="article:modified_time" content="2026-11-22" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gemini personal vs Workspace: what happens to your business data",
+  "description": "A personal Google account and a Workspace account get very different Gemini terms: training, human review, retention, EU data regions and contracts, sourced.",
+  "url": "https://noxiom.com/gemini-personal-vs-workspace",
+  "mainEntityOfPage": "https://noxiom.com/gemini-personal-vs-workspace",
+  "inLanguage": "en",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "author": {
+    "@type": "Person",
+    "@id": "https://noxiom.com/about#founder",
+    "name": "Samuil Gnocchi",
+    "url": "https://noxiom.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Noxiom",
+    "url": "https://noxiom.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://noxiom.com/img/logo.png"
+    }
+  },
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between Gemini with a personal account and with Workspace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different terms. Personal accounts: training on by default for adults, human review of some chats, reviewed chats kept up to three years. Workspace accounts: no training without your organisation's permission, no human review outside your domain without permission, prompts covered by the Cloud Data Processing Addendum, and retention set by your admins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Gemini in Google Workspace train on our data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google says Workspace does not use customer data for training models without the customer's prior permission or instruction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can people at Google read Gemini chats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For personal accounts, yes: human reviewers, including reviewers at Google's service providers, read some chats, and Google asks users not to enter confidential information they wouldn't want a reviewer to see. For Workspace, Google says content isn't reviewed by humans outside your domain without permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Google AI Pro a business plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google AI Pro is a personal Google One subscription, so personal-account terms apply even if someone pays for it to use at work. Gemini for business comes with Google Workspace."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Noxiom",
+      "item": "https://noxiom.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Personal or work account?",
+      "item": "https://noxiom.com/ai-accounts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Gemini",
+      "item": "https://noxiom.com/gemini-personal-vs-workspace"
+    }
+  ]
+}
+</script>
+    <style>
+/* Guide pages: builds on the site's report-* classes in styles.css. Inlined in
+   each page so the site stylesheet stays untouched.
+   Status colours (good #0ca30c, warning #fab219, critical #d03b3b) are
+   reserved for status and always come with an icon and a text label. */
+.guide .report-doc { background-image: none; }
+.guide .report-doc h3 { color: #e5e5e5; font-size: 1.05em; margin: 0; }
+.guide .report-doc a { color: var(--accent); }
+.guide .report-doc a.cta-button { color: #fff; }
+.guide-wide { max-width: 1060px; }
+.guide-wide .report-doc > p:not(.guide-full), .guide-wide .guide-measure { max-width: 74ch; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.guide .report-head { margin-bottom: 18px; padding-bottom: 16px; }
+.guide .report-doc h1 { font-size: 1.85em; margin-bottom: 10px; }
+.guide-lead { font-size: 1.06em; color: #e5e5e5 !important; line-height: 1.55; margin-bottom: 10px !important; }
+.guide-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.86em; color: var(--text-muted); margin: 0 !important; }
+.guide-meta strong { color: var(--text-soft); font-weight: 600; }
+.guide .report-doc h2 { margin: 30px 0 10px; }
+
+/* Tags: identity (personal / work), not status */
+.tag { display: inline-block; font-size: 0.66em; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.tag-personal { background: rgba(232, 67, 198, 0.14); color: #f5a6e4; }
+.tag-work { background: rgba(40, 247, 216, 0.12); color: var(--accent); }
+
+/* Status pills: icon carries the colour, the label stays in text ink */
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; font-size: 0.86em; line-height: 1.3; color: #ececec; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); text-align: left; }
+.pill-neutral { padding-left: 10px; }
+.pill-icon { flex: 0 0 auto; width: 18px; height: 18px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.72em; font-weight: 800; color: #fff; }
+.pill-good { background: rgba(12, 163, 12, 0.1); border-color: rgba(12, 163, 12, 0.4); }
+.pill-good .pill-icon { background: #0ca30c; }
+.pill-warning { background: rgba(250, 178, 25, 0.08); border-color: rgba(250, 178, 25, 0.35); }
+.pill-warning .pill-icon { background: #fab219; color: #0b0b0b; }
+.pill-critical { background: rgba(208, 59, 59, 0.12); border-color: rgba(208, 59, 59, 0.45); }
+.pill-critical .pill-icon { background: #d03b3b; }
+.pill-unknown { border-style: dashed; }
+.pill-unknown .pill-icon { background: #5b6275; }
+.pill-icon.is-good { background: #0ca30c; }
+.pill-icon.is-critical { background: #d03b3b; }
+.guide-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; font-size: 0.85em; }
+.guide-legend .pill { font-size: 0.92em; }
+
+/* The answer: personal vs work */
+.guide-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 10px; }
+.versus-card { border-radius: 14px; padding: 14px 18px; border: 1px solid var(--field-border); background: rgba(255, 255, 255, 0.025); }
+.versus-personal { border-top: 3px solid #e843c6; }
+.versus-work { border-top: 3px solid var(--accent); }
+.guide .versus-card h2 { font-size: 1.12em; color: #f0f0f0; margin: 8px 0 12px; }
+.versus-list { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 9px; }
+.versus-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); line-height: 1.45; }
+.versus-list .pill-icon { margin-top: 1px; }
+.versus-bottom { font-weight: 700; color: #f0f0f0 !important; margin: 0 !important; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.guide-alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 10px; background: rgba(250, 178, 25, 0.06); border: 1px solid rgba(250, 178, 25, 0.25); color: var(--text-soft); font-size: 0.94em; margin: 0 0 8px !important; }
+.guide-alert .pill-icon { background: #fab219; color: #0b0b0b; margin-top: 2px; }
+
+/* Comparison grid */
+.guide-controls { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 2px 0 10px; }
+.guide-controls[hidden] { display: none; }
+.guide-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+.guide-filter button { background: var(--field-bg); border: 1px solid var(--field-border); color: var(--text-soft); border-radius: 999px; padding: 5px 13px; font: inherit; font-size: 0.86em; cursor: pointer; }
+.guide-filter button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(40, 247, 216, 0.07); }
+.guide button:focus-visible, .guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.guide tr[hidden] { display: none !important; }
+.guide-matrix { font-size: 0.92em; }
+.guide-matrix td { vertical-align: middle; padding: 10px 12px; }
+.guide-matrix th { vertical-align: bottom; }
+.guide-matrix th.sortable { padding: 0; }
+.guide-matrix button.sort { all: unset; box-sizing: border-box; display: flex; gap: 6px; align-items: flex-end; justify-content: space-between; width: 100%; padding: 11px 12px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.94em; line-height: 1.3; }
+.guide-matrix button.sort:hover { background: rgba(40, 247, 216, 0.06); }
+.sort-mark::after { content: "\2195"; opacity: 0.45; font-size: 0.9em; }
+th[aria-sort="ascending"] .sort-mark::after { content: "\25B2"; opacity: 1; font-size: 0.7em; }
+th[aria-sort="descending"] .sort-mark::after { content: "\25BC"; opacity: 1; font-size: 0.7em; }
+.matrix-account { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.matrix-account a { font-weight: 600; text-decoration: none; }
+.matrix-account a::after { content: " \2192"; }
+.matrix-account a:hover { text-decoration: underline; }
+.guide-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.guide-chips a { font-size: 0.88em; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(40, 247, 216, 0.35); }
+.guide-chips a:hover { background: rgba(40, 247, 216, 0.08); }
+.guide-note { font-size: 0.86em; color: var(--text-muted) !important; }
+
+/* Steps for the self-check */
+.guide-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.step-card { border: 1px solid var(--field-border); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); display: flex; flex-direction: column; gap: 6px; }
+.step-num { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.85em; background: rgba(40, 247, 216, 0.14); color: var(--accent); }
+.step-card p { font-size: 0.92em; margin: 0 !important; }
+.step-card details summary { font-size: 0.86em; color: var(--accent); padding: 4px 0 0; }
+.step-card details[open] summary { margin-bottom: 6px; }
+.step-card ol, .step-card ul { margin: 0; padding-left: 18px; font-size: 0.88em; color: var(--text-soft); display: flex; flex-direction: column; gap: 6px; }
+.step-download { margin-top: auto; font-size: 0.88em; font-weight: 600; }
+
+/* Click-to-open sections */
+.guide summary { cursor: pointer; list-style: none; }
+.guide summary::-webkit-details-marker { display: none; }
+.guide-accordion { border-top: 1px solid var(--field-border); margin-bottom: 8px; }
+.guide-accordion details { border-bottom: 1px solid var(--field-border); }
+.guide-accordion summary, .guide-more > summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 13px 2px; font-weight: 600; color: #e5e5e5; }
+.guide-accordion summary::after, .guide-more > summary::after { content: "+"; color: var(--accent); font-size: 1.25em; font-weight: 400; line-height: 1; }
+.guide-accordion details[open] > summary::after, .guide-more[open] > summary::after { content: "\2212"; }
+.guide-accordion details > :not(summary), .guide-more > :not(summary) { margin-bottom: 14px; }
+.guide-more { border: 1px solid var(--field-border); border-radius: 12px; padding: 0 16px; margin: 0 0 10px; background: rgba(255, 255, 255, 0.02); }
+.guide-more[open] { padding-bottom: 4px; }
+.guide-more > summary .summary-hint { font-weight: 400; color: var(--text-muted); font-size: 0.86em; margin-left: auto; }
+.guide-callout > summary { color: #f0f0f0; }
+.guide-callout { border-color: rgba(250, 178, 25, 0.3); background: rgba(250, 178, 25, 0.04); }
+
+/* Plan cards on tool pages */
+.guide-plans { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 6px 0 8px; }
+.plan-card { border: 1px solid var(--field-border); border-radius: 14px; padding: 14px 16px; background: rgba(255, 255, 255, 0.025); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+.plan-personal { border-top: 3px solid #e843c6; }
+.plan-work { border-top: 3px solid var(--accent); }
+.plan-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 10px; }
+.guide .plan-head h3 { font-size: 1.02em; color: #f0f0f0; }
+.plan-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 6px !important; }
+.plan-verdict-label { font-size: 0.8em; color: var(--text-muted); }
+.plan-why { font-size: 0.86em; color: var(--text-muted) !important; margin: 0 0 8px !important; line-height: 1.45; }
+.plan-rows { margin: 0; }
+.plan-row { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.plan-row dt { font-size: 0.76em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; }
+.plan-row dd { margin: 0; }
+.plan-price { margin: auto 0 0 !important; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 0.86em; }
+.plan-price span { color: var(--text-muted); margin-right: 6px; }
+
+/* Full comparison table (inside a click-to-open section) */
+.guide-compare th[scope="row"] { color: #e5e5e5; font-weight: 600; white-space: nowrap; background: rgba(255, 255, 255, 0.02); vertical-align: top; }
+.guide-compare td { line-height: 1.5; font-size: 0.95em; }
+.guide-compare td .pill { display: flex; width: fit-content; margin-bottom: 6px; }
+.guide-cols-1 td { width: 75%; }
+
+sup.cite { font-size: 0.68em; margin-left: 2px; line-height: 0; }
+sup.cite a { text-decoration: none; }
+.guide-sources { font-size: 0.86em; padding-left: 22px; }
+.guide-sources li { margin-bottom: 6px; color: var(--text-muted); overflow-wrap: anywhere; }
+.guide-bridge { border: 1px solid rgba(40, 247, 216, 0.3); border-radius: 14px; padding: 18px 20px; background: rgba(40, 247, 216, 0.05); margin: 26px 0; }
+.guide .guide-bridge h2 { margin-top: 0; font-size: 1.2em; }
+.guide-cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+.guide-text-link { font-weight: 600; }
+.guide-downloads { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+@media (max-width: 700px) {
+  .guide-versus { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .guide .report-doc { padding: 24px 16px; }
+  .guide .report-doc h1 { font-size: 1.5em; }
+  .guide-matrix td { align-items: center; padding: 8px 0; }
+  .guide-matrix td::before { font-size: 0.86em; }
+  .guide-matrix td[data-label="Account"]::before { content: none; }
+  .guide-matrix td[data-label="Account"] { justify-content: flex-start; }
+  .guide-matrix thead { display: none; }
+  .guide-compare td { display: block; text-align: left; }
+  .guide-compare td::before { display: block; margin-bottom: 6px; color: #e5e5e5 !important; }
+  .guide-compare th[scope="row"] { display: block; white-space: normal; padding: 10px 0 2px; border: none; background: none; color: var(--accent); }
+}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap">
+        <a class="report-back" href="/ai-accounts">&larr; All AI accounts</a>
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide &middot; Google</span>
+            <h1>Gemini personal vs Workspace: what happens to your business data</h1>
+            <p class="guide-lead">With a personal Google account, Gemini trains on chats by default, human reviewers read some of them, and reviewed chats are kept for up to three years. With a Google Workspace work account, Google doesn't train on your data without permission, prompts fall under its Cloud Data Processing Addendum, and admins set retention and, on most editions, a European data region.</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="2026-11-22">22 November 2026</time></strong></span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span>Part of <a href="/ai-accounts">the AI accounts guide</a></span>
+            </p>
+          </div>
+
+<div class="guide-plans guide-plans-2">
+<article class="plan-card plan-personal" id="plan-gemini-personal">
+  <div class="plan-head"><span class="tag tag-personal">Personal</span><h3>Gemini app, personal Google account (free or Google AI Pro)</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Keep it out</span></p>
+  <p class="plan-why">Training is on by default, people may read chats, and Google itself asks users not to enter confidential information.</p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes, by default</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>18 months by default</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Free; AI Pro €21.99 a month</p>
+</article>
+<article class="plan-card plan-work" id="plan-gemini-workspace">
+  <div class="plan-head"><span class="tag tag-work">Work</span><h3>Gemini in Google Workspace, work account</h3></div>
+  <p class="plan-verdict"><span class="plan-verdict-label">Client data in it?</span> <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>With conditions</span></p>
+  <p class="plan-why">If staff use their work account, your firm has decided which data may go in, and you have set retention and, where needed, a European data region.</p>
+  <dl class="plan-rows">
+    <div class="plan-row"><dt>Trains on what you type?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No, without permission</span></dd></div>
+    <div class="plan-row"><dt>Contract with your firm</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span></dd></div>
+    <div class="plan-row"><dt>Can your firm manage it?</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span></dd></div>
+    <div class="plan-row"><dt>Where it is stored</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>EU option, most editions</span></dd></div>
+    <div class="plan-row"><dt>How long it is kept</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Admins decide</span></dd></div>
+    <div class="plan-row"><dt>People reading chats</dt><dd><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Not outside your domain</span></dd></div>
+  </dl>
+  <p class="plan-price"><span>Price</span> Included, from €6.80 per user a month</p>
+</article>
+</div>
+<p class="guide-legend">
+  <span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>In your favour</span>
+  <span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>Has a catch</span>
+  <span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>A problem for client data</span>
+  <span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>The vendor doesn't say</span>
+</p>
+
+          <h2 id="tell">How to tell which one someone is using</h2>
+<ul class="report-list">
+<li>Look at the account shown in the corner of Gemini. A company address managed by your Google Workspace means Workspace terms; a personal Gmail address means consumer terms. Google itself notes that work accounts may be subject to different data handling terms.</li>
+<li>Google AI Pro is a personal Google One subscription. Personal-account terms apply even when someone pays for it to use at work.</li>
+</ul>
+
+          <details class="guide-more" id="compare">
+            <summary>Full comparison, in the vendor's words <span class="summary-hint">with sources</span></summary>
+            <p class="guide-note">What Google itself states, in our words. Where the vendor doesn't say, we say "not stated" rather than guess.</p>
+<div class="report-table-wrap">
+<table class="report-table guide-compare guide-cols-2">
+<thead><tr><th scope="col"><span class="visually-hidden">Question</span></th><th scope="col"><span class="tag tag-personal">Personal</span> Gemini (personal)</th><th scope="col"><span class="tag tag-work">Work</span> Gemini (Workspace)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Trains on what you type?</th><td data-label="Gemini (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes, by default</span> With the History setting on, which is the default for adults, Google uses your future chats to train generative AI models. Switching History off stops that, except for chats you give feedback on.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>No, without permission</span> Google: &quot;Workspace does not use customer data for training models without customer's prior permission or instruction.&quot;<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">How long it is kept</th><td data-label="Gemini (personal)"><span class="pill pill-warning"><span class="pill-icon" aria-hidden="true">!</span><span class="visually-hidden">Has a catch: </span>18 months by default</span> History older than 18 months is deleted automatically by default; 3 or 36 months, or never, are the other options. With History off, chats are still kept for about two months. Chats seen by human reviewers are kept for up to three years and are not deleted when you delete your history.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Admins decide</span> Admins set it: up to 36 months for the Gemini app (18 months by default) and from 90 days to indefinitely inside Gmail, Docs and the other apps. With history off, new chats are kept for up to 72 hours.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">People reading chats</th><td data-label="Gemini (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>Yes</span> Human reviewers, including trained reviewers from Google's service providers, read some chats. Google asks users not to enter confidential information they wouldn't want a reviewer to see.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Not outside your domain</span> Google says content isn't reviewed by humans or used for model training outside your domain without permission.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Where it is stored</th><td data-label="Gemini (personal)"><span class="pill pill-unknown"><span class="pill-icon" aria-hidden="true">?</span><span class="visually-hidden">The vendor doesn't say: </span>Not stated</span> The pages we read don't say where personal-account chats are stored.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>EU option, most editions</span> Workspace data regions cover Gemini prompts and responses at rest, with Europe as one of the choices, on editions from Business Standard up. Business Starter isn't listed, and Gemini Notebook isn't covered.<sup class="cite"><a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Contract with your firm</th><td data-label="Gemini (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>None with your firm</span> Google's consumer privacy notice applies, with the individual. Google notes that work accounts may be subject to different data handling terms.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>DPA included</span> Prompts count as customer data under Google's Cloud Data Processing Addendum.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Can your firm manage it?</th><td data-label="Gemini (personal)"><span class="pill pill-critical"><span class="pill-icon" aria-hidden="true">✕</span><span class="visually-hidden">A problem for client data: </span>No</span> Nothing for the firm to manage. Admin controls for Gemini exist only for Google Workspace accounts.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-good"><span class="pill-icon" aria-hidden="true">✓</span><span class="visually-hidden">In your favour: </span>Yes</span> Admins can switch Gemini features and the Gemini app on or off, set retention, and use audit logs. The Gemini app is on by default as a core service.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Price</th><td data-label="Gemini (personal)"><span class="pill pill-neutral">Free; AI Pro €21.99 a month</span> Free to use. Google AI Pro costs €21.99 a month.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a></sup></td><td data-label="Gemini (Workspace)"><span class="pill pill-neutral">Included, from €6.80 per user a month</span> Included in Google Workspace: Business Starter €6.80, Business Standard €13.60 and Business Plus €21.10 per user per month, excluding VAT (Netherlands list prices). Starter includes only the Gemini app and Gemini in Gmail.<sup class="cite"><a href="#src-6" aria-label="Source 6">6</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+          </details>
+          <details class="guide-more" id="admin">
+            <summary>What an admin should check</summary>
+<ul class="report-list">
+<li>Decide whether the Gemini app should be available: Google turns it on by default as a core service.</li>
+<li>Set how long Gemini conversations are kept. The default for the Gemini app is 18 months.</li>
+<li>On Business Standard and higher editions, set the data region to Europe if you want data at rest in the EU. Gemini Notebook isn't covered by data regions.</li>
+<li>Ask staff to use Gemini for work only while signed in with their work account, not a personal Gmail address.</li>
+</ul>
+          </details>
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account?</summary>
+            <p>In a personal account, delete the chat from Gemini's history. Note that chats already selected for human review are kept for up to three years and aren't deleted along with the history.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a></sup></p>
+            <p>Then write down what happened, assess the risk to the people concerned, and decide on notification within 72 hours. Step by step, with a record you can fill in: <a href="/ai-data-incident">the first 72 hours</a>.</p>
+          </details>
+
+          <h2 id="faq">Questions</h2>
+<div class="guide-accordion">
+<details class="guide-faq"><summary>What's the difference between Gemini with a personal account and with Workspace?</summary><p>Different terms. Personal accounts: training on by default for adults, human review of some chats, reviewed chats kept up to three years. Workspace accounts: no training without your organisation's permission, no human review outside your domain without permission, prompts covered by the Cloud Data Processing Addendum, and retention set by your admins.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-2" aria-label="Source 2">2</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></p></details>
+<details class="guide-faq"><summary>Does Gemini in Google Workspace train on our data?</summary><p>Google says Workspace does not use customer data for training models without the customer's prior permission or instruction.<sup class="cite"><a href="#src-3" aria-label="Source 3">3</a></sup></p></details>
+<details class="guide-faq"><summary>Can people at Google read Gemini chats?</summary><p>For personal accounts, yes: human reviewers, including reviewers at Google's service providers, read some chats, and Google asks users not to enter confidential information they wouldn't want a reviewer to see. For Workspace, Google says content isn't reviewed by humans outside your domain without permission.<sup class="cite"><a href="#src-1" aria-label="Source 1">1</a>, <a href="#src-3" aria-label="Source 3">3</a></sup></p></details>
+<details class="guide-faq"><summary>Is Google AI Pro a business plan?</summary><p>No. Google AI Pro is a personal Google One subscription, so personal-account terms apply even if someone pays for it to use at work. Gemini for business comes with Google Workspace.<sup class="cite"><a href="#src-5" aria-label="Source 5">5</a>, <a href="#src-6" aria-label="Source 6">6</a></sup></p></details>
+</div>
+
+          <div class="guide-bridge" id="help">
+            <h2>Which account is your team really using?</h2>
+            <p>
+              This page shows what each Gemini account promises, not
+              which one your colleagues use.
+              <a href="/ai-accounts#check">The 20-minute check</a> gives you a
+              first picture for free. Noxiom's fixed-price AI usage review
+              finds out properly and turns it into rules that fit how your
+              team works.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="other-tools">Other tools</h2>
+<nav class="guide-chips" aria-label="Tool pages">
+<a href="/chatgpt-personal-vs-business">ChatGPT personal vs Business &rarr;</a>
+<a href="/copilot-personal-vs-work">Copilot personal vs work account &rarr;</a>
+<a href="/claude-personal-vs-team">Claude personal vs Team &rarr;</a>
+<a href="/deepseek-business-data">DeepSeek and business data &rarr;</a>
+</nav>
+
+          <details class="guide-more" id="sources">
+            <summary>Sources and changes</summary>
+            <p class="guide-note">
+              The vendor's own page unless marked otherwise. "Checked" is the
+              date we last read it. Changes are recorded in the
+              <a href="/ai-accounts#changes">change log</a>; corrections to
+              <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>.
+            </p>
+            <ol class="guide-sources">
+<li id="src-1"><a href="https://support.google.com/gemini/answer/13594961?hl=en" rel="noopener">Google: Gemini Apps Privacy Hub</a>. Page dated 16 November 2026. Checked 22 November 2026.</li>
+<li id="src-2"><a href="https://support.google.com/gemini/answer/13278892?hl=en" rel="noopener">Google: Manage and delete your history in Gemini Apps</a>. Checked 22 November 2026.</li>
+<li id="src-3"><a href="https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub?hl=en" rel="noopener">Google: Generative AI in Google Workspace Privacy Hub</a>. Page dated 10 November 2026. Checked 22 November 2026.</li>
+<li id="src-4"><a href="https://knowledge.workspace.google.com/admin/compliance/data-covered-by-data-regions?hl=en" rel="noopener">Google: Data covered by data regions</a>. Page dated 10 November 2026. Checked 22 November 2026.</li>
+<li id="src-5"><a href="https://one.google.com/about/plans" rel="noopener">Google: Google One plans</a>. Checked 22 November 2026.</li>
+<li id="src-6"><a href="https://workspace.google.com/pricing?hl=en" rel="noopener">Google: Google Workspace pricing (Netherlands)</a>. Checked 22 November 2026.</li>
+</ol>
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked 22 November 2026, next check by 22 December 2026. This
+            page describes vendors' published terms; it does not verify them
+            and is not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+// Guide pages: open the collapsed section a link points into, and make the
+// comparison grid filterable and sortable. Reads and stores nothing; without
+// JavaScript the grid is a plain table and the sections still open on click.
+(function () {
+  function openTo(id) {
+    var el = id && document.getElementById(id);
+    for (var d = el; d; d = d.parentElement) if (d.tagName === "DETAILS") d.open = true;
+  }
+  openTo(decodeURIComponent(location.hash.slice(1)));
+  window.addEventListener("hashchange", function () {
+    openTo(decodeURIComponent(location.hash.slice(1)));
+  });
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+    if (link) openTo(link.getAttribute("href").slice(1));
+  });
+
+  var table = document.getElementById("matrix");
+  var controls = document.getElementById("matrixControls");
+  if (!table || !controls) return;
+  var body = table.tBodies[0];
+  var rows = Array.prototype.slice.call(body.rows);
+  var state = { account: "all", tool: "all" };
+  controls.hidden = false;
+
+  controls.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button) return;
+    var key = button.hasAttribute("data-account") ? "account" : "tool";
+    state[key] = button.getAttribute("data-" + key);
+    button.parentElement.querySelectorAll("button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    rows.forEach(function (row) {
+      row.hidden =
+        (state.account !== "all" && row.getAttribute("data-account") !== state.account) ||
+        (state.tool !== "all" && row.getAttribute("data-tool") !== state.tool);
+    });
+  });
+
+  table.querySelectorAll("button.sort").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var col = Number(button.getAttribute("data-col"));
+      var th = button.parentElement;
+      var dir = th.getAttribute("aria-sort") === "ascending" ? "descending" : "ascending";
+      table.querySelectorAll("th[aria-sort]").forEach(function (h) {
+        h.setAttribute("aria-sort", "none");
+      });
+      th.setAttribute("aria-sort", dir);
+      var sign = dir === "ascending" ? 1 : -1;
+      rows
+        .slice()
+        .sort(function (a, b) {
+          var diff = Number(a.cells[col].getAttribute("data-sort")) - Number(b.cells[col].getAttribute("data-sort"));
+          return diff !== 0 ? sign * diff : Number(a.getAttribute("data-order")) - Number(b.getAttribute("data-order"));
+        })
+        .forEach(function (row) {
+          body.appendChild(row);
+        });
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

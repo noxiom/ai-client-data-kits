@@ -1,0 +1,522 @@
+{
+  "id": "client-data-in-ai",
+  "title": "Client data went into an AI tool",
+  "description": "What an employee and a small firm do in the first 72 hours after client or company data went into an AI tool: record it, contain it, assess the risk, decide on reporting to the Dutch data protection authority, and fix the cause.",
+  "version": "1.1.0",
+  "status": "release",
+  "checked": "2026-11-23",
+  "next_review": "2026-12-22",
+  "uses_dataset": "ai-accounts",
+  "license": { "name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
+  "changelog": [
+    { "date": "2026-11-23", "change": "Easier on phones (larger touch targets, a save bar, Share). An AI assistant can now fill in the record: copy its instructions, paste its answer back. Save to continue later as .json; the record itself saves as Word." },
+    { "date": "2026-11-23", "change": "First version: a page for staff, a page for the firm with the incident record builder, and Word templates for the record and a staff handout." }
+  ],
+
+  "sources": [
+    {
+      "id": "edpb-breach",
+      "publisher": "European Data Protection Board",
+      "title": "Guidelines 9/2022 on personal data breach notification under GDPR, version 2.0",
+      "url": "https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202209_personal_data_breach_notification_v2.0_en.pdf",
+      "page_date": "2023-03-28",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "ap-report",
+      "publisher": "Autoriteit Persoonsgegevens (Dutch data protection authority)",
+      "title": "This is how you report a data breach",
+      "url": "https://www.autoriteitpersoonsgegevens.nl/en/themes/security/data-breaches/this-is-how-you-report-a-data-breach",
+      "page_date": null,
+      "checked": "2026-11-23",
+      "note": "Link found through a web search on 23 Nov 2026. The AP site blocks automated reading, so the page was located, not read, by our tools."
+    }
+  ],
+
+  "employee": {
+    "slug": "pasted-company-data-into-ai",
+    "seo_title": "Pasted company or client data into ChatGPT? What to do now",
+    "meta_description": "Put client or company information into ChatGPT, Copilot, Gemini or another AI tool? Note what went in, tell your firm today, then delete it. What to do, per tool.",
+    "title": "I put company information into an AI tool. What now?",
+    "lead": "It happens, and it can be handled. What matters most is that the right person at your firm hears about it today, from you.",
+    "answer": [
+      "Write down what went in and where, without copying the information itself.",
+      "Tell the person your firm has named for this today: your manager, office manager or privacy contact.",
+      "Then delete the conversation, unless your firm asks you to wait."
+    ],
+    "why_today": "If personal data was involved, your firm may have to decide within 72 hours of finding out whether to report it to the Dutch data protection authority (the Autoriteit Persoonsgegevens). It has to keep a record of every incident like this, including the ones it doesn't report. It can only do either if it knows.",
+    "steps": [
+      {
+        "title": "Note it",
+        "when": "Now, 5 minutes",
+        "text": "Describe what happened. Don't paste the information again anywhere, not even into an email to your manager.",
+        "items": [
+          "Which tool, and which account: your personal account, or a work account your firm gave you.",
+          "When, roughly.",
+          "What kind of information, and whose: for example \"a client's payroll file with about 40 names and salaries\".",
+          "Pasted text, an uploaded file, or a connected mailbox or drive.",
+          "Whether you shared the chat with a link, and whether the tool's training setting was on."
+        ]
+      },
+      {
+        "title": "Tell your firm",
+        "when": "Today",
+        "text": "Tell your manager, office manager or the privacy contact. A short message is enough; you can copy the one below.",
+        "items": []
+      },
+      {
+        "title": "Delete it",
+        "when": "After you've noted it",
+        "text": "Delete the conversation and remove any share link. If the training setting was on, switch it off. Wait first if your firm asks you to: it may want to see the chat for its record.",
+        "items": []
+      }
+    ],
+    "message": "Hi [name], I need to report something. On [date] at about [time] I put [describe the kind of information, not the information itself] from [a client / our own files] into [tool], using my [personal / work] account. I have [not yet] deleted the conversation. Can we talk today?",
+    "work_account": "If your firm gave you a work account (for example ChatGPT Business, or Copilot with the green shield) and its rules allow this kind of information in it, this may not be an incident at all. The Dutch data protection authority says that when chatbot use is part of an organisation's policy, it is not a data breach. If you're not sure what the rules allow, tell your manager anyway.",
+    "work_account_sources": ["ap-chatbots"],
+    "next": [
+      "Your firm writes the incident down.",
+      "It assesses the risk to the people whose information it was.",
+      "It decides whether to report it to the Autoriteit Persoonsgegevens, and whether to tell the client and the people concerned.",
+      "You may be asked for details. The decisions are the firm's, not yours."
+    ],
+    "faq": [
+      {
+        "q": "Is it a data breach if I put client data into ChatGPT?",
+        "a": "If it included personal data and you used the tool against your employer's agreements, the Dutch data protection authority says it is a data breach. Not every breach has to be reported to the authority: only when it is likely to put the people concerned at some risk. Your firm makes that call.",
+        "sources": ["ap-chatbots", "gdpr"]
+      },
+      {
+        "q": "Should I delete the conversation straight away?",
+        "a": "Note what went in first, and tell your firm. Then delete it, unless your firm asks you to wait because it wants to see the chat for its record. Deleting doesn't always remove everything: some tools keep deleted chats for a while, and anything already used for training stays there. The per-tool notes on this page say what each vendor does.",
+        "sources": []
+      },
+      {
+        "q": "I pasted a password or an access key into an AI tool.",
+        "a": "Change the password or replace the key now, everywhere it is used, and tell whoever manages your IT. Then delete the conversation. A changed password is worthless to anyone who sees the chat later.",
+        "sources": []
+      },
+      {
+        "q": "It was company information, but nothing about people. Does it still matter?",
+        "a": "It isn't a personal data breach under the GDPR, because no personal data was involved. It can still matter: client contracts often require confidentiality, and the tool may keep or train on what you typed. Tell your manager so the firm can check.",
+        "sources": ["gdpr"]
+      },
+      {
+        "q": "Can my employer see what I typed into ChatGPT?",
+        "a": "Not in your personal account: your firm has no access to it. In a work account it depends on the plan and the settings. The AI accounts guide shows what admins can see per tool.",
+        "sources": []
+      },
+      {
+        "q": "Will I get into trouble?",
+        "a": "This page can't speak for your employer. What it can say: your firm needs to know to meet its own obligations, and the sooner it knows, the more options it has.",
+        "sources": []
+      }
+    ],
+    "handout": {
+      "title": "Put company information into an AI tool by mistake?",
+      "intro": "It happens, and it can be handled. Do these three things, in this order.",
+      "contact_line": "Who to tell in our firm: ______________________ (name, phone)",
+      "footer": "Adapted from noxiom.com/pasted-company-data-into-ai (CC BY 4.0). Not legal advice."
+    }
+  },
+
+  "owner": {
+    "slug": "ai-data-incident",
+    "seo_title": "Client data went into an AI tool: the first 72 hours",
+    "meta_description": "Client data went into ChatGPT or another AI tool? Record it, contain it, weigh the risk and decide on reporting within 72 hours. Free record builder.",
+    "title": "Client data went into an AI tool: the first 72 hours",
+    "lead": "Someone at your firm put client or personal data into ChatGPT, Copilot, Gemini, Claude or another AI tool. Here is what to do, in order, with a record you can fill in and save.",
+    "answer": "Write it down, contain it, check whether you are the controller or the client's processor, weigh the risk to the people concerned, and decide within 72 hours of becoming aware whether to report it to the Autoriteit Persoonsgegevens. Record the decision either way.",
+    "steps": [
+      {
+        "id": "record",
+        "title": "Write it down",
+        "when": "First hour",
+        "text": "Which tool and account, when, what kind of data and whose, how it went in, who found it. Describe the data; don't copy it.",
+        "detail": "The GDPR requires a record of every personal data breach, including the ones you don't report: the facts, the effects and what you did about it. The record builder below produces one.",
+        "sources": ["gdpr", "edpb-breach"]
+      },
+      {
+        "id": "contain",
+        "title": "Contain it",
+        "when": "First hour",
+        "text": "Delete the conversation, remove share links, switch off training, change any password or key that went in.",
+        "detail": "What deletion does differs per vendor and per account. Choose the tool and account in the record builder to see it, with sources.",
+        "sources": []
+      },
+      {
+        "id": "role",
+        "title": "Check your role",
+        "when": "Day 1",
+        "text": "Is this your firm's own data, or do you handle it for a client under a processing agreement?",
+        "detail": "If you are the client's processor, tell the client without undue delay. The client assesses the risk and decides about the authority; your processing agreement may set its own deadline. If you are the controller, the next steps are yours.",
+        "sources": ["edpb-breach"]
+      },
+      {
+        "id": "assess",
+        "title": "Weigh the risk",
+        "when": "Day 1 to 2",
+        "text": "To the people whose data it was: how sensitive, how many, can it be undone, can the recipient be relied on.",
+        "detail": "These are the criteria the European data protection authorities use. The record builder shows which of your answers point towards reporting and which may lower the risk. It never decides for you.",
+        "sources": ["edpb-breach"]
+      },
+      {
+        "id": "decide",
+        "title": "Decide and record why",
+        "when": "Within 72 hours",
+        "text": "Report to the Autoriteit Persoonsgegevens unless the breach is unlikely to put anyone at risk. Tell the people concerned too if the risk is high.",
+        "detail": "The 72 hours run from when your firm became reasonably certain that personal data was compromised. If you don't have every detail yet, you can report in phases. Record the decision and the reasons, whichever way it goes.",
+        "sources": ["gdpr", "edpb-breach", "ap-report"]
+      },
+      {
+        "id": "fix",
+        "title": "Fix the cause",
+        "when": "After",
+        "text": "A work account for the people who need one, clear rules about which data may go in, and a short word with the team.",
+        "detail": "One incident is usually the first one you hear about, not the only one. The AI accounts guide has a 20-minute check of which accounts your team really uses.",
+        "sources": []
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do we have to report it to the Autoriteit Persoonsgegevens?",
+        "a": "Only you can decide that. The rule: report within 72 hours of becoming aware, unless the breach is unlikely to result in a risk to the people concerned. The Dutch authority says reporting is mandatory in many chatbot cases. The European guidance says that if in doubt, you should report.",
+        "sources": ["gdpr", "ap-chatbots", "edpb-breach"]
+      },
+      {
+        "q": "When do the 72 hours start?",
+        "a": "When your firm has a reasonable degree of certainty that personal data was compromised. A short first investigation to establish that doesn't count, but it should start straight away.",
+        "sources": ["edpb-breach"]
+      },
+      {
+        "q": "We handle this data for a client. Who reports?",
+        "a": "If you are the client's processor, your duty is to tell the client without undue delay. You don't have to assess the risk first; the client does that and decides about reporting. Your processing agreement may set a shorter deadline.",
+        "sources": ["edpb-breach"]
+      },
+      {
+        "q": "We decided not to report. Do we still need a record?",
+        "a": "Yes. The GDPR requires a record of every personal data breach, including the facts, the effects and what you did. The authority can ask to see it.",
+        "sources": ["gdpr", "edpb-breach"]
+      },
+      {
+        "q": "Was it a breach if the employee used a work account we pay for?",
+        "a": "If using it with this data was within your rules, the Dutch authority doesn't treat it as a data breach, though it says such use is often not permitted by law. Record what happened and check that the use had a proper basis.",
+        "sources": ["ap-chatbots"]
+      },
+      {
+        "q": "Does this page send or keep what I type?",
+        "a": "No. The record builder runs in your browser. It sends nothing and stores nothing; when you close the tab, it is gone. Save the record as a file or print it before you close.",
+        "sources": []
+      }
+    ]
+  },
+
+  "record": {
+    "intro": "Describe the data by type. Don't enter the data itself, or the names of the people or the client: add those in your own copy.",
+    "sections": [
+      {
+        "id": "discovery",
+        "title": "Discovery",
+        "fields": [
+          { "id": "aware_at", "type": "datetime", "label": "When did the firm become aware?", "hint": "When someone responsible was reasonably certain that personal data went in. The 72 hours count from here." },
+          { "id": "reported_by", "type": "select", "label": "How was it found?", "options": [
+            ["self", "They reported it themselves"],
+            ["colleague", "A colleague noticed"],
+            ["outside", "A client or outsider told us"],
+            ["check", "We found it in a check"]
+          ] }
+        ]
+      },
+      {
+        "id": "what",
+        "title": "What happened",
+        "fields": [
+          { "id": "happened_at", "type": "datetime", "label": "When did it happen (roughly)?", "optional": true },
+          { "id": "plan", "type": "plan", "label": "Which tool and account?", "hint": "Not sure? Each tool page in the AI accounts guide explains how to tell a personal account from a work account." },
+          { "id": "how", "type": "select", "label": "How did it go in?", "options": [
+            ["pasted", "Pasted or typed text"],
+            ["upload", "Uploaded a file"],
+            ["connected", "Connected mailbox or drive"],
+            ["meeting", "Meeting recording or transcript"],
+            ["other", "Something else"]
+          ] },
+          { "id": "rules", "type": "radio", "label": "Was this within your rules for AI tools?", "options": [
+            ["allowed", "Allowed under our rules"],
+            ["against", "Against our rules"],
+            ["none", "We have no rules on this"],
+            ["unsure", "Not sure"]
+          ] },
+          { "id": "training", "type": "radio", "label": "Was the tool's training setting on at the time?", "options": [
+            ["on", "On"],
+            ["off", "Off, or a temporary chat"],
+            ["unsure", "Not sure"],
+            ["na", "Not applicable: work account"]
+          ] },
+          { "id": "shared", "type": "radio", "label": "Was the chat shared with a link?", "options": [
+            ["yes", "Yes"],
+            ["no", "No"],
+            ["unsure", "Not sure"]
+          ] }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "The data",
+        "fields": [
+          { "id": "categories", "type": "checkbox", "label": "What kind of data went in?", "options": [
+            ["contact", "Names and contact details"],
+            ["financial", "Financial details: bank account, salary, invoices, debts"],
+            ["id_numbers", "Identity numbers or documents: BSN, passport, driving licence"],
+            ["health", "Health information, including sick leave"],
+            ["special", "Other special categories: ethnic origin, religion, political views, trade union membership, sexual orientation, biometric or genetic data"],
+            ["criminal", "Criminal records or offences"],
+            ["children", "Data about children"],
+            ["hr", "Employee or job applicant information: CVs, assessments"],
+            ["credentials", "Passwords, access keys or tokens"],
+            ["business", "Confidential business information, no personal data"],
+            ["unsure", "Not sure what was in it"]
+          ] },
+          { "id": "people", "type": "select", "label": "About how many people's data?", "options": [
+            ["1", "1"],
+            ["2-10", "2 to 10"],
+            ["11-100", "11 to 100"],
+            ["101-1000", "101 to 1,000"],
+            ["1000+", "More than 1,000"],
+            ["unknown", "Not known yet"]
+          ] },
+          { "id": "whose", "type": "checkbox", "label": "Whose data?", "options": [
+            ["client", "A client's customers or staff"],
+            ["staff", "Our own staff"],
+            ["applicants", "Job applicants"],
+            ["other", "Someone else"]
+          ] },
+          { "id": "description", "type": "textarea", "label": "Short description", "hint": "By type only. For example: \"payroll export with names, salaries and bank account numbers of about 40 employees of a client\".", "optional": true }
+        ]
+      },
+      {
+        "id": "role",
+        "title": "Your firm's role",
+        "fields": [
+          { "id": "role", "type": "radio", "label": "For this data, is your firm the controller or a processor?", "options": [
+            ["controller", "Controller: our own data, or we decide what happens with it"],
+            ["processor", "Processor: we handle it for a client under a processing agreement"],
+            ["unsure", "Not sure"]
+          ] }
+        ]
+      },
+      {
+        "id": "contain",
+        "title": "Containment",
+        "fields": [
+          { "id": "actions", "type": "actions", "label": "What has been done? Tick each step as it happens; the time is added to the record.", "options": [
+            ["deleted", "Conversation deleted"],
+            ["link", "Share link removed"],
+            ["training_off", "Training setting switched off"],
+            ["secrets", "Passwords or keys that went in changed"],
+            ["vendor", "Vendor asked to delete the data, where it offers that"],
+            ["client", "Client informed"],
+            ["contact", "Privacy officer or adviser involved"]
+          ] }
+        ]
+      },
+      {
+        "id": "decision",
+        "title": "Decision",
+        "fields": [
+          { "id": "decision", "type": "radio", "label": "Report to the Autoriteit Persoonsgegevens?", "options": [
+            ["report", "Yes, reported"],
+            ["no", "No: unlikely to result in a risk to the people concerned"],
+            ["client", "Not ours to decide: we are the processor and told the client"],
+            ["open", "Not decided yet"]
+          ] },
+          { "id": "individuals", "type": "radio", "label": "Tell the people concerned?", "options": [
+            ["yes", "Yes"],
+            ["no", "No: the risk is not high"],
+            ["open", "Not decided yet"]
+          ] },
+          { "id": "reasons", "type": "textarea", "label": "Reasons for the decision", "hint": "Which factors weighed most, and who advised." },
+          { "id": "decided_by", "type": "text", "label": "Decided by (role)", "hint": "For example: owner, after advice from our privacy adviser." },
+          { "id": "fix", "type": "textarea", "label": "What changes so it doesn't happen again", "optional": true }
+        ]
+      }
+    ]
+  },
+
+  "assistant": {
+    "intro": "On your phone, or rather talk it through? An AI assistant can ask you the questions and fill in the record. You paste its answer back here, check it, and save.",
+    "caution": "Use your firm's work account for this, not a personal one, and describe the data by type, never the data itself.",
+    "prompt": "Help me fill in an AI data incident record. The questions and the allowed answers are at https://noxiom.com/data/ai-incident-record.schema.json (the same list is on https://noxiom.com/ai-data-incident under \"For AI assistants\"). Ask me the questions one at a time, in plain words, and offer the allowed answers. Only describe the data by type: don't ask for the data itself, or for the names of the people or the client. If I'm not sure, use the \"not sure\" answer or leave the question out; don't guess. Use local times written as YYYY-MM-DDTHH:MM. When we're done, give me the whole record as one JSON code block, so I can paste it back into the page."
+  },
+
+  "factors": [
+    {
+      "id": "no-contract",
+      "direction": "up",
+      "when": { "field": "account", "in": ["personal"] },
+      "text": "A personal account has no processor agreement with your firm, so the vendor isn't bound by your instructions about this data.",
+      "criterion": "Who received it",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "training-on",
+      "direction": "up",
+      "when": { "all": [ { "field": "account", "in": ["personal"] }, { "field": "training", "in": ["on", "unsure"] } ] },
+      "text": "Training was on, or may have been. The vendor may use the data to train its models, and deleting the chat may not undo that.",
+      "criterion": "Can it be undone",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "against-rules",
+      "direction": "up",
+      "when": { "field": "rules", "in": ["against"] },
+      "text": "The Dutch authority says personal data entered into a chatbot against the employer's agreements is a data breach.",
+      "criterion": "Is it a breach",
+      "sources": ["ap-chatbots"]
+    },
+    {
+      "id": "special",
+      "direction": "up",
+      "high_risk": true,
+      "when": { "field": "categories", "any": ["health", "special", "criminal"] },
+      "text": "Health, other special categories or criminal data: the harm to the people concerned can be especially severe.",
+      "criterion": "Sensitivity of the data",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "id-financial",
+      "direction": "up",
+      "high_risk": true,
+      "when": { "field": "categories", "any": ["id_numbers", "financial"] },
+      "text": "Identity numbers or financial details can cause harm on their own, and together they can be used for identity theft.",
+      "criterion": "Sensitivity of the data",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "children",
+      "direction": "up",
+      "high_risk": true,
+      "when": { "field": "categories", "any": ["children"] },
+      "text": "Data about children: the people concerned may be at greater risk.",
+      "criterion": "Who the people are",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "hr",
+      "direction": "up",
+      "when": { "field": "categories", "any": ["hr"] },
+      "text": "CVs and assessments often reveal more about a person than they seem to.",
+      "criterion": "Sensitivity of the data",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "credentials",
+      "direction": "up",
+      "when": { "field": "categories", "any": ["credentials"] },
+      "text": "Passwords or keys open other systems. Until they are changed, the risk reaches everything they give access to.",
+      "criterion": "Severity of the consequences",
+      "sources": []
+    },
+    {
+      "id": "many",
+      "direction": "up",
+      "when": { "field": "people", "in": ["11-100", "101-1000", "1000+"] },
+      "text": "More people affected generally means more impact.",
+      "criterion": "Number of people",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "shared-link",
+      "direction": "up",
+      "when": { "field": "shared", "in": ["yes"] },
+      "text": "A share link may let anyone who has it read the chat. Remove it and record when.",
+      "criterion": "How far it spread",
+      "sources": []
+    },
+    {
+      "id": "unsure-data",
+      "direction": "up",
+      "when": { "field": "categories", "any": ["unsure"] },
+      "text": "You can't rule out sensitive data yet. The European guidance is to report when in doubt.",
+      "criterion": "If in doubt",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "work-contract",
+      "direction": "down",
+      "when": { "field": "account", "in": ["work"] },
+      "text": "A work account under a processor agreement binds the vendor to your firm's instructions, if your firm accepted or signed that agreement. A recipient you can rely on can lower the risk; it doesn't mean nothing happened.",
+      "criterion": "Who received it",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "within-rules",
+      "direction": "down",
+      "when": { "field": "rules", "in": ["allowed"] },
+      "text": "Within your own rules, the Dutch authority doesn't treat chatbot use as a data breach, though it says such use is often not permitted by law. Record it and check the basis for the use.",
+      "criterion": "Is it a breach",
+      "sources": ["ap-chatbots"]
+    },
+    {
+      "id": "contact-only",
+      "direction": "down",
+      "when": { "all": [ { "field": "categories", "only": ["contact", "business"] }, { "field": "categories", "any": ["contact"] }, { "field": "people", "in": ["1", "2-10"] } ] },
+      "text": "Only names and contact details of a few people. In ordinary circumstances that is unlikely to cause substantial damage, though context can change that.",
+      "criterion": "Sensitivity of the data",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "no-personal",
+      "direction": "down",
+      "when": { "field": "categories", "only": ["business"] },
+      "text": "No personal data: this is not a personal data breach under the GDPR. Check your client contract's confidentiality clause all the same.",
+      "criterion": "Is it a breach",
+      "sources": ["gdpr"]
+    },
+    {
+      "id": "contained",
+      "direction": "down",
+      "when": { "all": [ { "field": "actions", "any": ["deleted"] }, { "field": "training", "in": ["off", "na"] } ] },
+      "text": "Deleted, with training off: this lowers the chance of further use. It doesn't undo what the vendor has already received.",
+      "criterion": "Can it be undone",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "plan-unknown",
+      "direction": "unknown",
+      "when": { "field": "account", "in": ["unknown"] },
+      "text": "Find out which account it was. It decides whether a contract covers the data.",
+      "criterion": "Who received it",
+      "sources": []
+    },
+    {
+      "id": "people-unknown",
+      "direction": "unknown",
+      "when": { "field": "people", "in": ["unknown"] },
+      "text": "Estimate how many people's data it was. The number matters, though even one person can be seriously affected.",
+      "criterion": "Number of people",
+      "sources": ["edpb-breach"]
+    },
+    {
+      "id": "no-rules",
+      "direction": "unknown",
+      "when": { "field": "rules", "in": ["none", "unsure"] },
+      "text": "The Dutch authority's statement is about use against the employer's agreements. Without clear rules, your firm has to judge whether this use was authorised.",
+      "criterion": "Is it a breach",
+      "sources": ["ap-chatbots"]
+    },
+    {
+      "id": "role-unsure",
+      "direction": "unknown",
+      "when": { "field": "role", "in": ["unsure"] },
+      "text": "Check your processing agreement with the client. If you are their processor, your duty is to tell them without undue delay, and they decide about reporting.",
+      "criterion": "Who decides",
+      "sources": ["edpb-breach"]
+    }
+  ],
+
+  "other_accounts": [
+    { "id": "other-personal", "label": "Another AI tool: a personal or free account", "account": "personal", "advice": "Look up in the tool's own help pages how to delete a conversation, whether deleted chats are kept for a while, and whether there is a training setting. Without a contract with your firm, assume the vendor keeps and uses what its consumer terms allow." },
+    { "id": "other-work", "label": "Another AI tool: a work account with a contract", "account": "work", "advice": "Check your processing agreement with the vendor: what it says about deletion, retention and incidents, and whether you can ask the vendor to delete this data. Ask your admin which retention setting applies." },
+    { "id": "unknown", "label": "Not sure which tool or account", "account": "unknown", "advice": "Ask the person which tool and which login they used. Each tool page in the AI accounts guide explains how to tell a personal account from a work account." }
+  ]
+}

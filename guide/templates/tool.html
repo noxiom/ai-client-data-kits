@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- include: head-meta -->
+    <title>{{seo_title}} | Noxiom</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="canonical" href="{{canonical}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="article:modified_time" content="{{checked_iso}}" />
+{{jsonld}}
+    <style>
+{{guide_css}}
+    </style>
+  </head>
+  <body>
+    <!-- include: header -->
+    <main class="guide">
+      <section class="report-wrap">
+        <a class="report-back" href="{{hub_url}}">&larr; All AI accounts</a>
+        <article class="report-doc">
+          <div class="report-head">
+            <span class="report-eyebrow"><span class="brandname">Noxiom</span> &middot; Free guide &middot; {{vendor}}</span>
+            <h1>{{title}}</h1>
+            <p class="guide-lead">{{summary}}</p>
+            <p class="guide-meta">
+              <span>Checked <strong><time datetime="{{checked_iso}}">{{checked_human}}</time></strong></span>
+              <span><a href="#sources">A source on every fact</a></span>
+              <span>Part of <a href="{{hub_url}}">the AI accounts guide</a></span>
+            </p>
+          </div>
+
+{{plan_cards}}
+
+          <h2 id="tell">How to tell which one someone is using</h2>
+{{how_to_tell}}
+
+          <details class="guide-more" id="compare">
+            <summary>Full comparison, in the vendor's words <span class="summary-hint">with sources</span></summary>
+            <p class="guide-note">What {{vendor}} itself states, in our words. Where the vendor doesn't say, we say "not stated" rather than guess.</p>
+{{side_by_side}}
+          </details>
+          <details class="guide-more" id="admin">
+            <summary>{{admin_heading}}</summary>
+{{admin_checks}}
+          </details>
+          <details class="guide-more guide-callout" id="already-happened">
+            <summary>Client data already went into a personal account?</summary>
+            <p>{{incident_note}}</p>
+            <p>Then write down what happened, assess the risk to the people concerned, and decide on notification within 72 hours. Step by step, with a record you can fill in: <a href="/ai-data-incident">the first 72 hours</a>.</p>
+          </details>
+
+          <h2 id="faq">Questions</h2>
+{{faq}}
+
+          <div class="guide-bridge" id="help">
+            <h2>Which account is your team really using?</h2>
+            <p>
+              This page shows what each {{tool_name}} account promises, not
+              which one your colleagues use.
+              <a href="{{hub_url}}#check">The 20-minute check</a> gives you a
+              first picture for free. Noxiom's fixed-price AI usage review
+              finds out properly and turns it into rules that fit how your
+              team works.
+            </p>
+            <div class="guide-cta-row">
+              <a data-cta="guide-sample" href="/sample-report" class="cta-button">Read a sample report</a>
+              <a data-cta="guide-intake" href="/contact" class="guide-text-link">Or book a 30-minute call &rarr;</a>
+            </div>
+          </div>
+
+          <h2 id="other-tools">Other tools</h2>
+{{other_tools}}
+
+          <details class="guide-more" id="sources">
+            <summary>Sources and changes</summary>
+            <p class="guide-note">
+              The vendor's own page unless marked otherwise. "Checked" is the
+              date we last read it. Changes are recorded in the
+              <a href="{{hub_url}}#changes">change log</a>; corrections to
+              <a href="mailto:contact@noxiom.com">contact@noxiom.com</a>.
+            </p>
+            <!-- sources-list -->
+          </details>
+
+          <p class="report-footnote">
+            Written and maintained by <a href="/about">Samuil Gnocchi</a>, founder of <span class="brandname">Noxiom</span>.
+            Checked {{checked_human}}, next check by {{next_review_human}}. This
+            page describes vendors' published terms; it does not verify them
+            and is not legal advice.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- include: footer -->
+    <script src="scripts.js"></script>
+    <script>
+{{guide_js}}
+    </script>
+  </body>
+</html>

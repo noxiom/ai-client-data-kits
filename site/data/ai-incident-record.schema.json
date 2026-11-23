@@ -1,0 +1,433 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxiom.com/data/ai-incident-record.schema.json",
+  "title": "AI data incident record",
+  "description": "The record from https://noxiom.com/ai-data-incident: what a small firm writes down when client or company data went into an AI tool. For AI assistants helping someone fill it in: ask the questions one at a time in plain words; describe the data by type only and never ask for the data itself or anyone's name; use only the listed values (const) for choices; leave out what the person doesn't know instead of guessing; give the result as one JSON object. The person pastes it into the record builder on the page, which checks it and fills the form in their browser. The page never decides whether to report a breach; neither should you.",
+  "x-version": "1.1.0",
+  "x-license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://noxiom.com/data/ai-incident-record.schema.json"
+    },
+    "kit": {
+      "const": "client-data-in-ai"
+    },
+    "version": {
+      "const": 1
+    },
+    "saved_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+      "description": "When the record was saved, local time."
+    },
+    "aware_at": {
+      "title": "When did the firm become aware?",
+      "description": "When someone responsible was reasonably certain that personal data went in. The 72 hours count from here. Local time, written as YYYY-MM-DDTHH:MM.",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+    },
+    "reported_by": {
+      "title": "How was it found?",
+      "oneOf": [
+        {
+          "const": "self",
+          "title": "They reported it themselves"
+        },
+        {
+          "const": "colleague",
+          "title": "A colleague noticed"
+        },
+        {
+          "const": "outside",
+          "title": "A client or outsider told us"
+        },
+        {
+          "const": "check",
+          "title": "We found it in a check"
+        }
+      ]
+    },
+    "happened_at": {
+      "title": "When did it happen (roughly)?",
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+      "description": "Local time, written as YYYY-MM-DDTHH:MM."
+    },
+    "plan": {
+      "title": "Which tool and account?",
+      "description": "Not sure? Each tool page in the AI accounts guide explains how to tell a personal account from a work account.",
+      "oneOf": [
+        {
+          "const": "chatgpt-personal",
+          "title": "ChatGPT Free, Plus or Pro (personal account)"
+        },
+        {
+          "const": "chatgpt-business",
+          "title": "ChatGPT Business (formerly Team) (work account)"
+        },
+        {
+          "const": "chatgpt-enterprise",
+          "title": "ChatGPT Enterprise (work account)"
+        },
+        {
+          "const": "copilot-personal",
+          "title": "Microsoft Copilot app, personal account (personal account)"
+        },
+        {
+          "const": "copilot-chat-work",
+          "title": "Microsoft 365 Copilot Chat, work account (work account)"
+        },
+        {
+          "const": "m365-copilot",
+          "title": "Microsoft 365 Copilot (paid licence, including Copilot Business) (work account)"
+        },
+        {
+          "const": "gemini-personal",
+          "title": "Gemini app, personal Google account (free or Google AI Pro) (personal account)"
+        },
+        {
+          "const": "gemini-workspace",
+          "title": "Gemini in Google Workspace, work account (work account)"
+        },
+        {
+          "const": "claude-personal",
+          "title": "Claude Free, Pro or Max (personal account)"
+        },
+        {
+          "const": "claude-work",
+          "title": "Claude Team or Enterprise (work account)"
+        },
+        {
+          "const": "deepseek-app",
+          "title": "DeepSeek app and website (personal account)"
+        },
+        {
+          "const": "other-personal",
+          "title": "Another AI tool: a personal or free account"
+        },
+        {
+          "const": "other-work",
+          "title": "Another AI tool: a work account with a contract"
+        },
+        {
+          "const": "unknown",
+          "title": "Not sure which tool or account"
+        }
+      ]
+    },
+    "how": {
+      "title": "How did it go in?",
+      "oneOf": [
+        {
+          "const": "pasted",
+          "title": "Pasted or typed text"
+        },
+        {
+          "const": "upload",
+          "title": "Uploaded a file"
+        },
+        {
+          "const": "connected",
+          "title": "Connected mailbox or drive"
+        },
+        {
+          "const": "meeting",
+          "title": "Meeting recording or transcript"
+        },
+        {
+          "const": "other",
+          "title": "Something else"
+        }
+      ]
+    },
+    "rules": {
+      "title": "Was this within your rules for AI tools?",
+      "oneOf": [
+        {
+          "const": "allowed",
+          "title": "Allowed under our rules"
+        },
+        {
+          "const": "against",
+          "title": "Against our rules"
+        },
+        {
+          "const": "none",
+          "title": "We have no rules on this"
+        },
+        {
+          "const": "unsure",
+          "title": "Not sure"
+        }
+      ]
+    },
+    "training": {
+      "title": "Was the tool's training setting on at the time?",
+      "oneOf": [
+        {
+          "const": "on",
+          "title": "On"
+        },
+        {
+          "const": "off",
+          "title": "Off, or a temporary chat"
+        },
+        {
+          "const": "unsure",
+          "title": "Not sure"
+        },
+        {
+          "const": "na",
+          "title": "Not applicable: work account"
+        }
+      ]
+    },
+    "shared": {
+      "title": "Was the chat shared with a link?",
+      "oneOf": [
+        {
+          "const": "yes",
+          "title": "Yes"
+        },
+        {
+          "const": "no",
+          "title": "No"
+        },
+        {
+          "const": "unsure",
+          "title": "Not sure"
+        }
+      ]
+    },
+    "categories": {
+      "title": "What kind of data went in?",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "const": "contact",
+            "title": "Names and contact details"
+          },
+          {
+            "const": "financial",
+            "title": "Financial details: bank account, salary, invoices, debts"
+          },
+          {
+            "const": "id_numbers",
+            "title": "Identity numbers or documents: BSN, passport, driving licence"
+          },
+          {
+            "const": "health",
+            "title": "Health information, including sick leave"
+          },
+          {
+            "const": "special",
+            "title": "Other special categories: ethnic origin, religion, political views, trade union membership, sexual orientation, biometric or genetic data"
+          },
+          {
+            "const": "criminal",
+            "title": "Criminal records or offences"
+          },
+          {
+            "const": "children",
+            "title": "Data about children"
+          },
+          {
+            "const": "hr",
+            "title": "Employee or job applicant information: CVs, assessments"
+          },
+          {
+            "const": "credentials",
+            "title": "Passwords, access keys or tokens"
+          },
+          {
+            "const": "business",
+            "title": "Confidential business information, no personal data"
+          },
+          {
+            "const": "unsure",
+            "title": "Not sure what was in it"
+          }
+        ]
+      }
+    },
+    "people": {
+      "title": "About how many people's data?",
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "1"
+        },
+        {
+          "const": "2-10",
+          "title": "2 to 10"
+        },
+        {
+          "const": "11-100",
+          "title": "11 to 100"
+        },
+        {
+          "const": "101-1000",
+          "title": "101 to 1,000"
+        },
+        {
+          "const": "1000+",
+          "title": "More than 1,000"
+        },
+        {
+          "const": "unknown",
+          "title": "Not known yet"
+        }
+      ]
+    },
+    "whose": {
+      "title": "Whose data?",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "const": "client",
+            "title": "A client's customers or staff"
+          },
+          {
+            "const": "staff",
+            "title": "Our own staff"
+          },
+          {
+            "const": "applicants",
+            "title": "Job applicants"
+          },
+          {
+            "const": "other",
+            "title": "Someone else"
+          }
+        ]
+      }
+    },
+    "description": {
+      "title": "Short description",
+      "description": "By type only. For example: \"payroll export with names, salaries and bank account numbers of about 40 employees of a client\".",
+      "type": "string",
+      "maxLength": 2000
+    },
+    "role": {
+      "title": "For this data, is your firm the controller or a processor?",
+      "oneOf": [
+        {
+          "const": "controller",
+          "title": "Controller: our own data, or we decide what happens with it"
+        },
+        {
+          "const": "processor",
+          "title": "Processor: we handle it for a client under a processing agreement"
+        },
+        {
+          "const": "unsure",
+          "title": "Not sure"
+        }
+      ]
+    },
+    "actions": {
+      "title": "What has been done? Tick each step as it happens; the time is added to the record.",
+      "type": "object",
+      "description": "The containment steps already taken, each with the local time it was done (YYYY-MM-DDTHH:MM).",
+      "properties": {
+        "deleted": {
+          "title": "Conversation deleted",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "link": {
+          "title": "Share link removed",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "training_off": {
+          "title": "Training setting switched off",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "secrets": {
+          "title": "Passwords or keys that went in changed",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "vendor": {
+          "title": "Vendor asked to delete the data, where it offers that",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "client": {
+          "title": "Client informed",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        },
+        "contact": {
+          "title": "Privacy officer or adviser involved",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "title": "Report to the Autoriteit Persoonsgegevens?",
+      "oneOf": [
+        {
+          "const": "report",
+          "title": "Yes, reported"
+        },
+        {
+          "const": "no",
+          "title": "No: unlikely to result in a risk to the people concerned"
+        },
+        {
+          "const": "client",
+          "title": "Not ours to decide: we are the processor and told the client"
+        },
+        {
+          "const": "open",
+          "title": "Not decided yet"
+        }
+      ]
+    },
+    "individuals": {
+      "title": "Tell the people concerned?",
+      "oneOf": [
+        {
+          "const": "yes",
+          "title": "Yes"
+        },
+        {
+          "const": "no",
+          "title": "No: the risk is not high"
+        },
+        {
+          "const": "open",
+          "title": "Not decided yet"
+        }
+      ]
+    },
+    "reasons": {
+      "title": "Reasons for the decision",
+      "description": "Which factors weighed most, and who advised.",
+      "type": "string",
+      "maxLength": 2000
+    },
+    "decided_by": {
+      "title": "Decided by (role)",
+      "description": "For example: owner, after advice from our privacy adviser.",
+      "type": "string",
+      "maxLength": 2000
+    },
+    "fix": {
+      "title": "What changes so it doesn't happen again",
+      "type": "string",
+      "maxLength": 2000
+    }
+  },
+  "additionalProperties": false
+}

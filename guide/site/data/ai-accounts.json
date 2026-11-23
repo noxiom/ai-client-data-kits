@@ -1,0 +1,1629 @@
+{
+  "title": "Personal or work account? What AI tools do with your business data",
+  "description": "What ChatGPT, Microsoft Copilot, Gemini, Claude and DeepSeek do with business data, per account type: training, retention, human review, storage location, contract and admin control. Every fact is sourced to the vendor's own page and dated.",
+  "version": "1.1.0",
+  "checked": "2026-11-22",
+  "next_review": "2026-12-22",
+  "publisher": {
+    "name": "Noxiom",
+    "url": "https://noxiom.com"
+  },
+  "author": {
+    "name": "Samuil Gnocchi",
+    "role": "founder of Noxiom",
+    "url": "https://noxiom.com/about",
+    "id": "https://noxiom.com/about#founder"
+  },
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "urls": {
+    "hub": "https://noxiom.com/ai-accounts",
+    "data": "https://noxiom.com/data/ai-accounts.json",
+    "register": "https://noxiom.com/downloads/ai-accounts-register.xlsx"
+  },
+  "fields": [
+    {
+      "id": "training",
+      "label": "Trains on what you type?"
+    },
+    {
+      "id": "retention",
+      "label": "How long it is kept"
+    },
+    {
+      "id": "human_review",
+      "label": "People reading chats"
+    },
+    {
+      "id": "location",
+      "label": "Where it is stored"
+    },
+    {
+      "id": "contract",
+      "label": "Contract with your firm"
+    },
+    {
+      "id": "admin",
+      "label": "Can your firm manage it?"
+    },
+    {
+      "id": "price",
+      "label": "Price"
+    }
+  ],
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "vendor": "OpenAI",
+      "slug": "chatgpt-personal-vs-business",
+      "page_title": "ChatGPT personal vs Business: what happens to your business data",
+      "seo_title": "ChatGPT personal vs Business account: what happens to your data",
+      "meta_description": "ChatGPT Free and Plus train on what you type by default; Business does not. Training, retention, admin access and contracts compared, sourced and dated.",
+      "summary": "ChatGPT's personal plans (Free, Plus, Pro) can train on what you type unless each person switches it off, and they give your firm no contract and no control. Business and Enterprise don't train on your data by default, come with a processor agreement and are managed by your admins. What matters most is which account someone is signed in to when they paste client data, not which plan the company pays for.",
+      "how_to_tell": [
+        "A work account belongs to your company's Business or Enterprise workspace and shows up in the workspace's member list. If a colleague isn't on that list, any ChatGPT they use is a personal account.",
+        "Being on the member list doesn't settle it: one person can have a personal account and a work account at the same time. Ask which one was used for the work in question.",
+        "A personal account paid for by the employee, or expensed, is still a personal account. Expense claims for OpenAI are a quick way to find them."
+      ],
+      "admin_checks": [
+        "Sign OpenAI's Data Processing Addendum: OpenAI asks Business and Enterprise customers to complete its DPA form.",
+        "Choose the storage region when you create a Business workspace, if one is offered. OpenAI says an existing Business workspace can't switch region later.",
+        "Compare the member list with your staff list, invite people by their work address, and ask them to stop using personal accounts for client work.",
+        "Tell staff plainly what admins can and can't see. OpenAI's pages disagree for Business (see the questions below), so don't promise privacy you can't confirm.",
+        "Enterprise only: set a retention period and decide whether you need the Compliance API audit log."
+      ],
+      "incident_note": "In a personal account, delete the conversation: OpenAI schedules deleted chats for permanent deletion within 30 days. Check whether \"Improve the model for everyone\" was on at the time, and note it in your record.",
+      "incident_sources": [
+        "oai-retention",
+        "oai-train"
+      ],
+      "faq": [
+        {
+          "q": "Is it safe to put company data into ChatGPT?",
+          "a": "It depends on the account, not on ChatGPT as such. In a personal account (Free, Plus or Pro), OpenAI may use what you type to train its models unless the person switches it off, and there is no contract between OpenAI and your firm. In ChatGPT Business or Enterprise, OpenAI says it doesn't train on your data by default, and it offers a Data Processing Addendum. Which company data may go in is then your firm's decision. No tool can honestly be called safe in general; this page shows what each account promises.",
+          "sources": [
+            "oai-train",
+            "oai-dpa"
+          ]
+        },
+        {
+          "q": "Is ChatGPT safe for confidential information?",
+          "a": "Confidential information is more than personal data: client documents, prices, plans, anything under a non-disclosure agreement. The same account rule applies. A personal account gives your firm no contract and no control, and may use what is typed for training by default. A Business or Enterprise workspace doesn't train on it by default and comes with OpenAI's processing terms. Check your client contracts as well: some don't allow their information in any outside tool, whatever the plan.",
+          "sources": [
+            "oai-train",
+            "oai-entprivacy"
+          ]
+        },
+        {
+          "q": "Can my employer see my ChatGPT history?",
+          "a": "Not in a personal account: your employer has no access to it. In a company workspace it depends on the plan. In Enterprise, admins can get an audit log of conversations through OpenAI's Compliance API. For Business, OpenAI's own pages disagree on whether admins can read members' chats, so assume they might.",
+          "sources": [
+            "oai-entprivacy",
+            "oai-bizfaq"
+          ]
+        },
+        {
+          "q": "Does ChatGPT Plus train on my data?",
+          "a": "By default, yes. OpenAI may use content from Free, Plus and Pro to train its models unless you switch off \"Improve the model for everyone\" under Settings > Data controls. Temporary Chats are not used for training. If you rate a response, OpenAI may use that whole conversation even if you opted out.",
+          "sources": [
+            "oai-train",
+            "oai-controls"
+          ]
+        },
+        {
+          "q": "Can admins see employees' chats in ChatGPT Business?",
+          "a": "OpenAI's own pages disagree. Its enterprise privacy page says workspace admins can view, access, export and delete end-user conversations. Its Business FAQ says admins and owners cannot see all private member chats by default, and that self-service export isn't available in Business. Until OpenAI aligns the two, tell staff to assume an admin may be able to see work chats.",
+          "sources": [
+            "oai-entprivacy",
+            "oai-bizfaq"
+          ]
+        },
+        {
+          "q": "Can I use my personal ChatGPT account for work?",
+          "a": "Technically yes; whether you may is your employer's decision. For client personal data it is a poor fit: your employer has no processor agreement with OpenAI for your personal account and no way to manage or delete what is in it. The Dutch data protection authority treats personal data entered into a chatbot against the employer's agreements as a data breach.",
+          "sources": [
+            "oai-entprivacy",
+            "ap-chatbots"
+          ]
+        },
+        {
+          "q": "Where is ChatGPT Business data stored?",
+          "a": "A new Business workspace can choose a storage region at checkout, where available; an existing workspace can't switch. OpenAI's page doesn't list the regions. Processing isn't tied to that region, and abuse-monitoring logs stay in the US. European data residency with processing in Europe is documented for Enterprise.",
+          "sources": [
+            "oai-bizstorage",
+            "oai-residency"
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "id": "chatgpt-personal",
+          "name": "ChatGPT Free, Plus or Pro",
+          "short_name": "Free, Plus, Pro",
+          "account": "personal",
+          "fields": {
+            "training": {
+              "short": "Yes, by default",
+              "tone": "critical",
+              "text": "OpenAI may use what you type to train its models. Each person can switch this off under Settings > Data controls > \"Improve the model for everyone\". Temporary Chats are not used for training. Rating a response can send that whole conversation to training even after opting out.",
+              "sources": [
+                "oai-train",
+                "oai-controls"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Until deleted",
+              "tone": "warning",
+              "text": "Chats stay in the account until the user deletes them. Deleted chats are scheduled for permanent deletion within 30 days. For Temporary Chats, OpenAI may keep a copy for up to 30 days for safety.",
+              "sources": [
+                "oai-retention"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The pages we read don't describe human review of personal-plan chats. OpenAI's EU privacy policy says it monitors content submitted to its platforms to enforce its terms.",
+              "sources": [
+                "oai-train",
+                "oai-euprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "Outside the EEA",
+              "tone": "warning",
+              "text": "OpenAI says it processes personal data on servers outside the EEA, Switzerland and the UK. For users in the EEA, OpenAI Ireland Limited is the controller.",
+              "sources": [
+                "oai-euprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "None with your firm",
+              "tone": "critical",
+              "text": "The individual accepts OpenAI's terms for themselves. OpenAI offers its Data Processing Addendum only for Business, Enterprise and the API.",
+              "sources": [
+                "oai-entprivacy",
+                "oai-euprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "No",
+              "tone": "critical",
+              "text": "The account belongs to the person, not the firm. Admin controls such as single sign-on, central billing and retention settings exist only in Business and Enterprise workspaces.",
+              "sources": [
+                "oai-bizdata"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Plus: $20 a month",
+              "tone": "neutral",
+              "text": "Free costs nothing. Plus is $20 a month, billed monthly. Local prices and tax may differ.",
+              "sources": [
+                "oai-plus"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "not-for-client-data",
+            "text": "There is no processor contract between OpenAI and your firm, training is on unless each person switches it off, and the firm has no control over the account. Switching training off fixes only the second point."
+          }
+        },
+        {
+          "id": "chatgpt-business",
+          "name": "ChatGPT Business (formerly Team)",
+          "short_name": "Business",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No, by default",
+              "tone": "good",
+              "text": "OpenAI says it doesn't use Business inputs or outputs to improve its models by default. Training would need a separate agreement signed by your organisation.",
+              "sources": [
+                "oai-train",
+                "oai-bizdata"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Admins decide",
+              "tone": "good",
+              "text": "Workspace admins can control how long data is kept. Deleted or unsaved conversations are removed within 30 days, unless the law requires longer.",
+              "sources": [
+                "oai-entprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Limited",
+              "tone": "warning",
+              "text": "Authorised OpenAI employees can access conversations for engineering support, abuse investigations and legal compliance. Specialised contractors bound by confidentiality can review for abuse and misuse.",
+              "sources": [
+                "oai-entprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "New workspaces pick a region",
+              "tone": "warning",
+              "text": "A new Business workspace can choose where its content is stored at checkout, where available. Existing workspaces can't switch, and OpenAI's page doesn't list the regions. Requests are still processed outside the chosen region, and abuse-monitoring logs stay in the US.",
+              "sources": [
+                "oai-bizstorage"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA available",
+              "tone": "good",
+              "text": "OpenAI signs a Data Processing Addendum for Business through its DPA form. Customers in the EEA contract with OpenAI Ireland Ltd.",
+              "sources": [
+                "oai-entprivacy",
+                "oai-dpa"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "Central billing, SAML single sign-on and basic analytics. Whether admins can read members' chats is unclear: OpenAI's enterprise privacy page says admins can view, access, export and delete conversations, while its Business FAQ says admins cannot see all private member chats by default.",
+              "sources": [
+                "oai-bizdata",
+                "oai-entprivacy",
+                "oai-bizfaq"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "$25 monthly, $20 annual",
+              "tone": "neutral",
+              "text": "$25 per user per month billed monthly, or $20 per user per month billed annually. OpenAI quotes these in USD and says prices vary by country and currency.",
+              "sources": [
+                "oai-bizfaq"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "If the DPA is signed, your firm has written down which data may go in, staff actually use the company workspace instead of personal accounts, and your client agreements allow it."
+          }
+        },
+        {
+          "id": "chatgpt-enterprise",
+          "name": "ChatGPT Enterprise",
+          "short_name": "Enterprise",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No, by default",
+              "tone": "good",
+              "text": "OpenAI says it does not use Enterprise business data to train its models by default.",
+              "sources": [
+                "oai-entprivacy",
+                "oai-train"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Admins decide",
+              "tone": "good",
+              "text": "Workspace admins control how long data is kept. Deleted conversations are removed within 30 days unless OpenAI is legally required to keep them.",
+              "sources": [
+                "oai-entprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Incidents only",
+              "tone": "good",
+              "text": "Authorised OpenAI employees access conversations only to resolve incidents, to recover conversations with your permission, or where the law requires it.",
+              "sources": [
+                "oai-entprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "EU residency option",
+              "tone": "good",
+              "text": "New eligible Enterprise customers can keep data at rest in Europe (the EEA and Switzerland) and have requests processed there, at no additional cost.",
+              "sources": [
+                "oai-residency"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA available",
+              "tone": "good",
+              "text": "OpenAI signs a Data Processing Addendum for Enterprise. Customers in the EEA contract with OpenAI Ireland Ltd.",
+              "sources": [
+                "oai-entprivacy",
+                "oai-dpa"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "SAML single sign-on, SCIM user provisioning, role-based access, user analytics, and an audit log of conversations through the Enterprise Compliance API.",
+              "sources": [
+                "oai-bizdata",
+                "oai-entprivacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "On request",
+              "tone": "neutral",
+              "text": "No public price. OpenAI asks Enterprise prospects to contact sales.",
+              "sources": [
+                "oai-pricing"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "The same conditions as Business, with more control: European data residency, an audit log and retention settings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "slug": "copilot-personal-vs-work",
+      "page_title": "Copilot personal vs work account: what happens to your business data",
+      "seo_title": "Copilot work vs personal account: the green shield explained",
+      "meta_description": "Consumer Copilot, Copilot Chat and Microsoft 365 Copilot handle business data differently. Training, storage, contracts and the green shield, sourced.",
+      "summary": "\"Copilot\" is three different products. The consumer app with a personal Microsoft account has no contract with your firm. Microsoft 365 Copilot Chat, used with a work account, is covered by Microsoft's Data Protection Addendum, shows a green shield and costs nothing extra. The paid Microsoft 365 Copilot licence adds access to your organisation's mail and files. In both work versions, web search queries sit outside the DPA.",
+      "how_to_tell": [
+        "Work account with enterprise data protection: Microsoft shows a green shield at the top of Copilot, next to the New Chat button.",
+        "No green shield means a personal Microsoft account, under consumer terms.",
+        "Copilot inside Word or Outlook from a Microsoft 365 Personal or Family subscription is the consumer product too, even on a work laptop."
+      ],
+      "admin_checks": [
+        "Make sure people use Copilot signed in with their work account. Ask them to look for the green shield.",
+        "Decide on web search. Queries sent to Bing aren't covered by the DPA or the EU Data Boundary. The \"Allow web search in Copilot\" policy switches it off.",
+        "Stop personal-account sign-in to Copilot on company devices with tenant restrictions. Microsoft advises against simply blocking the Copilot address.",
+        "Check the Copilot Chat usage report to see who uses it.",
+        "Before buying Microsoft 365 Copilot licences, review who can open which SharePoint sites, Teams and shared files. Copilot surfaces everything a user can open."
+      ],
+      "incident_note": "In the consumer app, delete the conversation from the chat list. Microsoft's pages for the updated app don't state how long deleted or kept chats are retained, so record that you could not confirm it.",
+      "incident_sources": [
+        "ms-consumer-history"
+      ],
+      "faq": [
+        {
+          "q": "What does the green shield in Copilot mean?",
+          "a": "It shows that enterprise data protection applies: the person is signed in with a work (Entra ID) account, and prompts and responses fall under Microsoft's Data Protection Addendum and Product Terms. No green shield means a personal Microsoft account and consumer terms.",
+          "sources": [
+            "ms-chat-privacy",
+            "ms-edp"
+          ]
+        },
+        {
+          "q": "What's the difference between Copilot Chat and Microsoft 365 Copilot?",
+          "a": "Copilot Chat comes with eligible Microsoft 365 work accounts at no extra cost and works from the web plus whatever people paste or upload. Microsoft 365 Copilot is a paid licence that can also draw on your organisation's mail, files, meetings and Teams through Microsoft Graph, limited to what each user is allowed to open.",
+          "sources": [
+            "ms-copilot-overview",
+            "ms-m365-privacy",
+            "ms-edp"
+          ]
+        },
+        {
+          "q": "Is Microsoft 365 Copilot GDPR compliant?",
+          "a": "No tool is compliant on its own; compliance depends on how your firm uses it. Microsoft 365 Copilot gives you what compliant use needs from the vendor: a DPA with Microsoft as processor, no training on your prompts, and EU Data Boundary processing for EU customers. Two things fall outside: web search queries sent to Bing, and Anthropic models, which Microsoft lists as currently excluded from the EU Data Boundary.",
+          "sources": [
+            "ms-m365-privacy",
+            "ms-chat-privacy"
+          ]
+        },
+        {
+          "q": "Does the consumer Copilot app train on my conversations?",
+          "a": "For the updated app (available since 18 August 2026), Microsoft says prompts, responses and files aren't used to train foundation models. Optional feedback may still be used to improve Copilot. The older app did train on conversations unless you opted out.",
+          "sources": [
+            "ms-consumer-history",
+            "ms-consumer-faq"
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "id": "copilot-personal",
+          "name": "Microsoft Copilot app, personal account",
+          "short_name": "Copilot app (personal)",
+          "account": "personal",
+          "fields": {
+            "training": {
+              "short": "No (foundation models)",
+              "tone": "warning",
+              "text": "Microsoft says prompts, responses and files in the updated Copilot app (available since 18 August 2026) aren't used to train foundation models. Optional feedback may be used to improve Copilot. The older app trained on conversations by default unless you opted out.",
+              "sources": [
+                "ms-consumer-history",
+                "ms-consumer-faq"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "Microsoft's pages for the updated app don't state a retention period. Chats are kept so you can return to them and can be deleted one by one. The older app kept activity for 18 months by default. Older-app chats not moved to the updated app by 31 December 2026 are permanently deleted.",
+              "sources": [
+                "ms-consumer-history",
+                "ms-consumer-faq"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "Microsoft's pages for the updated app don't say. For the older app, Microsoft said some conversations get automated and human review for product improvement and safety, with no opt-out.",
+              "sources": [
+                "ms-consumer-faq"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The consumer pages we read don't say where conversations are stored. The EU Data Boundary is a commitment for Microsoft's work services.",
+              "sources": [
+                "ms-consumer-faq",
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "None with your firm",
+              "tone": "critical",
+              "text": "Use is governed by Microsoft's consumer privacy terms, with the individual. Microsoft's Data Protection Addendum covers Copilot only when people sign in with a work (Entra ID) account.",
+              "sources": [
+                "ms-consumer-faq",
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "No",
+              "tone": "critical",
+              "text": "Nothing for the firm to manage. On company devices, admins can stop personal-account sign-in to Copilot with tenant restrictions.",
+              "sources": [
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Free",
+              "tone": "neutral",
+              "text": "The app is free. Copilot features are also built into Microsoft 365 Personal and Family subscriptions, which are consumer products.",
+              "sources": [
+                "ms-consumer-faq"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "not-for-client-data",
+            "text": "Microsoft's training change helps, but there is still no contract with your firm and no admin control, and retention and review aren't stated for the updated app."
+          }
+        },
+        {
+          "id": "copilot-chat-work",
+          "name": "Microsoft 365 Copilot Chat, work account",
+          "short_name": "Copilot Chat (work)",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No",
+              "tone": "good",
+              "text": "Microsoft: \"Copilot Chat does not use your data to train foundation models.\"",
+              "sources": [
+                "ms-chat-privacy",
+                "ms-edp"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Your policies",
+              "tone": "good",
+              "text": "Prompts and responses are stored in your Microsoft 365 tenant (in Exchange) for audit and eDiscovery, under the same Purview retention policies you use for Microsoft 365.",
+              "sources": [
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Opted out",
+              "tone": "good",
+              "text": "Microsoft says its Copilot services have opted out of the human abuse-monitoring review used in Azure OpenAI (stated on its Microsoft 365 Copilot privacy page).",
+              "sources": [
+                "ms-m365-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "EU, except web search",
+              "tone": "warning",
+              "text": "EU traffic stays within the EU Data Boundary. Exception: web search queries sent to Bing are not covered by the EU Data Boundary or the DPA, and Bing handles them as an independent controller.",
+              "sources": [
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA included",
+              "tone": "good",
+              "text": "Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.",
+              "sources": [
+                "ms-chat-privacy",
+                "ms-edp"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "Admins can remove access, switch web search off with the \"Allow web search in Copilot\" policy, and see a usage report. Users see a green shield next to New Chat when enterprise data protection applies. Copilot Chat can't search your organisation's mail and files by itself; people bring data in by pasting or uploading.",
+              "sources": [
+                "ms-chat-privacy",
+                "ms-copilot-overview"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Included",
+              "tone": "neutral",
+              "text": "Included with eligible Microsoft 365 work accounts at no extra cost.",
+              "sources": [
+                "ms-edp"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "If staff are signed in with their work account (green shield), your firm has decided which data may go in, and you have made a decision about web search, which falls outside the DPA."
+          }
+        },
+        {
+          "id": "m365-copilot",
+          "name": "Microsoft 365 Copilot (paid licence, including Copilot Business)",
+          "short_name": "Microsoft 365 Copilot",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No",
+              "tone": "good",
+              "text": "Microsoft says prompts, responses and data accessed through Microsoft Graph aren't used to train foundation models.",
+              "sources": [
+                "ms-m365-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Your policies",
+              "tone": "good",
+              "text": "Interactions are stored in your tenant. Admins can search them and set retention policies, and users can delete their own history.",
+              "sources": [
+                "ms-m365-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Opted out",
+              "tone": "good",
+              "text": "Microsoft says its Copilot services have opted out of the human abuse-monitoring review used in Azure OpenAI.",
+              "sources": [
+                "ms-m365-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "EU, with exceptions",
+              "tone": "warning",
+              "text": "For EU customers it is an EU Data Boundary service. Exceptions: web search queries sent to Bing, and Anthropic models, which Microsoft lists as currently excluded from the EU Data Boundary.",
+              "sources": [
+                "ms-m365-privacy",
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA included",
+              "tone": "good",
+              "text": "Covered by Microsoft's Product Terms and Data Protection Addendum, with Microsoft acting as processor. Web search queries are the exception.",
+              "sources": [
+                "ms-m365-privacy",
+                "ms-chat-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "Everything Copilot Chat offers, plus Microsoft Purview and SharePoint Advanced Management. Copilot can draw on everything a user is allowed to open in mail, files, Teams and calendars, so loose sharing permissions become visible quickly.",
+              "sources": [
+                "ms-m365-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Business: $21 per user a month",
+              "tone": "neutral",
+              "text": "Microsoft 365 Copilot Business, for organisations of up to 300 users: USD 21 per user per month on annual billing (Microsoft, March 2026). We did not check the enterprise licence price.",
+              "sources": [
+                "ms-business-price",
+                "ms-license"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "The same conditions as Copilot Chat, plus one more: fix file and mailbox permissions before rollout, because Copilot shows people whatever they already have access to."
+          }
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "vendor": "Google",
+      "slug": "gemini-personal-vs-workspace",
+      "page_title": "Gemini personal vs Workspace: what happens to your business data",
+      "seo_title": "Gemini personal vs Workspace: training, review and retention",
+      "meta_description": "A personal Google account and a Workspace account get very different Gemini terms: training, human review, retention, EU data regions and contracts, sourced.",
+      "summary": "With a personal Google account, Gemini trains on chats by default, human reviewers read some of them, and reviewed chats are kept for up to three years. With a Google Workspace work account, Google doesn't train on your data without permission, prompts fall under its Cloud Data Processing Addendum, and admins set retention and, on most editions, a European data region.",
+      "how_to_tell": [
+        "Look at the account shown in the corner of Gemini. A company address managed by your Google Workspace means Workspace terms; a personal Gmail address means consumer terms. Google itself notes that work accounts may be subject to different data handling terms.",
+        "Google AI Pro is a personal Google One subscription. Personal-account terms apply even when someone pays for it to use at work."
+      ],
+      "admin_checks": [
+        "Decide whether the Gemini app should be available: Google turns it on by default as a core service.",
+        "Set how long Gemini conversations are kept. The default for the Gemini app is 18 months.",
+        "On Business Standard and higher editions, set the data region to Europe if you want data at rest in the EU. Gemini Notebook isn't covered by data regions.",
+        "Ask staff to use Gemini for work only while signed in with their work account, not a personal Gmail address."
+      ],
+      "incident_note": "In a personal account, delete the chat from Gemini's history. Note that chats already selected for human review are kept for up to three years and aren't deleted along with the history.",
+      "incident_sources": [
+        "g-gemini-hub"
+      ],
+      "faq": [
+        {
+          "q": "What's the difference between Gemini with a personal account and with Workspace?",
+          "a": "Different terms. Personal accounts: training on by default for adults, human review of some chats, reviewed chats kept up to three years. Workspace accounts: no training without your organisation's permission, no human review outside your domain without permission, prompts covered by the Cloud Data Processing Addendum, and retention set by your admins.",
+          "sources": [
+            "g-gemini-hub",
+            "g-gemini-history",
+            "g-ws-hub"
+          ]
+        },
+        {
+          "q": "Does Gemini in Google Workspace train on our data?",
+          "a": "Google says Workspace does not use customer data for training models without the customer's prior permission or instruction.",
+          "sources": [
+            "g-ws-hub"
+          ]
+        },
+        {
+          "q": "Can people at Google read Gemini chats?",
+          "a": "For personal accounts, yes: human reviewers, including reviewers at Google's service providers, read some chats, and Google asks users not to enter confidential information they wouldn't want a reviewer to see. For Workspace, Google says content isn't reviewed by humans outside your domain without permission.",
+          "sources": [
+            "g-gemini-hub",
+            "g-ws-hub"
+          ]
+        },
+        {
+          "q": "Is Google AI Pro a business plan?",
+          "a": "No. Google AI Pro is a personal Google One subscription, so personal-account terms apply even if someone pays for it to use at work. Gemini for business comes with Google Workspace.",
+          "sources": [
+            "g-ai-plans",
+            "g-ws-pricing"
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "id": "gemini-personal",
+          "name": "Gemini app, personal Google account (free or Google AI Pro)",
+          "short_name": "Gemini (personal)",
+          "account": "personal",
+          "fields": {
+            "training": {
+              "short": "Yes, by default",
+              "tone": "critical",
+              "text": "With the History setting on, which is the default for adults, Google uses your future chats to train generative AI models. Switching History off stops that, except for chats you give feedback on.",
+              "sources": [
+                "g-gemini-hub",
+                "g-gemini-history"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "18 months by default",
+              "tone": "warning",
+              "text": "History older than 18 months is deleted automatically by default; 3 or 36 months, or never, are the other options. With History off, chats are still kept for about two months. Chats seen by human reviewers are kept for up to three years and are not deleted when you delete your history.",
+              "sources": [
+                "g-gemini-hub",
+                "g-gemini-history"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Yes",
+              "tone": "critical",
+              "text": "Human reviewers, including trained reviewers from Google's service providers, read some chats. Google asks users not to enter confidential information they wouldn't want a reviewer to see.",
+              "sources": [
+                "g-gemini-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The pages we read don't say where personal-account chats are stored.",
+              "sources": [
+                "g-gemini-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "None with your firm",
+              "tone": "critical",
+              "text": "Google's consumer privacy notice applies, with the individual. Google notes that work accounts may be subject to different data handling terms.",
+              "sources": [
+                "g-gemini-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "No",
+              "tone": "critical",
+              "text": "Nothing for the firm to manage. Admin controls for Gemini exist only for Google Workspace accounts.",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Free; AI Pro €21.99 a month",
+              "tone": "neutral",
+              "text": "Free to use. Google AI Pro costs €21.99 a month.",
+              "sources": [
+                "g-ai-plans"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "not-for-client-data",
+            "text": "Training is on by default, people may read chats, and Google itself asks users not to enter confidential information."
+          }
+        },
+        {
+          "id": "gemini-workspace",
+          "name": "Gemini in Google Workspace, work account",
+          "short_name": "Gemini (Workspace)",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No, without permission",
+              "tone": "good",
+              "text": "Google: \"Workspace does not use customer data for training models without customer's prior permission or instruction.\"",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Admins decide",
+              "tone": "good",
+              "text": "Admins set it: up to 36 months for the Gemini app (18 months by default) and from 90 days to indefinitely inside Gmail, Docs and the other apps. With history off, new chats are kept for up to 72 hours.",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not outside your domain",
+              "tone": "good",
+              "text": "Google says content isn't reviewed by humans or used for model training outside your domain without permission.",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "EU option, most editions",
+              "tone": "good",
+              "text": "Workspace data regions cover Gemini prompts and responses at rest, with Europe as one of the choices, on editions from Business Standard up. Business Starter isn't listed, and Gemini Notebook isn't covered.",
+              "sources": [
+                "g-ws-regions"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA included",
+              "tone": "good",
+              "text": "Prompts count as customer data under Google's Cloud Data Processing Addendum.",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "Admins can switch Gemini features and the Gemini app on or off, set retention, and use audit logs. The Gemini app is on by default as a core service.",
+              "sources": [
+                "g-ws-hub"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Included, from €6.80 per user a month",
+              "tone": "neutral",
+              "text": "Included in Google Workspace: Business Starter €6.80, Business Standard €13.60 and Business Plus €21.10 per user per month, excluding VAT (Netherlands list prices). Starter includes only the Gemini app and Gemini in Gmail.",
+              "sources": [
+                "g-ws-pricing"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "If staff use their work account, your firm has decided which data may go in, and you have set retention and, where needed, a European data region."
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "vendor": "Anthropic",
+      "slug": "claude-personal-vs-team",
+      "page_title": "Claude personal vs Team: what happens to your business data",
+      "seo_title": "Claude personal vs Team plan: training, retention, contract",
+      "meta_description": "Claude Free, Pro and Max versus Team and Enterprise: training on chats, 30-day or 5-year retention, the DPA, US storage and admin controls, sourced.",
+      "summary": "Claude's personal plans (Free, Pro, Max) use chats for training unless each person switches it off, and keep that data for up to five years if they don't. Team and Enterprise don't train on customer content and include Anthropic's Data Processing Addendum. Data on the work plans is stored in the US, and only Enterprise can set a retention limit.",
+      "how_to_tell": [
+        "Team and Enterprise members belong to your organisation and appear in its member list.",
+        "Anyone can buy Pro or Max for themselves, even with a work email address, and that is still a personal plan. Enterprise's domain capture can bring such accounts into the organisation."
+      ],
+      "admin_checks": [
+        "Leave the Development Partner Program off unless you mean to share your data with Anthropic for training.",
+        "Verify your domain and switch on single sign-on (both available on Team).",
+        "Team has no custom retention setting. If you need a retention limit, that is an Enterprise feature.",
+        "Enterprise: use domain capture to bring personal accounts created with your work domain into the organisation.",
+        "Data is stored in the US. Check that the standard contractual clauses in Anthropic's DPA fit what your client agreements say about transfers."
+      ],
+      "incident_note": "In a personal account, delete the chat: Anthropic deletes it from back-end storage within 30 days. If the Model Improvement setting was on, de-identified data may already be in training pipelines, where Anthropic says it can be kept for up to five years. Record which it was.",
+      "incident_sources": [
+        "a-consumer-retention",
+        "a-consumer-terms"
+      ],
+      "faq": [
+        {
+          "q": "What's the difference between Claude's personal plans and Team?",
+          "a": "Personal plans (Free, Pro, Max) run on consumer terms: training unless each person switches it off, no DPA, no admin controls. Team runs on Anthropic's Commercial Terms: no training on your content, a DPA included, single sign-on and central billing.",
+          "sources": [
+            "a-consumer-training",
+            "a-commercial-terms",
+            "a-pricing"
+          ]
+        },
+        {
+          "q": "How long does Claude keep data on the Team plan?",
+          "a": "Chats stay in the product until they are deleted. Deleted chats leave Anthropic's back-end storage within 30 days, and content flagged for safety review can be kept for up to 2 years. Custom retention periods are an Enterprise feature; Team doesn't have them.",
+          "sources": [
+            "a-org-retention",
+            "a-ent-retention",
+            "a-pricing"
+          ]
+        },
+        {
+          "q": "Why does Claude mention five years?",
+          "a": "That applies to the personal plans. If a user lets Anthropic use their chats to improve Claude, de-identified data may be kept in training pipelines for up to five years. With the setting off, the period is 30 days.",
+          "sources": [
+            "a-consumer-terms",
+            "a-consumer-retention"
+          ]
+        },
+        {
+          "q": "Is Claude data stored in the EU?",
+          "a": "Anthropic says data is stored in the US, while requests may be routed to the US, Europe, Asia and Australia. We found no EU data residency option for Team or Enterprise.",
+          "sources": [
+            "a-servers"
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "id": "claude-personal",
+          "name": "Claude Free, Pro or Max",
+          "short_name": "Free, Pro, Max",
+          "account": "personal",
+          "fields": {
+            "training": {
+              "short": "Yes, unless switched off",
+              "tone": "critical",
+              "text": "Each user chooses through the Model Improvement privacy setting, and Anthropic's pricing page lists training for these plans as opt-out. Incognito chats are never used. Chats flagged for safety review, and chats you give feedback on, can be used either way.",
+              "sources": [
+                "a-consumer-terms",
+                "a-consumer-training",
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "30 days, or up to 5 years",
+              "tone": "warning",
+              "text": "With training off: 30 days. With training on: up to 5 years, de-identified, in Anthropic's training pipelines. Deleted chats leave back-end storage within 30 days. Chats flagged for safety: inputs and outputs for up to 2 years.",
+              "sources": [
+                "a-consumer-terms",
+                "a-consumer-retention"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The pages we read don't describe it, beyond safety review of flagged conversations.",
+              "sources": [
+                "a-consumer-training"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The pages we read don't say separately where personal-plan data is stored.",
+              "sources": [
+                "a-consumer-training",
+                "a-consumer-retention"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "None with your firm",
+              "tone": "critical",
+              "text": "Personal plans run on Anthropic's consumer terms. Anthropic's Data Processing Addendum comes with its Commercial Terms, which cover Team and Enterprise.",
+              "sources": [
+                "a-consumer-terms",
+                "a-dpa"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "No",
+              "tone": "critical",
+              "text": "No single sign-on, central billing, audit logs or retention controls.",
+              "sources": [
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Pro: $20 a month",
+              "tone": "neutral",
+              "text": "Free costs nothing. Pro is $20 a month, or $17 a month billed annually. Max is $100 a month. All excluding tax.",
+              "sources": [
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "not-for-client-data",
+            "text": "There is no processor contract with your firm, training is on unless each person switches it off, and retention can run to five years."
+          }
+        },
+        {
+          "id": "claude-work",
+          "name": "Claude Team or Enterprise",
+          "short_name": "Team, Enterprise",
+          "account": "work",
+          "fields": {
+            "training": {
+              "short": "No",
+              "tone": "good",
+              "text": "Anthropic's Commercial Terms say it may not train models on customer content. The exception is an organisation that opts into Anthropic's Development Partner Program.",
+              "sources": [
+                "a-commercial-terms",
+                "a-processor"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "Until deleted; Enterprise can limit",
+              "tone": "warning",
+              "text": "Chats stay in the product until the organisation deletes them. Deleted chats leave back-end storage within 30 days, and flagged content is kept for up to 2 years. Enterprise can set a custom retention period (at least 30 days); Team can't.",
+              "sources": [
+                "a-org-retention",
+                "a-ent-retention",
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The pages we read don't describe it, beyond safety review of flagged content.",
+              "sources": [
+                "a-org-retention"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "Stored in the US",
+              "tone": "warning",
+              "text": "Anthropic says data is stored in the US, while requests may be routed to the US, Europe, Asia and Australia. We found no EU data residency option for Team or Enterprise.",
+              "sources": [
+                "a-servers"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "DPA included",
+              "tone": "good",
+              "text": "The Data Processing Addendum, with standard contractual clauses, is part of the Commercial Terms: accepting them accepts the DPA. Anthropic acts as processor, and customers in the EEA contract with Anthropic Ireland.",
+              "sources": [
+                "a-dpa",
+                "a-processor",
+                "a-commercial-terms"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "Yes",
+              "tone": "good",
+              "text": "Team: single sign-on, domain verification, central billing and usage analytics. Enterprise adds SCIM, audit logs, role-based access, a Compliance API, custom retention and domain capture.",
+              "sources": [
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Team: $25 monthly, $20 annual",
+              "tone": "neutral",
+              "text": "Team (2 to 150 seats): a standard seat is $25 a month billed monthly or $20 a month billed annually. Enterprise: $20 per seat per month plus usage, with a 20-seat minimum. All excluding tax.",
+              "sources": [
+                "a-pricing"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "conditional",
+            "text": "If your firm has decided which data may go in and staff use the organisation's accounts. Data is stored in the US, so the transfer rests on the standard contractual clauses in the DPA; check that fits your client agreements."
+          }
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "vendor": "DeepSeek",
+      "slug": "deepseek-business-data",
+      "page_title": "DeepSeek and business data: what the app does with what you type",
+      "seo_title": "DeepSeek and GDPR: what the app does with your business data",
+      "meta_description": "DeepSeek's app stores personal data in China and uses it for training unless you opt out by email. What that means for client data, with sources and dates.",
+      "summary": "DeepSeek's own app and website store personal data in China, use it for training unless you opt out by email, and have no business plan or processor agreement. This page covers the DeepSeek service itself, not other companies that run DeepSeek's models on their own infrastructure.",
+      "how_to_tell": [
+        "Every use of the DeepSeek app or website is the consumer service. There is no work account to switch to."
+      ],
+      "admin_checks": [
+        "There is no work version to configure. Decide whether DeepSeek is allowed at all, write the decision into your rules, and tell staff.",
+        "If you block it on company devices or the office network, remember that blocking doesn't reach personal phones."
+      ],
+      "incident_note": "Delete the chat history in DeepSeek's settings. DeepSeek's policy says users exercise their privacy rights, including the training opt-out, by emailing privacy@deepseek.com. Record what you asked and when.",
+      "incident_sources": [
+        "ds-privacy"
+      ],
+      "faq": [
+        {
+          "q": "Is DeepSeek GDPR compliant?",
+          "a": "We don't label any tool compliant or not, but DeepSeek's own app is a poor fit for client data: personal data is stored in China, it is used for training unless you opt out by email, and there is no processor agreement. In February 2025 the Dutch data protection authority warned users to be very careful and announced an investigation into data transfers to China.",
+          "sources": [
+            "ds-privacy",
+            "ds-ap-warning"
+          ]
+        },
+        {
+          "q": "Does DeepSeek have a business plan?",
+          "a": "We found none for the app and website: its privacy policy describes no business accounts or processor agreement.",
+          "sources": [
+            "ds-privacy"
+          ]
+        },
+        {
+          "q": "What about DeepSeek models run by other providers?",
+          "a": "DeepSeek's privacy policy says it doesn't cover apps that developers build on its platform, and companies that run DeepSeek's models on their own infrastructure have their own terms. Those can be very different, so assess each one separately.",
+          "sources": [
+            "ds-privacy"
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "id": "deepseek-app",
+          "name": "DeepSeek app and website",
+          "short_name": "DeepSeek app",
+          "account": "personal",
+          "fields": {
+            "training": {
+              "short": "Yes",
+              "tone": "critical",
+              "text": "DeepSeek's privacy policy lists training and improving its models as a purpose. It gives users a right to opt out of training, exercised by emailing DeepSeek. Third-party guides mention an in-app setting; we haven't verified it.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "retention": {
+              "short": "While the account exists",
+              "tone": "warning",
+              "text": "Kept for as long as you have an account. You can delete chat history in the settings.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "human_review": {
+              "short": "Not stated",
+              "tone": "unknown",
+              "text": "The privacy policy doesn't say whether people review chats.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "location": {
+              "short": "China",
+              "tone": "critical",
+              "text": "DeepSeek: \"we directly collect, process and store your Personal Data in People's Republic of China.\"",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "contract": {
+              "short": "None",
+              "tone": "critical",
+              "text": "No business plan or processor agreement found. The controller is Hangzhou DeepSeek Artificial Intelligence Co., Ltd., and its EU representative is Prighter.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "admin": {
+              "short": "No",
+              "tone": "critical",
+              "text": "There is no work version to manage.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            },
+            "price": {
+              "short": "Free app",
+              "tone": "neutral",
+              "text": "Free to use. No paid business plan is described.",
+              "sources": [
+                "ds-privacy"
+              ],
+              "checked": "2026-11-22"
+            }
+          },
+          "verdict": {
+            "status": "not-for-client-data",
+            "text": "Data is stored in China, it is used for training unless you opt out by email, and there is no business contract. The Dutch data protection authority warned users to be very careful with DeepSeek in February 2025.",
+            "sources": [
+              "ds-ap-warning"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "hub_faq": [
+    {
+      "q": "Is ChatGPT (or Copilot, Gemini, Claude) GDPR compliant?",
+      "a": "No tool is GDPR compliant or non-compliant by itself. The GDPR applies to how your firm uses it. What a vendor can give you is a processor agreement (GDPR Article 28), no training on your data, admin control and clear storage terms. Work plans offer those; personal accounts don't, because the contract is between the vendor and the individual.",
+      "sources": [
+        "gdpr"
+      ]
+    },
+    {
+      "q": "Is it safe to put company data into ChatGPT, Copilot or Gemini?",
+      "a": "It depends on the account someone is signed in to, not on the brand. A personal account has no contract with your firm, and most personal accounts may use what is typed for training unless it is switched off. Work accounts (ChatGPT Business, Microsoft 365 Copilot Chat with a work login, Gemini in Google Workspace) don't train on your data by default and come with a processing agreement. Which data may go in is then your firm's decision. The comparison above shows each account, with sources.",
+      "sources": [
+        "oai-train",
+        "ms-chat-privacy",
+        "g-ws-hub"
+      ]
+    },
+    {
+      "q": "Is it a data breach if an employee puts client data into ChatGPT?",
+      "a": "In the Netherlands, the Dutch data protection authority (Autoriteit Persoonsgegevens) says that if employees enter personal data into a chatbot contrary to the agreements made with their employer, that is a data breach. If chatbot use is the organisation's own policy, it is not a breach, but it is often not permitted by law. Notifying the authority and the people affected is mandatory in many cases.",
+      "sources": [
+        "ap-chatbots"
+      ]
+    },
+    {
+      "q": "Does buying a business plan solve it?",
+      "a": "Only for the people who use it. A business plan covers work accounts. It does nothing about a colleague who keeps using a personal account on the same laptop, and from the outside you often can't tell which one was used. That's why the check below starts with asking.",
+      "sources": []
+    },
+    {
+      "q": "Can we just block personal AI accounts?",
+      "a": "Partly. Microsoft lets admins stop personal-account sign-in to Copilot on company devices with tenant restrictions, and network filters can block whole sites. None of that reaches personal phones or home computers, so clear rules and a work account people actually like using matter more than blocking.",
+      "sources": [
+        "ms-chat-privacy"
+      ]
+    },
+    {
+      "q": "How often is this guide checked?",
+      "a": "Every fact carries the date it was last checked against the vendor's own page. We re-check all of them at least once a month and record every change in the change log at the bottom of this page. If you spot something out of date, tell us and we'll fix it and log it.",
+      "sources": []
+    },
+    {
+      "q": "Can I reuse this?",
+      "a": "Yes. The data behind this guide is open under CC BY 4.0. Use it, adapt it, put it in your own client materials, as long as you credit Noxiom and link to this page. The JSON file is linked below.",
+      "sources": []
+    },
+    {
+      "q": "Who wrote this, and what's in it for them?",
+      "a": "Sam, founder of Noxiom, an independent consultancy in Zeewolde that reviews how small firms use AI with client data. That review is what we sell. We don't sell any of the tools on this page and get nothing from their vendors. The guide is free and ungated because it's more useful that way.",
+      "sources": []
+    }
+  ],
+  "known_gaps": [
+    "Consumer Copilot (the app updated on 18 August 2026): Microsoft's pages don't state the retention period, human review or data location.",
+    "ChatGPT Business: OpenAI doesn't list which storage regions are offered, and its pages disagree on whether admins can read members' chats.",
+    "Claude Team and Enterprise: we found no EU data residency option.",
+    "DeepSeek: an in-app training opt-out is described by third parties only; the policy describes opting out by email.",
+    "Microsoft 365 Copilot: only the Copilot Business price was checked, from a March 2026 Microsoft post; Microsoft's pricing page did not load."
+  ],
+  "changelog": [
+    {
+      "date": "2026-11-23",
+      "change": "Added the questions people ask in their own words (company data in ChatGPT, confidential information, whether an employer can see chats). The register is now an Excel file, which opens correctly in Dutch Excel too. Linked to the new incident kit. No vendor facts changed."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "First version: 5 tools and 11 account types, every fact checked against the vendors' own pages on 22 November 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "oai-train",
+      "publisher": "OpenAI",
+      "title": "How your data is used to improve model performance",
+      "url": "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-controls",
+      "publisher": "OpenAI",
+      "title": "Data Controls FAQ",
+      "url": "https://help.openai.com/en/articles/7730893-data-controls-faq",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-retention",
+      "publisher": "OpenAI",
+      "title": "Chat and file retention policies in ChatGPT",
+      "url": "https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-euprivacy",
+      "publisher": "OpenAI",
+      "title": "EU privacy policy",
+      "url": "https://openai.com/policies/eu-privacy-policy/",
+      "page_date": "2026-08-24",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-entprivacy",
+      "publisher": "OpenAI",
+      "title": "Enterprise privacy at OpenAI",
+      "url": "https://openai.com/enterprise-privacy/",
+      "page_date": "2026-01-08",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-bizdata",
+      "publisher": "OpenAI",
+      "title": "Business data privacy, security, and compliance",
+      "url": "https://openai.com/business-data/",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-bizfaq",
+      "publisher": "OpenAI",
+      "title": "ChatGPT Business: General FAQ",
+      "url": "https://help.openai.com/en/articles/12111915-chatgpt-business-rename-faq",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-bizstorage",
+      "publisher": "OpenAI",
+      "title": "Where your ChatGPT Business content is stored",
+      "url": "https://help.openai.com/en/articles/20001418-where-your-chatgpt-business-content-is-stored",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-residency",
+      "publisher": "OpenAI",
+      "title": "Data residency and inference residency for ChatGPT",
+      "url": "https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-dpa",
+      "publisher": "OpenAI",
+      "title": "Data Processing Addendum",
+      "url": "https://openai.com/policies/data-processing-addendum/",
+      "page_date": "2026-01-01",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-plus",
+      "publisher": "OpenAI",
+      "title": "What is ChatGPT Plus?",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "oai-pricing",
+      "publisher": "OpenAI",
+      "title": "ChatGPT pricing",
+      "url": "https://chatgpt.com/pricing",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-consumer-history",
+      "publisher": "Microsoft",
+      "title": "Microsoft Copilot activity history (updated app)",
+      "url": "https://support.microsoft.com/en-us/privacy/microsoft-copilot/activity-history",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-consumer-faq",
+      "publisher": "Microsoft",
+      "title": "Privacy FAQ for Microsoft Copilot (older app)",
+      "url": "https://support.microsoft.com/en-us/topic/privacy-faq-for-microsoft-copilot-27b3a435-8dc9-4b55-9a4b-58eeb9647a7f",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-chat-privacy",
+      "publisher": "Microsoft",
+      "title": "Privacy and protections for Microsoft 365 Copilot Chat",
+      "url": "https://learn.microsoft.com/en-us/copilot/privacy-and-protections",
+      "page_date": "2026-11-19",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-edp",
+      "publisher": "Microsoft",
+      "title": "Enterprise data protection in Microsoft 365 Copilot and Copilot Chat",
+      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/enterprise-data-protection",
+      "page_date": "2026-11-04",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-copilot-overview",
+      "publisher": "Microsoft",
+      "title": "What is Microsoft Copilot? (licensing overview)",
+      "url": "https://learn.microsoft.com/en-us/copilot/faq",
+      "page_date": "2026-11-17",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-m365-privacy",
+      "publisher": "Microsoft",
+      "title": "Data, privacy, and security for Microsoft 365 Copilot",
+      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy",
+      "page_date": "2026-11-04",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-license",
+      "publisher": "Microsoft",
+      "title": "License options for Microsoft Copilot",
+      "url": "https://learn.microsoft.com/en-us/copilot/plan/copilot-license-options",
+      "page_date": "2026-11-04",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ms-business-price",
+      "publisher": "Microsoft Tech Community",
+      "title": "Act now: lock in current pricing on Microsoft 365 Copilot",
+      "url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/act-now-lock-in-current-pricing-on-microsoft-365-copilot/ba-p/4502628",
+      "page_date": "2026-03-17",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-gemini-hub",
+      "publisher": "Google",
+      "title": "Gemini Apps Privacy Hub",
+      "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+      "page_date": "2026-11-16",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-gemini-history",
+      "publisher": "Google",
+      "title": "Manage and delete your history in Gemini Apps",
+      "url": "https://support.google.com/gemini/answer/13278892?hl=en",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-ws-hub",
+      "publisher": "Google",
+      "title": "Generative AI in Google Workspace Privacy Hub",
+      "url": "https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub?hl=en",
+      "page_date": "2026-11-10",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-ws-regions",
+      "publisher": "Google",
+      "title": "Data covered by data regions",
+      "url": "https://knowledge.workspace.google.com/admin/compliance/data-covered-by-data-regions?hl=en",
+      "page_date": "2026-11-10",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-ws-pricing",
+      "publisher": "Google",
+      "title": "Google Workspace pricing (Netherlands)",
+      "url": "https://workspace.google.com/pricing?hl=en",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "g-ai-plans",
+      "publisher": "Google",
+      "title": "Google One plans",
+      "url": "https://one.google.com/about/plans",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-consumer-terms",
+      "publisher": "Anthropic",
+      "title": "Updates to our consumer terms",
+      "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+      "page_date": "2025-08-28",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-consumer-training",
+      "publisher": "Anthropic",
+      "title": "Is my data used for model training?",
+      "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+      "page_date": "2026-03-16",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-consumer-retention",
+      "publisher": "Anthropic",
+      "title": "How long do you store my data?",
+      "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+      "page_date": "2026-07-01",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-org-retention",
+      "publisher": "Anthropic",
+      "title": "How long do you store my organization's data?",
+      "url": "https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data",
+      "page_date": "2026-07-01",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-ent-retention",
+      "publisher": "Anthropic",
+      "title": "Configure custom data retention controls for Enterprise plans",
+      "url": "https://privacy.claude.com/en/articles/10440198-configure-custom-data-retention-controls-for-enterprise-plans",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-processor",
+      "publisher": "Anthropic",
+      "title": "Does Anthropic act as a data processor or controller?",
+      "url": "https://privacy.claude.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-dpa",
+      "publisher": "Anthropic",
+      "title": "How do I view and sign your Data Processing Addendum (DPA)?",
+      "url": "https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa",
+      "page_date": "2026-03-16",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-servers",
+      "publisher": "Anthropic",
+      "title": "Where are your servers located?",
+      "url": "https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers",
+      "page_date": "2026-06-15",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-commercial-terms",
+      "publisher": "Anthropic",
+      "title": "Commercial Terms of Service",
+      "url": "https://www.anthropic.com/legal/commercial-terms",
+      "page_date": "2025-06-17",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "a-pricing",
+      "publisher": "Anthropic",
+      "title": "Claude pricing",
+      "url": "https://claude.com/pricing",
+      "page_date": null,
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ds-privacy",
+      "publisher": "DeepSeek",
+      "title": "DeepSeek Privacy Policy",
+      "url": "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      "page_date": "2026-02-10",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ds-ap-warning",
+      "publisher": "DutchNews.nl (reporting the Dutch data protection authority)",
+      "title": "Dutch privacy watchdog warns about uploading info to DeepSeek",
+      "url": "https://www.dutchnews.nl/?p=247047",
+      "page_date": "2025-02-03",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "ap-chatbots",
+      "publisher": "Autoriteit Persoonsgegevens (Dutch data protection authority)",
+      "title": "Caution: use of AI chatbot may lead to data breaches",
+      "url": "https://www.autoriteitpersoonsgegevens.nl/en/current/caution-use-of-ai-chatbot-may-lead-to-data-breaches",
+      "page_date": "2024-08-06",
+      "checked": "2026-11-22"
+    },
+    {
+      "id": "gdpr",
+      "publisher": "EUR-Lex",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "page_date": "2016-04-27",
+      "checked": "2026-11-22"
+    }
+  ]
+}
