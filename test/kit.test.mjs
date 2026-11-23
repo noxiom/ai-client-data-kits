@@ -468,3 +468,12 @@ test("the Dutch staff handout is a valid Word file in Dutch", () => {
   assert.ok(!DASHES.test(doc));
   assert.ok(existsSync(join(out, `${kit.employee_nl.slug}.html`)));
 });
+
+test("every kit page carries the site's breadcrumb and 'more in this topic' includes", () => {
+  for (const [name, html] of Object.entries(pages)) {
+    const key = slugs[name].replaceAll("/", "-");
+    assert.ok(html.includes(`<!-- include: res-${key}-top -->`), `${name}: breadcrumb include`);
+    assert.ok(html.includes(`<!-- include: res-${key}-more -->`), `${name}: more-in-topic include`);
+    assert.ok(!/"BreadcrumbList"/.test(html), `${name}: the breadcrumb markup comes from the site's index, not the page`);
+  }
+});

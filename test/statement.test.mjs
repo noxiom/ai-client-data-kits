@@ -364,3 +364,9 @@ test("the Markdown examples in the repository are up to date", () => {
   }
   for (const f of readdirSync(KIT2_DIR)) assert.ok(!DASHES.test(readFileSync(join(KIT2_DIR, f), "utf8")), f);
 });
+
+test("page: carries the site's breadcrumb and 'more in this topic' includes", () => {
+  assert.ok(html.includes(`<!-- include: res-${kit.page.slug}-top -->`));
+  assert.ok(html.includes(`<!-- include: res-${kit.page.slug}-more -->`));
+  assert.ok(!/"BreadcrumbList"/.test(html));
+});

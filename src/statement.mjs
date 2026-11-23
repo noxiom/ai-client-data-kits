@@ -16,7 +16,7 @@ import { join } from "node:path";
 import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
 import { docx, markdown } from "./docx.mjs";
-import { ROOT, GUIDE_DIR, writeIfChanged, tpl, guideTpl, loadGuide, articleLd, breadcrumb, fieldHtml, choiceList } from "./render.mjs";
+import { ROOT, GUIDE_DIR, writeIfChanged, tpl, guideTpl, loadGuide, articleLd, fieldHtml, choiceList, resKey } from "./render.mjs";
 
 const guide = await import(pathToFileURL(join(GUIDE_DIR, "src", "render.mjs")).href);
 const { esc, pill, humanDate, fill, resolveCitations, jsonLd, faqLd, faqHtml, cite, SITE_ORIGIN, HUB_SLUG } = guide;
@@ -245,8 +245,10 @@ function changelog(kit) {
 export function renderStatementPage(kit, facts, data) {
   const p = kit.page;
   const url = `${SITE_ORIGIN}/${p.slug}`;
-  const ld = [articleLd(kit, data, { headline: p.title, description: p.meta_description, url }), faqLd(p.faq), breadcrumb(p.title, url)];
+  // The breadcrumb comes from the website's free-resources index (res_key).
+  const ld = [articleLd(kit, data, { headline: p.title, description: p.meta_description, url }), faqLd(p.faq)];
   const html = fill(tpl("statement.html"), {
+    res_key: resKey(p.slug),
     guide_css: guideTpl("guide.css"),
     kit_css: tpl("kit.css").trim(),
     seo_title: esc(p.seo_title),

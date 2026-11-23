@@ -18,7 +18,8 @@ import { docx, markdown } from "./docx.mjs";
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 export const GUIDE_DIR = resolve(process.env.GUIDE_DIR || join(ROOT, "guide"));
 const guide = await import(pathToFileURL(join(GUIDE_DIR, "src", "render.mjs")).href);
-const { esc, pill, humanDate, fill, resolveCitations, jsonLd, faqLd, faqHtml, cite, publisher, founder, TONES, SITE_ORIGIN, HUB_SLUG } = guide;
+const { esc, pill, humanDate, fill, resolveCitations, jsonLd, faqLd, faqHtml, cite, publisher, founder, TONES, SITE_ORIGIN, HUB_SLUG, resKey } = guide;
+export { resKey };
 
 export const KIT_DIR = join(ROOT, "kits", "client-data-in-ai");
 export const DOWNLOADS = {
@@ -96,15 +97,6 @@ export function articleLd(kit, data, { headline, description, url, lang = "en", 
   };
 }
 
-export const breadcrumb = (name, url) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Noxiom", item: `${SITE_ORIGIN}/` },
-    { "@type": "ListItem", position: 2, name, item: url },
-  ],
-});
-
 // The guide's account types, flattened for the record builder and the notes.
 export function planFacts(data) {
   const label = Object.fromEntries(data.fields.map((f) => [f.id, f.label]));
@@ -175,11 +167,8 @@ export function renderEmployee(kit, data, lang = "en") {
   const ui = e.ui;
   const url = `${SITE_ORIGIN}/${e.slug}`;
   const changelog = nl ? e.changelog : kit.changelog;
-  const ld = [
-    articleLd(kit, data, { headline: e.title, description: e.meta_description, url, lang, published: changelog[changelog.length - 1].date }),
-    faqLd(e.faq),
-    breadcrumb(e.title, url),
-  ];
+  // The breadcrumb comes from the website's free-resources index (res_key).
+  const ld = [articleLd(kit, data, { headline: e.title, description: e.meta_description, url, lang, published: changelog[changelog.length - 1].date }), faqLd(e.faq)];
   const extra = {
     1: `<p class="kit-message" id="msg">${esc(e.message)}</p>
               <button type="button" class="kit-copy" data-copy="msg" data-copied="${esc(ui.copied)}" hidden>${esc(ui.copy)}</button>`,
@@ -200,6 +189,7 @@ ${toolNotes(data, { ...e, lang })}
     ...base,
     ...uiSlots,
     html_lang: lang,
+    res_key: resKey(e.slug),
     header: nl ? "<!-- include: header-nl -->" : "<!-- include: header -->",
     scripts_src: nl ? "/scripts.js" : "scripts.js",
     alternates: alternates(kit),
@@ -457,9 +447,10 @@ ${items.join("\n")}
 export function renderOwner(kit, data) {
   const o = kit.owner;
   const url = `${SITE_ORIGIN}/${o.slug}`;
-  const ld = [articleLd(kit, data, { headline: o.title, description: o.meta_description, url }), faqLd(o.faq), breadcrumb(o.title, url)];
+  const ld = [articleLd(kit, data, { headline: o.title, description: o.meta_description, url }), faqLd(o.faq)];
   const html = fill(tpl("incident.html"), {
     ...common(kit, data),
+    res_key: resKey(o.slug),
     seo_title: esc(o.seo_title),
     meta_description: esc(o.meta_description),
     canonical: url,

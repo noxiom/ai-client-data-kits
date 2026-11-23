@@ -308,6 +308,12 @@ function changelogHtml(data) {
 
 // ---------------------------------------------------------------- pages
 
+// The name of a page's generated include on the website (breadcrumb at the
+// top, "More in this topic" at the end): its path with "/" as "-". The
+// website's free-resources index writes src/partials/res-<key>-top.html and
+// res-<key>-more.html for every page it lists.
+export const resKey = (slug) => slug.replace(/^\//, "").replaceAll("/", "-");
+
 function common(data) {
   const plans = allPlans(data);
   return {
@@ -346,6 +352,7 @@ function renderHub(data) {
     faqLd(data.hub_faq),
   ];
   const html = fill(readFileSync(join(ROOT, "templates", "hub.html"), "utf8"), {
+    res_key: resKey(HUB_SLUG),
     ...common(data),
     seo_title: "Personal vs work AI accounts: what happens to business data",
     meta_description: description,
@@ -368,18 +375,12 @@ function renderTool(data, tool) {
   const ld = [
     articleLd(data, { headline: tool.page_title, description: tool.meta_description, url }),
     faqLd(tool.faq),
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Noxiom", item: `${SITE_ORIGIN}/` },
-        { "@type": "ListItem", position: 2, name: "Personal or work account?", item: `${SITE_ORIGIN}/${HUB_SLUG}` },
-        { "@type": "ListItem", position: 3, name: tool.name, item: url },
-      ],
-    },
+    // The breadcrumb (visible and BreadcrumbList) comes from the website's
+    // free-resources index, through the res-<page>-top include.
   ];
   const work = tool.plans.some((p) => p.account === "work");
   const html = fill(readFileSync(join(ROOT, "templates", "tool.html"), "utf8"), {
+    res_key: resKey(tool.slug),
     ...common(data),
     seo_title: esc(tool.seo_title),
     meta_description: esc(tool.meta_description),
